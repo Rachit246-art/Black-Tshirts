@@ -1,0 +1,1311 @@
+[
+  {
+    "id": "boardroom-taylor-rooks",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/f614f8470af71ed224190bd32e5fef41e59e848a-1536x1024.png",
+    "poster": "https://cdn.sanity.io/images/zil8k06j/production/f614f8470af71ed224190bd32e5fef41e59e848a-1536x1024.png",
+    "depth": {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/f614f8470af71ed224190bd32e5fef41e59e848a-1536x1024.png?w=1600&fit=max&auto=format&q=80",
+      "depthSrc": "https://cdn.sanity.io/images/zil8k06j/production/879cb147e38bfa80daff3c6a3a3e0b2970ff59de-1024x683.png"
+    },
+    "x": 0,
+    "y": 0,
+    "width": 501,
+    "height": 334,
+    "frame": "bare",
+    "sheen": false,
+    "cornerRadius": 0,
+    "label": "Justin Jefferson on Why He’s the NFL’s Best WR Despite the Vikings’ QB Struggles",
+    "brand": "Boardroom",
+    "category": "Feature",
+    "body": "A conversation with Taylor Rooks for Boardroom’s September cover story. Justin reflects on the confidence behind his game, his memorable Buffalo catch, and competing with Ja’Marr Chase. He also explores Odell Beckham Jr.’s influence and how personal style has become part of his identity.",
+    "cta": "$undefined",
+    "link": "https://www.youtube.com/watch?v=-UNGHRtkJI0",
+    "contentKind": "video",
+    "videoId": "-UNGHRtkJI0",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "Boardroom"
+      },
+      {
+        "label": "Category",
+        "value": "Feature"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": -5.1
+  },
+  {
+    "id": "80mzBKvFoCU",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/198c9c9a6195e2fbccdc1c251fc2309789ffc530-1066x1600.png",
+    "poster": "https://i.ytimg.com/vi/80mzBKvFoCU/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": 780.0568070146653,
+    "y": 73.24957449454814,
+    "width": 413,
+    "height": 620,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Justin Jefferson Wins Offensive Player of the Year Award | 2023 NFL Honors",
+    "brand": "NFL",
+    "category": "Big Moment",
+    "body": "$undefined",
+    "cta": "$undefined",
+    "link": "https://www.youtube.com/watch?v=80mzBKvFoCU",
+    "contentKind": "video",
+    "videoId": "80mzBKvFoCU",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "NFL"
+      },
+      {
+        "label": "Category",
+        "value": "Big Moment"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": -4.3
+  },
+  {
+    "id": "FikMj22nPoA",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/c9a9483e6afb286d7193f43300d2b6a3fc21c11f-1600x750.png",
+    "poster": "https://i.ytimg.com/vi/FikMj22nPoA/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": 1561.7161428137404,
+    "y": -8.240569947520271,
+    "width": 465,
+    "height": 218,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "I Got My Mind Blown At WWE SummerSlam",
+    "brand": "Justin Jefferson",
+    "category": "Collaboration",
+    "body": "$undefined",
+    "cta": "$undefined",
+    "link": "https://www.youtube.com/watch?v=FikMj22nPoA",
+    "contentKind": "video",
+    "videoId": "FikMj22nPoA",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "Justin Jefferson"
+      },
+      {
+        "label": "Category",
+        "value": "Collaboration"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": 5.8
+  },
+  {
+    "id": "bayou-king",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/4092dbf2a158b514899e662f35122cb77fc66bce-1920x1621.webp",
+    "poster": "https://cdn.sanity.io/images/zil8k06j/production/a51753800f818030e05d97e033822b92af234546-1080x1440.jpg",
+    "depth": {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/4092dbf2a158b514899e662f35122cb77fc66bce-1920x1621.webp?w=1600&fit=max&auto=format&q=80",
+      "depthSrc": "https://cdn.sanity.io/images/zil8k06j/production/1d153e9a864c239996239e4a191dee69153591e6-1024x864.png"
+    },
+    "x": -1550.6740121506098,
+    "y": -800.9196007752325,
+    "width": 449,
+    "height": 379,
+    "frame": "bare",
+    "sheen": false,
+    "cornerRadius": 0,
+    "label": "Bayou King",
+    "brand": "Under Armour",
+    "category": "Feature",
+    "body": "Andscape traces the cleats, the camp, and the style back to St. Rose.",
+    "cta": "Read the feature",
+    "link": "https://andscape.com/features/justin-jefferson-under-armour-cleats-camp-bayou-king-fashion/",
+    "contentKind": "link",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "Under Armour"
+      },
+      {
+        "label": "Category",
+        "value": "Feature"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": -5.6
+  },
+  {
+    "id": "diamond-jet",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/27083a349f744c7c4024e299e7c17fcd5ad40b0a-1838x2304.png",
+    "poster": "https://cdn.sanity.io/images/zil8k06j/production/27083a349f744c7c4024e299e7c17fcd5ad40b0a-1838x2304.png",
+    "depth": {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/27083a349f744c7c4024e299e7c17fcd5ad40b0a-1838x2304.png?w=1600&fit=max&auto=format&q=80",
+      "depthSrc": "https://cdn.sanity.io/images/zil8k06j/production/af38042f429cf44f93ac58b4ff9bc1f263d699b1-1024x1284.png"
+    },
+    "x": -763.6878847637711,
+    "y": -871.843112668721,
+    "width": 429,
+    "height": 537,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "The Diamond Jet",
+    "brand": "Lakeside Diamond",
+    "category": "Style",
+    "body": "The jet pendant from Justin's game day kit, iced end to end by Lakeside Diamond, with a mosaic set cuban and jet cut earrings to match.",
+    "cta": "Learn More",
+    "link": "https://www.instagram.com/p/DSGB52-kTPW/",
+    "contentKind": "link",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Jeweler",
+        "value": "Lakeside Diamond"
+      },
+      {
+        "label": "Piece",
+        "value": "Custom jet pendant"
+      },
+      {
+        "label": "The kit",
+        "value": "Cuban link and jet cut earrings"
+      }
+    ],
+    "rotation": -4.5
+  },
+  {
+    "id": "jettas-mix",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/a0a2c619cf42d4ec0f3c6ff25773ede7c94a21a3-453x667.png",
+    "poster": "https://cdn.sanity.io/images/zil8k06j/production/a0a2c619cf42d4ec0f3c6ff25773ede7c94a21a3-453x667.png",
+    "depth": "$undefined",
+    "x": -50.13288216209662,
+    "y": -807.596807613736,
+    "width": 337,
+    "height": 496,
+    "frame": "bare",
+    "sheen": false,
+    "cornerRadius": 0,
+    "label": "Jettas Mix",
+    "brand": "General Mills",
+    "category": "Collaboration",
+    "body": "His own General Mills box: Cinnamon Toast Crunch and Cheerios in strawberry lemon, shades on the front.",
+    "cta": "Learn More",
+    "link": "https://www.generalmills.com/news/press-releases/general-mills-cereal-training-camp-returns-for-year-two",
+    "contentKind": "link",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Partner",
+        "value": "General Mills"
+      },
+      {
+        "label": "Piece",
+        "value": "Cereal box"
+      },
+      {
+        "label": "Flavor",
+        "value": "Strawberry Lemon"
+      }
+    ],
+    "rotation": -3.4
+  },
+  {
+    "id": "madden-99-club",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/e43151e06b79948bc9bb66d1490384a2bc7a99f7-922x1152.png",
+    "poster": "https://cdn.sanity.io/images/zil8k06j/production/e43151e06b79948bc9bb66d1490384a2bc7a99f7-922x1152.png",
+    "depth": "$undefined",
+    "x": 691.5830001918428,
+    "y": -886.6661654680502,
+    "width": 487,
+    "height": 609,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Madden 99 Club",
+    "brand": "EA Sports",
+    "category": "Digital",
+    "body": "Three straight years rated 99 overall in Madden 24, 25 and 26. The 99 Club is video game royalty, and Justin hasn't given the seat back.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Rating",
+        "value": "99 overall"
+      },
+      {
+        "label": "Editions",
+        "value": "Madden 24 · 25 · 26"
+      },
+      {
+        "label": "Publisher",
+        "value": "EA Sports"
+      }
+    ],
+    "rotation": 2.5
+  },
+  {
+    "id": "cleat-signature",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/63d4723d2cc5451d2cd51122774eb38d34c1d2a6-1920x1621.webp",
+    "poster": "https://cdn.sanity.io/images/zil8k06j/production/63d4723d2cc5451d2cd51122774eb38d34c1d2a6-1920x1621.webp",
+    "depth": {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/63d4723d2cc5451d2cd51122774eb38d34c1d2a6-1920x1621.webp?w=1600&fit=max&auto=format&q=80",
+      "depthSrc": "https://cdn.sanity.io/images/zil8k06j/production/21dd36acac4769db6fc2faab98ea28a3e5c9e145-1024x865.png"
+    },
+    "x": 1491.4042918207258,
+    "y": -806.7734774504788,
+    "width": 415,
+    "height": 351,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "UA x Jefferson PE: Chrome 18",
+    "brand": "Under Armour",
+    "category": "Footwear",
+    "body": "These cleats were made to stand out. Inspired by one of his favorite brands, Chrome 18 is a package of custom metal studs, quilted red leather, metal aglets, a flawless red chrome plate and one of the biggest metal lace locks ever made.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Colorway",
+        "value": "Red Chrome"
+      },
+      {
+        "label": "Edition",
+        "value": "Player Exclusive"
+      },
+      {
+        "label": "Category",
+        "value": "Footwear"
+      }
+    ],
+    "rotation": 3.6
+  },
+  {
+    "id": "card-prizm-debut",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/030f298debdfb81fd1da8c82a253b6b291a4718c-933x1400.webp",
+    "poster": "$undefined",
+    "depth": "$undefined",
+    "x": -1666.7173103085142,
+    "y": -1767.6202090189327,
+    "width": 368,
+    "height": 553,
+    "frame": "polaroid",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "2025 Paris Fashion Week",
+    "brand": "Amiri",
+    "category": "Fashion",
+    "body": "Justin is rocking an all-white Amiri ensemble while attending the Amiri Menswear Spring/Summer 2025 show during Paris Fashion Week.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Designer",
+        "value": "Amiri"
+      },
+      {
+        "label": "Show",
+        "value": "Menswear SS25"
+      },
+      {
+        "label": "Look",
+        "value": "All-white ensemble"
+      }
+    ],
+    "rotation": 6.6
+  },
+  {
+    "id": "photo-camp",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/6c46f81bbe870385c1c58edc4508c1fbd4cd120b-1400x934.webp",
+    "poster": "$undefined",
+    "depth": "$undefined",
+    "x": -911.4435084048648,
+    "y": -1698.8612458016723,
+    "width": 467,
+    "height": 312,
+    "frame": "polaroid",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Under Armour Flight School",
+    "brand": "Under Armour",
+    "category": "Off-Field",
+    "body": "Under Armour and Justin Jefferson recently hosted the inaugural Flight School, powered by UA NEXT. Held at IMG Academy in Bradenton, FL, this two-day camp set out to help grassroots football players navigate their journey from high school to collegiate football.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Powered by",
+        "value": "UA NEXT"
+      },
+      {
+        "label": "Venue",
+        "value": "IMG Academy, Bradenton FL"
+      },
+      {
+        "label": "Format",
+        "value": "Two-day camp"
+      }
+    ],
+    "rotation": 5.1
+  },
+  {
+    "id": "photo-editorial",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/d3e033e240d85dddfbced35e0dab1491bad7be84-1200x1500.webp",
+    "poster": "$undefined",
+    "depth": "$undefined",
+    "x": -147.79137515428488,
+    "y": -1762.1122663165443,
+    "width": 350,
+    "height": 437,
+    "frame": "polaroid",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Oakley Editorial",
+    "brand": "Oakley",
+    "category": "Campaign",
+    "body": "Black and white, chain up, shades on. A studio frame from an Oakley shoot.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Partner",
+        "value": "Oakley"
+      },
+      {
+        "label": "Format",
+        "value": "Studio editorial"
+      },
+      {
+        "label": "Finish",
+        "value": "Black & white"
+      }
+    ],
+    "rotation": 4.9
+  },
+  {
+    "id": "card-prizm-mvp",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/837a5d67cc99599b23c1616128482c755f9a4d97-741x984.jpg",
+    "poster": "https://cdn.sanity.io/images/zil8k06j/production/837a5d67cc99599b23c1616128482c755f9a4d97-741x984.jpg",
+    "depth": "$undefined",
+    "x": 589.9159837021532,
+    "y": -1690.1828211871907,
+    "width": 428,
+    "height": 569,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "The MVP Card",
+    "brand": "Collectible",
+    "category": "Cards",
+    "body": "Instagram post via @jjettas2 on December 22, 2025.",
+    "cta": "View on Instagram",
+    "link": "https://www.instagram.com/p/DSlnnvSEbx6/",
+    "contentKind": "link",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Year",
+        "value": "2024"
+      },
+      {
+        "label": "Finish",
+        "value": "Holographic"
+      },
+      {
+        "label": "Format",
+        "value": "Trading card"
+      }
+    ],
+    "rotation": -2.5
+  },
+  {
+    "id": "oakley-sphaera",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/4f66b9dd648b213e9f9eb287c1e91a336547df7b-1774x887.png",
+    "poster": "$undefined",
+    "depth": "$undefined",
+    "x": 1437.8618584204658,
+    "y": -1761.2082473898772,
+    "width": 597,
+    "height": 298,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Oakley Stunt Collection",
+    "brand": "Oakley",
+    "category": "Eyewear",
+    "body": "Jefferson in two performance driven styles, the Stunt Wing and Stunt Glider, designed for secure fit and comfort under pressure.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Styles",
+        "value": "Stunt Wing · Stunt Glider"
+      },
+      {
+        "label": "Category",
+        "value": "Eyewear"
+      }
+    ],
+    "rotation": 2.8
+  },
+  {
+    "id": "photo-pfw",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/336c1db0efb5c8958c31508d27dbede8464744cb-1201x1500.webp",
+    "poster": "$undefined",
+    "depth": "$undefined",
+    "x": -1647.366335174763,
+    "y": -2555.6518909556326,
+    "width": 345,
+    "height": 431,
+    "frame": "polaroid",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Oakley Shoot",
+    "brand": "Oakley",
+    "category": "Campaign",
+    "body": "On set with Oakley, shooting the signature eyewear series that carries Justin's name.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Partner",
+        "value": "Oakley"
+      },
+      {
+        "label": "Line",
+        "value": "JJ Signature Series"
+      },
+      {
+        "label": "Format",
+        "value": "Photoshoot"
+      }
+    ],
+    "rotation": -6.4
+  },
+  {
+    "id": "cleat-lv",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/af690f9b04acde79a97ec0d306e804a1058e67e6-1920x1621.webp",
+    "poster": "https://cdn.sanity.io/images/zil8k06j/production/af690f9b04acde79a97ec0d306e804a1058e67e6-1920x1621.webp",
+    "depth": {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/af690f9b04acde79a97ec0d306e804a1058e67e6-1920x1621.webp?w=1600&fit=max&auto=format&q=80",
+      "depthSrc": "https://cdn.sanity.io/images/zil8k06j/production/bbf06b801be0042255376e99f9e6dd2b8c103e4f-1024x864.png"
+    },
+    "x": -879.9293917836869,
+    "y": -2630.986516897101,
+    "width": 477,
+    "height": 402,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Monogram PE",
+    "brand": "Under Armour",
+    "category": "Footwear",
+    "body": "These Gold Louis Vuitton-inspired Under Armour cleats celebrate his 99 overall rating in Madden 26.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Colorway",
+        "value": "Gold"
+      },
+      {
+        "label": "Edition",
+        "value": "Player Exclusive"
+      },
+      {
+        "label": "Category",
+        "value": "Footwear"
+      }
+    ],
+    "rotation": -3.5
+  },
+  {
+    "id": "photo-gq",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/a7106dbd9a605ac4276242c2fbe4cc2d282e583f-1600x1066.webp",
+    "poster": "$undefined",
+    "depth": "$undefined",
+    "x": -114.35888845178602,
+    "y": -2561.7427434341516,
+    "width": 395,
+    "height": 263,
+    "frame": "polaroid",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "ESPN Cover Story",
+    "brand": "ESPN",
+    "category": "Feature",
+    "body": "Featured as ESPN’s Cover Story back in 2022, Justin talks about his career journey, his family’s continued impact, and his unbelievable Week 10 catch.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Outlet",
+        "value": "ESPN"
+      },
+      {
+        "label": "Year",
+        "value": "2022"
+      },
+      {
+        "label": "Format",
+        "value": "Cover Story"
+      }
+    ],
+    "rotation": -3
+  },
+  {
+    "id": "photo-tunnel",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/0a3f093e70707f141d7a209120b252bc2a32f0d1-1121x1400.webp",
+    "poster": "$undefined",
+    "depth": "$undefined",
+    "x": 579.4591505147589,
+    "y": -2636.746878355043,
+    "width": 324,
+    "height": 405,
+    "frame": "polaroid",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Tunnel Walk",
+    "brand": "Hermès",
+    "category": "Fashion",
+    "body": "Justin & former college teammate and fellow NFL pro Joe Burrow dressed to impress at the Hermès Spring/Summer 2025 Men’s Show during Paris Fashion Week.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Event",
+        "value": "Hermès SS25 Men’s Show"
+      },
+      {
+        "label": "Location",
+        "value": "Paris Fashion Week"
+      },
+      {
+        "label": "With",
+        "value": "Joe Burrow"
+      }
+    ],
+    "rotation": 6.5
+  },
+  {
+    "id": "card-rookie",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/3f87e2e9f8ece228d78796a9d6cf13cd7bcd07b8-1036x1519.webp",
+    "poster": "$undefined",
+    "depth": "$undefined",
+    "x": 1236.417988086955,
+    "y": -2564.225907732034,
+    "width": 279,
+    "height": 410,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 2,
+    "label": "LSU Peach Bowl",
+    "brand": "Collectible",
+    "category": "Cards",
+    "body": "A nod to the night at LSU when Justin torched Oklahoma for four first half touchdowns on the way to the national title. The collection's origin story in cardboard.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Year",
+        "value": "2020"
+      },
+      {
+        "label": "Moment",
+        "value": "The Peach Bowl"
+      },
+      {
+        "label": "Format",
+        "value": "Trading card"
+      }
+    ],
+    "rotation": -4.8
+  },
+  {
+    "id": "ua-afterburner",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/15c0565bf0dd89ad739a24650f46634b0b6e4e59-1400x645.webp",
+    "poster": "https://cdn.sanity.io/images/zil8k06j/production/15c0565bf0dd89ad739a24650f46634b0b6e4e59-1400x645.webp",
+    "depth": {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/15c0565bf0dd89ad739a24650f46634b0b6e4e59-1400x645.webp?w=1600&fit=max&auto=format&q=80",
+      "depthSrc": "https://cdn.sanity.io/images/zil8k06j/production/25674b8188f4a4f671fa8cc886024933749a55b6-1024x472.png"
+    },
+    "x": -971.3303591239503,
+    "y": 2629.0895188960712,
+    "width": 449,
+    "height": 207,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "UA Blur Pro PE: The Bag",
+    "brand": "Under Armour",
+    "category": "Footwear",
+    "body": "Record-breaking stats. Unstoppable shine. Justin Jefferson does it all, and so do his cleats: luxury mixed with the insane speed you didn't expect. Released and sold out in 2025.",
+    "cta": "$undefined",
+    "link": "$undefined",
+    "contentKind": "shop",
+    "videoId": "$undefined",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Colorway",
+        "value": "Chrome"
+      },
+      {
+        "label": "Released",
+        "value": "2025"
+      },
+      {
+        "label": "Category",
+        "value": "Footwear"
+      }
+    ],
+    "rotation": -5
+  },
+  {
+    "id": "yt-1S6JtcxFvUM",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/d78fcafc666e76848e03a29d8c244324fd06f77f-1036x1519.jpg",
+    "poster": "https://i.ytimg.com/vi/1S6JtcxFvUM/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": -237.4428980047462,
+    "y": 2725.141402151203,
+    "width": 338,
+    "height": 496,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 2,
+    "label": "Justin Jefferson Catch of the Year",
+    "brand": "NFL",
+    "category": "Big Moment",
+    "body": "One hand, fourth down, overtime on the line. NFL Films on the catch of the year.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/1S6JtcxFvUM",
+    "contentKind": "video",
+    "videoId": "1S6JtcxFvUM",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "NFL"
+      },
+      {
+        "label": "Category",
+        "value": "Big Moment"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": 5.9
+  },
+  {
+    "id": "yt-2z3KvJEbmjE",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/c1b4d2e3b402b858091a66a3e479db5862370f6e-1402x1122.png",
+    "poster": "https://i.ytimg.com/vi/2z3KvJEbmjE/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": 521.7020476346486,
+    "y": 2637.346548229689,
+    "width": 492,
+    "height": 394,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Justin Jefferson (WR, Vikings) | Top 100 Players of 2025",
+    "brand": "NFL",
+    "category": "News",
+    "body": "Voted the league's No. 9 player by his peers heading into the 2025 season.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/2z3KvJEbmjE",
+    "contentKind": "post",
+    "videoId": "2z3KvJEbmjE",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "NFL"
+      },
+      {
+        "label": "Category",
+        "value": "News"
+      },
+      {
+        "label": "Source",
+        "value": "Journal"
+      }
+    ],
+    "rotation": 3.6
+  },
+  {
+    "id": "yt-30wzUUR8VCU",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/f691a5a6e1dee2abd1784c59dbdcb8c6312730e0-1254x1254.png",
+    "poster": "https://i.ytimg.com/vi/30wzUUR8VCU/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": 1337.859099971906,
+    "y": 2707.405734717613,
+    "width": 485,
+    "height": 485,
+    "frame": "bare",
+    "sheen": false,
+    "cornerRadius": 0,
+    "label": "When you meet Justin Jefferson and all you want to do is griddy",
+    "brand": "Minnesota Vikings",
+    "category": "News",
+    "body": "A young fan meets JJ, and there's only one way to celebrate.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/30wzUUR8VCU",
+    "contentKind": "video",
+    "videoId": "30wzUUR8VCU",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "Minnesota Vikings"
+      },
+      {
+        "label": "Category",
+        "value": "News"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": 5.5
+  },
+  {
+    "id": "yt-4NDvOnGdlMI",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/d8d48c2a6734207c8596abd4d93f365d10577be4-900x900.webp",
+    "poster": "https://i.ytimg.com/vi/4NDvOnGdlMI/maxresdefault.jpg",
+    "depth": {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/d8d48c2a6734207c8596abd4d93f365d10577be4-900x900.webp?w=1600&fit=max&auto=format&q=80",
+      "depthSrc": "https://cdn.sanity.io/images/zil8k06j/production/5cd05b9f9feade587d993765bdacaa16070720a7-900x900.png"
+    },
+    "x": -1741.664056277473,
+    "y": 1763.6129342624918,
+    "width": 488,
+    "height": 488,
+    "frame": "bare",
+    "sheen": false,
+    "cornerRadius": 0,
+    "label": "Justin Jefferson Takes It To The Next Level With Kevin Hart | Cold As Balls",
+    "brand": "LOL! Network",
+    "category": "Collaboration",
+    "body": "Ice tubs and jokes with Kevin Hart on Cold As Balls.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/4NDvOnGdlMI",
+    "contentKind": "video",
+    "videoId": "4NDvOnGdlMI",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "LOL! Network"
+      },
+      {
+        "label": "Category",
+        "value": "Collaboration"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": -2.6
+  },
+  {
+    "id": "yt-ALUoX0s7xAg",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/ae09b54a99be735dde270cc2fc181425bb25486e-971x794.webp",
+    "poster": "https://i.ytimg.com/vi/ALUoX0s7xAg/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": -937.8713228932095,
+    "y": 1840.2907637669705,
+    "width": 473,
+    "height": 386,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Justin Jefferson & Ja'Marr Chase Lucky Charms Commercial (2025)",
+    "brand": "General Mills",
+    "category": "Collaboration",
+    "body": "LSU teammates reunited: JJ and Ja'Marr Chase for Lucky Charms.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/ALUoX0s7xAg",
+    "contentKind": "video",
+    "videoId": "ALUoX0s7xAg",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "General Mills"
+      },
+      {
+        "label": "Category",
+        "value": "Collaboration"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": -3.3
+  },
+  {
+    "id": "yt-MzaRekgSbFE",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/7fa2762250e840da5a8d05ce68b5f4bc209294dc-1491x1600.png",
+    "poster": "https://i.ytimg.com/vi/MzaRekgSbFE/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": -122.98189619663322,
+    "y": 1757.6739412464667,
+    "width": 453,
+    "height": 486,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "30 Minutes of Justin Jefferson Highlights",
+    "brand": "NFL",
+    "category": "Big Moment",
+    "body": "Thirty minutes of route running, one-handers, and griddys.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/MzaRekgSbFE",
+    "contentKind": "video",
+    "videoId": "MzaRekgSbFE",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "NFL"
+      },
+      {
+        "label": "Category",
+        "value": "Big Moment"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": 3
+  },
+  {
+    "id": "yt-NXVio8QF9ts",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/aafdff0303991d8b5d8ec00d7ae31b43eb71b596-1536x1024.png",
+    "poster": "https://i.ytimg.com/vi/NXVio8QF9ts/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": 640.6332195977709,
+    "y": 1828.4993672475684,
+    "width": 428,
+    "height": 285,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Vikings' Justin Jefferson hosts youth football camp at Destrehan High School",
+    "brand": "WWLTV",
+    "category": "Collaboration",
+    "body": "Back home in Louisiana, JJ runs his youth camp at Destrehan High School.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/NXVio8QF9ts",
+    "contentKind": "video",
+    "videoId": "NXVio8QF9ts",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "WWLTV"
+      },
+      {
+        "label": "Category",
+        "value": "Collaboration"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": -4.8
+  },
+  {
+    "id": "yt-S3HB7R9_t5I",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/067e662c7e02d1bac742f64fb0dcb67790851dc9-900x674.webp",
+    "poster": "https://i.ytimg.com/vi/S3HB7R9_t5I/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": 1440.43556188867,
+    "y": 1755.8192125195637,
+    "width": 471,
+    "height": 353,
+    "frame": "bare",
+    "sheen": false,
+    "cornerRadius": 0,
+    "label": "Justin Jefferson wasn't high on LSU’s radar... Then one prospect camp changed everything",
+    "brand": "NBD",
+    "category": "News",
+    "body": "The prospect camp that put JJ on LSU's radar and changed everything.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/S3HB7R9_t5I",
+    "contentKind": "video",
+    "videoId": "S3HB7R9_t5I",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "NBD"
+      },
+      {
+        "label": "Category",
+        "value": "News"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": 6.1
+  },
+  {
+    "id": "yt-S4JQzvAFvFE",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/6e398191687eea10c17f006f6a780d0d162c4011-1446x747.png",
+    "poster": "https://i.ytimg.com/vi/S4JQzvAFvFE/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": -1638.5087934656578,
+    "y": 941.8901003967039,
+    "width": 458,
+    "height": 237,
+    "frame": "bare",
+    "sheen": false,
+    "cornerRadius": 0,
+    "label": "Justin Jefferson: It's more to me than catching footballs on Sundays",
+    "brand": "Minnesota Vikings",
+    "category": "News",
+    "body": "On family, community, and why the work off the field matters as much as the catches.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/S4JQzvAFvFE",
+    "contentKind": "video",
+    "videoId": "S4JQzvAFvFE",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "Minnesota Vikings"
+      },
+      {
+        "label": "Category",
+        "value": "News"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": -5.5
+  },
+  {
+    "id": "yt-Vc0TONj5zjY",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/2c5c17fdb0ad0495d4c9d3fc7d202f64079b7729-1521x1600.png",
+    "poster": "https://i.ytimg.com/vi/Vc0TONj5zjY/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": -827.9729428845922,
+    "y": 871.8980704562273,
+    "width": 464,
+    "height": 488,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "We Spent The Day With Justin Jefferson | Off The Clock",
+    "brand": "Blitzfits",
+    "category": "Collaboration",
+    "body": "A day off the clock: cars, fits, and film with Blitzfits.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/Vc0TONj5zjY",
+    "contentKind": "video",
+    "videoId": "Vc0TONj5zjY",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "Blitzfits"
+      },
+      {
+        "label": "Category",
+        "value": "Collaboration"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": -4.5
+  },
+  {
+    "id": "yt-apDtCouirC4",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/2b5b17f818d3413a3aa4b6e57eaab19163c84526-1748x1106.png",
+    "poster": "https://i.ytimg.com/vi/apDtCouirC4/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": -31.728622612411755,
+    "y": 950.05093661719,
+    "width": 421,
+    "height": 266,
+    "frame": "polaroid",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Justin Jefferson Mic'd Up At Top Secret Receiver Camp! “This Ain’t Friendly”",
+    "brand": "Overtime SZN",
+    "category": "Collaboration",
+    "body": "Mic'd up and talking his talk at the invite-only receiver camp.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/apDtCouirC4",
+    "contentKind": "video",
+    "videoId": "apDtCouirC4",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "Overtime SZN"
+      },
+      {
+        "label": "Category",
+        "value": "Collaboration"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": -5.1
+  },
+  {
+    "id": "yt-dSH2KeP7zvk",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/7cea708ad85a93432bdd099ca634fd0dabe8e5d7-1600x1516.png",
+    "poster": "https://i.ytimg.com/vi/dSH2KeP7zvk/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": 753.0998317344317,
+    "y": 878.5205100092571,
+    "width": 447,
+    "height": 424,
+    "frame": "bare",
+    "sheen": false,
+    "cornerRadius": 0,
+    "label": "How A 2 Star Recruit Became An NFL Superstar",
+    "brand": "Nonstop",
+    "category": "News",
+    "body": "From two-star recruit to the top of the receiver game.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/dSH2KeP7zvk",
+    "contentKind": "video",
+    "videoId": "dSH2KeP7zvk",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "Nonstop"
+      },
+      {
+        "label": "Category",
+        "value": "News"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": 4.4
+  },
+  {
+    "id": "yt-qxhu6NisGLY",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/744261b4ac49e5498267f9acf90ec5f727dc04a6-900x583.webp",
+    "poster": "https://i.ytimg.com/vi/qxhu6NisGLY/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": 1566.039229071205,
+    "y": 941.2229871680029,
+    "width": 494,
+    "height": 320,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "#2 Justin Jefferson (WR, Vikings) | Top 100 Players of 2023",
+    "brand": "NFL",
+    "category": "Big Moment",
+    "body": "Peers ranked JJ the No. 2 player in football after his 128-catch, 1,809-yard 2022 season.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/qxhu6NisGLY",
+    "contentKind": "video",
+    "videoId": "qxhu6NisGLY",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "NFL"
+      },
+      {
+        "label": "Category",
+        "value": "Big Moment"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": 6.6
+  },
+  {
+    "id": "yt-sm5cuNdikww",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/d5dcf0554148560e2a708a5cb243679bdeb8811e-1219x1290.png",
+    "poster": "https://i.ytimg.com/vi/sm5cuNdikww/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": -1499.935999774839,
+    "y": -10.140355280600488,
+    "width": 490,
+    "height": 519,
+    "frame": "bare",
+    "sheen": true,
+    "cornerRadius": 0,
+    "label": "Justin Jefferson’s Unforgettable First Touchdown in NFL History!",
+    "brand": "FUMBLEFLICK",
+    "category": "Big Moment",
+    "body": "The first one. Rookie year, and the start of everything.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/sm5cuNdikww",
+    "contentKind": "video",
+    "videoId": "sm5cuNdikww",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "FUMBLEFLICK"
+      },
+      {
+        "label": "Category",
+        "value": "Big Moment"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": -3.1
+  },
+  {
+    "id": "yt-vIsmqdgm_ZM",
+    "type": "image",
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/bb18e35e72dd4d3b9a05564753212be7fd914622-1129x1600.png",
+    "poster": "https://i.ytimg.com/vi/vIsmqdgm_ZM/maxresdefault.jpg",
+    "depth": "$undefined",
+    "x": -762.9524899051712,
+    "y": 73.63578568329103,
+    "width": 337,
+    "height": 477,
+    "frame": "bare",
+    "sheen": false,
+    "cornerRadius": 0,
+    "label": "Justin Jefferson’s Secret Receiver Camp For 5-Stars",
+    "brand": "Overtime SZN",
+    "category": "Collaboration",
+    "body": "JJ runs routes with the next generation of five-star receivers.",
+    "cta": "$undefined",
+    "link": "https://youtu.be/vIsmqdgm_ZM",
+    "contentKind": "video",
+    "videoId": "vIsmqdgm_ZM",
+    "article": "$undefined",
+    "details": [
+      {
+        "label": "Channel",
+        "value": "Overtime SZN"
+      },
+      {
+        "label": "Category",
+        "value": "Collaboration"
+      },
+      {
+        "label": "Source",
+        "value": "External"
+      }
+    ],
+    "rotation": 2.7
+  }
+]

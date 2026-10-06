@@ -1,0 +1,157 @@
+{
+  "heroTitle": "Foundation",
+  "heroEyebrow": "Beyond the Game",
+  "heroIntro": "Off the field Justin enjoys giving back to the community that helped him get to where he is today. Actions speak louder than words.",
+  "heroPhotos": [
+    {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/4448877a0abc8237a07e2c80286620b94d3e8e9e-3648x5472.jpg",
+      "width": 3648,
+      "height": 5472,
+      "alt": "Justin Jefferson and a teammate handing out backpacks under the tent at the Backpack Drive",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUHCAP/xAAoEAABAwMDAgYDAAAAAAAAAAABAgMEAAURBhIhE0EHIjFRYYEUFXH/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQB/8QAHhEAAQQDAAMAAAAAAAAAAAAAAQACESEDEkETMWH/2gAMAwEAAhEDEQA/AL9KmRWI63nXAG0Dco+wpVdtRQoECJMQDIZkuJQkt/Pes5StW3u4aTlq/aZWobVtr4UE128MdeuRrJIg3WQt1wpIi+Xdsx3+qzaa6mDC43FLQTupI6XFJ6zSMdiRmisnXPVyWpzySlb69xK15PJ+KKnPmlUa4B1M9SWhqBAU02287KdKSrByEj2pFKskqzCDPYWSlSSOmkeZJqtXOzCPfGZra87uChXoP5TGdY03SMGFOdMkghQHpVLBF9Quc6AJpTS22K0PQWnp7Z/JdG9e44PNFNdYWgwLyqOHSoIQnn6opJN+0YHxf//Z"
+    },
+    {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/24d2b1197f7f932b425c0c2a5b6a36b231d6010e-933x1400.webp",
+      "width": 933,
+      "height": 1400,
+      "alt": "A young camper at the JJets event",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGBwP/xAAmEAABAwQBAwQDAAAAAAAAAAABAgMEAAUREiETMUEGUWGBFEJS/8QAFwEAAwEAAAAAAAAAAAAAAAAAAgMEAf/EAB0RAAIBBQEBAAAAAAAAAAAAAAECAAMEERIxIUH/2gAMAwEAAhEDEQA/AKKTbIUz8OM8hqQVryMLICT9Vzv1khQ5kO3wY0ESHe+2Tg1G2e/xo0JhyJLdW0zyFlPKacXBUNUKNezPfXNcdGFn9fr2pVW5CMMjpxGU7d2HnyPzZrlEw0mNDXjnOgNFTMu6hMlaV3eS8oHlaFYB80UIudhkCCVKnBmOTb2WpSm4qUpi/wAt9j81UWGW5cWui0XFuMMFzpg8EeeKzOC4WoQWBlSjjmqT0rLktGS5FdLbumu3x7VWz7sNuTVcqfJSw4rnR2Ci3sSopznFFJFXuTEPSWAtXfaionVixI5ElTmf/9k="
+    }
+  ],
+  "manifestoLines": [
+    "BUILDING MINDSETS THAT",
+    "PERFORM AND CREATE",
+    "MEANINGFUL CHANGE"
+  ],
+  "missionLogo": {
+    "src": "https://cdn.sanity.io/images/zil8k06j/production/390d40e58dfc79a978ada67e933feb2f96d35fdc-9148x2442.png",
+    "alt": "The JJets Foundation",
+    "width": 9148,
+    "height": 2442,
+    "lqip": null
+  },
+  "collagePhotos": [
+    {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/93f87775461d60b7fdedadb318530e1d8b41a6ff-2682x3609.jpg",
+      "width": 2682,
+      "height": 3609,
+      "alt": "Justin with a young camper at the HardCount tent",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUEBgcC/8QAKBAAAQMCBQMEAwAAAAAAAAAAAQIDBAAFBhESEyEUMWEHI0FxQlGh/8QAFwEAAwEAAAAAAAAAAAAAAAAAAgMEAP/EAB4RAQACAgEFAAAAAAAAAAAAAAEAAgMRBBIhMUFR/9oADAMBAAIRAxEAPwBcrEj8y6pmyH1bzfCEhsp2/FXGy43nKZVvW8zQj82Unn7+Kym+36JeLiWoW8Gnnipakq5UT4qx4ZucnDtlXAbcUrWpxYLqsu/YVVbI4zqLTOClq9yLMQ4xu7t5lKClsDWQGzwUj9UVPgz0yEuuTmoqntwjMpBJHFFSWaqraGVxhrcT4/sVts5jJskN5pRJXuJVqzHxllUm5yoc0W3ojJd3I4WoaOdY7inPoYepxE61Jyeb0ABLg1Ac+a69XYzVhxKybOjpO59skc092ul8/IkNV1K02044FKTHSjnkOq0qz+qK0HDU1+ZaGnpSkOungqU2kk/yiiOJjk7k16n/2Q=="
+    },
+    {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/8adccb2114728d919049ef5551c6407569e298a9-3603x2669.jpg",
+      "width": 3603,
+      "height": 2669,
+      "alt": "Daps with a camper mid-field",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYCBQf/xAAlEAABAwQBAgcAAAAAAAAAAAABAgMEAAURQQYiMRITISMzUVL/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQP/xAAbEQACAwADAAAAAAAAAAAAAAAAAQIREhMUUv/aAAwDAQACEQMRAD8AunZnGhfHVXJliTHV7ZdQnPhVoUvc1dtTV3hps0aK1GHqFOJ+RX5xSc4W0SAtsqSnuW+4J+6jci48Ysoq6IzoON51R7MbWUB5TNHakWctjzLTES4BhQKN0UjpcemFT+VZWcnq3RWPMW4+T//Z"
+    },
+    {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/30abd2e2fe07a8090521954a225e4ae78343469b-3648x5472.jpg",
+      "width": 3648,
+      "height": 5472,
+      "alt": "Justin Jefferson with a young boy at the Backpack Drive",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAcFCAEEBv/EACUQAAEDAwQCAgMAAAAAAAAAAAECAwQABREGEiExE0EHIhRScf/EABUBAQEAAAAAAAAAAAAAAAAAAAQF/8QAHxEAAgEDBQEAAAAAAAAAAAAAAQIAAwQRBRITITEU/9oADAMBAAIRAxEAPwBl3PUMJq5NR5jxO/nyHoVlF4gSpbzMKQlzxnnBpQ2e8JuCAu4ttGcTuDmcg46qAtmoJFq1q6FyGFpUOR1wTyB/KG1UFtgPcqraOKXMR15LDfmNIGFLGaKSV112I891tM04B6HqiqSaezqGz7CllBxIy+xXYLTTibYILaVZUUqzuNciuzLvExpbJW7McWQltI9ftmntq+0pn2wtlQH2Bweq0NJ2OLCnpSEgvsNjCxxwr1QUt9tUvH1L9Xsfmx3nMXL/AMcX3eNsBt0YH2K6KsChKtvBFFJ41krkaf/Z"
+    },
+    {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/5013d4bd26947015757bea8b6e1cb64563b274c8-7069x4844.jpg",
+      "width": 7069,
+      "height": 4844,
+      "alt": "The JJets Foundation Turkey Drive with volunteers and families",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAOABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCAwQG/8QAJRAAAgICAgECBwAAAAAAAAAAAQIDBAAFESEGB0EUFSIyQlFh/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EABwRAQACAwADAAAAAAAAAAAAAAEAAgMRIRQiQf/aAAwDAQACEQMRAD8A4Py35VDZlk1JksSMwJVVJ69zlWsip2K4vQqXKSBDETyx656HuMjomOv1kltgJbE33Mf7jjxmikVitchCpYhcuOuj+8w48dCqZDa/Zfybj6uowWSzKoevorTIR+KkDnDNW09ab+ntfBjXV5gij6mHBwxTHo4chtds7Wf/2Q=="
+    },
+    {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/6991299dd7a634b0e9b04b6428957a0dcacfda95-4807x3504.jpg",
+      "width": 4807,
+      "height": 3504,
+      "alt": "Chased down by the whole camp",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgABBP/EACMQAAEDAwMFAQAAAAAAAAAAAAECAwQABREGIVESExQXMSL/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/xAAbEQACAgMBAAAAAAAAAAAAAAAAAQIDEiIxQv/aAAwDAQACEQMRAD8AERLpcIMtUhgnqZTk75xnmkMbXt4t0YiQjycYJKhzxRpx4OPSlNtp7LzZyn5k1ulpK02VDbv7WlSgrq3xUrsI6hbjLqEXsmY4pSu02gE7JI+VVxHS9wmnyGS2G3N0jIGBVWq6x+hKmDXD/9k="
+    },
+    {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/ededd88c64edf840333a45aa0caf7a510da96e13-3648x3082.jpg",
+      "width": 3648,
+      "height": 3082,
+      "alt": "Handing out backpacks under the tent at the Backpack Drive",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAARABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAcGBAX/xAApEAAABQMCBQQDAAAAAAAAAAAAAQIDBAUGERIxByE1YXITFCI2UXOB/8QAFgEBAQEAAAAAAAAAAAAAAAAABAMC/8QAIhEAAgAFAwUAAAAAAAAAAAAAAAECAxEhMQQSMhNBUnHw/9oADAMBAAIRAxEAPwDeVbirSG6LJlRpRG42j4lpxlR7EOSmXk3eltMSIc32z8RaXZRkRltuQhDjr7NuSYsiJ6jJKwl1ScHk9uY820a7LorqYTbyo7chJqdJJb/j+DKbie0SpNEo6r6xbXuJLhPuEywSm9R6VGvGruAhcql1upSFyY6XVMqM9Bp5FjsAO5N+RXrLwN9dH0xnzITud1qB+gwAN0/NeyMzsVK3ejRvEAAGiyy6wf/Z"
+    },
+    {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/a3920af0eedbbcb5165cf1c43a29dff8da9e4ab7-4396x2564.jpg",
+      "width": 4396,
+      "height": 2564,
+      "alt": "The whole JJets camp on the field",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQHAwb/xAAmEAACAgECAwkAAAAAAAAAAAABAgMEABEhBzFRBRIUFiIyQUNh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/8QAHBEAAgEFAQAAAAAAAAAAAAAAAAERAgMxUaET/9oADAMBAAIRAxEAPwDC5xBmdpRTr0lm9Q7qblf3GX4gQ2+zIpPDiCddPY/PrqMn1aFY7U0qahypGJyyMkEijQjT5GTvprBk0TgoHn239cyBejPvhnDUgJayMwGvLYYYfVa6xzRrh//Z"
+    },
+    {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/d4a9796253d68b1bbcfc63c46d32f4b47a2c64cb-4032x3024.jpg",
+      "width": 4032,
+      "height": 3024,
+      "alt": "Justin Jefferson and a teammate with kids at the Backpack Drive",
+      "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGBQj/xAAkEAABBAIBAgcAAAAAAAAAAAACAQMEEQAFBhIhBxMjQUJRU//EABcBAAMBAAAAAAAAAAAAAAAAAAECBAb/xAAeEQACAwABBQAAAAAAAAAAAAABAwACEQQGIUJhof/aAAwDAQACEQMRAD8A1X+ZjDQx2M1GHRTqUey9scl8mOLpXNkqi+wgdY9NKpZzxO2jcvfOvL5hx/zP3yn4kc2XNdRw61ztIrd/H6rBUuGAXOxH246l2ayowAn3LaN4ueiKua1RJe9XhjrcPXA2IpEaoUpLHDKsYfKYw9VcUdgk/J//2Q=="
+    }
+  ],
+  "impactStats": [
+    {
+      "value": 1443,
+      "label": "Kids Impacted"
+    },
+    {
+      "value": 105,
+      "label": "Money Raised",
+      "prefix": "$$",
+      "suffix": "K"
+    },
+    {
+      "value": 7,
+      "label": "Schools Supported"
+    }
+  ],
+  "waysHeading": "WAYS YOU CAN HELP",
+  "tiers": [
+    {
+      "tier": "Tier 1",
+      "name": "Supporter",
+      "body": "Local businesses, family-owned companies, community partners, and startups.",
+      "range": "$$5,000 - $25,000",
+      "cta": {
+        "label": "Learn more",
+        "href": "mailto:partnerships@jjettas.com?subject=Supporter%20Sponsorship%20Inquiry%20for%20"
+      }
+    },
+    {
+      "tier": "Tier 2",
+      "name": "Fan",
+      "body": "Regional businesses.",
+      "range": "$$50,000 - $100,000",
+      "cta": {
+        "label": "Learn more",
+        "href": "mailto:partnerships@jjettas.com?subject=Fan%20Sponsorship%20Inquiry%20for%20"
+      }
+    },
+    {
+      "tier": "Tier 3",
+      "name": "Superstar",
+      "body": "National brands and Fortune 500 companies.",
+      "range": "$$250,000 +",
+      "cta": {
+        "label": "Learn more",
+        "href": "mailto:partnerships@jjettas.com?subject=Superstar%20Sponsorship%20Inquiry%20for%20"
+      }
+    }
+  ],
+  "footerCta": {
+    "headline": [
+      "Bigger than",
+      "the game"
+    ],
+    "cta": {
+      "label": "Off-Field",
+      "href": "/off-field"
+    },
+    "cutout": {
+      "src": "https://cdn.sanity.io/images/zil8k06j/production/8dd1e176f02b0ba66615f0fea2678b894a7788cf-1396x1600.webp",
+      "alt": "Justin Jefferson in a blue puffer jacket",
+      "width": 1396,
+      "height": 1600,
+      "lqip": null
+    }
+  }
+}

@@ -1,0 +1,927 @@
+[
+  {
+    "_id": "partnership.under-armour",
+    "brandLogoAlt": "Under Armour",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/9eeaff1c2111f7fa8797002445c619ad2aaa980e-480x304.png",
+    "category": "Fashion",
+    "description": "The signature partnership. Justin is the face of Under Armour football — custom game-day cleats, design sessions at UA headquarters in Baltimore, and a say in where the footwear goes next.",
+    "externalLink": null,
+    "featured": true,
+    "featuredOrder": 10,
+    "gallery": [
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/eac4130f974bf3a8d167cf2912610eea60746d16-4320x2880.jpg",
+        "width": 4320,
+        "height": 2880,
+        "alt": "Browsing the floor at Under Armour HQ",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGA//EACcQAAEDAwMBCQAAAAAAAAAAAAIBAwQABREHEiEUBhMxQUJRYYLh/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/EAB8RAAIBAwUBAAAAAAAAAAAAAAECAAMREgQFEzFBof/aAAwDAQACEQMRAD8AuJtzVrs5F3mXfqCIhKvrxxUnMssxoZN1kShlMOiJykQuW/r8U11FgdHOgwYzzgCRCW78rR23nLsE2yHKcFuSuTeFEQ8e1WC1OMMfBMjPTSpge2JkhIu4NyXQkl1qiWBdbTjbjhKKYMadRYbaNNXKZt8fKikXc7ADKFtExJNvs//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/1d66186974d7ed2379fefbd754679ad7d430e938-4000x2667.jpg",
+        "width": 4000,
+        "height": 2667,
+        "alt": "Justin at the design table, cleat concepts laid out",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQGAwf/xAAhEAACAgEEAgMAAAAAAAAAAAABAgMEAAUGESESMRVR0f/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAbEQEAAwEAAwAAAAAAAAAAAAABAAIhEQMSE//aAAwDAQACEQMRAD8A6PZ3Jq8Oh07NSgr2PHhk8uQTiku7bLpVjsV44LUpIIXseX0crdZRY9DltxKqMgLBQOsjdu2F1qqZbUKCXk8OvscYJv1fHzYn5ie45NNR3R8a8MNiJZpWjDsyeuST+YYxHpEDRqT2T3ywBOGMrQDSHsa8Z//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/de7dbff49c955b342a82c2e20d646096231f06f0-4000x2667.jpg",
+        "width": 4000,
+        "height": 2667,
+        "alt": "Reviewing designs with the Under Armour team",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGB//EACIQAAICAgICAgMAAAAAAAAAAAECAwQABRESBiEigQcxQf/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAdEQACAgEFAAAAAAAAAAAAAAABAgADExEUITFB/9oADAMBAAIRAxEAPwDSvMvyIdVXtWoEkasqL0AT5d+ff1iu15fb382uGmBgrOgkss3rnn9jnKTfVKrNPXnrpKkiFSSOCOcka3hFJusJt3RXB+MaycAYHc15BU/cUaGxl1jSLdrS7VkmaQRsR2ZGYn7wyV8kpzaXaNUgvWHjChgWPsc/zDFYdOAYUMvon//Z"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Protect This House — Under Armour anthem spot",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/02452303-d3f7-4a54-ba77-801558aad050/play_720p.mp4#sanity=zil8k06j/production/3c9b750f43cdd4d8a1bd2e8129521ed5e123dca3.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/89bc307d-cd9a-46f2-8296-aff873b9f499/play_720p.mp4#sanity=zil8k06j/production/956454ca23d4bea5106216a7f3fbbb878263c933.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/7f61b788f11f5980dc2dde4f6ac3f123f3fa1bed-4000x2667.jpg",
+        "width": 4000,
+        "height": 2667,
+        "alt": "Sitting with the Under Armour football design crew",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAYHBAX/xAAhEAABBAICAgMAAAAAAAAAAAABAgMEEQAFEiEGEzFRYf/EABYBAQEBAAAAAAAAAAAAAAAAAAUCBP/EABsRAAICAwEAAAAAAAAAAAAAAAECAAMEFDFh/9oADAMBAAIRAxEAPwCk7PezobCl6pptQbIUWwbB+xecub5H5FNZW5HbjNBSiAFdFArrvNPJuJs0tNMov0cwpXdHFx6AYrrzRkOuIfBcomuJ/MK3a0qL288m7WYuFSULU8nNbGVMIVJKB7CPi8MRNUicIoQNg4UoPEWm+sMQQVsoK8k2YloYgif/2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/477450ef43fe6a3830b5ad077e8b5990ff9ea515-4000x2667.jpg",
+        "width": 4000,
+        "height": 2667,
+        "alt": "Talking product with the Under Armour designers",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAYHBf/EACUQAAEEAgAFBQEAAAAAAAAAAAIBAwQFAAYREhNBYSEiMTJxgf/EABUBAQEAAAAAAAAAAAAAAAAAAAMC/8QAHBEAAgICAwAAAAAAAAAAAAAAAQIAIRIUAxPw/9oADAMBAAIRAxEAPwB7Vivg04SJD7ccY7QuEacPb4XEur3CPba/srNLLUbA/VD+vN2Xl/mZ+uw2L5XhseqaCfSJEcVBMfKYgNxWKnZ5jkBtWmm3SAWkJeH7gIqZdYNiLapmRUoutaNNsKluS+8rRmqry/OGUChcIKaGg92kXDJ1kibnJ4T/2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/662d1bc0c750490e0d2668777bc6e470e122f84b-2880x4320.jpg",
+        "width": 2880,
+        "height": 4320,
+        "alt": "Prototype cleats across the table at UA HQ",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAcCBQMEBv/EACQQAAEDBAICAgMAAAAAAAAAAAECAwQABQYREiEUIhVBB4GR/8QAGAEAAgMAAAAAAAAAAAAAAAAABAUBAgP/xAAlEQABAwEGBwAAAAAAAAAAAAABAAIDBAURE1FSkRQVITFBgaH/2gAMAwEAAhEDEQA/AM2OvQcizR253lxtpuEnhHZT2CsDsitrJ7hLyFqbDaWrwmdFtsH1Pfe6WlinPxn9GKVhPZUlWjTCl29UoQI/yjDPlKBWhrrgCPs0tMJBa0DfsUSapoJB+eFRJtdkjNoblzlofA9ktDaRRUslw+BGuCW4k5DzYbG1l3ezs7oojAk13KMdmkqmXGTZZaI8WP8AIvpUlQcZVvoHsEVZSbFkdxvKpNthrjtLHPm6da39arofwTY4jdokSeKlvJdKeSzv+UzXTrZAAArCrtMtJbC0e1eKlDurykY/jGYsOqbiMAsA+nJSSaKdCiVHZJ/VFL+Z1GQ2RHCR5lf/2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/114eb02eda28b7c1b4b2fe53edec9134092cc516-4320x2880.jpg",
+        "width": 4320,
+        "height": 2880,
+        "alt": "Justin with the Under Armour team",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgAF/8QAIRAAAgIBBQEAAwAAAAAAAAAAAQIDBBEABQYSIQcxQVH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEAwX/xAAZEQEAAwEBAAAAAAAAAAAAAAABAAIDBCH/2gAMAwEAAhEDEQA/ABW8rMgpTC+k1i7GAsHfJiGR7phvS39rpV69vdi1XsqjBDNn8+DW5t/zvZEfs6SyOQF7M3oA/mjn0nhyVaktiK/McMvVWXJUD9A51DHs5tV8iNOfasJc0uU7XILEkTzTDABkc+scatJuIVoDx+q1itWnlYEs7xjJ9xq1rU0yAAgbFln/2Q=="
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Justin Jefferson for Under Armour",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/32f60b78-093f-49e1-b6f9-6b73e4b1ddbd/play_720p.mp4#sanity=zil8k06j/production/749514dde4b4d9d9644ab9ad0c8bb042789e62d4.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/ead9de11-0830-41cf-9b61-60cb2e421356/play_720p.mp4#sanity=zil8k06j/production/58b75363a1bf5ff6c42e89ac6d7b9373eea34a7d.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/5c4e44bbddb8a9479222f89c94608e826245cf4c-4320x2880.jpg",
+        "width": 4320,
+        "height": 2880,
+        "alt": "All-hands selfie with the Under Armour staff",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUHAwb/xAAkEAABAwMDBAMAAAAAAAAAAAABAgMEAAURBhIhEzFRcRRBQ//EABYBAQEBAAAAAAAAAAAAAAAAAAIDBf/EACERAAEDAwQDAAAAAAAAAAAAAAECAxEABCEUIkFhMXHR/9oADAMBAAIRAxEAPwDOBdY8y5qvEWMiTElHpt5/Ln78UnvduF+1AUw2EQm1JJwheA4R3HuleiXH7VquXGgu7IJf2GORke81R9WWSLdILKSDHcbWVoca4IJpBDL9vqJMCJB4mPFNRUl+FDcrn1UhnxYcSUttqQrbnJAOdp8UV0Nl0JEucL5D0yQle9STjHOD3orOcu7JCinOOqoLVxW6Bns/a//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/362ecbec4f5d84cbfb3decbfbb285cb6f6a531cb-4320x2880.jpg",
+        "width": 4320,
+        "height": 2880,
+        "alt": "On stage at the Under Armour campus visit",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFBv/EACMQAAICAgEEAgMAAAAAAAAAAAIDAQQFEQAGEiExQVFxgeH/xAAXAQADAQAAAAAAAAAAAAAAAAABAgME/8QAHxEAAQQCAgMAAAAAAAAAAAAAAQACAxEEBSExQWGh/9oADAMBAAIRAxEAPwBfGLDDV6ldVRD7DB7twMkUfnl7qq5YqIVKqtV6CXEnsfMT9cw2LtZPFExlW8MEyI3JJifH1743kOo8o6mQm1GyWQzMJ17/AHza3ZQygOY48elAYcrCQ5t35tSs1hqwXe5z0qNowyQGfA7+OHMtZiwbdm+CnWtyH94cB2ePffxOMWUBf//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/d8eb6e0780e3a92fbc97e61e7c0ed28573bd5d3d-4320x2880.jpg",
+        "width": 4320,
+        "height": 2880,
+        "alt": "Signing off the Under Armour campus visit",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMHCP/EACEQAAEDBAMBAQEAAAAAAAAAAAIBAwQABRExBhIhEwcV/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAcEQACAQUBAAAAAAAAAAAAAAABAgADERIhMUH/2gAMAwEAAhEDEQA/AGcGmsxLmyFtmg2bvgNoq9c42tVvjd/N+C1/UMDlI4Qmo6TGlxWU/wAwuUhzlEA3S7p6PXSa3VR4+7Ilc4lNpIcaYjPovzFfDzjdMrErkx2Ib0hTOC+7lmmX22MvKLqr234C0Ui+xUbnr8y6oQoWOuaKQOLdkxBB5P/Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/ba7299467e0884b34cb49757503290f21f0bf1e2-5306x6633.jpg",
+        "width": 5306,
+        "height": 6633,
+        "alt": "The chrome Under Armour cleats, paired",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAQGAwUH/8QAJhAAAgICAQIFBQAAAAAAAAAAAQIDBAAFESExEjRBUXETIiMykf/EABYBAQEBAAAAAAAAAAAAAAAAAAIBAP/EABgRAQADAQAAAAAAAAAAAAAAAAABERIh/9oADAMBAAIRAxEAPwChFKrQHLpGhK9Acy10sNe4Z/pLKG7A4xuKlqHZwC5CTVfp4+55xdDFRuTVpuFjB8cYb9jhzxrTW/qve2s1iRm5Y/wYZXmik/5BwQcMK09Ltw0b+raGZQwbryO4PuMgbugezskW1PFYhU/aXXhwPbn1ysqeSPxnKn82vyMcyjdNXXjUIgAA9MMYbDCr/9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/b005523d9d5afecd7620c2a276d33d84b5ff7b54-4320x2880.jpg",
+        "width": 4320,
+        "height": 2880,
+        "alt": "Under Armour campus visit",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EACIQAAEEAgIBBQAAAAAAAAAAAAECAwQFABEGEhMUISNRYf/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAdEQACAgIDAQAAAAAAAAAAAAABAgARAwQSMTJB/9oADAMBAAIRAxEAPwBm9i0VfSS5VeU+obAU2g+yxs4hwdups1sv3DkxDzqiC60dJ0PvI8acURZOmmytQAK1DZy7xCa552eyUKbTv4+o0cCdnXLUyXf2JXVzKlq/U25Sjh9JamI9DnyV9AvyeYje94ZWvOPVV7PM2dGUXikJPVwgaH5hjVGACuAgCcxPqf/Z"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Under Armour origins film — the St. Rose trophy haul",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/ba91f318-a18d-4c31-bf4b-236d70b7fd67/play_720p.mp4#sanity=zil8k06j/production/7099edd9408d52833fd4aa0bc0981fb957622813.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/ee995045-1de7-431c-9a77-d8d4e12b9804/play_720p.mp4#sanity=zil8k06j/production/1646b875c953b0289b3e05f6e5de6f2ad33feaee.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/fe37b05d38dc403be42386bedb016463b330041e-4320x2880.jpg",
+        "width": 4320,
+        "height": 2880,
+        "alt": "Under Armour campus visit",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBBAUG/8QAJhAAAQMDAgUFAAAAAAAAAAAAAwECBAAFBhESEyExQVEHFCIyYf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/EABwRAAEEAwEAAAAAAAAAAAAAAAIAAQMEETFREv/aAAwDAQACEQMRAD8ATiUiY7LbkPe6NFG3cVF6sRfFMuuBWK8GkoeSJtycu8W5fsPytcJiGR3C33QLxF3ukuRhd/Pcn7VW3ZZLm582RMCIrVJ7fhp8URuunbvTzUCjLwL7WDOOMu2lF2xKHAmvAOG07U5o9HdaK1PVkS2vMCx4ZCjDwWORqPXlqlFC1QuqeYeL/9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/40012b53a62bdfdd758e5e80859e06e01df2ebfb-4000x2667.jpg",
+        "width": 4000,
+        "height": 2667,
+        "alt": "Under Armour campus visit",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAcIBv/EACQQAAIBBAEDBQEAAAAAAAAAAAECAwAEBREGEiFBBxMiI1Fx/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBf/EABwRAQACAgMBAAAAAAAAAAAAAAEAAhESAxUhQf/aAAwDAQACEQMRAD8AT3IYcXa22MjwjSFpGPWjHZDeKYCen+fzmJsBeywLFbLuP56A34IHmsTwy1GZy1rbysEKSCRXC7IIqoeL8etoMYsjSzyCYdRVn7Df5UqaJm/yFvZXUJLmV4/yCzyE0N17ZlVu/wB2v5RVFNhsU0khmsUlfqILuxJNFaHXc76YjhYn/9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/d43f75a06bcb45f61591a17ec10c4f2889b79a0c-2880x4320.jpg",
+        "width": 2880,
+        "height": 4320,
+        "alt": "Under Armour campus visit",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAYHAwX/xAAoEAABAwMCBQQDAAAAAAAAAAACAQMEAAURBiEHEhQxQRMjMnFRwdH/xAAWAQEBAQAAAAAAAAAAAAAAAAAEBQb/xAAkEQACAQIFBAMAAAAAAAAAAAABAgADEQQSIYHRBSJB4TFhkf/aAAwDAQACEQMRAD8AnuneHVvs7YTdTOiZd0a7Bn91QtO3K2PyelKOjsJpMi2HZV8bf2kriNNeO4BHh+rIF1xcARbClOPDm3Q4IOQbhyOCYo4Zj3a223q/RykWpHt+vO8K7lVu/wAxpLVUVlUb6BQFE2FSxhKKj+t9YXCPqOSxbGR6RpeQFUVVSx5opQq0RoaZP7CnDVG1D22HMXtVGczVKNx5C+4aIJVS9P3EXrfIgz2jC5ugLLUgMemqp8e1QaLJcjSm3HSJ1G1ymV3x+KqcOa3brNZZFrAxR+QrpI8vNhU8fVC6ZlrsbaXPHuIxIKBUbwJjdrZPbnujP9x9F3IEyi/VFc2/6lKTdXzcR0SReXALtRWqRHyi9W23qHDm3agI35n/2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/ed868e639f855875375f17ea18eeb437951ce6c9-2326x3489.jpg",
+        "width": 2326,
+        "height": 3489,
+        "alt": "Under Armour campus visit",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAUGBAMH/8QAJxAAAQMDBAEDBQAAAAAAAAAAAQIDBAAFEQYHEiETFCJBFiMxUXH/xAAZAQACAwEAAAAAAAAAAAAAAAABAgADBAX/xAAgEQABBAEEAwAAAAAAAAAAAAABAAIDEQQTITFREkGB/9oADAMBAAIRAxEAPwCPtFx1O5B9BEtsgBKs+xRGB8itavq9nipNvmjBz0s06Or3ol8bskM+Ga45hTpIIAx809v2p5tssLxVKbDrKsh8LBKx+uNOIsat7soec7jZ9KEn6r1SHwlFsfbShISEqJzRXo9mfYultYmTru2l51IUQkJ6FFWthgAAbx8UOTL2pR7ahMCa9c27hKkPNBS0px7lGpsaMu+oLjGYmty4jXA/ccHRH57rkxubfZ8Fbvn4eMnsDBP9rVA3guvog062lakpxyKRmuQ2HNY0EuG62a+PZFFMIu0tzaDiEzXuIWePFWARRSiNvBd4TZaKEu9lXJQ77+KKepxyUdSDpf/Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/2a1d33237bd8664fc23225954849c16df54a84ca-4096x2728.jpg",
+        "width": 4096,
+        "height": 2728,
+        "alt": "Running routes at the UA Next camp",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAcEBQb/xAAlEAABAwQBAwUBAAAAAAAAAAABAgMEAAUREgYUITETFSIyUXH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAgME/8QAHBEAAgICAwAAAAAAAAAAAAAAAAECIQMEEjFh/9oADAMBAAIRAxEAPwBmco5tHtXEfdTqFrV6TacZ+VWdlvxlRYq3XW2coSt3cYzsO1K13iyZtmEOdOefb3CxsPripN1sypUUR+sdbbUAnCR4wP7WeOyn2TTRvL3zLorgthkx3UJAwoOCikjE4iChek9xI3UO6Nj5/c0USz3QnL0//9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/591dd74ce70efcc2c44e984fc820eca2be29aa03-2252x3153.jpg",
+        "width": 2252,
+        "height": 3153,
+        "alt": "The JJETAS zine with London On Da Track",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAcABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAYHBQL/xAAmEAACAQMEAgAHAAAAAAAAAAABAgMABBEFBiExEhMUIjJBUWGB/8QAGAEAAwEBAAAAAAAAAAAAAAAAAQQFAgP/xAAdEQACAgIDAQAAAAAAAAAAAAAAAQIRAxITIVEE/9oADAMBAAIRAxEAPwCsa3vSw0+zaTT4o28Rlndvo/lTBd7DdWtNayXPuiUEgE4GR+BSXaN8JJfytO7QykcsMnjvilWzubbSdZe8tWJVnyC5xhT3is5XzW7Z2wwWJLpWXBDAQfCZQAcYz1RUeXWbj2zkTysrSEqQcZFFLv4431JDnKOG541XTBKpCSKcAAcc0r2u3l1m4R7tD4IAVccA81QpII5SokUMB9j1XQjSJSI1Cj9CqDhTJu9pIwRs/TSo+aVeOgeqK1XdvI80UdF4Dd+n/9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/30ce764b518b605f1d525df20e1fd78ce3a8ccd6-5306x6633.jpg",
+        "width": 5306,
+        "height": 6633,
+        "alt": "The chrome Under Armour cleat in profile",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAUEBgEDB//EACUQAAEEAQQCAQUAAAAAAAAAAAEAAgMEEQUSEyEzcWEGIjGBof/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/EABgRAQEAAwAAAAAAAAAAAAAAAAARATFB/9oADAMBAAIRAxEAPwDFXRJ5HNccgZxglNn6NGJWRhwD3HHwE2utbUmHLWeXR9hwzhQrWHATwn7Ce+87UTorbPoulVHNju2H8+0F2EJddrSSz79+7IHeUKpdkioVp4TytHf9Vb1X6eoizyQgxvIwS04z+laK3iHpKNQ8g9pzpKxJpEMbtjfwPlCnW/MfSFhR/9k="
+      }
+    ],
+    "heroImageAlt": "Under Armour",
+    "heroImageUrl": "https://cdn.sanity.io/images/zil8k06j/production/ac5710872c7f703f0a4f7d887ad30a6dd280fcdd-1200x1600.webp",
+    "homeHero": "custom",
+    "listOrder": 10,
+    "name": "Under Armour",
+    "slug": "under-armour",
+    "videoFirst": false,
+    "videoPreviewUrl": "https://vz-e818877b-c14.b-cdn.net/117a7505-bef3-4b23-8e19-9e73e08983d9/play_480p.mp4#sanity=zil8k06j/production/49d6dd8f19d6a7cff0ade86a0192e01fa89b3fc9.mp4",
+    "videoUrl": "https://vz-e818877b-c14.b-cdn.net/a6226ad6-724a-4beb-8923-f021bc92c1d0/play_480p.mp4#sanity=zil8k06j/production/5d99d34b3de3eea376a1b43e87679d5d3ed30081.mp4"
+  },
+  {
+    "_id": "partnership.gatorade",
+    "brandLogoAlt": "Gatorade",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/b779c0a86da7ba32d550b42cd4fd176112c3e704-3840x2160.png",
+    "category": "Beverage",
+    "description": "Long-running hydration partner, with Gatorade campaigns, sideline visibility, and a recurring slot in their game-day rotation.",
+    "externalLink": null,
+    "featured": true,
+    "featuredOrder": 20,
+    "gallery": [
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Gatorade spot with Justin Jefferson",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/16c0a4cc-7697-4f18-a97c-a6ef380ee656/play_720p.mp4#sanity=zil8k06j/production/785ab6eba3e45c437dbcebda3080b31bc80abb9d.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/60d5ad05-864d-4d74-94ec-17e11f16d65f/play_720p.mp4#sanity=zil8k06j/production/bcb2f0ebbcd67e7238dc4dd1a5b581f8b3b4d6fa.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/38fdd30d55404c16eace4e21986333bd11f6870b-1134x1419.png",
+        "width": 1134,
+        "height": 1419,
+        "alt": "Justin Jefferson in profile, purple Gatorade sweat beading on his face",
+        "lqip": "$1f"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Gatorade social spot with Justin Jefferson",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/b7ba6684-7727-4449-91af-0b0f7aa3c94c/play_720p.mp4#sanity=zil8k06j/production/f2e327344d5ca862d78c04c78d722f0f084793c9.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/5c60b591-fad3-4bba-9bb5-575042c521c8/play_720p.mp4#sanity=zil8k06j/production/6dd72d36acc73cd44442d7ab3e2c55775f75e8e4.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/e5249f0485b25079ee5d510daf3fda9de578fe23-1134x1419.png",
+        "width": 1134,
+        "height": 1419,
+        "alt": "Justin in the retro Gatorade track jacket on Up & Adams",
+        "lqip": "$20"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Justin Jefferson laughing between throws at Gatorade's indoor target range",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/db4600e6-4d27-46c8-bc4d-2b8ad7805cda/play_720p.mp4#sanity=zil8k06j/production/94460c42647fdb007080515496b2f371714ae4f4.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/1f0bbd61-f3e9-437b-ba90-1e392e0ab9be/play_1080p.mp4#sanity=zil8k06j/production/f9aaf413c062e7745db70eb082cdb14ab05d2ac4.mp4",
+        "playPhoneUrl": "https://vz-e818877b-c14.b-cdn.net/1f0bbd61-f3e9-437b-ba90-1e392e0ab9be/play_720p.mp4#sanity=zil8k06j/production/f9aaf413c062e7745db70eb082cdb14ab05d2ac4.mp4"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Justin Jefferson in shades taking Alex Day's questions on the Gatorade set",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/a36900a1-f605-4843-a692-8364bc78aba2/play_720p.mp4#sanity=zil8k06j/production/e3e49f82f6262bc878cf36765cd2ebf8ce9f792a.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/938efac9-b819-4939-846d-837e7014bc57/play_1080p.mp4#sanity=zil8k06j/production/1897a6fea77f24471c6f141fa16bc2e3d1acc3bd.mp4",
+        "playPhoneUrl": "https://vz-e818877b-c14.b-cdn.net/938efac9-b819-4939-846d-837e7014bc57/play_720p.mp4#sanity=zil8k06j/production/1897a6fea77f24471c6f141fa16bc2e3d1acc3bd.mp4"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Justin Jefferson pushing a weighted sled in a Fast Twitch training montage",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/2f4d13b8-27fc-46f1-975f-99245872035d/play_720p.mp4#sanity=zil8k06j/production/9e98a28d795179a07ed1edac83370c08421fd9b6.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/a7948305-d280-4cde-94e0-e1affaa48b8d/play_720p.mp4#sanity=zil8k06j/production/90763939061a47460f46cc82ee2dfcb7a8a897b2.mp4"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Creators run a blindfolded turf drill at Gatorade HQ, calling their best JJ impression",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/b7c63442-0462-4e15-b8f8-3443788df44d/play_720p.mp4#sanity=zil8k06j/production/d4cf726ca77b71ac3d2315e904713e8b27d8de9e.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/c9f63213-1ed1-4d8d-9cfc-51c8f9262a3b/play_720p.mp4#sanity=zil8k06j/production/bee5538cef26b6eb29b20ef17223a803e7d4f37f.mp4"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Hydration games on Gatorade's indoor turf — quizzes, spikes and a hydration meter",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/47f1281e-127e-4f8c-a5d8-a40e405be575/play_720p.mp4#sanity=zil8k06j/production/9615af97e87e50b9222c2f4d06eb9ac5e86baf33.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/0d7dc490-538b-4921-a0d2-7968e8b31a66/play_1080p.mp4#sanity=zil8k06j/production/4c9725e9910d6b2bf5d4b322f206b37cab1431c9.mp4",
+        "playPhoneUrl": "https://vz-e818877b-c14.b-cdn.net/0d7dc490-538b-4921-a0d2-7968e8b31a66/play_720p.mp4#sanity=zil8k06j/production/4c9725e9910d6b2bf5d4b322f206b37cab1431c9.mp4"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Justin Jefferson answers a quickfire round on Gatorade's orange set, Fast Twitch towel around his neck",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/b171c317-80ce-4525-877a-6c261cdb583b/play_720p.mp4#sanity=zil8k06j/production/52e5d7553fd1ca23d0d6c309a0648fbc1118476c.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/df91ecca-5ba4-4d96-b175-264fc2c8797c/play_720p.mp4#sanity=zil8k06j/production/5f2a4c9e7c141c8c27ab7641e1f2ad3d74ff6a59.mp4"
+      }
+    ],
+    "heroImageAlt": "Justin Jefferson — Gatorade",
+    "heroImageUrl": "https://cdn.sanity.io/images/zil8k06j/production/6fa7c7fd07fdbf07119a115343881c3a9913963f-1067x1600.webp",
+    "homeHero": "custom",
+    "listOrder": 20,
+    "name": "Gatorade",
+    "slug": "gatorade",
+    "videoFirst": null,
+    "videoPreviewUrl": null,
+    "videoUrl": null
+  },
+  {
+    "_id": "partnership.pepsi",
+    "brandLogoAlt": "Pepsi",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/75f4f38f87df8cf9c852346a428258da840cb8e8-900x898.png",
+    "category": "Beverage",
+    "description": "National Pepsi campaigns — suiting up in the gladiator arena alongside Megan Thee Stallion and crashing tailgates with Josh Allen.",
+    "externalLink": null,
+    "featured": true,
+    "featuredOrder": 25,
+    "gallery": [
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Pepsi's Tailgate Crashers spot — Justin and Josh Allen swap jerseys for the blue Pepsi jumpsuits",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/376a5c1c-3b08-4dae-9e4e-cbe621d34fa5/play_720p.mp4#sanity=zil8k06j/production/bc1ae8ad5f026164122c005d108774fab7c200ea.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/0264ecb1-93c1-4c52-b7e9-e033512aec2a/play_1080p.mp4#sanity=zil8k06j/production/47463e62f608c76d72007a7410cd99f4e7690c95.mp4",
+        "playPhoneUrl": "https://vz-e818877b-c14.b-cdn.net/0264ecb1-93c1-4c52-b7e9-e033512aec2a/play_720p.mp4#sanity=zil8k06j/production/47463e62f608c76d72007a7410cd99f4e7690c95.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/84b58730e443eb19fb353645afff156f47792ec8-1272x677.jpg",
+        "width": 1272,
+        "height": 677,
+        "alt": "Tailgate Crashers key art — Justin and Josh Allen in the blue Pepsi jumpsuits",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUBBgf/xAAiEAABAwQCAgMAAAAAAAAAAAADAQIEAAUGETFBEiEHYYH/xAAWAQEBAQAAAAAAAAAAAAAAAAADBAX/xAAdEQACAgIDAQAAAAAAAAAAAAABAgADITETFJHw/9oADAMBAAIRAxEAPwBDjuZQbMJrY0NJBRj0gicI6nAvlCShEZMswI3lwrW7Rf2sygvcKGeSxdHRmkf3qosEs9xkkDNK4wkbtGu6WtO1mLqAd7kyUVKMrG2SZQU13M8BTeC644oqmTPR3e177+6KXltGA33kPq0naz//2Q=="
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Pepsi x Gladiator II spot with SZA and the NFL gladiators",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/5b32f4af-e139-4fa6-82ad-5a169efbb833/play_360p.mp4#sanity=zil8k06j/production/12345e71d04253aafb6712110d0aa3f69a29cb37.mp4",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/d513d03e-d230-4ba0-afb1-49f9948b5998/play_360p.mp4#sanity=zil8k06j/production/1b894d12d2b872344f2a02c056361a8992407f05.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/01e34b7b45b19fc2bc898a807bf1ce862caa4c3b-3024x4032.jpg",
+        "width": 3024,
+        "height": 4032,
+        "alt": "On set for Pepsi x Gladiator II — SZA and the gladiators between takes",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAMCBAcFBv/EACMQAAICAgICAQUAAAAAAAAAAAECAwQAEgURITETBhRRYnH/xAAZAQACAwEAAAAAAAAAAAAAAAABAgMEBQb/xAAcEQEAAgIDAQAAAAAAAAAAAAABAAIDEQQFUZH/2gAMAwEAAhEDEQA/AMnr1LD1vnCNp46JHvOlUriOaMXmMMbeNj+cs8ZY5pEhgmoh4pXCGOROuv2x/wBTw8i0CfDSWcBtA5XvXrDyezzVyOLR9gw8PG1LxE0bQPpsGHsFfRGGPepy9hY3ahN4QKOo8Mt0yrUbJuQ2pp0TTuZgltcjHaggBCgDX+Yn7O1YqCF6+g33PnPWV1Hxg9DvLNiNUVdVA795yd9KPk16qCeyHFRiHj4I3I2VQDhkUQFQSMMRjbn/2Q=="
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Walking the Gladiator II Pepsi set",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/04716e9e-6ba7-4988-be8d-5008de7aae4e/play_720p.mp4#sanity=zil8k06j/production/34d00ed690dd34cf3b264f23f38ad9c69a5d8ec3.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/98d2cef3-7739-4e97-be90-31118852a5b8/play_720p.mp4#sanity=zil8k06j/production/5787eaf0527239abb52256802f3a3f3df563a349.mp4"
+      }
+    ],
+    "heroImageAlt": "Justin Jefferson in the blue Pepsi jumpsuit",
+    "heroImageUrl": "https://cdn.sanity.io/images/zil8k06j/production/e27047dea6d62b0f3c470708df028751b2e18a50-2560x1936.webp",
+    "homeHero": "image",
+    "listOrder": 25,
+    "name": "Pepsi",
+    "slug": "pepsi",
+    "videoFirst": false,
+    "videoPreviewUrl": null,
+    "videoUrl": null
+  },
+  {
+    "_id": "partnership.general-mills",
+    "brandLogoAlt": "General Mills",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/85d204ad561aceaa24c53a72bf7efd82d28421fd-480x408.png",
+    "category": "Cereal",
+    "description": "Cereal-box royalty — Cinnamon Toast Crunch covers, the limited-edition Griddy Toast Crunch, Justin's own Jettas Mix, and aisle-side spots with Terry Crews.",
+    "externalLink": null,
+    "featured": true,
+    "featuredOrder": 30,
+    "gallery": [
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/2d62a54a7cfeb995fa70382c96aada799fc1c08c-2000x1319.jpg",
+        "width": 2000,
+        "height": 1319,
+        "alt": "Justin beside his Cinnamon Toast Crunch cereal box",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCBAf/xAAhEAABBAICAwEBAAAAAAAAAAABAgMEBQAGEiEREzFBcf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGREAAwEBAQAAAAAAAAAAAAAAAAERAgMx/9oADAMBAAIRAxEAPwDUNiu7Fi5kFuUtDDayniD0cYbjsD1ZVxZRfWhCmkk+D2ScY3unQ7CYtxbriOauSgkfcjfaVBtJkAyXXS2wz6w3+Hx8P9xbjSgOVWm9eDzUZKplDGkewuBwcgonDLWvVbVTVMw2FKLbfQJwwSFKf//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/352a8b8fd0d047bb8b2d43e1bfad0d85b006ea89-2048x2048.png",
+        "width": 2048,
+        "height": 2048,
+        "alt": "The limited-edition Griddy Toast Crunch box",
+        "lqip": "$21"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/6a2cc56009c754e36ccc423fb1c91b96708a0401-2048x2048.png",
+        "width": 2048,
+        "height": 2048,
+        "alt": "The Griddy box back — career highlights and Q&A",
+        "lqip": "$22"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/1b7473e80105f84795317ba9914c3f7d7f2f9e5e-1440x1800.jpg",
+        "width": 1440,
+        "height": 1800,
+        "alt": "Justin Jefferson's Jettas Mix cereal box",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAZABQDASIAAhEBAxEB/8QAHAAAAQMFAAAAAAAAAAAAAAAAAAYHCAECAwQF/8QAKRAAAgEDAgQFBQAAAAAAAAAAAQIDAAQFBhEHEiFRCBMiMkEUMTRy0f/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAGxEAAwEAAwEAAAAAAAAAAAAAAQIRAAMSMWH/2gAMAwEAAhEDEQA/AL+L2u5sTqi/wasbe4cbpcs52VT2XvTSZc39vNGMhqK+HmKGX1Eg/wApV+JPE3b8SHyMYQQQxIeZztzEfA70hNRumeliCulqphDNudwWHbajZzfmZOIFST7pWeH+eafhnYNPO87CSQCRzuSAelFV8PNr9NwrxcfMG2L9R9j1opMMmS/GPTYyWcluOYcjoElLLzcij5XsabS20piJb1bfGm7ed/SriIkDv8VJHUX50v6isemfeKnCFqbqe4VQOvu39A2UWM0rZWsEPlIgPp2260V3Y/aKKdRBNOTTd//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/8bb45ba98687c7b50f25c99fb372acf3db9f94ea-3000x2000.jpg",
+        "width": 3000,
+        "height": 2000,
+        "alt": "Digging into a bowl of Cinnamon Toast Crunch on set",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUBAwf/xAAjEAACAQQCAgIDAAAAAAAAAAABAgMABAUGESESEwdhIzFB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAaEQEBAAMBAQAAAAAAAAAAAAABAgARIQMS/9oADAMBAAIRAxEAPwDLNB0ODaGnee4eFz3bxKB+Qf0n6o3TQks9wx2Ix9zb+y9jB4B5ER+zVnxNNPjtvt3gmY+cbIA3YUVOxrLZ7zjb33GSWSRnII4A7/VXqSn6XuOZ1ABiDO6LkMRkXtGaGYqAfNG6PNFNdyzM15m3m8Fj5UDxU9CilPnKdwuh1n//2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/9e912c72dcf0a73f7913fd4a0d0555a793354bd9-1440x1440.jpg",
+        "width": 1440,
+        "height": 1440,
+        "alt": "Cereal night with the receivers — Lucky Charms and Cheerios in hand",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAcFAgj/xAAlEAABAwMDAwUAAAAAAAAAAAABAAIDBBESBQYxIUFhFSIjUXH/xAAYAQACAwAAAAAAAAAAAAAAAAABAwACBP/EAB8RAAICAgEFAAAAAAAAAAAAAAECABEDEgQhMTKRof/aAAwDAQACEQMRAD8A85+jTOgzZ7j9WXFNpE87SbEWNuFRaTdGhRaf8eLam5DiR0I8LV1fem04I4Y9KpBk6JgfJbh3cIHIxLEL0H2aDx1Go3Fn0LkpdoNSCRg4/gRUCo3vo+Ywha7p1Nu6JyZEZQStRT4tWK7A1JNTtDpADwVqx0kIaTjc+URA+AlB3mW6NuR55RESZJ//2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/f2e7ef3f99c7ef7dc4d8ae0d03f71061de8e317e-3000x2000.jpg",
+        "width": 3000,
+        "height": 2000,
+        "alt": "Hitting the griddy with the Cinnamon Toast Crunch square",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwAG/8QAIhAAAQQCAQQDAAAAAAAAAAAAAQIDBAUAEQYHEhMhMUJR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ADLpJyiJSM2VdMVIaXYBLSHGh7Ts6xCruD8UhuzGnksyHe8+JcpelOHWzoZl6qrhrn+VbKC53A7A1mjuOMw7eW3IeW4ggfCTgDF1EkwrF5koCE7JSkH679ZYwp4BVODucU8tX6o7OWB//9k="
+      }
+    ],
+    "heroImageAlt": "Justin Jefferson's General Mills cereal boxes — Cinnamon Toast Crunch, Jettas Mix, and Griddy Toast Crunch",
+    "heroImageUrl": "https://cdn.sanity.io/images/zil8k06j/production/2c51604620a68eed0f583a35bed4b2266dd4d855-2223x1986.png",
+    "homeHero": "image",
+    "listOrder": 30,
+    "name": "General Mills",
+    "slug": "general-mills",
+    "videoFirst": false,
+    "videoPreviewUrl": "https://vz-e818877b-c14.b-cdn.net/77351573-decf-43ea-873c-7eec9185800f/play_720p.mp4#sanity=zil8k06j/production/4594d4905989736be512bc770a19b91ecf91c32e.mp4&phone=480",
+    "videoUrl": "https://vz-e818877b-c14.b-cdn.net/682c1738-0725-442b-9c06-eddc1d499b1d/play_1080p.mp4#sanity=zil8k06j/production/42532f2b122f828d1e547f73b657d4105cab816a.mp4",
+    "videoPhoneUrl": "https://vz-e818877b-c14.b-cdn.net/682c1738-0725-442b-9c06-eddc1d499b1d/play_720p.mp4#sanity=zil8k06j/production/42532f2b122f828d1e547f73b657d4105cab816a.mp4"
+  },
+  {
+    "_id": "partnership.oakley",
+    "brandLogoAlt": "Oakley",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/09271aa8cb1971a8ad694ac9f7243f99f174a251-480x254.png",
+    "category": "Eye Wear",
+    "description": "Lifestyle and performance eyewear collaboration with Oakley, from training visors to off-field shades.",
+    "externalLink": null,
+    "featured": true,
+    "featuredOrder": 40,
+    "gallery": [
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Oakley teaser — something special is coming",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/ec839dcb-3f67-4d71-8174-da7f7d019de2/play_720p.mp4#sanity=zil8k06j/production/8fcbf6425e4422b1aca532b1773d288a641a4a44.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/c82bb20a-5663-471f-8f52-51f478b559f9/play_720p.mp4#sanity=zil8k06j/production/ac84fabcff4d7c9cad3482467d13d9fd7c0a8f55.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/9690ac92319026cd3cc8bf9d833da0782db0fd1e-1600x2400.jpg",
+        "width": 1600,
+        "height": 2400,
+        "alt": "Justin in blue Oakleys at the Oakley launch, eyewear cases in front",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAYHBQP/xAAmEAABAwMEAgEFAAAAAAAAAAABAgMEAAURBhITIQcxYRQVIkFR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEE/8QAHREAAgMAAgMAAAAAAAAAAAAAAQIAAxESMQQhQf/aAAwDAQACEQMRAD8AZtVna6wUpzgGkh/VkeJKjNyAON93iSpBGUn5FZ+s9QfdNRNGDeDHhNtoCgOsqUaxtcQZUa4RJTaIkhEICQQD2sZ9mjN2kZHHj8Q3LsSlyUo5Mk5697c0Uuq8gRILbTd1irYkLbS5sRhQ2n0c0U3IH7MxRh6yRG9yhcr3JeaHGgnISn1XJuc+j6hDktwlxG3ae9w/lV1vxFHa0kL0JpUtQB2FOP3WFb/E0i4xXpqbk03tKglG0noUaqAoURbrGstaxuyYoiwXfUaUzYSlOsABpKlq7/EUVSNOSmdK2pu1vtGQ42SouI6ByfmiqAAMkd2Zicn/2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/2271e26411e7f76dcaab66310b9488c88583b162-1600x2400.jpg",
+        "width": 1600,
+        "height": 2400,
+        "alt": "All smiles under the Oakley O in the blue Sphaeras",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYEBQcI/8QAJBAAAgICAgICAgMAAAAAAAAAAQIDBAAFBhESIQcxEyJBYYH/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQF/8QAHREAAgICAwEAAAAAAAAAAAAAAQIAAxExBBJBIv/aAAwDAQACEQMRAD8AZOXuIY68hPSDvvEtuTV495VoOCXnHaMCCDl/8l7aWhSqRVqhtWLDFET+P9xF3Oj20tWht44K9a5TYFq59Dr+8GyzqwEbVR3Qn3yPsVWowZijEsxJwyJxLkUe1062JYVglDsjp39MPvDGiTEYODJfOrUMGu/NYfwiRSfNfsHMGHLHs7awb1mzJUceEYLH119Z0VzDj2q225r0RA8dbx8nTzP7e8pdx8YcXFOWeGpJG0b+PQb1k71BySZqcfmtUtYAHyc63FDi2l2o1rSRKscU0hlQE++iB7wxmqy3a8CwwToIo/1UMvsAYY1cKABIbna2xnbZOZ//2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/ced5838f07f9671daf2b0ce58e922f78d6f39fa8-1600x2400.jpg",
+        "width": 1600,
+        "height": 2400,
+        "alt": "Portrait in the blue Oakley Sphaeras and cream knit",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAABgAFBwj/xAAlEAABBAIBAwQDAAAAAAAAAAABAgMEEQAFBhITIRQiQVExNMH/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQF/8QAHhEAAgIBBQEAAAAAAAAAAAAAAQIAAxIEERNBUSH/2gAMAwEAAhEDEQA/ANpvctPFYKXEBKSo/PgZhSuXR2ts1HaYkpaWkFTiwaF5o6nRyGHjMbQQykEKK/xgt7Xq3nNPQaya55HU4VXV/wAzPDsevsvWtMSYvVyOHf7KMsIbfh+whTlskPOkeeptJIOWFk/kVxp7PSclllUcslCeyRXSB4wpC49A0uyckoCAXle01Rv6xYlr2uAm/nAPNZDyFRy24U9t4GvvzlFzBBltF0Vm047xjaRQAFZZyuTzKXFlvsoTaELIF5YA1aRh0NnU/9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/112ea429abc4548abe660656405f16f4874369c8-1600x2400.jpg",
+        "width": 1600,
+        "height": 2400,
+        "alt": "Riding out in the Oakleys",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAcIBgQF/8QAKRAAAQMDAwMCBwAAAAAAAAAAAQIDBAAFEQYHEhMxUSFhFBUiI0JScf/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwD/xAAaEQADAAMBAAAAAAAAAAAAAAAAARECEiEi/9oADAMBAAIRAxEAPwCeJPJdpjq4Asq9SQOx/teK45j05ZxWnsJlLtki2LhvKXI4payn8s0wFbHXVcSMno8JPT6jiifpJ/WlsBiqJdLmB3opqXkWHTc022fo8KkNJHJTkg5PvRR2QywbOna24Ki7iQoWpHy5HZJW2VDuoD0qo4+orZLH25CSnOM+9SNcHUtyLLe0oHUS4kqT5HiqV20cgXTTybmzAbYU64rKQPBpU8rw3mdFVu98hc1m8ZkpsPhtIUEnt3orc6z2VtOp789dfiHIy3wOaE9s+aKpqTp//9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/be381dc70b8a2c2b207440cf5f7f1c243cfdd5ee-1600x2400.jpg",
+        "width": 1600,
+        "height": 2400,
+        "alt": "Justin wearing his oakleys",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYCBAcF/8QAJxAAAQMEAQMDBQAAAAAAAAAAAQIDBAAFBhESE0FRBxRhISIxMqH/xAAYAQACAwAAAAAAAAAAAAAAAAAEBQEDBv/EACIRAAEEAQMFAQAAAAAAAAAAAAEAAgMRBAUSMRMUIUFhgf/aAAwDAQACEQMRAD8ASOu7eb65DS+WGm1FCEp+O5qp6jMycbix5MG8qVKSRyaC+Q1TRgsuFEuc+4PtMNh0lelKBIFRyliFnUKaLBEaTcWkEq2jRUk+KDMu6SweE17UxxbZG0SPfKqYjk7F2sjMmW6W5GyhY8kd6Kzqx3eLjkVy3XaK+mW24orT4/FFGgpQWkFciE6/Ilojvy1str+0kfWtExBd/wANukhEUIkIcaHFak7GvFMqcDtcpLdxt6PbvMjqcVHaTrtqp49PF4lXBLTfSRFTpQJ/Y/FLnZAfHujHK08Gnujn6WU6yPpP4sPzqVKuOTTJUtoJecO1BI0KKZMrS25eXCtA5aAP9oqxmTTQCFE+iXI4td4tf//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/336c1db0efb5c8958c31508d27dbede8464744cb-1201x1500.webp",
+        "width": 1201,
+        "height": 1500,
+        "alt": "Justin wearing oakleys",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAYHCAQF/8QAKxAAAQMCBQIEBwAAAAAAAAAAAQIDBAARBQYHEiETMRRBYXEiMzVRcnOx/8QAGAEAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAhEQABBAEDBQAAAAAAAAAAAAABAAIDBBESITIzQVGBkf/aAAwDAQACEQMRAD8AsGO54gYZHKkAvO+VuE+96SlahuZhnowuMlaJCviR0yU7rUj6m5ywV1oDB2lncebqsQPavCyVNlsvNYy62VC/TaHmB6UqSXQMEJ0NUykFrvS1Xh6HkQmUyHCXQkbj60VMBqFLhJDLsZxxQF9xFFAnYpNR4Pb6smre8QlSlblOLV9+1UHI81cpTEbcoMRR1FC/Fx2qcwfmIp6087Yp+AotdMlWouxKB5TtGEif1XvGKADhSAeeKK68ofTXv3q/gorOziE2XAedl//Z"
+      }
+    ],
+    "heroImageAlt": "Oakley",
+    "heroImageUrl": "https://cdn.sanity.io/images/zil8k06j/production/de38a31c07cb6c0920947ab8899e070fe5bfbcc5-1600x1600.webp",
+    "homeHero": "custom",
+    "listOrder": 40,
+    "name": "Oakley",
+    "slug": "oakley",
+    "videoFirst": false,
+    "videoPreviewUrl": "https://vz-e818877b-c14.b-cdn.net/b2dd6fe1-1486-46fd-bb47-b38ee9f7c0a2/play_720p.mp4#sanity=zil8k06j/production/35d4de72ff44a657c27ddcb2691c6fcbb3d2100f.mp4&phone=480",
+    "videoUrl": "https://vz-e818877b-c14.b-cdn.net/5a6411a7-99fd-48a9-b7c4-ef0a3fe04152/play_720p.mp4#sanity=zil8k06j/production/c4b2af8992a0a53f88e7a5a50817d75e63ab7637.mp4"
+  },
+  {
+    "_id": "partnership.raising-canes",
+    "brandLogoAlt": "Raising Cane's",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/678cbd2a6bb22010eadd90d55a32d0bf6295fc4a-360x361.png",
+    "category": "Brand Ambassador",
+    "description": "Brand ambassador for Raising Cane's — recurring presence in their NFL and Louisiana-pride campaigns.",
+    "externalLink": null,
+    "featured": false,
+    "featuredOrder": 50,
+    "gallery": [
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/e0c45d4415e0afcb1803600113258821600a888c-1280x1920.jpg",
+        "width": 1280,
+        "height": 1920,
+        "alt": "Raising Cane's at Justin Jefferson's Under Armour Flight School",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAeABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAUGAgQH/8QAJhAAAQQBAwMEAwAAAAAAAAAAAQIDBAUABhESITFREyJBQhUWYf/EABcBAQADAAAAAAAAAAAAAAAAAAIAAwT/xAAgEQACAgEDBQAAAAAAAAAAAAAAAQIRAxITFCFBUmGB/9oADAMBAAIRAxEAPwBZV6s1PcbiO5JWpKvcrolvb4A/uNnn9QKjo5rkLc+wDua2lbdiXSVy4HBSkAl5lI2IV5ONYGqGFh8LDDHE8T6iwDv5wTyNOjUsEVFSu7+CKVDty7yWqYSob+1ZIGGP/wBkg9jdRm9vr0OGTd9MPHj5I47KVDqoD7tTqAhaU9G207cz4ybqpP5OxaRYSw02rfk4vqBmOmI7T+o4bElAcbLmyknscudRQqdqmtVQ65DLzLwbC++PpEGpyaj2FJqaoEhNzFIHzxwyCcJCyBhjK6P/2Q=="
+      }
+    ],
+    "heroImageAlt": "Raising Cane's",
+    "heroImageUrl": "https://cdn.sanity.io/images/zil8k06j/production/eb085472f19420db5bdf0e35d8dfcf5c8596a1f3-1600x1067.webp",
+    "homeHero": "custom",
+    "listOrder": 50,
+    "name": "Raising Cane's",
+    "slug": "raising-canes",
+    "videoFirst": false,
+    "videoPreviewUrl": null,
+    "videoUrl": null
+  },
+  {
+    "_id": "partnership.beats",
+    "brandLogoAlt": "Beats by Dre",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/d56dc6fe1088b09a5a8f6158d517d26db75ed846-480x480.png",
+    "category": "Audio",
+    "description": "Game-day arrivals run through Beats — Powerbeats campaigns and the custom iced-out pairs Justin wears through the tunnel.",
+    "externalLink": null,
+    "featured": true,
+    "featuredOrder": 50,
+    "gallery": [
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/f0cb4085e8af874e2cb2129a43a722da27170c6b-1170x1303.jpg",
+        "width": 1170,
+        "height": 1303,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAWABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAcGAgT/xAAjEAABBAIBBQADAAAAAAAAAAABAAIDBAURBhIhIjFRE0Fx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwIE/8QAHBEAAgMBAAMAAAAAAAAAAAAAAAECAxEhEiJB/9oADAMBAAIRAxEAPwDA3+az8cxrI8FHGK8spIbO3q7FUjjU1ePj2Imuviis3XOc9rOwP8Utj4NbtYVtm/cjdFCC8dHfqXc+MyV3HUp6Nh5r1mkOb1fPgQOpTqct+mmFzhYudwqnIDTrZN8dOZ/4dAjy2ikMLSYwXZKXZ/R9hEbqi3uCxvmlnkaq5Tu4wjFR3Ca0/gPo2vZcxeQwOLfFHPA+MD3o7REqexSAa9mSy3M9th/mRs7OkRFeIjT/2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/78ddcafc3c02342898da1a05b2a05fa5b85df3de-1170x1300.jpg",
+        "width": 1170,
+        "height": 1300,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAWABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAUGBwME/8QAJBAAAgICAgEEAwEAAAAAAAAAAQIDBAAFBhESISIxUQcVMnH/xAAXAQADAQAAAAAAAAAAAAAAAAABAwQC/8QAHxEBAAMAAAcBAAAAAAAAAAAAAQACEQMTITFBcZHh/9oADAMBAAIRAxEAPwDF9dx6janZP2NSQj+UQ+5z9AZ2qcfG82D1tdSkeaI+JQDoAZNfitNbptw2zsLDLLDExRZCPn/PvNKm5PSevZt6mpHUsynouAB5Hr5wXbDqyhappTD3Mm2HCHq2mhnEXmvXYZvUYzz7LlF+veljeZHYMSWYdnGZ5l/GRg8LOtH7+Sux6iVY1kWywLDJ+GzHquOyJKZpbnl4xOD7VB+8YxzUzZI9pT3M0sju0nkxPqTjGMGQjP/Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/3c774a12877769edff4b4cda495be1ce7ca2ad1b-1170x1299.jpg",
+        "width": 1170,
+        "height": 1299,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAWABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAUGAQMHCP/EACEQAAEEAgIDAQEAAAAAAAAAAAEAAgMEBRESIQZRYSNB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwIE/8QAHBEAAgIDAQEAAAAAAAAAAAAAAAECEQMSMRNh/9oADAMBAAIRAxEAPwCHs+aV6lQzBrnOjHQ9lWrE+SSvrU7F5sUUcsAkIB7B2uVWoo6uMNixxPM8WM32fq1YuW3p7mybrubpo3vSjKp7pQ4Jj0p7dPQFXIU54WyMnbxP1FwttizGOLJHgeton8/oNkPncRZs05L4sjhGSBEd9ALHhdt9mlI2TX5u0ERFjk3Npi5IpRVFidH3/ERFoth0f//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/bce0abc0a667a206133281341060c030a9e6b416-1170x1300.jpg",
+        "width": 1170,
+        "height": 1300,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAWABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAQGBwH/xAAoEAABBAIABQIHAAAAAAAAAAABAAIDBAURBhITIUExURQjJUJxgZH/xAAXAQADAQAAAAAAAAAAAAAAAAABAgME/8QAGxEAAwEAAwEAAAAAAAAAAAAAAAECEgQRFDL/2gAMAwEAAhEDEQA/AMSr4HI2JW12xzyB59fUfldt8L3Kz5I/hjK0O5TI3uB+1Z8txZXx9JkmLpujtsIDdvJGvPZSac2EyVBks9i9Wml+ZI2N+wXeVlfLWVTQyqCkWsTYqy9Iwyv0AdxjY/qLQm1sHofXrzdeCwdkR9sg1JSrUkUfTbNFzOadkj2UWzM5g1ESIvtb7BEU8roV/JG67vJKIiGUTP/Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/33327a98e393a300a6bd28eb24088f1029ea6093-1170x1299.jpg",
+        "width": 1170,
+        "height": 1299,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAWABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYF/8QAJBAAAQQCAgEEAwAAAAAAAAAAAQACAwQFEQYhEgcTMUEUIjL/xAAYAQEAAwEAAAAAAAAAAAAAAAADAAECBP/EABwRAQABBQEBAAAAAAAAAAAAAAEAAgMREjEzQv/aAAwDAQACEQMRAD8Ay+H8i5NxOjPWxmRD43u82tlbvRVPV9XuUvx1uveq05ZXDwD2jpoPztQTclWrUpp7E7C1nQAO+1MS8vFGd4ZEZmvO9b0DtLd1EA7DtbOdnk1MlkMmLkn4sMM0RO/LWu/tFkWsnmLUvu1qcUcRHQc7tFC3SHWXVcqXOAk4Y3vgkjc8+LBv5+1ms7mbsk6KIjfRJv4GWeJfO+oD5tP7H+hsoiLqOQsT/9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/e5b39f1f79a242b66789c0c7151abac79b096938-1080x1433.jpg",
+        "width": 1080,
+        "height": 1433,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAcFCAMEBv/EACYQAAIBAwMDBAMAAAAAAAAAAAECAwAEBQcREgYhMRRRYYEyQXH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EAB8RAAICAgEFAAAAAAAAAAAAAAECAAMSIREEEyJRgf/aAAwDAQACEQMRAD8A4rC9HyXuMa+uJRAp7RqfJ+TWe4iOU6dusa8MZvMc3KKSNNua+1RxtT6S5CZSRVYDiG3B+SKaGmMJu9P51sSlxko7vdmbbnxHj+0ZvL2Hy+Spkxr5KxDRhSCHHBlOxU+QaKYGqljh36tkcsI7hokNwsP4iT9/fiirFJIGpLqQOUv5Uihs0tZJJUXiHA7be1MLS3THqPKLHkPVz4uBhyIBILfVbWlljbX3XNnFdwJNGAWCsNxuKtAiLGiqihVHYADYCpbemVX59xu+2OIlXOrdH86mdna0iN3HJs5l9yfNFWkNFMt5UBRBO5//2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/416a1b38f91992673e30682f2ff3ffdd99d56083-1080x1432.jpg",
+        "width": 1080,
+        "height": 1432,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAUGAgQI/8QAJxAAAQQBAwMDBQAAAAAAAAAAAQIDBAUABhESIVFhBxNBFCIxceH/xAAWAQEBAQAAAAAAAAAAAAAAAAADAQL/xAAbEQADAAMBAQAAAAAAAAAAAAAAAQIDERIhUf/aAAwDAQACEQMRAD8AZK1Lzrn7KPDLwCw02NuhUe57YsYZmXjUp+zTESWeoS2dj/cxjzZjHpzY10WE8Gwv3PqQnZP6375B6JjTbG6fRXrfmTQypbba3ftB2+R85c+a4zaTHiFUNtGvdFLc9aWtuPjDJS0F1EnvM2DDzUlCiFJUkjDGa36Bs71vauulUD1c+yhuI4OPFA2285K6M9OKLSzbz8FAU+6Du+r8geMe2j7o0wXeZ9wNcuXnIqitp0qTdNPyVrbaA4J6bJ6YHHUu/hpN6LddXUyCFyocaQ5tt7jiASRhiGsWpUFolRJI74Znpk2f/9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/8040f9da37dd09c81f581bf40bc7a6f5e3b26567-2880x1500.jpg",
+        "width": 2880,
+        "height": 1500,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAcDBAUG/8QAJRAAAQMEAQIHAAAAAAAAAAAAAQIDBAAFBiExBxIREyI1QXGR/8QAFwEAAwEAAAAAAAAAAAAAAAAAAgQFBv/EAB4RAAEEAgMBAAAAAAAAAAAAAAEAAgMEETESI0Kh/9oADAMBAAIRAxEAPwDmpvUeyWwKagsLkujXeNJBqGDlV4duUhVuZagvrAV5iU+Kdjk0kSSSd/FNjF1KN5gAkkGCCd80bO6ZgdrKUsk1Kkr494W1JuWTrd7nsnlIWeQn0j8oqrfPcF/Qoq4Yoh5WRbdsuAPP4F//2Q=="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/9b2fb31c1166e1cb24a716336d3f78f24ed6ff29-1170x1463.jpg",
+        "width": 1170,
+        "height": 1463,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYCAwUH/8QAJxAAAgEDAwMDBQAAAAAAAAAAAQIDAAQFBhESIUFREzKBFDM0ctH/xAAYAQADAQEAAAAAAAAAAAAAAAAABAUBAv/EAB4RAAEEAgMBAAAAAAAAAAAAAAIAAQMREhMEBUEh/9oADAMBAAIRAxEAPwBIssMsZIYx7ntypt0siY6eSOYK0cw4ldq5/NdXS5YG2Poxqiv5PWnfG3WVzM1vC0UMk8ZBZt+JZP7VA+bE762ulMj6+et3y1DUGh8ZlstPdw3/AKYY7Mg68SO1FOMOno1U/TSmJCdyD13Pc0Uli3rJ/IvHSbe6GucjElzBKIJEQIqsPdt5rY0hpvPYrIC4yIhW2VCNwdy3inRvxo6tu/ZH+ldGAuVoikIAxtUW4Jj+aKna/a+aKy0Mv//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/8e88f3ebd901404e9d6708a1e6fc02349201640d-1170x1463.jpg",
+        "width": 1170,
+        "height": 1463,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAZABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAcEBgIDBf/EACgQAAEDBAAEBgMAAAAAAAAAAAIBAwQABRExBhITIRQiMzVRsUFyc//EABgBAAMBAQAAAAAAAAAAAAAAAAMFBgAC/8QAHREAAQQCAwAAAAAAAAAAAAAAAQACAwQRMRIhYf/aAAwDAQACEQMRAD8ApcaLD8SLMqSrRroRTK1g/DkRp/KGXoirhSVMKPxXbukM4t+ba6bTTb5CQOqOSUvzim45wJa37ETT6EBng+tnvnddyWLAsEh3QOvFoqlZ1UAt7I36kstuczqimC7aRbcIB8wiuELG6KdicKdNcgqRxfYY86EyTkhWFYdFxDHe9UwStxBZEIXnZLnIhIhLhC7fFUzin2Vf3H7pk2/2pj+Q/VJXnk0PO1Sxt4OMY1haokYHIrRPsNI5yplETVFSI/ppRQ8lFwF//9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/a4e18746634c70913a80ec0bdac8c6a565f895bf-1170x1463.jpg",
+        "width": 1170,
+        "height": 1463,
+        "alt": "justin jefferson in beats photoshoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAZABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgAEB//EACkQAAEEAQEHAwUAAAAAAAAAAAEAAgMEEQUGExQhMUFREjKxIjU2cnP/xAAXAQADAQAAAAAAAAAAAAAAAAACBAUG/8QAIBEAAgIBBAMBAAAAAAAAAAAAAQIAAwUEERIhIjFBUf/aAAwDAQACEQMRAD8AJtpPx7DhXCuBAxzPQeU8o0Io5JBea4wHHpDOuVh13RbGr261XZuAQTNzvHSOyceVfuyJVTxXsTK6fCix15v4n3+wnHXL2hzRkKTU7LT6QBUnO8kaMl3nKkwmrDKCYnZjGVyo+Rfb0nfQuYPpPUEdislG5punXJrl2Z0d1gDOHB9zuxSk9FwXbb8zs/3HwoLMWmuCivsTsGJr4FidwL38+XYeFLJsT9gi/Z3ypEHIG0E1gncz/9k="
+      }
+    ],
+    "heroImageAlt": "Crystal-studded Beats Studio headphones with white sherpa ear cushions",
+    "heroImageUrl": "https://cdn.sanity.io/images/zil8k06j/production/29faf3693f44c82175facdbea2a682c1639e9fb4-2000x1600.png",
+    "homeHero": null,
+    "listOrder": 60,
+    "name": "Beats",
+    "slug": "beats",
+    "videoFirst": false,
+    "videoPreviewUrl": null,
+    "videoUrl": null
+  },
+  {
+    "_id": "partnership.loews",
+    "brandLogoAlt": "Lowe's",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/6b5c9aca7f15fb0bb3dd0c6c032d464e4f72f08a-480x211.png",
+    "category": "Home Improvement",
+    "description": "Part of Lowe's NFL roster — the league's official home-improvement partner.",
+    "externalLink": null,
+    "featured": false,
+    "featuredOrder": 70,
+    "gallery": [
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Lowe's 2025 commercial with Justin Jefferson",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/7dc21d12-e349-4c38-bdd6-2818245af85d/play_720p.mp4#sanity=zil8k06j/production/c5afabed8045d35369377dbfead6741be778f126.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/87dc146b-44e7-47bd-8790-f4e8e3d5c8a3/play_1080p.mp4#sanity=zil8k06j/production/78b2e08413318b9da6a3ce41a1a8d663a7ab8d13.mp4",
+        "playPhoneUrl": "https://vz-e818877b-c14.b-cdn.net/87dc146b-44e7-47bd-8790-f4e8e3d5c8a3/play_720p.mp4#sanity=zil8k06j/production/78b2e08413318b9da6a3ce41a1a8d663a7ab8d13.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/e21de3516c0b7a292c5b3f6587c4d666fe4e5721-1170x1455.jpg",
+        "width": 1170,
+        "height": 1455,
+        "alt": "Justin Jefferson for NFL Home Team with Lowe's",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAcDBQgE/8QAKRAAAQMEAQIEBwAAAAAAAAAAAQIDBAAFBhESIVEHMXGhFCIyNTZBcv/EABYBAQEBAAAAAAAAAAAAAAAAAAQDAv/EACARAAICAQQDAQAAAAAAAAAAAAECAAMRBCEx4QUSUYH/2gAMAwEAAhEDEQA/AGHlviDdMeui2rhCTFi7Ibd48+dVWD5eu45pIudxmLYt7qAhsOHTZPYUxPEK2RbnidxRKZQ4UMqUgqHVJ7is7vsOSMfYjx0BLjQ89+5p1GjS5QzMRv3JG9h7BFHHU1WhSVpCkEFJGwR+6KosEafZxK2IlPB50Mj5+4oqJxnY5ExuOZNmAUrGbgEHSi0R1pHORFxEgON7C9J0nqetPLLfxyb/ABSujfeo/q3Sada9FbVqBgwl/j69TYljEgr8P7G1Yo/wtmhMeXBpI9qK7k/SPSiiAYGIwnJzP//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/60539e5722407e65b557ee98e9940457e3d517e3-1920x1128.jpg",
+        "width": 1920,
+        "height": 1128,
+        "alt": "Justin Jefferson in the Lowe's campaign",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYDBAUH/8QAJRAAAQMDAwMFAAAAAAAAAAAAAgEDBAAGEQUSIRNBgQciYXGh/8QAFQEBAQAAAAAAAAAAAAAAAAAABQT/xAAjEQABAwMCBwAAAAAAAAAAAAABAAIDBRFRQeEEEiFhgaHw/9oADAMBAAIRAxEAPwB51C4LVG69TalgwrTBrvc3KuUxz+1gy7jtkmmGmYYdVCVxzlcEHbHzSneEVmHdcwI7YgJm4hJjOals2Gw7JjPPAjhqGPfyic9qahp3ODcnTXZFT1WOIA29eMrvfp/qujPWywbStM5JdwZXgvPiiqll6XBc0ciOM2q9Yu31RRcsTmPLcd9lfFxEcjA8X6/ZX//Z"
+      }
+    ],
+    "heroImageAlt": "Lowe's",
+    "heroImageUrl": "https://cdn.sanity.io/images/zil8k06j/production/d7ffcaabc029594d44f80f0a2408057cc8cb7621-2248x1620.png",
+    "homeHero": null,
+    "listOrder": 70,
+    "name": "Lowe's",
+    "slug": "loews",
+    "videoFirst": false,
+    "videoPreviewUrl": null,
+    "videoUrl": null
+  },
+  {
+    "_id": "partnership.us-bank",
+    "brandLogoAlt": "U.S. Bank",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/398ea5fdc827e2b9e5bf1491fa9fb47b50366336-480x121.png",
+    "category": "Finance",
+    "description": "Hometown banking partner — the name over the stadium Justin lights up on Sundays.",
+    "externalLink": null,
+    "featured": false,
+    "featuredOrder": 90,
+    "gallery": [
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/0c35e8aeccbccf62b4ecfc9a1bac79f1b63182ef-675x450.png",
+        "width": 675,
+        "height": 450,
+        "alt": "Justin Jefferson portrait for the U.S. Bank partnership",
+        "lqip": "$23"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Justin Jefferson announcing the U.S. Bank partnership",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/250aca97-b3fe-472c-8cfe-8a113ac617bc/play_480p.mp4#sanity=zil8k06j/production/7be9345677a88a5fe5157c99cb99128689e904fe.mp4",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/2a0ab570-f779-4c1a-a94b-944a4573ddf3/play_480p.mp4#sanity=zil8k06j/production/acf08bebe063280cd4c027c0d363e08ece35b8ce.mp4"
+      }
+    ],
+    "heroImageAlt": "US Bank",
+    "heroImageUrl": "https://cdn.sanity.io/images/zil8k06j/production/d7ffcaabc029594d44f80f0a2408057cc8cb7621-2248x1620.png",
+    "homeHero": null,
+    "listOrder": 90,
+    "name": "US Bank",
+    "slug": "us-bank",
+    "videoFirst": true,
+    "videoPreviewUrl": null,
+    "videoUrl": null
+  },
+  {
+    "_id": "partnership.ea-sports",
+    "brandLogoAlt": "EA Sports",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/b68d09d184687fd2ac2786b893a29432c1bf81f2-480x333.png",
+    "category": "Gaming",
+    "description": "A Madden fixture: repeat member of the 99 Club, the rating reserved for the game's very best.",
+    "externalLink": null,
+    "featured": false,
+    "featuredOrder": 100,
+    "gallery": [
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Madden clip featuring Justin Jefferson",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/02317b22-94b6-4fae-8ee6-df48a9cfcf09/play_360p.mp4#sanity=zil8k06j/production/838501407cf3d6495050f1595a3fe6ef44f54677.mp4",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/982d3bab-0170-4e20-befb-6ca550b12f95/play_360p.mp4#sanity=zil8k06j/production/3476e79fa17fb31926c54e31474f708aaeb39430.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/3346c2720d94936a9358988e3d78cb8789b1c8b8-2560x1440.png",
+        "width": 2560,
+        "height": 1440,
+        "alt": "Justin Jefferson in Madden",
+        "lqip": "$24"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/0a77c34921333d16d48f424ef32d2354065782b7-1080x1350.jpg",
+        "width": 1080,
+        "height": 1350,
+        "alt": "Madden's 99 Club ratings-update card for Justin",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAZABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYHAwX/xAAoEAABAwMDAwMFAAAAAAAAAAABAgMEAAURBhIhEzRhBzE1QXFzgrH/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQP/xAAZEQEAAwEBAAAAAAAAAAAAAAABAAIRIQP/2gAMAwEAAhEDEQA/AMatTt3uz6okaDDjpj5K17MHiu11uEuRNRuhM9TaAQQQlQ9qQUps8ZcmNcZSZTgIyW+Dkc1Ri6sTdIsQ5kZW5KMIdZQdyjn6mgoykuPS5vp6ZInhqO711kNpPATgYpXg6G1Hpiz2Qxbu7JRKDqlELSScHGKUpJmM6dOQBHkHbhIwnGeDVTZ7hqFiyRRCbacjA4SAnco+DUXce5/UVoGg+wb+9Y386crnI62euyPuipN0nvyZqcPlW1QSAAMeKUuHyMz8yv7StgAwgXZ//9k="
+      }
+    ],
+    "heroImageAlt": "EA Sports",
+    "heroImageUrl": "https://cdn.sanity.io/images/zil8k06j/production/28e3c9727c63da0bc2e3b1487f4e988b6cd9cab3-1300x1300.webp",
+    "homeHero": null,
+    "listOrder": 100,
+    "name": "EA Sports",
+    "slug": "ea-sports",
+    "videoFirst": true,
+    "videoPreviewUrl": null,
+    "videoUrl": null
+  },
+  {
+    "_id": "partnership.little-caesars",
+    "brandLogoAlt": "Little Caesars",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/2b3a243cc43691cb4bb9482c2d4c66e1e87c8870-776x195.png",
+    "category": "Food",
+    "description": "National campaign work with the pizza chain, from the \"One Day\" spot to the game-day promos.",
+    "externalLink": null,
+    "featured": false,
+    "featuredOrder": null,
+    "gallery": [
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Justin Jefferson's Little Caesars commercial",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/af736c3e-aa45-4ba7-9b5c-446523f7e144/play_720p.mp4#sanity=zil8k06j/production/77d29cbcf2ff3ad07a044c549ae53486db49088c.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/c7b62c56-fe1c-45d8-8d19-67fb89e92fff/play_1080p.mp4#sanity=zil8k06j/production/723a041a5f8c7fe3b8cb5154db57c7c62459e4a8.mp4",
+        "playPhoneUrl": "https://vz-e818877b-c14.b-cdn.net/c7b62c56-fe1c-45d8-8d19-67fb89e92fff/play_720p.mp4#sanity=zil8k06j/production/723a041a5f8c7fe3b8cb5154db57c7c62459e4a8.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/d585bce7def364ca94a00c7d55447e0987b9ba18-350x677.jpg",
+        "width": 350,
+        "height": 677,
+        "alt": "Justin Jefferson for Little Caesars",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAnABQDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAQDBQcCBv/EACYQAAIBAwIGAgMAAAAAAAAAAAECAwAEBQYRBxITITFBIlEIFGH/xAAYAQADAQEAAAAAAAAAAAAAAAABAgMEAP/EABwRAQEAAwADAQAAAAAAAAAAAAECAAMREyExYf/aAAwDAQACEQMRAD8A3/XmqLLA42aOe56FzJGRG30fRpHhRnkzGCaN74XV3AxEm53YA+N6zz8iZyt5bRPCxRgu7geF371Hw21Lg9NJdPj4S/X25mLEbkegKdNZp81KI8/M2ToagJOr7zf6KqtO5hMzior1I2jWTf4mipTRQJmW4YpmvpimqcbZ5KS2iv4Elj+W4YfyqDC6D0/KJJVh51Y/Ec3Za44h3N8+rdL42wmaAXErvK6jyqjuKh4NW08I1E08rupyMixhm3AUehVa0zWvte8eNl6/cvM97jLCDG2Udrarywp4FFN0VMAOGTaaev3KjI4iK7zlhkH36lqGCd/vzTGOxkGOaT9QBEkYuyj2x8miim6/MGP0UUUM7P/Z"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "One Day — Little Caesars spot with Justin Jefferson",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/39b51058-d056-4f14-a09e-b56136b7eef8/play_720p.mp4#sanity=zil8k06j/production/cb77e8b1d3b72b072a8a04e940ef4ead6cd9662b.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/4db546b1-685f-4dbb-a372-348b7ce24f27/play_1080p.mp4#sanity=zil8k06j/production/bd1d8131aac2176be831a3209aa41f9b4bc4fbfa.mp4",
+        "playPhoneUrl": "https://vz-e818877b-c14.b-cdn.net/4db546b1-685f-4dbb-a372-348b7ce24f27/play_720p.mp4#sanity=zil8k06j/production/bd1d8131aac2176be831a3209aa41f9b4bc4fbfa.mp4"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "It's not rocket science — Little Caesars game-day promo with Justin Jefferson",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/c58d7a8e-5e10-4ad4-8d67-3210bcfe33ba/play_720p.mp4#sanity=zil8k06j/production/187b9e9e8caa1462608da8ccf0ec9f2201e8c370.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/09b8647e-807e-41b8-b61b-d1f76a6e0cdb/play_720p.mp4#sanity=zil8k06j/production/14efb4d65f20a5e48aa6dd7c434ae3b72d45558c.mp4"
+      }
+    ],
+    "heroImageAlt": null,
+    "heroImageUrl": null,
+    "homeHero": null,
+    "listOrder": 110,
+    "name": "Little Caesars",
+    "slug": "little-caesars",
+    "videoFirst": true,
+    "videoPreviewUrl": null,
+    "videoUrl": null
+  },
+  {
+    "_id": "partnership.abercrombie",
+    "brandLogoAlt": "Abercrombie & Fitch",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/a2bf34c68c407aa7a97262b9d8f0627c411458f3-738x270.png",
+    "category": "Fashion",
+    "description": "Face of the Fall 2026 NFL by Abercrombie campaign, the league's fashion collaboration with the brand.",
+    "externalLink": null,
+    "featured": false,
+    "featuredOrder": null,
+    "gallery": [
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Justin Jefferson fronting the NFL by Abercrombie campaign",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/9e093392-1c10-4e5e-b0cd-0f06a7d771f6/play_720p.mp4#sanity=zil8k06j/production/255194b6096f8da803fbdd92b4ccd85e03dfde52.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/927b0bb7-2c68-4532-84ec-acbae39631fd/play_720p.mp4#sanity=zil8k06j/production/6755c5960b8aa111e31e0928e5b7a9b70c27361d.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/9fcea40d572129aa1be14c5c70e0e2061cdc298e-1080x1440.jpg",
+        "width": 1080,
+        "height": 1440,
+        "alt": "Justin Jefferson on set for the Fall 2026 NFL by Abercrombie campaign",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFBgf/xAAoEAACAQMDAwIHAAAAAAAAAAABAgMABBEFEiETIjEGFEFCUWFxgZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A4Fo1mz6hLboVV2IwWbaP7V5TdRuEnV3jjzgGXtFQ5fby3iSpMC0j7SgHI+9a31NcpB6eso+msZfABVeePNAvAI+mM4/RzRU7TdT0mC1VL5pusD8vjFFBnNJ7dRMpAG1GIB+uKo391cX8FsrSbhEuNvwFTEHcPxTKcAYoFprKaR92M8UU4rtjyaKD/9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/03b619c986217914f2ed286c43d79eb42fd57588-1080x1440.jpg",
+        "width": 1080,
+        "height": 1440,
+        "alt": "Justin Jefferson between takes at the NFL by Abercrombie shoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQFBgcD/8QAJxAAAgICAQMDBAMAAAAAAAAAAQIDBAAFEQYSIQciURMxMkEWUnH/xAAYAQACAwAAAAAAAAAAAAAAAAADBAECBf/EAB0RAQADAQACAwAAAAAAAAAAAAEAAhEDEzEUIUH/2gAMAwEAAhEDEQA/AKHqblIrPXNqeNmCryP0fkZKbKxWpmyo2qyoyqFKjntyZrdEUbkCV9cpbauSsb9/hiPuSPjE6nQLwrYi3NoC4rcBY/x5H6OJ+OwTU+RzWUHZSKLj/TuRBfgpycMs1ronZS2ZHihhMZb28SA+MMkbB6lbWou7NU9FUh2m0ubaE98UCiGNf6k+Tid6N5t7dlbnh5nABPgeeMjvTNm12gpiizQCQdzhD+R+TnKtank21qN5GZBIxAP+4fotKOfkV5UOvU30xGfr3XdKTPqqyNYERLM7Lz7j98Mz/rBF/kNs9o5LcnDBVHPthrZrgT//2Q=="
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "On set at the Fall 2026 NFL by Abercrombie campaign",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/6b7206b6-753b-4f8b-99e1-10da31d92fe2/play_720p.mp4#sanity=zil8k06j/production/4a6c2ef573b92e6155b0beaf3563299f76dbdd7d.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/00e08278-5b08-439c-a650-be2812f1033c/play_720p.mp4#sanity=zil8k06j/production/2f77c069d028bcd80aa839e10d1ee96c06bd5b2b.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/14bfa34903ee90f2ea57931cf8c51388c66f5d84-1080x1440.jpg",
+        "width": 1080,
+        "height": 1440,
+        "alt": "Justin Jefferson in the Fall 2026 NFL by Abercrombie collection",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGgAAAgIDAAAAAAAAAAAAAAAAAAcDCAEEBv/EACkQAAEDAwMCBQUAAAAAAAAAAAECAwQABREGBxIhUQgTMUGxFBU1c5H/xAAXAQADAQAAAAAAAAAAAAAAAAACAwQF/8QAGhEBAAMBAQEAAAAAAAAAAAAAAQACAxIUMf/aAAwDAQACEQMRAD8AZmqL/H07Y5U95bZW0jkhtSsFZ7VmJqNUrR7V5aY5qU0HC0k/2qobj36bfNwnxMUtLTcgNIYJ6JAPamjo3Ujts221O8FgCK8pDSVHIGfas5x5Bl5r0pOve3NtiSkyEONrUnlxAz0oqqcy9SZL6nFKIz6AHoBRTfMRXoY0fEdaIFs1BEmQmy3JlpLjpB6ZHuKn0/oa6ag2thfapBSJklTsoLVgcR6GtrxIJC77bAsZAjLPWmZs+Ana228RjLKj80LdrlVIRQtokqJcY/0k+RHCuXlLKM98Gipb/wDm5/71/NFWHySs/9k="
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Fitting looks at the NFL by Abercrombie campaign shoot",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/d68a3060-6899-400b-a656-d1c24a1ebc10/play_720p.mp4#sanity=zil8k06j/production/800b60797b9ec3ee6f61dfc54cff7c00be383f13.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/3f784e27-0421-490c-afc2-c3dbad91c0bc/play_720p.mp4#sanity=zil8k06j/production/024f75142f4263d4caf21e4bdccc0002e1fa8a85.mp4"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/7e106908e14ddd4fd2f0383a6e20e6d4a0058f56-1080x1440.jpg",
+        "width": 1080,
+        "height": 1440,
+        "alt": "Justin Jefferson posing for the NFL by Abercrombie campaign",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAMGBAUH/8QAJBAAAQMDBAIDAQAAAAAAAAAAAQIDBAAFEQYSITETQQcWMoH/xAAXAQADAQAAAAAAAAAAAAAAAAAAAgMB/8QAGxEAAwEAAwEAAAAAAAAAAAAAAAECEQMSUUH/2gAMAwEAAhEDEQA/AMnUmt7wzaYM6FDZYYknG/8AXVXdlSbpFbkYCkFsLJ9HIqPvehn4mmRAu92aYiCQVoW0ncQD0KozaXYenYtnsspbznj2kq4Kx759HFT5JlrF6Nxuk9fgm4LtrMlSHX/GsdpA3Y/tFSz+lXpEl9Ta50NCV7A0sEngd5oqfRL6WT0r9axlTNFy20svOuDK2y32Fjqo743+yNIWq6okJYQkFC3EkEKzzzXR25DqY6mkrIbJyRRIlvmB4S4fET+a2bSjrgtS3WiX7tNcUCXyMDHVFa5fCuKKTWGH/9k="
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/f643b487b6db2d57451eb34c94ffea92d87abd57-1080x1440.jpg",
+        "width": 1080,
+        "height": 1440,
+        "alt": "Justin Jefferson closing the NFL by Abercrombie shoot",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAcDBQYI/8QAJBAAAQMEAgICAwAAAAAAAAAAAQIDBAAFBhESIRMxFFEHQWH/xAAXAQADAQAAAAAAAAAAAAAAAAACBAUB/8QAHhEAAgICAgMAAAAAAAAAAAAAAQIAERIxBBMDQcH/2gAMAwEAAhEDEQA/ANXjMxdt/HsGUtC3nG44Vx/ZNS4lfp9wuBamtJQ0tHNHY5J/hqhyK/Jx3AIDaW/K/IaTHbRvXZHulLcMzuOM5PHERYddhp4uqV6cJ9g1KHjZjY1KuaKpDbnVWhRWOw7OIWQWJmcvTDhJStBPoiisIqDdxbZ801c7ljsZman5DC08Yo75H7P1SZy5EmPk1wamDi8HSVDdMjDW0/MuVxI3OR5uLxO1DXqlDdJT8u4SX5LqnHVqJUpR7NMce8ip9QOQFwDgb+S6t2SPw4qWmXVNpHfEUVm2wCkbopnrWKdjT//Z"
+      }
+    ],
+    "heroImageAlt": null,
+    "heroImageUrl": null,
+    "homeHero": null,
+    "listOrder": 120,
+    "name": "Abercrombie & Fitch",
+    "slug": "abercrombie",
+    "videoFirst": true,
+    "videoPreviewUrl": null,
+    "videoUrl": null
+  },
+  {
+    "_id": "partnership.sleep-number",
+    "brandLogoAlt": "Sleep Number",
+    "brandLogoUrl": "https://cdn.sanity.io/images/zil8k06j/production/037a2684df77cfe8a1c21eca4987b19da40d6cd9-1600x261.png",
+    "category": "Sleep & Wellness",
+    "description": "Recovery starts at night — Sleep Number, the NFL's official sleep and wellness partner.",
+    "externalLink": null,
+    "featured": false,
+    "featuredOrder": null,
+    "gallery": [
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/bf0ee477426a60fb741060e0f292a43f9f263b8b-1280x720.jpg",
+        "width": 1280,
+        "height": 720,
+        "alt": "Justin Jefferson for Sleep Number",
+        "lqip": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAwf/xAAlEAABAwQBAgcAAAAAAAAAAAABAgMEAAUGERMSISJBUXGhwdH/xAAVAQEBAAAAAAAAAAAAAAAAAAAEBf/EABwRAAICAgMAAAAAAAAAAAAAAAECABEDBBJBkf/aAAwDAQACEQMRAD8AkZZP4ctnOyQ+qM7IUpCkudIUPSm8Pnus5ZbXUOKDPLvxu9vY1pk1uizrmG5bXI2lwkJKjofNdLxPErEqythVuaVtWztSj90o7LKKMMMCMbEuru7S3XVSZaQsqJ0HgQBRT0XDsfab6UWtgDe/P9oqYcFm+TexgeuhP//Z"
+      },
+      {
+        "src": "https://cdn.sanity.io/images/zil8k06j/production/271d3bed0f6a4ee2a77c658b89e6815e21162eeb-2000x1600.png",
+        "width": 2000,
+        "height": 1600,
+        "alt": "Justin Jefferson resting up with Sleep Number",
+        "lqip": "$25"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Night Owl vs. Early Bird with Justin Jefferson — Sleep Number episode four",
+        "loopUrl": "https://cdn.sanity.io/files/zil8k06j/production/2bab9c90ceef0ef88dd6d5806abd63d0cbd34307.mp4",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/0cb4e5d0-26f6-41ac-afe9-d7804579c6cb/play_720p.mp4#sanity=zil8k06j/production/de338cb8c147d89a4d6725fb7e0a206fa6d727d3.mp4"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Justin Jefferson joking about sleeping instead of working out for Sleep Number",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/fb966465-cd61-42b2-ab91-7e2d435f3527/play_720p.mp4#sanity=zil8k06j/production/9f1f1bccedb66c1b699171fcb30663d74d38a62f.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/66988100-7820-4553-9289-aaff1b32c8ce/play_720p.mp4#sanity=zil8k06j/production/88f2bb32cc2bf3a1359c0f01a615836441d70b3a.mp4"
+      },
+      {
+        "src": "",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Justin Jefferson in his Vikings uniform in Sleep Number's film",
+        "loopUrl": "https://vz-e818877b-c14.b-cdn.net/8fde2c40-9c26-4d9c-b149-a2fd4e332d0f/play_720p.mp4#sanity=zil8k06j/production/af3d4d776bada32dd73d422330ca679d4f3613d3.mp4&phone=480",
+        "playUrl": "https://vz-e818877b-c14.b-cdn.net/653704ae-f550-4118-989e-a7cb765fd1c2/play_1080p.mp4#sanity=zil8k06j/production/7f919201dd2d484cafbf90277f1bf0c8d1001337.mp4",
+        "playPhoneUrl": "https://vz-e818877b-c14.b-cdn.net/653704ae-f550-4118-989e-a7cb765fd1c2/play_720p.mp4#sanity=zil8k06j/production/7f919201dd2d484cafbf90277f1bf0c8d1001337.mp4"
+      }
+    ],
+    "heroImageAlt": null,
+    "heroImageUrl": null,
+    "homeHero": null,
+    "listOrder": null,
+    "name": "Sleep Number",
+    "slug": "sleep-number",
+    "videoFirst": true,
+    "videoPreviewUrl": "https://vz-e818877b-c14.b-cdn.net/97c889ab-05ac-4203-89ba-c6df1a40b587/play_720p.mp4#sanity=zil8k06j/production/ca05028dd3676082ab7f2eaf4b28a252890ad386.mp4&phone=480",
+    "videoUrl": "https://vz-e818877b-c14.b-cdn.net/9e59d879-07db-4944-bd12-8d01000695da/play_720p.mp4#sanity=zil8k06j/production/d2539d3598e83b86d183cc6def89e83025962197.mp4"
+  }
+]
