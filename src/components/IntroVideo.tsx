@@ -98,7 +98,7 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[95] flex items-center justify-center bg-[#0b0a0f] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+      className={`fixed inset-0 z-[95] flex items-center justify-center bg-[#000000] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
         isExiting ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'
       }`}
       aria-label="Editorial intro video"
@@ -128,10 +128,10 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
       {/* Play prompt overlay if browser blocked autoplay */}
       {!isPlaying && (
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm pointer-events-none">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#d4a24a] bg-black/70 flex items-center justify-center text-[#d4a24a] text-2xl sm:text-3xl pl-1 shadow-[0_0_30px_rgba(212,162,74,0.5)] animate-pulse">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#ffffff] bg-black/70 flex items-center justify-center text-[#ffffff] text-2xl sm:text-3xl pl-1 shadow-[0_0_30px_rgba(212,162,74,0.5)] animate-pulse">
             ▶
           </div>
-          <span className="mt-4 font-mono text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#f4efe6]">
+          <span className="mt-4 font-mono text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#ffffff]">
             Click anywhere to play film
           </span>
         </div>
@@ -141,7 +141,7 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
       <div className="absolute top-6 inset-x-6 sm:inset-x-12 z-20 flex items-center justify-between pointer-events-auto">
         {/* Left: Film Reel Label */}
         <div className="flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white/90">
-          <span className={`w-2 h-2 rounded-full bg-[#d4a24a] ${isPlaying ? 'animate-pulse' : ''}`} />
+          <span className={`w-2 h-2 rounded-full bg-[#ffffff] ${isPlaying ? 'animate-pulse' : ''}`} />
           <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em]">
             Justin Jefferson · Film
           </span>
@@ -164,7 +164,7 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
               e.stopPropagation();
               handleFinish();
             }}
-            className="group px-4 py-1.5 rounded-full bg-white/15 hover:bg-white/25 active:scale-95 backdrop-blur-md border border-white/25 text-[#f4efe6] font-mono text-[10px] sm:text-xs uppercase tracking-widest flex items-center gap-2 transition-all shadow-lg"
+            className="group px-4 py-1.5 rounded-full bg-white/15 hover:bg-white/25 active:scale-95 backdrop-blur-md border border-white/25 text-[#ffffff] font-mono text-[10px] sm:text-xs uppercase tracking-widest flex items-center gap-2 transition-all shadow-lg"
           >
             <span>Skip</span>
             <span className="transition-transform group-hover:translate-x-0.5">→</span>
@@ -175,7 +175,7 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
       {/* Bottom Progress Bar */}
       <div className="absolute bottom-0 inset-x-0 z-20 h-1 bg-white/15">
         <div
-          className="h-full bg-[#d4a24a] transition-all duration-100 ease-linear shadow-[0_0_8px_#d4a24a]"
+          className="h-full bg-[#ffffff] transition-all duration-100 ease-linear shadow-[0_0_8px_#ffffff]"
           style={{ width: `${progress}%` }}
         />
       </div>

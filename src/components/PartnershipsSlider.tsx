@@ -46,7 +46,7 @@ export const PartnershipsSlider = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-[#0d0914] flex flex-col justify-center text-[#f4efe6] py-20">
+    <div className="relative w-full min-h-screen overflow-hidden bg-[#0d0914] flex flex-col justify-center text-[#ffffff] py-20">
       {/* Background Pebble Texture */}
       <div 
         className="absolute inset-0 opacity-10 pointer-events-none"
@@ -99,7 +99,7 @@ export const PartnershipsSlider = () => {
                   <h3 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white">
                     {slides[activeSlide].title}
                   </h3>
-                  <p className="font-body text-sm md:text-base text-[#d4c8b8]/70 leading-relaxed font-medium max-w-sm">
+                  <p className="font-body text-sm md:text-base text-[#ffffff]/70 leading-relaxed font-medium max-w-sm">
                     {slides[activeSlide].description}
                   </p>
                 </motion.div>
@@ -120,14 +120,14 @@ export const PartnershipsSlider = () => {
               >
                 {/* Standard Polaroid styling with correct containment */}
                 <div
-                  className="relative bg-[#f4efe6] rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.9),0_0_20px_rgba(0,0,0,0.5)] flex flex-col"
+                  className="relative bg-[#ffffff] rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.9),0_0_20px_rgba(0,0,0,0.5)] flex flex-col"
                   style={{ 
                     padding: '16px 16px 64px 16px',
                     width: 'clamp(280px, 35vw, 450px)',
                     aspectRatio: '4/5' 
                   }}
                 >
-                  <div className="w-full h-full relative overflow-hidden shadow-inner border border-black/10 bg-[#f4efe6] flex items-center justify-center">
+                  <div className="w-full h-full relative overflow-hidden shadow-inner border border-black/10 bg-[#ffffff] flex items-center justify-center">
                     <img
                       src={slides[activeSlide].image}
                       alt={slides[activeSlide].title}
@@ -141,7 +141,7 @@ export const PartnershipsSlider = () => {
 
           {/* Right Column: View All Button */}
           <div className="w-full lg:w-1/3 flex items-center justify-center lg:justify-end order-3 relative z-20">
-            <button className="bg-[#f4efe6] text-[#171220] font-display font-bold uppercase tracking-[0.2em] text-sm px-10 py-5 rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl">
+            <button className="bg-[#ffffff] text-[#ffffff] font-display font-bold uppercase tracking-[0.2em] text-sm px-10 py-5 rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl">
               View All
             </button>
           </div>
@@ -149,7 +149,7 @@ export const PartnershipsSlider = () => {
       </div>
 
       {/* Bottom Logos Marquee Area */}
-      <div className="absolute bottom-0 left-0 w-full border-t border-[#f4efe6]/10 py-6 lg:py-8 z-20 bg-[#0d0914]/80 backdrop-blur-sm">
+      <div className="absolute bottom-0 left-0 w-full border-t border-[#ffffff]/10 py-6 lg:py-8 z-20 bg-[#0d0914]/80 backdrop-blur-sm">
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex justify-between items-center opacity-50 font-display font-bold text-sm sm:text-lg md:text-xl tracking-[0.2em] uppercase whitespace-nowrap overflow-hidden">
           <span className="px-4">Oakley</span>
           <span className="px-4">Cane's</span>

@@ -41,11 +41,11 @@ export const PremiumContact: React.FC = () => {
   return (
     <section 
       className="relative w-full min-h-screen py-32 z-30 overflow-hidden"
-      style={{ backgroundColor: '#07050a', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', padding: '100px 20px' }}
+      style={{ backgroundColor: '#000000', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', padding: '100px 20px' }}
     >
       {/* Background ambient light */}
       <div className="absolute inset-0 pointer-events-none opacity-20 flex items-center justify-center">
-        <div style={{ width: '40vw', height: '40vw', borderRadius: '50%', backgroundColor: '#d4a24a', filter: 'blur(150px)', opacity: 0.15 }} />
+        <div style={{ width: '40vw', height: '40vw', borderRadius: '50%', backgroundColor: '#ffffff', filter: 'blur(150px)', opacity: 0.15 }} />
       </div>
 
       <motion.div 
@@ -59,7 +59,7 @@ export const PremiumContact: React.FC = () => {
         {/* Typography Header */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '60px' }}>
           <motion.div variants={assembleVariants(0)} style={{ marginBottom: '20px' }}>
-            <span className="font-mono uppercase tracking-widest" style={{ color: '#d4a24a', fontSize: '12px', letterSpacing: '0.4em' }}>
+            <span className="font-mono uppercase tracking-widest" style={{ color: '#ffffff', fontSize: '12px', letterSpacing: '0.4em' }}>
               Let's Build Something
             </span>
           </motion.div>
@@ -103,7 +103,7 @@ export const PremiumContact: React.FC = () => {
               className="w-full bg-transparent text-white font-mono transition-colors uppercase peer"
               style={{ fontSize: '13px', padding: '15px 0', borderBottom: '1px solid rgba(255,255,255,0.15)', letterSpacing: '0.1em', outline: 'none', boxShadow: 'none' }}
             />
-            <div className="absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500 ease-out peer-focus:w-full" style={{ backgroundColor: '#d4a24a' }} />
+            <div className="absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500 ease-out peer-focus:w-full" style={{ backgroundColor: '#ffffff' }} />
           </motion.div>
 
           <motion.div variants={assembleVariants(5)} className="w-full relative group">
@@ -113,7 +113,7 @@ export const PremiumContact: React.FC = () => {
               className="w-full bg-transparent text-white font-mono transition-colors uppercase peer"
               style={{ fontSize: '13px', padding: '15px 0', borderBottom: '1px solid rgba(255,255,255,0.15)', letterSpacing: '0.1em', outline: 'none', boxShadow: 'none' }}
             />
-            <div className="absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500 ease-out peer-focus:w-full" style={{ backgroundColor: '#d4a24a' }} />
+            <div className="absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500 ease-out peer-focus:w-full" style={{ backgroundColor: '#ffffff' }} />
           </motion.div>
 
           <motion.div variants={assembleVariants(6)} className="w-full relative group">
@@ -121,14 +121,14 @@ export const PremiumContact: React.FC = () => {
               className="w-full bg-transparent font-mono transition-colors uppercase appearance-none cursor-pointer peer"
               style={{ fontSize: '13px', padding: '15px 0', borderBottom: '1px solid rgba(255,255,255,0.15)', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.8)', outline: 'none', boxShadow: 'none' }}
             >
-              <option value="" disabled selected style={{ backgroundColor: '#07050a', color: '#ffffff' }}>SELECT INQUIRY</option>
-              <option value="order" style={{ backgroundColor: '#07050a', color: '#ffffff' }}>Order Question</option>
-              <option value="wholesale" style={{ backgroundColor: '#07050a', color: '#ffffff' }}>Wholesale</option>
-              <option value="collab" style={{ backgroundColor: '#07050a', color: '#ffffff' }}>Collaboration</option>
-              <option value="other" style={{ backgroundColor: '#07050a', color: '#ffffff' }}>Other</option>
+              <option value="" disabled selected style={{ backgroundColor: '#000000', color: '#ffffff' }}>SELECT INQUIRY</option>
+              <option value="order" style={{ backgroundColor: '#000000', color: '#ffffff' }}>Order Question</option>
+              <option value="wholesale" style={{ backgroundColor: '#000000', color: '#ffffff' }}>Wholesale</option>
+              <option value="collab" style={{ backgroundColor: '#000000', color: '#ffffff' }}>Collaboration</option>
+              <option value="other" style={{ backgroundColor: '#000000', color: '#ffffff' }}>Other</option>
             </select>
             <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: 'rgba(255,255,255,0.3)', fontSize: '10px' }}>▼</div>
-            <div className="absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500 ease-out peer-focus:w-full" style={{ backgroundColor: '#d4a24a' }} />
+            <div className="absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500 ease-out peer-focus:w-full" style={{ backgroundColor: '#ffffff' }} />
           </motion.div>
 
           <motion.div variants={assembleVariants(7)} className="w-full relative group">
@@ -138,7 +138,7 @@ export const PremiumContact: React.FC = () => {
               className="w-full bg-transparent text-white font-mono transition-colors uppercase resize-none peer"
               style={{ fontSize: '13px', padding: '15px 0', borderBottom: '1px solid rgba(255,255,255,0.15)', letterSpacing: '0.1em', outline: 'none', boxShadow: 'none' }}
             />
-            <div className="absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500 ease-out peer-focus:w-full" style={{ backgroundColor: '#d4a24a' }} />
+            <div className="absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-500 ease-out peer-focus:w-full" style={{ backgroundColor: '#ffffff' }} />
           </motion.div>
 
           <motion.button 
@@ -146,10 +146,10 @@ export const PremiumContact: React.FC = () => {
             className="w-full mt-6 group relative flex items-center justify-center overflow-hidden transition-transform hover:scale-[1.02] active:scale-[0.98]"
             style={{ backgroundColor: '#ffffff', padding: '20px 0', borderRadius: '2px' }}
           >
-            <span className="relative z-10 font-mono font-bold uppercase" style={{ fontSize: '11px', letterSpacing: '0.3em', color: '#07050a' }}>
+            <span className="relative z-10 font-mono font-bold uppercase" style={{ fontSize: '11px', letterSpacing: '0.3em', color: '#000000' }}>
               Send Transmission
             </span>
-            <div className="absolute inset-0 z-0 h-full w-full translate-y-[100%] transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:translate-y-0" style={{ backgroundColor: '#d4a24a' }} />
+            <div className="absolute inset-0 z-0 h-full w-full translate-y-[100%] transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:translate-y-0" style={{ backgroundColor: '#ffffff' }} />
           </motion.button>
           
           <motion.div variants={assembleVariants(9)} className="flex items-center justify-center gap-6 mt-10">

@@ -36,15 +36,16 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
   }, [isOpen]);
 
   const logoColor = isOpen
-    ? '#f4efe6'
-    : (theme === 'home' || theme === 'foundation' ? '#171220' : '#f4efe6');
+    ? '#ffffff'
+    : (theme === 'home' || theme === 'foundation' ? '#ffffff' : '#ffffff');
 
   return (
     <>
       {/* Top Header Bar */}
       <header
-        className="pointer-events-none fixed inset-x-0 top-0 z-[90] flex items-center justify-between px-6 py-5 md:px-[calc(var(--page-x)+3rem)] md:py-7"
+        className="pointer-events-none fixed inset-x-0 top-0 flex items-center justify-between px-6 py-5 md:px-12 md:py-7"
         data-nav="true"
+        style={{ zIndex: 99999 }}
       >
         <Link
           to="/"
@@ -59,7 +60,8 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
               xmlns="http://www.w3.org/2000/svg"
               role="img"
               aria-label="Justin Jefferson"
-              className="h-10 w-auto md:h-12 fill-current"
+              className="h-10 w-auto md:h-12"
+              style={{ fill: '#ffffff' }}
             >
               <path d="M27.9271 35.2244L28.9161 42.818L18.486 35.4071L7.90283 42.9264L8.88835 35.3355L18.4858 28.5164L27.9271 35.2244Z" />
               <path d="M15.4903 23.3423L0 34.2789L1.75369 20.6774L7.34806 16.7187L6.74483 23.1164L10.9979 20.1124L13.1327 3.79814L18.5 0L15.4903 23.3423Z" />
@@ -85,7 +87,8 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
             xmlns="http://www.w3.org/2000/svg"
             role="img"
             aria-hidden="true"
-            className="h-3 w-auto md:h-3.5 fill-current"
+            className="h-3 w-auto md:h-3.5"
+            style={{ fill: '#ffffff' }}
           >
             <path
               className={`hamburger-bar hamburger-bar--top transition-transform duration-300 origin-center ${
@@ -173,22 +176,22 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
         </div>
 
         {/* Overlay Footer credits */}
-        <div className="jj-menu-credits relative z-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-8 md:px-16 text-[11px] uppercase tracking-widest text-[#f4efe6]/50 font-mono">
+        <div className="jj-menu-credits relative z-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-8 md:px-16 text-[11px] uppercase tracking-widest text-[#ffffff]/50 font-mono">
           <div className="flex items-center gap-6">
             <a
               href="https://www.instagram.com/atassemble/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[#f4efe6] transition-colors"
+              className="hover:text-[#ffffff] transition-colors"
             >
               An Assemble Project
             </a>
             <span className="opacity-30">/</span>
-            <Link to="/privacy" className="hover:text-[#f4efe6] transition-colors">
+            <Link to="/privacy" className="hover:text-[#ffffff] transition-colors">
               Privacy
             </Link>
             <span className="opacity-30">/</span>
-            <Link to="/terms" className="hover:text-[#f4efe6] transition-colors">
+            <Link to="/terms" className="hover:text-[#ffffff] transition-colors">
               Terms
             </Link>
           </div>
@@ -198,7 +201,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
               href="https://layertwo.design"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[#f4efe6] transition-colors"
+              className="hover:text-[#ffffff] transition-colors"
             >
               Site by LayerTwo
             </a>

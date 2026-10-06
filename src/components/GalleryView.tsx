@@ -24,7 +24,7 @@ const GalleryItem = ({ image, index }: { image: any; index: number }) => {
         delay: index * 0.1, // Staggered entry
         ease: "easeOut"
       }}
-      className="relative group overflow-hidden rounded-xl bg-[#171220] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.8)] cursor-pointer"
+      className="relative group overflow-hidden rounded-xl bg-[#ffffff] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.8)] cursor-pointer"
       style={{ aspectRatio: '4/5' }}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
@@ -45,7 +45,7 @@ const GalleryItem = ({ image, index }: { image: any; index: number }) => {
 
 export const GalleryView = () => {
   return (
-    <section className="relative w-full min-h-screen bg-[#07050a] py-32 px-6 md:px-12 z-40">
+    <section className="relative w-full min-h-screen bg-[#000000] py-32 px-6 md:px-12 z-40">
       <div className="max-w-[1600px] mx-auto">
         <div className="flex flex-col items-center mb-20 text-center">
           <motion.h2 
@@ -62,7 +62,7 @@ export const GalleryView = () => {
             whileInView={{ opacity: 1, width: '80px' }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="h-1 bg-[#d4c8b8]"
+            className="h-1 bg-[#ffffff]"
           />
         </div>
 

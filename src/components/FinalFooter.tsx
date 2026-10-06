@@ -105,7 +105,7 @@ export const FinalFooter: React.FC = () => {
                 bottom: '10px',
                 background: 'none',
                 border: 'none',
-                color: '#d4a24a',
+                color: '#ffffff',
                 fontFamily: 'monospace',
                 fontSize: '12px',
                 cursor: 'pointer',
@@ -123,7 +123,7 @@ export const FinalFooter: React.FC = () => {
           
           {/* Quick Links */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minWidth: '150px' }}>
-            <span style={{ fontFamily: 'monospace', fontSize: '10px', color: '#d4a24a', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '10px' }}>
+            <span style={{ fontFamily: 'monospace', fontSize: '10px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '10px' }}>
               Quick Links
             </span>
             {links.map((link, i) => (
@@ -146,7 +146,7 @@ export const FinalFooter: React.FC = () => {
 
           {/* Socials */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minWidth: '150px' }}>
-            <span style={{ fontFamily: 'monospace', fontSize: '10px', color: '#d4a24a', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '10px' }}>
+            <span style={{ fontFamily: 'monospace', fontSize: '10px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '10px' }}>
               Connect
             </span>
             {socials.map((link, i) => (
@@ -169,7 +169,7 @@ export const FinalFooter: React.FC = () => {
 
           {/* Legal */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minWidth: '150px' }}>
-            <span style={{ fontFamily: 'monospace', fontSize: '10px', color: '#d4a24a', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '10px' }}>
+            <span style={{ fontFamily: 'monospace', fontSize: '10px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '10px' }}>
               Information
             </span>
             {legal.map((link, i) => (
@@ -202,7 +202,7 @@ export const FinalFooter: React.FC = () => {
         display: 'flex',
         whiteSpace: 'nowrap',
         overflow: 'hidden',
-        backgroundColor: '#07050a'
+        backgroundColor: '#000000'
       }}>
         <motion.div
           animate={{ x: [0, -1035] }}

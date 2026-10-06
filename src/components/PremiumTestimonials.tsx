@@ -11,22 +11,22 @@ export const PremiumLookbook: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full bg-[#0b0a0f] py-32 border-t border-[#171220]">
+    <section className="relative w-full bg-[#000000] py-32 border-t border-[#ffffff]">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16">
         
         {/* Premium Minimal Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div>
-            <div className="text-[#d4a24a] font-mono text-xs tracking-[0.3em] uppercase mb-6 flex items-center gap-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#d4a24a]"></span>
+            <div className="text-[#ffffff] font-mono text-xs tracking-[0.3em] uppercase mb-6 flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ffffff]"></span>
               Curated Selection
             </div>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold uppercase tracking-tighter text-[#f4efe6] leading-[0.9]">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold uppercase tracking-tighter text-[#ffffff] leading-[0.9]">
               The <br /> Archive
             </h2>
           </div>
           <div className="max-w-xs">
-            <p className="text-[#f4efe6]/50 font-body text-sm leading-relaxed">
+            <p className="text-[#ffffff]/50 font-body text-sm leading-relaxed">
               Explore the raw essence of our previous collections. Unfiltered, unedited, and authentic to the streetwear roots.
             </p>
           </div>
@@ -37,7 +37,7 @@ export const PremiumLookbook: React.FC = () => {
           {images.map((img) => (
             <div 
               key={img.id} 
-              className={`relative overflow-hidden bg-[#171220] rounded-sm group cursor-pointer ${img.colSpan} ${img.rowSpan}`}
+              className={`relative overflow-hidden bg-[#ffffff] rounded-sm group cursor-pointer ${img.colSpan} ${img.rowSpan}`}
             >
               <div className={`relative w-full ${img.aspect} md:h-full md:aspect-auto`}>
                 <img 
@@ -48,7 +48,7 @@ export const PremiumLookbook: React.FC = () => {
                 />
                 
                 {/* Subtle dark vignette overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0b0a0f]/80 via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity duration-1000" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/80 via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity duration-1000" />
                 
                 {/* Decorative plus icon on hover */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-white/20 bg-black/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:scale-100 scale-50 transition-all duration-700 ease-out">

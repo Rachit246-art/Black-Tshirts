@@ -33,7 +33,7 @@ export const PremiumAccordion: React.FC = () => {
   return (
     <section 
       className="relative w-full flex flex-col py-0 md:py-16 px-0 md:px-8"
-      style={{ minHeight: '100vh', backgroundColor: '#07050a' }}
+      style={{ minHeight: '100vh', backgroundColor: '#000000' }}
     >
       {/* Optional Top Thin Border for Separation */}
       <div className="absolute top-0 inset-x-0 h-[1px] bg-white/5" />
@@ -78,10 +78,10 @@ export const PremiumAccordion: React.FC = () => {
               {/* Content Overlay */}
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 flex flex-col justify-end transition-all duration-[800ms] min-w-[200px]">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className={`font-mono text-sm tracking-widest transition-colors duration-500 ${isHovered ? 'text-[#d4a24a]' : 'text-white/30'}`}>
+                  <span className={`font-mono text-sm tracking-widest transition-colors duration-500 ${isHovered ? 'text-[#ffffff]' : 'text-white/30'}`}>
                     {item.id}
                   </span>
-                  <div className={`h-[1px] bg-[#d4a24a] transition-all duration-[800ms] ${isHovered ? 'w-12' : 'w-0'}`} />
+                  <div className={`h-[1px] bg-[#ffffff] transition-all duration-[800ms] ${isHovered ? 'w-12' : 'w-0'}`} />
                 </div>
                 
                 {/* Title */}
@@ -98,7 +98,7 @@ export const PremiumAccordion: React.FC = () => {
                 
                 {/* Subtitle */}
                 <div 
-                  className={`mt-4 font-mono text-xs md:text-sm tracking-widest text-[#f4efe6]/80 uppercase overflow-hidden transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] whitespace-nowrap`}
+                  className={`mt-4 font-mono text-xs md:text-sm tracking-widest text-[#ffffff]/80 uppercase overflow-hidden transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] whitespace-nowrap`}
                   style={{
                     maxHeight: isHovered ? '50px' : '0px',
                     opacity: isHovered ? 1 : 0,

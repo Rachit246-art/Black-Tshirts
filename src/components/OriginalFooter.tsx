@@ -13,7 +13,7 @@ const polaroids = [
 
 export const OriginalFooter = () => {
   return (
-    <footer className="relative w-full overflow-hidden bg-[#0d0914] text-[#f4efe6] flex flex-col justify-between z-50 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]" style={{ minHeight: '100vh' }}>
+    <footer className="relative w-full overflow-hidden bg-[#0d0914] text-[#ffffff] flex flex-col justify-between z-50 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]" style={{ minHeight: '100vh' }}>
       
       {/* Background Soft Texture */}
       <div 
@@ -29,14 +29,14 @@ export const OriginalFooter = () => {
           {[...polaroids, ...polaroids].map((p, idx) => (
             <div
               key={`${p.id}-${idx}`}
-              className="relative bg-[#f4efe6] p-2 pb-8 sm:p-3 sm:pb-12 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.9)] flex-shrink-0 transition-transform duration-500 hover:-translate-y-6 hover:scale-110 hover:z-20 cursor-pointer border border-[#d3c8ba]"
+              className="relative bg-[#ffffff] p-2 pb-8 sm:p-3 sm:pb-12 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.9)] flex-shrink-0 transition-transform duration-500 hover:-translate-y-6 hover:scale-110 hover:z-20 cursor-pointer border border-[#000000]"
               style={{ 
                 width: 'clamp(140px, 16vw, 220px)', 
                 aspectRatio: '3/4',
                 transform: `rotate(${p.rot}deg)` 
               }}
             >
-              <div className="w-full h-full relative overflow-hidden bg-[#171220] shadow-inner border border-black/20">
+              <div className="w-full h-full relative overflow-hidden bg-[#ffffff] shadow-inner border border-black/20">
                 <img src={p.src} alt="" className="w-full h-full object-cover" />
               </div>
             </div>
@@ -51,7 +51,7 @@ export const OriginalFooter = () => {
           <div className="mb-2">
             <h3 
               className="font-display tracking-widest drop-shadow-2xl"
-              style={{ fontSize: 'clamp(2rem, 4vw, 4rem)', color: '#d4a24a', filter: 'drop-shadow(0 0 20px rgba(212,162,74,0.5))' }}
+              style={{ fontSize: 'clamp(2rem, 4vw, 4rem)', color: '#ffffff', filter: 'drop-shadow(0 0 20px rgba(212,162,74,0.5))' }}
             >
               PREMIUM APPAREL
             </h3>
@@ -64,10 +64,10 @@ export const OriginalFooter = () => {
           </h2>
           
           <div className="mt-16 relative group">
-            <div className="absolute inset-0 bg-[#d4a24a] rounded-full blur-lg opacity-30 group-hover:opacity-60 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-[#ffffff] rounded-full blur-lg opacity-30 group-hover:opacity-60 transition-opacity duration-300" />
             <button 
               className="relative font-display font-bold uppercase tracking-[0.2em] text-sm md:text-base px-14 py-6 rounded-full hover:scale-105 transition-all duration-300 shadow-2xl"
-              style={{ backgroundColor: '#d4a24a', color: '#0a0710' }}
+              style={{ backgroundColor: '#ffffff', color: '#0a0710' }}
             >
               Shop Collection
             </button>
@@ -77,11 +77,11 @@ export const OriginalFooter = () => {
 
       {/* Bottom Logos Marquee Area */}
       <div className="w-full border-t border-white/5 py-8 relative z-40 bg-[#0a0710] mt-auto">
-        <div className="max-w-[1800px] mx-auto px-6 md:px-12 flex flex-wrap justify-center sm:justify-between items-center opacity-90 text-[#f4efe6] font-display font-bold text-xs md:text-sm tracking-[0.2em] uppercase gap-6 md:gap-8">
+        <div className="max-w-[1800px] mx-auto px-6 md:px-12 flex flex-wrap justify-center sm:justify-between items-center opacity-90 text-[#ffffff] font-display font-bold text-xs md:text-sm tracking-[0.2em] uppercase gap-6 md:gap-8">
           <span>High on the north</span>
-          <span className="text-[#d4a24a]">Exclusive</span>
+          <span className="text-[#ffffff]">Exclusive</span>
           <span>Premium</span>
-          <span className="text-[#d4a24a]">Limited Edition</span>
+          <span className="text-[#ffffff]">Limited Edition</span>
           <span>Streetwear</span>
         </div>
       </div>

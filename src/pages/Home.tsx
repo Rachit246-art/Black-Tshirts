@@ -136,7 +136,7 @@ export const Home: React.FC = () => {
 
   return (
     <div
-      className="relative w-full bg-[#d3c8ba] text-[#171220] selection:bg-[#171220] selection:text-[#f4efe6]"
+      className="relative w-full bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000]"
     >
       {/* =========================================================================
           COMBINED 3-TIER PINNED STAGE:
@@ -165,12 +165,12 @@ export const Home: React.FC = () => {
             {/* Giant Blurred Background Watermarks: JUSTIN / JEFFERSON */}
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 flex flex-col justify-center opacity-30 select-none overflow-hidden">
               <div className="animate-marquee-left flex whitespace-nowrap">
-                <span className="font-display text-[22vw] leading-none tracking-[-0.03em] uppercase text-[#171220] pr-12">
+                <span className="font-display text-[22vw] leading-none tracking-[-0.03em] uppercase text-[#ffffff] pr-12">
                   PREMIUM PRINTED APPAREL · PREMIUM PRINTED APPAREL ·
                 </span>
               </div>
               <div className="animate-marquee-right flex whitespace-nowrap -mt-[5vw]">
-                <span className="font-display text-[22vw] leading-none tracking-[-0.03em] uppercase text-[#171220] pr-12">
+                <span className="font-display text-[22vw] leading-none tracking-[-0.03em] uppercase text-[#ffffff] pr-12">
                   OVERSIZED TEES · STREETWEAR · OVERSIZED TEES ·
                 </span>
               </div>
@@ -187,11 +187,11 @@ export const Home: React.FC = () => {
 
             {/* Top Header Label */}
             <div className="relative z-20 max-w-7xl mx-auto w-full flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-0 mt-4 md:mt-0">
-              <div className="text-[10px] md:text-[11px] font-mono uppercase tracking-[0.2em] md:tracking-[0.25em] text-[#171220]/70 flex items-center gap-2 text-center md:text-left justify-center md:justify-start">
-                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#4f2bab]" />
+              <div className="text-[10px] md:text-[11px] font-mono uppercase tracking-[0.2em] md:tracking-[0.25em] text-[#ffffff]/70 flex items-center gap-2 text-center md:text-left justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#ffffff]" />
                 From Studio To The Streets
               </div>
-              <div className="text-[10px] md:text-[11px] font-mono uppercase tracking-[0.2em] md:tracking-[0.25em] text-[#171220]/70 text-center md:text-right">
+              <div className="text-[10px] md:text-[11px] font-mono uppercase tracking-[0.2em] md:tracking-[0.25em] text-[#ffffff]/70 text-center md:text-right">
                 Crafted For Comfort
               </div>
             </div>
@@ -204,7 +204,7 @@ export const Home: React.FC = () => {
 
           {/* 2. SIGNATURE MOMENTS SECTION (RISES UP OVER HERO ACCORDING TO SCROLL) */}
           <div
-            className="absolute inset-0 w-full h-full z-20 flex flex-col justify-center bg-[#0b0a0f] text-[#f4efe6] overflow-hidden shadow-[0_-30px_90px_rgba(0,0,0,0.95)]"
+            className="absolute inset-0 w-full h-full z-20 flex flex-col justify-center bg-[#000000] text-[#ffffff] overflow-hidden shadow-[0_-30px_90px_rgba(0,0,0,0.95)]"
             style={{
               transform: `translate3d(0, ${momentsTranslateY}%, 0) scale(${1 - easedQuoteRise * 0.05})`,
               opacity: Math.max(0.15, 1 - easedQuoteRise * 0.85),
@@ -240,7 +240,7 @@ export const Home: React.FC = () => {
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden opacity-30 select-none"
             >
-              <h2 className="font-display font-bold text-[35vw] sm:text-[28vw] leading-none uppercase tracking-[-0.03em] text-[#563b80] drop-shadow-2xl whitespace-nowrap">
+              <h2 className="font-display font-bold text-[35vw] sm:text-[28vw] leading-none uppercase tracking-[-0.03em] text-[#333333] drop-shadow-2xl whitespace-nowrap">
                 Signature Products
               </h2>
             </div>
@@ -248,8 +248,8 @@ export const Home: React.FC = () => {
             {/* Top Control Bar: Collection Label & Navigation Arrows */}
             <div className="relative z-10 max-w-7xl mx-auto w-full px-6 sm:px-12 mb-12 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full bg-[#d4a24a] animate-pulse shadow-[0_0_10px_#d4a24a]" />
-                <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-[#d4a24a]">
+                <span className="w-3 h-3 rounded-full bg-[#ffffff] animate-pulse shadow-[0_0_10px_#ffffff]" />
+                <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-[#ffffff]">
                   Signature Products · 09 Pieces
                 </span>
               </div>
@@ -308,14 +308,14 @@ export const Home: React.FC = () => {
                     >
                       {/* Premium Polaroid Frame */}
                       <div
-                        className="relative bg-[#f4efe6] p-3 pb-12 sm:p-4 sm:pb-16 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.8)] transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-8 group-hover:rotate-2 z-10 group-hover:z-30 group-hover:shadow-[0_40px_80px_rgba(0,0,0,1)]"
+                        className="relative bg-[#111111] p-3 pb-12 sm:p-4 sm:pb-16 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.8)] transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-8 group-hover:rotate-2 z-10 group-hover:z-30 group-hover:shadow-[0_40px_80px_rgba(0,0,0,1)]"
                         style={{
                           width: '280px',
                           height: '380px'
                         }}
                       >
                         {/* Inner Image Container */}
-                        <div className="w-full h-full relative overflow-hidden bg-[#171220] shadow-inner border border-black/10">
+                        <div className="w-full h-full relative overflow-hidden bg-[#000000] shadow-inner border border-white/10">
                           <img
                             src={moment.image}
                             alt={moment.title}
@@ -342,13 +342,13 @@ export const Home: React.FC = () => {
                       <div className="mt-6 text-center w-full px-2" style={{ maxWidth: '300px' }}>
                         <h3 
                           className="font-display text-base sm:text-lg uppercase font-bold tracking-widest group-hover:scale-110 transition-all duration-300 truncate drop-shadow-md"
-                          style={{ color: '#f4efe6' }}
+                          style={{ color: '#ffffff' }}
                         >
                           {moment.title}
                         </h3>
                         <div 
                           className="mt-2 text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] transition-opacity"
-                          style={{ color: '#d4a24a', opacity: 0.9 }}
+                          style={{ color: '#ffffff', opacity: 0.9 }}
                         >
                           {moment.stat}
                         </div>
@@ -363,7 +363,7 @@ export const Home: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsAudioPlaying(!isAudioPlaying)}
-              className="absolute bottom-6 right-6 z-30 flex items-center gap-2 px-3 py-2 rounded-full bg-[#171220]/90 border border-white/10 hover:border-[#d4a24a]/50 backdrop-blur-md shadow-lg pointer-events-auto transition-colors cursor-pointer"
+              className="absolute bottom-6 right-6 z-30 flex items-center gap-2 px-3 py-2 rounded-full bg-[#ffffff]/90 border border-white/10 hover:border-[#ffffff]/50 backdrop-blur-md shadow-lg pointer-events-auto transition-colors cursor-pointer"
               title="Toggle audio mood"
             >
               <div className="flex items-end gap-[3px] h-3.5">
@@ -372,7 +372,7 @@ export const Home: React.FC = () => {
                 <span className={`w-[2px] h-3.5 bg-white/80 ${isAudioPlaying ? 'animate-pulse' : ''}`} style={{ animationDelay: '0.4s' }} />
                 <span className={`w-[2px] h-1.5 bg-white/80 ${isAudioPlaying ? 'animate-pulse' : ''}`} style={{ animationDelay: '0.1s' }} />
               </div>
-              <span className="font-mono text-[9px] uppercase tracking-widest text-[#f4efe6]/70 hidden sm:inline">
+              <span className="font-mono text-[9px] uppercase tracking-widest text-[#ffffff]/70 hidden sm:inline">
                 {isAudioPlaying ? 'Sound On' : 'Muted'}
               </span>
             </button>
@@ -385,7 +385,7 @@ export const Home: React.FC = () => {
               transform: `translate3d(0, ${quoteTranslateY}%, 0)`,
               clipPath: 'polygon(0 3.5vw, 100% 0, 100% 100%, 0 100%)',
               WebkitClipPath: 'polygon(0 3.5vw, 100% 0, 100% 100%, 0 100%)',
-              backgroundColor: '#1a0e30',
+              backgroundColor: '#000000',
               pointerEvents: quoteRiseProgress > 0.05 ? 'auto' : 'none',
               willChange: 'transform'
             }}
@@ -403,7 +403,7 @@ export const Home: React.FC = () => {
             <div
               aria-hidden="true"
               className="relative z-10 flex items-center justify-center gap-1 mb-6 sm:mb-8 select-none"
-              style={{ color: 'rgba(212, 200, 184, 0.5)' }} // #d4c8b8 with 50% opacity
+              style={{ color: 'rgba(255, 255, 255, 0.5)' }} // #ffffff with 50% opacity
             >
               <span className="font-display text-5xl sm:text-7xl md:text-8xl leading-none tracking-[0.15em] font-normal">
                 {'\u201C\u201C'}
@@ -417,7 +417,7 @@ export const Home: React.FC = () => {
             <h2 
               className="relative z-10 font-display leading-[0.88] uppercase tracking-[-0.02em] max-w-6xl mx-auto select-none"
               style={{ 
-                color: '#d4c8b8', 
+                color: '#ffffff', 
                 fontSize: 'clamp(32px, 7vw, 100px)',
                 fontWeight: 800,
                 WebkitFontSmoothing: 'antialiased'
@@ -442,8 +442,9 @@ export const Home: React.FC = () => {
                       return (
                         <span 
                           key={wordIdx}
-                          className="inline-block mx-[0.15em] mb-1 sm:mb-2"
+                          className="inline-block mb-1 sm:mb-2"
                           style={{
+                            margin: '0 0.15em',
                             transform: `translate3d(${randX * scatter}px, ${randY * scatter}px, 0) rotate(${randRot * scatter}deg) scale(${1 - scatter * 0.4})`,
                             opacity: 1 - scatter * 0.9,
                             willChange: 'transform, opacity'
@@ -482,13 +483,13 @@ export const Home: React.FC = () => {
                   }}
                 >
                   <div
-                    className="relative bg-[#f4efe6] rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.4)] flex flex-col"
+                    className="relative bg-[#111111] rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.4)] flex flex-col"
                     style={{ 
                       padding: '16px 16px 64px 16px',
                       aspectRatio: '3/4' 
                     }}
                   >
-                    <div className="w-full h-full relative overflow-hidden shadow-inner border border-black/10 bg-[#f4efe6] flex items-center justify-center">
+                    <div className="w-full h-full relative overflow-hidden shadow-inner border border-white/10 bg-[#000000] flex items-center justify-center">
                       <img
                         src={item.image}
                         alt={item.title}
@@ -504,7 +505,7 @@ export const Home: React.FC = () => {
             {/* Editorial Subtitle */}
             <div 
               className="relative z-10 mt-10 sm:mt-14 max-w-2xl mx-auto font-body text-xs sm:text-sm md:text-base leading-relaxed font-medium tracking-wide"
-              style={{ color: 'rgba(212, 200, 184, 0.6)' }}
+              style={{ color: 'rgba(255, 255, 255, 0.6)' }}
             >
               <p style={{ opacity: Math.max(0, Math.min(1, easedQuoteRise * 2 - 0.5)), transform: `translateY(${Math.max(0, 20 - easedQuoteRise * 40)}px)` }}>
                 More than fabric, more than threads, more than the design itself.
@@ -518,7 +519,7 @@ export const Home: React.FC = () => {
       </div>
       
       {/* 4 & 4.5. JS-DRIVEN OVERLAPPING GALLERY & VIDEO SECTION */}
-      <div className="relative w-full bg-[#07050a]">
+      <div className="relative w-full bg-[#000000]">
         
         {/* ANCHOR: Tracks natural scroll position of the gallery independently of the video */}
         <div ref={galleryAnchorRef} className="w-full z-10">

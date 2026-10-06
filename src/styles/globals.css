@@ -7,27 +7,27 @@
 
 /* Ensure data-theme=home has the exact authentic sand background and dark ink typography */
 body[data-theme="home"] {
-  background-color: var(--color-sand, #d3c8ba) !important;
-  color: var(--color-ink-deep, #171220) !important;
+  background-color: var(--color-sand, #000000) !important;
+  color: var(--color-ink-deep, #ffffff) !important;
 }
 
 body[data-theme="tone-dark"] {
-  background-color: var(--color-ink, #0b0a0f) !important;
-  color: var(--color-bone, #f4efe6) !important;
+  background-color: var(--color-ink, #000000) !important;
+  color: var(--color-bone, #ffffff) !important;
 }
 
 body[data-theme="foundation"] {
-  background-color: var(--color-bone, #f4efe6) !important;
-  color: var(--color-ink-deep, #171220) !important;
+  background-color: var(--color-bone, #ffffff) !important;
+  color: var(--color-ink-deep, #ffffff) !important;
 }
 
 body[data-theme="tone-purple"] {
   background-color: var(--color-purple-deep, #2c1352) !important;
-  color: var(--color-bone, #f4efe6) !important;
+  color: var(--color-bone, #ffffff) !important;
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-gold, #d4a24a);
+  outline: 2px solid var(--color-gold, #ffffff);
   outline-offset: 4px;
 }
 
