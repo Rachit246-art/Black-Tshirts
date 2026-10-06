@@ -48,19 +48,10 @@ export const PageLoader: React.FC<PageLoaderProps> = ({ onComplete }) => {
         isFinished ? '-translate-y-full ease-in-out' : 'translate-y-0'
       }`}
       style={{
-        backgroundColor: '#171220'
+        backgroundColor: '#000000'
       }}
       aria-label="Loading site"
     >
-      {/* Background grain texture */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-40"
-        style={{
-          backgroundImage: "url('/textures/pebble.webp')",
-          backgroundSize: '480px 480px'
-        }}
-      />
-
       <div className="relative z-10 flex flex-col items-center">
         {/* Justin Jefferson Monogram Logo with animated bottom-to-top fill */}
         <div className="relative">

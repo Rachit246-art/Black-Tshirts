@@ -39,12 +39,7 @@ const AppContent: React.FC = () => {
 
       {/* Step 1: Preload page */}
       {introStep === 'loader' && (
-        <PageLoader onComplete={() => setIntroStep('video')} />
-      )}
-
-      {/* Step 2: Second video playback (t-shirt-video.mp4) */}
-      {introStep === 'video' && (
-        <IntroVideo onComplete={() => setIntroStep('ready')} />
+        <PageLoader onComplete={() => setIntroStep('ready')} />
       )}
 
       {/* Navigation (visible once video begins or completes) */}

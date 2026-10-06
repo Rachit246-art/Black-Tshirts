@@ -1,5 +1,15 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { homeData } from '../data/homeData';
+import { GalleryView } from '../components/GalleryView';
+import { FinalFooter } from '../components/FinalFooter';
+import { PremiumAccordion } from '../components/PremiumAccordion';
+import { PremiumVideo } from '../components/PremiumVideo';
+import { PremiumContact } from '../components/PremiumContact';
+
+const pseudoRandom = (seed: number) => {
+  const x = Math.sin(seed++) * 10000;
+  return x - Math.floor(x);
+};
 
 export const Home: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -7,6 +17,11 @@ export const Home: React.FC = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(true);
   const stageTrackRef = useRef<HTMLDivElement>(null);
   const railRef = useRef<HTMLDivElement>(null);
+  
+  // Custom JS-driven pinning for Gallery -> Video overlap
+  const galleryAnchorRef = useRef<HTMLDivElement>(null);
+  const [galleryTranslateY, setGalleryTranslateY] = useState(0);
+
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeftState, setScrollLeftState] = useState(0);
@@ -21,6 +36,7 @@ export const Home: React.FC = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
+          // 1. Hero / Signature / Quote Track Logic
           if (stageTrackRef.current) {
             const rect = stageTrackRef.current.getBoundingClientRect();
             const windowHeight = window.innerHeight;
@@ -36,6 +52,23 @@ export const Home: React.FC = () => {
               }
             }
           }
+
+          // 2. JS-Driven Pinning for Gallery -> Video Overlap
+          if (galleryAnchorRef.current) {
+            const rect = galleryAnchorRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            // When the NATURAL bottom of the gallery scrolls above the bottom of the screen,
+            // we calculate the overlap to translate the inner gallery down, pinning it visually.
+            const overlap = windowHeight - rect.bottom;
+            // Cap the overlap at windowHeight (the exact height of the PremiumVideo)
+            // so it stops pinning and scrolls away naturally once the video covers it.
+            if (overlap > 0) {
+              setGalleryTranslateY(Math.min(overlap, windowHeight));
+            } else {
+              setGalleryTranslateY(0);
+            }
+          }
+
           ticking = false;
         });
         ticking = true;
@@ -104,7 +137,6 @@ export const Home: React.FC = () => {
   return (
     <div
       className="relative w-full bg-[#d3c8ba] text-[#171220] selection:bg-[#171220] selection:text-[#f4efe6]"
-      style={{ overflowX: 'clip' }}
     >
       {/* =========================================================================
           COMBINED 3-TIER PINNED STAGE:
@@ -134,69 +166,39 @@ export const Home: React.FC = () => {
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 flex flex-col justify-center opacity-30 select-none overflow-hidden">
               <div className="animate-marquee-left flex whitespace-nowrap">
                 <span className="font-display text-[22vw] leading-none tracking-[-0.03em] uppercase text-[#171220] pr-12">
-                  JUSTIN JEFFERSON · JUSTIN JEFFERSON ·
+                  PREMIUM PRINTED APPAREL · PREMIUM PRINTED APPAREL ·
                 </span>
               </div>
               <div className="animate-marquee-right flex whitespace-nowrap -mt-[5vw]">
                 <span className="font-display text-[22vw] leading-none tracking-[-0.03em] uppercase text-[#171220] pr-12">
-                  #18 VIKINGS · ALL-PRO · #18 VIKINGS ·
+                  OVERSIZED TEES · STREETWEAR · OVERSIZED TEES ·
                 </span>
               </div>
             </div>
 
             {/* Central Portrait Cutout */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex justify-center items-end h-[68vh] sm:h-[72vh]">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex justify-center items-end h-[80vh] sm:h-[85vh]">
               <img
-                src="/3d-hero/hero-portrait-mobile.webp"
+                src="/Hero-section.png"
                 alt="Justin Jefferson"
-                className="h-full w-auto max-w-none object-contain drop-shadow-2xl"
+                className="h-full w-auto max-w-none object-contain drop-shadow-2xl scale-[1.32] origin-bottom"
               />
             </div>
 
             {/* Top Header Label */}
-            <div className="relative z-20 max-w-7xl mx-auto w-full flex items-center justify-between">
-              <div className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#171220]/70 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#4f2bab]" />
-                From St. Rose to Minneapolis
+            <div className="relative z-20 max-w-7xl mx-auto w-full flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-0 mt-4 md:mt-0">
+              <div className="text-[10px] md:text-[11px] font-mono uppercase tracking-[0.2em] md:tracking-[0.25em] text-[#171220]/70 flex items-center gap-2 text-center md:text-left justify-center md:justify-start">
+                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#4f2bab]" />
+                From Studio To The Streets
               </div>
-              <div className="text-[11px] font-mono uppercase tracking-[0.25em] text-[#171220]/70">
-                Minnesota Vikings #18
+              <div className="text-[10px] md:text-[11px] font-mono uppercase tracking-[0.2em] md:tracking-[0.25em] text-[#171220]/70 text-center md:text-right">
+                Crafted For Comfort
               </div>
             </div>
 
-            {/* Middle / Bottom Editorial Statements flanking the cutout */}
-            <div className="relative z-20 max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-end mt-auto pt-48 pb-4">
-              {/* Left Column: Peach Bowl Preview Card & Statement */}
-              <div className="md:col-span-4 flex flex-col gap-6">
-                <div className="p-4 sm:p-5 rounded-sm bg-[#171220]/90 text-[#f4efe6] backdrop-blur-md max-w-xs shadow-2xl border border-[#171220]/20">
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-[#d4a24a] block mb-1">
-                    Moment 01 · 2019 Peach Bowl
-                  </span>
-                  <div className="font-display text-xl uppercase tracking-tight">
-                    The Peach Bowl
-                  </div>
-                  <div className="font-numono text-xs text-[#d4a24a] mt-1">
-                    14 REC · 227 YDS · 4 TD
-                  </div>
-                </div>
-
-                <p className="font-body text-xs sm:text-sm text-[#171220]/80 leading-relaxed max-w-xs font-medium">
-                  Every move Justin makes carries intention, style, and a story you don't see on the field.
-                </p>
-              </div>
-
-              {/* Center spacer for cutout */}
-              <div className="hidden md:block md:col-span-4" />
-
-              {/* Right Column: Unusually spaced character typography & Statement */}
-              <div className="md:col-span-4 flex flex-col items-start md:items-end text-left md:text-right">
-                <div className="font-mono text-[10px] uppercase tracking-[0.35em] text-[#171220]/80 leading-loose max-w-xs">
-                  F r o m &nbsp; a &nbsp; S t . &nbsp; R o s e , &nbsp; L o u i s i a n a &nbsp; t o &nbsp; t h e &nbsp; M e t &nbsp; G a l a &nbsp; r u n w a y .
-                </div>
-                <div className="mt-4 text-xs font-mono text-[#171220]/60 uppercase tracking-widest">
-                  Scroll to explore ↓
-                </div>
-              </div>
+            {/* All Middle/Bottom flanking text removed per user requests for a cleaner hero image display */}
+            <div className="relative z-20 max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-end mt-auto pt-10 md:pt-48 pb-8 md:pb-4 pointer-events-none">
+              {/* Empty container to preserve bottom spacing */}
             </div>
           </section>
 
@@ -233,30 +235,30 @@ export const Home: React.FC = () => {
               }}
             />
 
-            {/* Giant Purple Display Watermark: SIGNATURE MOMENTS */}
+            {/* Giant Purple Display Watermark: SIGNATURE PRODUCTS */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 top-10 sm:top-14 z-0 flex justify-center overflow-hidden opacity-30 select-none"
+              className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden opacity-30 select-none"
             >
-              <h2 className="font-display text-[14vw] sm:text-[12vw] leading-none uppercase tracking-[-0.03em] text-[#563b80]">
-                Signature Moments
+              <h2 className="font-display font-bold text-[35vw] sm:text-[28vw] leading-none uppercase tracking-[-0.03em] text-[#563b80] drop-shadow-2xl whitespace-nowrap">
+                Signature Products
               </h2>
             </div>
 
             {/* Top Control Bar: Collection Label & Navigation Arrows */}
-            <div className="relative z-10 max-w-7xl mx-auto w-full px-6 sm:px-12 mb-4 flex items-center justify-between">
+            <div className="relative z-10 max-w-7xl mx-auto w-full px-6 sm:px-12 mb-12 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-[#d4a24a] animate-pulse" />
-                <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#d4a24a]">
-                  Signature Moments · 05 Collectibles
+                <span className="w-3 h-3 rounded-full bg-[#d4a24a] animate-pulse shadow-[0_0_10px_#d4a24a]" />
+                <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-[#d4a24a]">
+                  Signature Products · 09 Pieces
                 </span>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-4">
                 <button
                   type="button"
                   onClick={() => scrollRail('left')}
-                  className="w-8 h-8 rounded-full border border-white/20 bg-white/5 hover:bg-white/20 flex items-center justify-center text-white/80 hover:text-white transition-colors cursor-pointer"
+                  className="w-12 h-12 rounded-full border-2 border-white/30 bg-white/10 hover:bg-white/30 flex items-center justify-center text-white/90 hover:text-white transition-all cursor-pointer backdrop-blur-md"
                   aria-label="Scroll left"
                 >
                   ←
@@ -264,7 +266,7 @@ export const Home: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => scrollRail('right')}
-                  className="w-8 h-8 rounded-full border border-white/20 bg-white/5 hover:bg-white/20 flex items-center justify-center text-white/80 hover:text-white transition-colors cursor-pointer"
+                  className="w-12 h-12 rounded-full border-2 border-white/30 bg-white/10 hover:bg-white/30 flex items-center justify-center text-white/90 hover:text-white transition-all cursor-pointer backdrop-blur-md"
                   aria-label="Scroll right"
                 >
                   →
@@ -279,77 +281,77 @@ export const Home: React.FC = () => {
               onMouseMove={handleMouseMove}
               onMouseUp={stopDragging}
               onMouseLeave={stopDragging}
-              className="relative z-10 w-full overflow-x-auto no-scrollbar pt-2 pb-6 px-4 sm:px-8 md:px-12 cursor-grab active:cursor-grabbing select-none"
+              className="relative z-10 w-full overflow-x-auto no-scrollbar pt-12 pb-24 px-4 sm:px-8 md:px-12 cursor-grab active:cursor-grabbing select-none"
             >
-              <div className="flex items-center gap-4 sm:gap-6 md:gap-7 min-w-max mx-auto justify-start sm:justify-center">
+              <div className="flex items-center gap-8 sm:gap-10 md:gap-12 min-w-max mx-auto justify-start sm:justify-center">
                 {homeData.signatureMoments.map((moment, idx) => {
-                  const baseOffset = cardOffsetsPx[idx];
-                  const delayMs = idx * 160;
+                  const baseOffset = (idx % 2 === 0 ? 20 : -20); // slight alternating vertical offset
+                  const delayMs = idx * 120;
+                  const flyInRotation = idx % 2 === 0 ? 30 : -30;
+                  
                   return (
                     <div
                       key={moment._id}
-                      className="shrink-0 flex flex-col items-center group cursor-pointer"
+                      className="shrink-0 flex flex-col items-center group cursor-pointer relative"
                       style={{
-                        width: '210px',
+                        width: '280px',
                         flexShrink: 0,
                         transform: cardsRevealed
-                          ? `translateY(${baseOffset}px) scale(1)`
-                          : `translateY(${baseOffset + 180}px) scale(0.90)`,
+                          ? `translateY(${baseOffset}px) scale(1) rotate(0deg)`
+                          : `translateY(${baseOffset + 800}px) scale(0.3) rotate(${flyInRotation}deg)`,
                         opacity: cardsRevealed ? 1 : 0,
                         transition: cardsRevealed
-                          ? `transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) ${delayMs}ms, opacity 0.75s ease-out ${delayMs}ms`
-                          : 'transform 0.35s ease-out, opacity 0.35s ease-out',
+                          ? `transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.1) ${delayMs}ms, opacity 0.8s ease-out ${delayMs}ms`
+                          : 'transform 0.4s ease-in, opacity 0.4s ease-in',
                         willChange: 'transform, opacity'
                       }}
                     >
-                      {/* 3D Gold Collectible Card Box - Exact 210px x 308px (Zero Cutting) */}
+                      {/* Premium Polaroid Frame */}
                       <div
-                        className="relative rounded-xl overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.85)] border-[2px] border-[#d4a24a] bg-[#0b0a0f] transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-2 group-hover:shadow-[0_20px_45px_rgba(212,162,74,0.4)]"
+                        className="relative bg-[#f4efe6] p-3 pb-12 sm:p-4 sm:pb-16 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.8)] transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-8 group-hover:rotate-2 z-10 group-hover:z-30 group-hover:shadow-[0_40px_80px_rgba(0,0,0,1)]"
                         style={{
-                          width: '210px',
-                          height: '308px',
-                          position: 'relative'
+                          width: '280px',
+                          height: '380px'
                         }}
                       >
-                        <img
-                          src={moment.image}
-                          alt={moment.title}
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'contain',
-                            display: 'block'
-                          }}
-                          className="pointer-events-none select-none"
-                          loading="lazy"
-                        />
+                        {/* Inner Image Container */}
+                        <div className="w-full h-full relative overflow-hidden bg-[#171220] shadow-inner border border-black/10">
+                          <img
+                            src={moment.image}
+                            alt={moment.title}
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'cover',
+                              display: 'block'
+                            }}
+                            className="pointer-events-none select-none transition-transform duration-700 group-hover:scale-105"
+                            loading="lazy"
+                          />
+                        </div>
 
                         {/* Corner Badge */}
                         {moment.badge && (
-                          <div className="absolute top-2.5 left-2.5 z-10 px-2 py-0.5 rounded-full bg-black/75 backdrop-blur-md border border-[#d4a24a]/50 text-[8px] font-mono uppercase tracking-wider text-[#d4a24a]">
+                          <div className="absolute top-2 left-2 z-20 px-3 py-1 bg-black text-white text-[9px] font-display font-bold uppercase tracking-widest shadow-md">
                             {moment.badge}
                           </div>
                         )}
-
-                        {/* Holographic Foil Reflection */}
-                        <div
-                          aria-hidden="true"
-                          className="pointer-events-none absolute inset-0 opacity-60 group-hover:opacity-90 bg-gradient-to-tr from-transparent via-white/20 to-transparent mix-blend-screen transition-opacity duration-300"
-                        />
-                        <div
-                          aria-hidden="true"
-                          className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-white/20"
-                        />
                       </div>
 
                       {/* Card Title & Stat Labels below */}
-                      <div className="mt-3 text-center w-full px-1" style={{ maxWidth: '210px' }}>
-                        <h3 className="font-display text-xs sm:text-sm uppercase tracking-wider text-[#f4efe6] group-hover:text-[#d4a24a] transition-colors truncate">
+                      <div className="mt-6 text-center w-full px-2" style={{ maxWidth: '300px' }}>
+                        <h3 
+                          className="font-display text-base sm:text-lg uppercase font-bold tracking-widest group-hover:scale-110 transition-all duration-300 truncate drop-shadow-md"
+                          style={{ color: '#f4efe6' }}
+                        >
                           {moment.title}
                         </h3>
-                        <p className="font-numono text-[10px] sm:text-[11px] text-[#d4a24a] tracking-widest mt-0.5">
+                        <div 
+                          className="mt-2 text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] transition-opacity"
+                          style={{ color: '#d4a24a', opacity: 0.9 }}
+                        >
                           {moment.stat}
-                        </p>
+                        </div>
                       </div>
                     </div>
                   );
@@ -416,20 +418,44 @@ export const Home: React.FC = () => {
               className="relative z-10 font-display leading-[0.88] uppercase tracking-[-0.02em] max-w-6xl mx-auto select-none"
               style={{ 
                 color: '#d4c8b8', 
-                fontSize: 'clamp(42px, 8vw, 120px)',
+                fontSize: 'clamp(32px, 7vw, 100px)',
                 fontWeight: 800,
                 WebkitFontSmoothing: 'antialiased'
               }}
             >
-              <span className="block">
-                I WANT PEOPLE TO
-              </span>
-              <span className="block">
-                REMEMBER ME FOR
-              </span>
-              <span className="block">
-                MORE THAN FOOTBALL
-              </span>
+              {[
+                "WE WANT PEOPLE TO",
+                "REMEMBER OUR BRAND FOR",
+                "MORE THAN JUST CLOTHES"
+              ].map((line, lineIdx) => {
+                const words = line.split(' ');
+                return (
+                  <span key={lineIdx} className="flex justify-center flex-wrap">
+                    {words.map((word, wordIdx) => {
+                      const globalIdx = lineIdx * 100 + wordIdx;
+                      // Words fly in and assemble as easedQuoteRise goes from 0 to 1
+                      const scatter = Math.max(0, 1 - easedQuoteRise * 1.5);
+                      const randX = (pseudoRandom(globalIdx) - 0.5) * 1200; 
+                      const randY = (pseudoRandom(globalIdx + 10) - 0.5) * 1200; 
+                      const randRot = (pseudoRandom(globalIdx + 20) - 0.5) * 500; 
+
+                      return (
+                        <span 
+                          key={wordIdx}
+                          className="inline-block mx-[0.15em] mb-1 sm:mb-2"
+                          style={{
+                            transform: `translate3d(${randX * scatter}px, ${randY * scatter}px, 0) rotate(${randRot * scatter}deg) scale(${1 - scatter * 0.4})`,
+                            opacity: 1 - scatter * 0.9,
+                            willChange: 'transform, opacity'
+                          }}
+                        >
+                          {word}
+                        </span>
+                      );
+                    })}
+                  </span>
+                );
+              })}
             </h2>
 
             {/* Base photo removed - only animated images will show on scroll */}
@@ -449,22 +475,27 @@ export const Home: React.FC = () => {
                     left: '50%',
                     // Starts at bottom (translateY + 100vh) and moves up to center
                     transform: `translate(-50%, calc(-50% + ${riseVal}vh)) rotate(${rot}deg)`,
-                    width: 'clamp(240px, 28vw, 380px)',
+                    width: 'clamp(300px, 35vw, 500px)',
                     willChange: 'transform',
                     // Only show when it starts rising
                     opacity: riseVal < 100 ? 1 : 0
                   }}
                 >
                   <div
-                    className="relative bg-[#f0e4d4] p-[6px] sm:p-2 shadow-[0_20px_60px_rgba(0,0,0,0.7)]"
-                    style={{ aspectRatio: '3/4' }}
+                    className="relative bg-[#f4efe6] rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.4)] flex flex-col"
+                    style={{ 
+                      padding: '16px 16px 64px 16px',
+                      aspectRatio: '3/4' 
+                    }}
                   >
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
+                    <div className="w-full h-full relative overflow-hidden shadow-inner border border-black/10 bg-[#f4efe6] flex items-center justify-center">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-contain"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
                 </div>
               );
@@ -472,15 +503,43 @@ export const Home: React.FC = () => {
 
             {/* Editorial Subtitle */}
             <div 
-              className="relative z-10 mt-10 sm:mt-14 max-w-xl mx-auto font-body text-xs sm:text-sm md:text-base leading-relaxed font-medium tracking-wide"
+              className="relative z-10 mt-10 sm:mt-14 max-w-2xl mx-auto font-body text-xs sm:text-sm md:text-base leading-relaxed font-medium tracking-wide"
               style={{ color: 'rgba(212, 200, 184, 0.6)' }}
             >
-              <p>More than routes, more than records, more than the game itself.</p>
-              <p className="mt-0.5">Writing a story that outlasts every snap, every season, every era.</p>
+              <p style={{ opacity: Math.max(0, Math.min(1, easedQuoteRise * 2 - 0.5)), transform: `translateY(${Math.max(0, 20 - easedQuoteRise * 40)}px)` }}>
+                More than fabric, more than threads, more than the design itself.
+              </p>
+              <p className="mt-0.5" style={{ opacity: Math.max(0, Math.min(1, easedQuoteRise * 2 - 0.7)), transform: `translateY(${Math.max(0, 20 - easedQuoteRise * 40)}px)` }}>
+                Writing a story that outlasts every trend, every season, every era.
+              </p>
             </div>
           </div>
         </div>
       </div>
+      
+      {/* 4 & 4.5. JS-DRIVEN OVERLAPPING GALLERY & VIDEO SECTION */}
+      <div className="relative w-full bg-[#07050a]">
+        
+        {/* ANCHOR: Tracks natural scroll position of the gallery independently of the video */}
+        <div ref={galleryAnchorRef} className="w-full z-10">
+          {/* CONTENT: Translates down to stay pinned */}
+          <div style={{ transform: `translateY(${galleryTranslateY}px)`, willChange: 'transform' }}>
+            <GalleryView />
+          </div>
+        </div>
+
+        {/* Video glides up naturally over the pinned gallery */}
+        <div className="relative z-20 shadow-[0_-40px_100px_rgba(0,0,0,1)] bg-black">
+          <PremiumVideo />
+        </div>
+        
+      </div>
+
+      {/* 6. PREMIUM CONTACT US */}
+      <PremiumContact />
+
+      {/* 7. FINAL PREMIUM FOOTER */}
+      <FinalFooter />
     </div>
   );
 };

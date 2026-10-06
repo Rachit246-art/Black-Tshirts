@@ -39,10 +39,17 @@ export const homeData = {
     secondaryImage: "https://cdn.sanity.io/images/zil8k06j/production/6fa7c7fd07fdbf07119a115343881c3a9913963f-1067x1600.webp",
     secondaryImageAlt: "Justin Jefferson in black sunglasses and tailoring"
   },
-  signatureMoments: (homeJson.signatureMoments as any[]).map((m, idx) => ({
-    ...m,
-    badge: idx === 0 ? "College Football Playoff" : idx === 1 ? "NFL Rookie Record" : idx === 2 ? "The Miracle Grab" : idx === 3 ? "AP NFL OPOY" : "NFL Pro Bowl"
-  })) as SignatureMoment[],
+  signatureMoments: [
+    { _id: '1', title: 'The Vintage Duck', stat: 'Limited Edition · 100 Pieces', badge: 'New Arrival', image: '/real image/gallery-1.jfif' },
+    { _id: '2', title: 'Goosebumps Brown', stat: 'Oversized Fit · Premium Cotton', badge: 'Best Seller', image: '/real image/gallery-2.jfif' },
+    { _id: '3', title: 'Reality Mask', stat: 'Graphic Tee · Heavyweight', badge: 'Exclusive', image: '/real image/gallery-3.jfif' },
+    { _id: '4', title: 'Outside White', stat: 'Summer Drop · Breathable', badge: 'Trending', image: '/real image/gallery-4.jfif' },
+    { _id: '5', title: 'Pain Anime Tee', stat: 'Anime Collection · Back Print', badge: 'Restocked', image: '/real image/gallery-5.jfif' },
+    { _id: '6', title: 'Excellent Zip', stat: 'Hoodie · Fleece Lined', badge: 'Winter Edit', image: '/real image/gallery-6.jfif' },
+    { _id: '7', title: 'Vintage Car', stat: 'Retro Series · Distressed', badge: 'Classic', image: '/real image/gallery-7.jfif' },
+    { _id: '8', title: 'Spider Black', stat: 'Gothic Collection · Glow Print', badge: 'Limited', image: '/real image/gallery-10.jfif' },
+    { _id: '9', title: 'Streetwear Black', stat: 'Core Collection · Essential', badge: 'Staple', image: '/real image/gallery-11.jfif' }
+  ] as SignatureMoment[],
   partnerLogos: homeJson.partnerLogos as PartnerLogo[],
   featuredPartnerships: homeJson.featuredPartnerships as FeaturedPartnership[],
   editorialMarquee: [
