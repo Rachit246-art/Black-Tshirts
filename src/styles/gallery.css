@@ -1,0 +1,311 @@
+/* =========================================================================
+   MAISON JJETTAS — GALLERY INNER PAGE STYLESHEET
+   Avant-garde editorial layouting, 3D interactive viewing decks,
+   and luxury transitions.
+   ========================================================================= */
+
+:root {
+  --gallery-bg: #000000;
+  --gallery-fg: #ffffff;
+}
+
+/* 3D Perspective Stage for Inspection Deck */
+.gallery-3d-stage {
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+.gallery-3d-card {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.5s ease,
+              filter 0.5s ease,
+              box-shadow 0.6s ease;
+  will-change: transform, opacity;
+}
+
+/* Perspective card states in 3D deck */
+.gallery-3d-card.active {
+  transform: translate3d(0, 0, 80px) rotateY(0deg) scale(1);
+  opacity: 1;
+  z-index: 30;
+  filter: grayscale(0%);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.95), 0 0 50px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.gallery-3d-card.prev {
+  transform: translate3d(-60%, 0, -100px) rotateY(28deg) scale(0.88);
+  opacity: 0.45;
+  z-index: 20;
+  filter: grayscale(90%) blur(1px);
+  pointer-events: auto;
+}
+
+.gallery-3d-card.next {
+  transform: translate3d(60%, 0, -100px) rotateY(-28deg) scale(0.88);
+  opacity: 0.45;
+  z-index: 20;
+  filter: grayscale(90%) blur(1px);
+  pointer-events: auto;
+}
+
+.gallery-3d-card.hidden-left {
+  transform: translate3d(-120%, 0, -260px) rotateY(40deg) scale(0.75);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery-3d-card.hidden-right {
+  transform: translate3d(120%, 0, -260px) rotateY(-40deg) scale(0.75);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Asymmetric Lookbook Grid */
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .lookbook-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lookbook-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.25rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .lookbook-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.25rem;
+  }
+}
+
+/* Lookbook Card Dimensions */
+.lookbook-card {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background-color: #070709;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.lookbook-card:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95), 0 0 35px rgba(255, 255, 255, 0.08);
+}
+
+.lookbook-card-tall {
+  aspect-ratio: 3 / 4;
+}
+
+.lookbook-card-square {
+  aspect-ratio: 1 / 1;
+}
+
+.lookbook-card-hero {
+  aspect-ratio: 16 / 10;
+}
+
+@media (min-width: 1024px) {
+  .lookbook-span-2 {
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* Lookbook Image Hover Bloom */
+.lookbook-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(85%) contrast(115%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.lookbook-card:hover .lookbook-image {
+  filter: grayscale(0%) contrast(105%);
+  transform: scale(1.07);
+}
+
+/* Kinetic Filmstrip Runway */
+.runway-track-wrap {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  padding: 1rem 0 3rem;
+}
+
+.runway-track-wrap:active {
+  cursor: grabbing;
+}
+
+.runway-track-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.runway-strip {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  padding: 0 1.5rem;
+}
+
+.runway-item-box {
+  width: 320px;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background-color: #08080a;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .runway-item-box {
+    width: 380px;
+  }
+}
+
+.runway-item-box:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* View Mode Selector Tabs */
+.gallery-mode-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.gallery-mode-pill:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.gallery-mode-pill.active {
+  color: #000000 !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  font-weight: 700;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+}
+
+/* Gallery Filter Chip */
+.gallery-filter-chip {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 0.55rem 1.1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.gallery-filter-chip:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.gallery-filter-chip.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Bottom Floating Meta Drawer */
+.lookbook-drawer {
+  position: absolute;
+  inset-x: 0;
+  bottom: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.65) 70%, transparent 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(14px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lookbook-card:hover .lookbook-drawer {
+  transform: translateY(0);
+}
+
+/* Scanline Radar Laser */
+.gallery-scan-laser {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  animation: laser-sweep 3.5s ease-in-out infinite;
+}
+
+@keyframes laser-sweep {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* Fullscreen Haute-Couture Lightbox */
+.gallery-lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.gallery-lightbox-shell {
+  position: relative;
+  background: #09090c;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
+  max-width: 60rem;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.95), 0 0 50px rgba(255, 255, 255, 0.08);
+}

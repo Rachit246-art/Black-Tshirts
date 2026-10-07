@@ -1,5 +1,6 @@
 @import './reference.css';
 @import './about.css';
+@import './gallery.css';
 
 /* Prevent global leather texture from overriding the home page */
 .bg-layers__texture--footer {

@@ -1311,13 +1311,19 @@ export const About: React.FC = () => {
             </motion.div>
           )}
 
-          {/* Exhibition Counter Footnote */}
-          <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-white/50">
+          {/* Exhibition Counter Footnote with Direct Link to Dedicated Gallery Page */}
+          <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 font-mono text-xs text-white/50">
             <div>
-              [ SHOWCASING {filteredGalleryPieces.length} OF {runwayGalleryPieces.length} CURATED ATELIER PIECES ]
+              [ SHOWCASING {filteredGalleryPieces.length} OF 27 ATELIER PIECES ]
             </div>
+            <Link
+              to="/gallery"
+              className="px-6 py-3 border border-white/25 text-white font-mono text-xs uppercase tracking-[0.2em] font-bold hover:bg-white hover:text-black transition-all duration-300"
+            >
+              Enter Full Dedicated Gallery Page (27 Works) ↗
+            </Link>
             <div className="flex items-center gap-4">
-              <span>ALL PIECES MILLED IN PORTO</span>
+              <span>PORTO MILLING</span>
               <span className="text-white/80 font-bold">420 GSM STANDARDS</span>
             </div>
           </div>
