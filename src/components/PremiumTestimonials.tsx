@@ -3,11 +3,11 @@ import React from 'react';
 export const PremiumLookbook: React.FC = () => {
   // Using valid local images from the "real image" folder
   const images = [
-    { id: 1, src: '/real image/gallery-1.jfif', alt: 'Premium Lookbook Piece 1', colSpan: 'md:col-span-8', rowSpan: 'md:row-span-2', aspect: 'aspect-[16/10]' },
-    { id: 2, src: '/real image/gallery-2.jfif', alt: 'Premium Lookbook Piece 2', colSpan: 'md:col-span-4', rowSpan: 'md:row-span-1', aspect: 'aspect-[4/5]' },
-    { id: 3, src: '/real image/gallery-3.jfif', alt: 'Premium Lookbook Piece 3', colSpan: 'md:col-span-4', rowSpan: 'md:row-span-1', aspect: 'aspect-square' },
-    { id: 4, src: '/real image/gallery-10.jfif', alt: 'Premium Lookbook Piece 4', colSpan: 'md:col-span-4', rowSpan: 'md:row-span-1', aspect: 'aspect-[4/5]' },
-    { id: 5, src: '/real image/gallery-6.jfif', alt: 'Premium Lookbook Piece 5', colSpan: 'md:col-span-8', rowSpan: 'md:row-span-1', aspect: 'aspect-[21/9]' },
+    { id: 1, src: '/real image/product-1.jpeg', alt: 'Premium Lookbook Piece 1', colSpan: 'md:col-span-8', rowSpan: 'md:row-span-2', aspect: 'aspect-[16/10]' },
+    { id: 2, src: '/real image/product-2.jpeg', alt: 'Premium Lookbook Piece 2', colSpan: 'md:col-span-4', rowSpan: 'md:row-span-1', aspect: 'aspect-[4/5]' },
+    { id: 3, src: '/real image/product-3.jpeg', alt: 'Premium Lookbook Piece 3', colSpan: 'md:col-span-4', rowSpan: 'md:row-span-1', aspect: 'aspect-square' },
+    { id: 4, src: '/real image/product-4.jpeg', alt: 'Premium Lookbook Piece 4', colSpan: 'md:col-span-4', rowSpan: 'md:row-span-1', aspect: 'aspect-[4/5]' },
+    { id: 5, src: '/real image/product-5.jpeg', alt: 'Premium Lookbook Piece 5', colSpan: 'md:col-span-8', rowSpan: 'md:row-span-1', aspect: 'aspect-[21/9]' },
   ];
 
   return (

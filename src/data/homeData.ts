@@ -40,15 +40,15 @@ export const homeData = {
     secondaryImageAlt: "Justin Jefferson in black sunglasses and tailoring"
   },
   signatureMoments: [
-    { _id: '1', title: 'The Vintage Duck', stat: 'Limited Edition · 100 Pieces', badge: 'New Arrival', image: '/real image/gallery-1.jfif' },
-    { _id: '2', title: 'Goosebumps Brown', stat: 'Oversized Fit · Premium Cotton', badge: 'Best Seller', image: '/real image/gallery-2.jfif' },
-    { _id: '3', title: 'Reality Mask', stat: 'Graphic Tee · Heavyweight', badge: 'Exclusive', image: '/real image/gallery-3.jfif' },
-    { _id: '4', title: 'Outside White', stat: 'Summer Drop · Breathable', badge: 'Trending', image: '/real image/gallery-4.jfif' },
-    { _id: '5', title: 'Pain Anime Tee', stat: 'Anime Collection · Back Print', badge: 'Restocked', image: '/real image/gallery-5.jfif' },
-    { _id: '6', title: 'Excellent Zip', stat: 'Hoodie · Fleece Lined', badge: 'Winter Edit', image: '/real image/gallery-6.jfif' },
-    { _id: '7', title: 'Vintage Car', stat: 'Retro Series · Distressed', badge: 'Classic', image: '/real image/gallery-7.jfif' },
-    { _id: '8', title: 'Spider Black', stat: 'Gothic Collection · Glow Print', badge: 'Limited', image: '/real image/gallery-10.jfif' },
-    { _id: '9', title: 'Streetwear Black', stat: 'Core Collection · Essential', badge: 'Staple', image: '/real image/gallery-11.jfif' }
+    { _id: '1', title: 'Smile Heal The Soul', stat: 'Heavyweight Graphic Tee · 420 GSM', badge: 'New Arrival', image: '/real image/product-1.jpeg' },
+    { _id: '2', title: 'Small Body Big Energy', stat: 'Oversized Boxy Fit · Carbon Wash', badge: 'Best Seller', image: '/real image/product-2.jpeg' },
+    { _id: '3', title: 'Chicago Racing Team 98', stat: 'Motorsport Edition · Dropped Shoulder', badge: 'Exclusive', image: '/real image/product-3.jpeg' },
+    { _id: '4', title: 'Chains Kurapika Noir', stat: 'Anime Gothic Archive · Velvet Feel', badge: 'Trending', image: '/real image/product-4.jpeg' },
+    { _id: '5', title: 'Feeling Acid Wash', stat: 'Distressed Vintage Wash · Mineral Dye', badge: 'Restocked', image: '/real image/product-5.jpeg' },
+    { _id: '6', title: 'Cross Bones Graphic Tee', stat: 'Heavyweight Loopback · Porto Milled', badge: 'Archive Edit', image: '/real image/product-6.jpeg' },
+    { _id: '7', title: 'Dark Soul Streetwear', stat: 'Retro Series · Bound Collar', badge: 'Classic', image: '/real image/product-7.jpeg' },
+    { _id: '8', title: 'Obsidian Skull Edition', stat: 'Core Silhouette · Pre-Shrunk', badge: 'Limited', image: '/real image/product-8.jpeg' },
+    { _id: '9', title: 'Maison Box Cut Black', stat: 'Essential Heavy Tee · 420 GSM', badge: 'Staple', image: '/real image/product-9.jpeg' }
   ] as SignatureMoment[],
   partnerLogos: homeJson.partnerLogos as PartnerLogo[],
   featuredPartnerships: homeJson.featuredPartnerships as FeaturedPartnership[],

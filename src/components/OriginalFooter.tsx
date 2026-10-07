@@ -1,14 +1,14 @@
 import React from 'react';
 
 const polaroids = [
-  { id: 1, src: '/real image/gallery-1.jfif', rot: -4 },
-  { id: 2, src: '/real image/gallery-2.jfif', rot: 3 },
-  { id: 3, src: '/real image/gallery-3.jfif', rot: -2 },
-  { id: 4, src: '/real image/gallery-4.jfif', rot: 5 },
-  { id: 5, src: '/real image/gallery-5.jfif', rot: -5 },
-  { id: 6, src: '/real image/gallery-6.jfif', rot: 2 },
-  { id: 7, src: '/real image/gallery-7.jfif', rot: -3 },
-  { id: 8, src: '/real image/gallery-10.jfif', rot: 4 },
+  { id: 1, src: '/real image/product-1.jpeg', rot: -4 },
+  { id: 2, src: '/real image/product-2.jpeg', rot: 3 },
+  { id: 3, src: '/real image/product-3.jpeg', rot: -2 },
+  { id: 4, src: '/real image/product-4.jpeg', rot: 5 },
+  { id: 5, src: '/real image/product-5.jpeg', rot: -5 },
+  { id: 6, src: '/real image/product-6.jpeg', rot: 2 },
+  { id: 7, src: '/real image/product-7.jpeg', rot: -3 },
+  { id: 8, src: '/real image/product-8.jpeg', rot: 4 },
 ];
 
 export const OriginalFooter = () => {

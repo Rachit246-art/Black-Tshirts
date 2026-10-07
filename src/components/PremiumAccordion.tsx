@@ -5,25 +5,25 @@ const collections = [
     id: '01',
     title: 'TOKYO NIGHTS',
     subtitle: 'The Anime Edit',
-    image: '/real image/gallery-1.jfif',
+    image: '/real image/product-4.jpeg',
   },
   {
     id: '02',
     title: 'VINTAGE WASH',
     subtitle: 'Acid & Stone',
-    image: '/real image/gallery-6.jfif',
+    image: '/real image/product-5.jpeg',
   },
   {
     id: '03',
     title: 'HEAVYWEIGHT',
-    subtitle: '400GSM Premium',
-    image: '/real image/gallery-4.jfif',
+    subtitle: '420GSM Premium',
+    image: '/real image/product-1.jpeg',
   },
   {
     id: '04',
     title: 'LIMITED DROP',
     subtitle: 'Exclusive Run',
-    image: '/real image/gallery-7.jfif',
+    image: '/real image/product-3.jpeg',
   }
 ];
 

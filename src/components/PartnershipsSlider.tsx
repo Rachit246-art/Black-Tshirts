@@ -4,33 +4,33 @@ import { motion, AnimatePresence } from 'framer-motion';
 const slides = [
   {
     id: 0,
-    title: "Slide One",
-    description: "The signature partnership. Custom game-day cleats, design sessions at headquarters, and a say in where the footwear goes next.",
-    image: "/real image/gallery-1.jfif"
+    title: "Smile Heal The Soul",
+    description: "The signature heavyweight drop. Custom silkscreen graphics, Porto milled loopback cotton, and architectural drop-shoulder cut.",
+    image: "/real image/product-1.jpeg"
   },
   {
     id: 1,
-    title: "Slide Two",
-    description: "Long-running hydration partner, with massive campaigns, sideline visibility, and a recurring slot in their game-day rotation.",
-    image: "/real image/gallery-2.jfif"
+    title: "Small Body Big Energy",
+    description: "Oversized silhouette cut with reinforced ribbed bound collar and tactile velvet hand-feel.",
+    image: "/real image/product-2.jpeg"
   },
   {
     id: 2,
-    title: "Slide Three",
-    description: "National campaigns — suiting up in the gladiator arena alongside Megan Thee Stallion and crashing tailgates.",
-    image: "/real image/gallery-3.jfif"
+    title: "Chicago Racing Team 98",
+    description: "Motorsport heritage capsule with twin-needle coverstitch and mineral enzyme wash.",
+    image: "/real image/product-3.jpeg"
   },
   {
     id: 3,
-    title: "Slide Four",
-    description: "Exclusive partnership deals setting the tone for fashion and on-field swagger, elevating the brand completely.",
-    image: "/real image/gallery-4.jfif"
+    title: "Chains Kurapika Noir",
+    description: "Anime gothic dark aesthetic with deep matte obsidian pigment absorption.",
+    image: "/real image/product-4.jpeg"
   },
   {
     id: 4,
-    title: "Slide Five",
-    description: "Bringing the heat with exclusive releases and limited edition drops that keep the fans guessing what's next.",
-    image: "/real image/gallery-5.jfif"
+    title: "Feeling Acid Wash",
+    description: "Bringing the heat with vintage distressed treatments and limited batch runs worldwide.",
+    image: "/real image/product-5.jpeg"
   }
 ];
 

@@ -2,15 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const galleryImages = [
-  { id: 1, src: '/real image/gallery-1.jfif', title: 'Design One' },
-  { id: 2, src: '/real image/gallery-2.jfif', title: 'Design Two' },
-  { id: 3, src: '/real image/gallery-3.jfif', title: 'Design Three' },
-  { id: 4, src: '/real image/gallery-4.jfif', title: 'Design Four' },
-  { id: 5, src: '/real image/gallery-5.jfif', title: 'Design Five' },
-  { id: 6, src: '/real image/gallery-6.jfif', title: 'Design Six' },
-  { id: 7, src: '/real image/gallery-7.jfif', title: 'Design Seven' },
-  { id: 8, src: '/real image/gallery-10.jfif', title: 'Design Eight' },
-  { id: 9, src: '/real image/gallery-11.jfif', title: 'Design Nine' }
+  { id: 1, src: '/real image/product-1.jpeg', title: 'Smile Heal The Soul' },
+  { id: 2, src: '/real image/product-2.jpeg', title: 'Small Body Big Energy' },
+  { id: 3, src: '/real image/product-3.jpeg', title: 'Chicago Racing Team 98' },
+  { id: 4, src: '/real image/product-4.jpeg', title: 'Chains Kurapika Noir' },
+  { id: 5, src: '/real image/product-5.jpeg', title: 'Feeling Acid Wash' },
+  { id: 6, src: '/real image/product-6.jpeg', title: 'Cross Bones Graphic Tee' },
+  { id: 7, src: '/real image/product-7.jpeg', title: 'Dark Soul Streetwear' },
+  { id: 8, src: '/real image/product-8.jpeg', title: 'Obsidian Skull Edition' },
+  { id: 9, src: '/real image/product-9.jpeg', title: 'Maison Box Cut Black' }
 ];
 
 const GalleryItem = ({ image, index }: { image: any; index: number }) => {

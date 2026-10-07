@@ -101,11 +101,11 @@ export const Home: React.FC = () => {
   };
 
   const imagesToShow = [
-    { title: "Gallery 1", image: "/real image/gallery-1.jfif" },
-    { title: "Gallery 2", image: "/real image/gallery-2.jfif" },
-    { title: "Gallery 3", image: "/real image/gallery-3.jfif" },
-    { title: "Gallery 4", image: "/real image/gallery-4.jfif" },
-    { title: "Gallery 5", image: "/real image/gallery-5.jfif" }
+    { title: "Drop 01", image: "/real image/product-1.jpeg" },
+    { title: "Drop 02", image: "/real image/product-2.jpeg" },
+    { title: "Drop 03", image: "/real image/product-3.jpeg" },
+    { title: "Drop 04", image: "/real image/product-4.jpeg" },
+    { title: "Drop 05", image: "/real image/product-5.jpeg" }
   ];
 
   // Drag-to-scroll interaction for the horizontal trading cards rail
