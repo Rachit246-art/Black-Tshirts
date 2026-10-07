@@ -13,7 +13,6 @@ interface GalleryPiece {
   weight: string;
   wash: string;
   image: string;
-  aspect: 'tall' | 'square' | 'hero';
   edition: string;
   description: string;
   badge: string;
@@ -29,7 +28,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Loopback',
     wash: 'Carbon Matte Black',
     image: '/real image/product-1.jpeg',
-    aspect: 'tall',
     edition: '100 Pieces Worldwide',
     description: 'Archival discharge print on ultra-dense 420 GSM Egyptian cotton. Engineered for permanent posture.',
     badge: 'FLAGSHIP DROP',
@@ -48,7 +46,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Cotton',
     wash: 'Obsidian Enzyme',
     image: '/real image/product-2.jpeg',
-    aspect: 'square',
     edition: 'Core Silhouette',
     description: 'Drop-shoulder architectural drape with reinforced twin-needle 280 GSM elastic bound collar.',
     badge: 'CORE ATELIER',
@@ -67,7 +64,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '450 GSM French Terry',
     wash: 'Bio-Enzyme Mineral',
     image: '/real image/product-3.jpeg',
-    aspect: 'hero',
     edition: 'Collector Series 098',
     description: 'Motorsport heritage graphic with subtle tonal distress wash and vintage velvet hand-feel.',
     badge: 'RUNWAY SHOWPIECE',
@@ -86,7 +82,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Pure Heavy',
     wash: 'Deep Pigment Gothic',
     image: '/real image/product-4.jpeg',
-    aspect: 'tall',
     edition: 'Limited Run 024',
     description: 'Gothic-inspired chest illustration in tonal dark charcoal over velvet matte obsidian jersey.',
     badge: 'TONAL NOIR',
@@ -105,7 +100,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '400 GSM Combed Cotton',
     wash: 'Custom Acid Fog',
     image: '/real image/product-5.jpeg',
-    aspect: 'square',
     edition: 'Atelier Vault 05',
     description: 'Hand-distressed acid wash giving each piece a unique marbleized charcoal grain.',
     badge: 'HAND TREATED',
@@ -124,7 +118,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Jersey',
     wash: 'Carbon Dye',
     image: '/real image/product-6.jpeg',
-    aspect: 'tall',
     edition: 'Limited Edition 50',
     description: 'High-contrast bone typography screen-printed with archival discharge ink for zero stiffness.',
     badge: 'LIMITED 50',
@@ -143,7 +136,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Heavyweight',
     wash: 'Black Matte',
     image: '/real image/product-7.jpeg',
-    aspect: 'hero',
     edition: 'Core Runway',
     description: 'Clean silhouette designed for everyday royalty, featuring zero side-twist seam technology.',
     badge: 'ZERO DISTORTION',
@@ -162,7 +154,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '440 GSM Luxury',
     wash: 'Bio-Washed Charcoal',
     image: '/real image/product-8.jpeg',
-    aspect: 'square',
     edition: 'Run 088',
     description: 'Hand-rendered skull artwork across the back shoulders with subtle tonal front embroidery.',
     badge: 'EMBROIDERED DETAIL',
@@ -181,7 +172,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Pure Heavy',
     wash: 'Pitch Midnight',
     image: '/real image/product-9.jpeg',
-    aspect: 'tall',
     edition: 'Permanent Atelier',
     description: 'The foundation of the Maison. Zero branding on front, letting the sculptural drape command presence.',
     badge: 'ICONIC SILHOUETTE',
@@ -200,7 +190,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Cotton',
     wash: 'Carbon Wash',
     image: '/real image/product-10.jpeg',
-    aspect: 'square',
     edition: '75 Pieces Worldwide',
     description: 'Minimalist cyber-gothic technical line art screen printed with zero hand feel.',
     badge: 'TECHNICAL LINE',
@@ -219,7 +208,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '450 GSM French Terry',
     wash: 'Mineral Enzyme',
     image: '/real image/product-11.jpeg',
-    aspect: 'hero',
     edition: 'Archive Drop',
     description: 'Softened with volcanic pumice wash to create instant generational softness and natural character.',
     badge: 'PUMICE WASHED',
@@ -238,7 +226,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Jersey',
     wash: 'Obsidian Matte',
     image: '/real image/product-12.jpeg',
-    aspect: 'tall',
     edition: 'Runway Edition',
     description: 'Elongated sleeves terminating just above the elbow with tailored clean cuff hems.',
     badge: 'OVER-ELBOW FIT',
@@ -257,7 +244,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Cotton',
     wash: 'Triple Bio-Wash',
     image: '/real image/product-13.jpeg',
-    aspect: 'square',
     edition: 'Small Batch 60',
     description: 'Proprietary enzyme formulation delivering an ultra-smooth velvety touch on heavyweight cotton.',
     badge: 'VELVET HAND',
@@ -276,7 +262,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Loopback',
     wash: 'Obsidian Matte',
     image: '/real image/product-14.jpeg',
-    aspect: 'tall',
     edition: '120 Pieces Worldwide',
     description: 'Intricate architectural cross motif rendered in discharge grey across the spine.',
     badge: 'SPINE MOTIF',
@@ -295,7 +280,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '440 GSM Luxury',
     wash: 'Acid Marble',
     image: '/real image/product-15.jpeg',
-    aspect: 'hero',
     edition: 'Atelier Archive',
     description: 'Inspired by 90s Shibuya streetwear with hand-treated acid marbling and box cut proportions.',
     badge: 'DISTRESSED',
@@ -314,7 +298,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Pure Heavy',
     wash: 'Pitch Black',
     image: '/real image/product-16.jpeg',
-    aspect: 'tall',
     edition: 'Collector Drop',
     description: 'Tonal black-on-black gloss print with reflective obsidian ink visible only in direct light.',
     badge: 'REFLECTIVE INK',
@@ -333,7 +316,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Cotton',
     wash: 'Matte Charcoal',
     image: '/real image/product-17.jpeg',
-    aspect: 'square',
     edition: 'Permanent Vault',
     description: 'Engineered for clean horizontal fall across the waist without clinging or folding.',
     badge: 'STRUCTURE CUT',
@@ -352,7 +334,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM French Terry',
     wash: 'Bio-Enzyme Washed',
     image: '/real image/product-18.jpeg',
-    aspect: 'tall',
     edition: 'Limited Run 80',
     description: 'Intentionally reinforced edge with raw-cut aesthetic lookbook treatment.',
     badge: 'RAW EDGE',
@@ -371,7 +352,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Jersey',
     wash: 'Carbon Matte',
     image: '/real image/product-19.jpeg',
-    aspect: 'hero',
     edition: 'Core Silhouette',
     description: 'The archetype of structural garment construction. Zero sag guarantee through 100+ wash cycles.',
     badge: 'ARCHETYPE',
@@ -390,7 +370,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '440 GSM Luxury Jersey',
     wash: 'Obsidian Matte',
     image: '/real image/product-20.jpeg',
-    aspect: 'tall',
     edition: 'Batch 020',
     description: 'Milled on circular looms in Northern Portugal using long-staple combed cotton.',
     badge: 'CIRCULAR LOOM',
@@ -409,7 +388,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Cotton',
     wash: 'Sun-Bleached Charcoal',
     image: '/real image/product-21.jpeg',
-    aspect: 'square',
     edition: 'Special Wash Run',
     description: 'Artisanal washing process simulating decades of gentle wear while preserving high fabric density.',
     badge: 'ARTISANAL WASH',
@@ -428,7 +406,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Jersey',
     wash: 'Pitch Black Matte',
     image: '/real image/product-22.jpeg',
-    aspect: 'tall',
     edition: 'Permanent Series',
     description: 'Clean silhouette designed for everyday royalty, command the room without screaming for attention.',
     badge: 'ESSENTIAL ARMOR',
@@ -447,7 +424,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Heavyweight',
     wash: 'Carbon Wash',
     image: '/real image/product-23.jpeg',
-    aspect: 'hero',
     edition: 'Limited 100',
     description: 'Geometric diamond emblem screen-printed in tonal metallic charcoal on obsidian jersey.',
     badge: 'METALLIC CHARCOAL',
@@ -466,7 +442,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '450 GSM Loopback',
     wash: 'Deep Pitch Noir',
     image: '/real image/product-24.jpeg',
-    aspect: 'tall',
     edition: 'Run 024',
     description: 'Our heaviest jersey formulation. Incredible structural presence and windproof density.',
     badge: 'MAXIMUM DENSITY',
@@ -485,7 +460,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Cotton',
     wash: 'Obsidian Matte',
     image: '/real image/product-25.jpeg',
-    aspect: 'square',
     edition: 'Maison Core',
     description: 'Tailored with subtle forward-pitch shoulder seams that enhance athletic posture and frame.',
     badge: 'POSTURE FIT',
@@ -504,7 +478,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '420 GSM Jersey',
     wash: 'Enzyme Mineral',
     image: '/real image/product-26.jpeg',
-    aspect: 'tall',
     edition: 'Special Exhibition',
     description: 'Runway tribute edition featuring serialized archival typography on the lower side seam.',
     badge: 'SERIALIZED NO. 26',
@@ -523,7 +496,6 @@ const allGalleryPieces: GalleryPiece[] = [
     weight: '450 GSM Bespoke French Terry',
     wash: 'Obsidian Velvet',
     image: '/real image/product-27.jpeg',
-    aspect: 'hero',
     edition: 'Collector Finale',
     description: 'The pinnacle of the Maison catalog. Crafted in strictly numbered runs with commemorative atelier seal.',
     badge: 'RUNWAY FINALE',
@@ -584,7 +556,7 @@ export const Gallery: React.FC = () => {
   // Filmstrip horizontal scroll helpers
   const scrollFilmstrip = (direction: 'left' | 'right') => {
     if (filmstripRef.current) {
-      const offset = direction === 'left' ? -460 : 460;
+      const offset = direction === 'left' ? -480 : 480;
       filmstripRef.current.scrollBy({ left: offset, behavior: 'smooth' });
     }
   };
@@ -615,386 +587,388 @@ export const Gallery: React.FC = () => {
       />
 
       {/* Ambient Lighting Gradient */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none fixed top-[-15%] left-1/2 -translate-x-1/2 w-[1100px] h-[750px] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.06)_0%,_transparent_70%)] blur-[130px] z-0"
-      />
+      <div aria-hidden="true" className="gallery-ambient-glow" />
 
       {/* ========================================================================= */}
-      {/* 1. GALLERY HERO SECTION */}
+      {/* 1. GALLERY HERO SECTION (EXPANSIVE & CENTERED) */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pt-32 md:pt-44 pb-16 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
-          <div>
-            {/* Top Badge */}
+      <section className="relative z-10 pt-36 md:pt-48 pb-16">
+        <div className="gallery-page-container">
+          {/* Subtle Watermark Kinetic Marquee */}
+          <div aria-hidden="true" className="pointer-events-none absolute -top-4 left-0 right-0 opacity-15 overflow-hidden select-none">
+            <div className="flex whitespace-nowrap animate-marquee-left">
+              <span className="gallery-marquee-text pr-12">
+                THE RUNWAY GALLERY · 27 BESPOKE PIECES · 420 GSM COTTON · ARCHITECTURAL LUXURY ·
+              </span>
+              <span className="gallery-marquee-text pr-12">
+                THE RUNWAY GALLERY · 27 BESPOKE PIECES · 420 GSM COTTON · ARCHITECTURAL LUXURY ·
+              </span>
+            </div>
+          </div>
+
+          {/* Centered Grand Hero Header */}
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 relative z-10">
+            {/* Top pill badge */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-md mb-6"
+              className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-md mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-              <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-white/80">
-                Maison JJettas · Visual Archive
+              <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/90">
+                Maison JJettas · Complete Visual Exhibition
               </span>
             </motion.div>
 
             {/* Main Headline */}
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 35 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-display text-5xl sm:text-7xl lg:text-8xl font-black uppercase tracking-[-0.03em] leading-[0.92]"
+              transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-[-0.03em] leading-[0.9] mb-8"
             >
               THE RUNWAY <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-300 to-white/40">
-                GALLERY.
+                ARCHIVE.
               </span>
             </motion.h1>
+
+            {/* Sub-paragraph */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.85, delay: 0.2 }}
+              className="font-body text-base sm:text-lg md:text-xl text-white/70 max-w-2xl font-light leading-relaxed mb-8"
+            >
+              Every release is cut, stitched, and dyed in strictly calibrated small-batch drops. Explore all 27 physical silhouettes defining our modern uniform.
+            </motion.p>
+
+            {/* Key Standards Badges */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.85, delay: 0.3 }}
+              className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-white/60"
+            >
+              <span className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
+                27 EXHIBITED LOTS
+              </span>
+              <span className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
+                420 GSM HEAVYWEIGHT
+              </span>
+              <span className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
+                PORTO CIRCULAR LOOMS
+              </span>
+            </motion.div>
           </div>
 
-          {/* Exhibition Meta Counter & Quick Navigation */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col items-start md:items-end gap-3 text-left md:text-right"
-          >
-            <span className="font-mono text-xs uppercase tracking-[0.25em] text-white/50">
-              Curated Catalog 2026/27
-            </span>
-            <div className="font-display text-2xl sm:text-3xl font-extrabold text-white">
-              27 PIECES EXHIBITED
+          {/* Interactive Navigation & Controls Bar (Centered and Balanced) */}
+          <div className="pt-10 border-t border-white/10 flex flex-col lg:flex-row items-center justify-between gap-6">
+            {/* Category Filter Pills Bar */}
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              {(['ALL', 'HEAVYWEIGHT', 'GRAPHIC', 'VINTAGE', 'STRUCTURE'] as const).map((cat) => {
+                const isSelected = selectedCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => {
+                      setSelectedCategory(cat);
+                      setVaultActiveIndex(0);
+                    }}
+                    className={`gallery-filter-pill-btn ${isSelected ? 'active' : ''}`}
+                  >
+                    {cat === 'ALL' ? 'ALL WORKS (27)' : cat}
+                  </button>
+                );
+              })}
             </div>
-            <div className="flex items-center gap-4 text-xs font-mono text-white/60">
-              <Link to="/about" className="hover:text-white underline underline-offset-4 transition-colors">
-                ← About The Brand
-              </Link>
-              <span>/</span>
-              <Link to="/" className="hover:text-white underline underline-offset-4 transition-colors">
-                Shop Collection →
-              </Link>
+
+            {/* Viewing Perspective Mode Switcher */}
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                onClick={() => setViewMode('masonry')}
+                className={`gallery-mode-toggle ${viewMode === 'masonry' ? 'active' : ''}`}
+                aria-label="Lookbook Grid Mode"
+              >
+                <span>:::</span> LOOKBOOK
+              </button>
+              <button
+                onClick={() => setViewMode('runway')}
+                className={`gallery-mode-toggle ${viewMode === 'runway' ? 'active' : ''}`}
+                aria-label="Kinetic Runway Slider Mode"
+              >
+                <span>◄►</span> RUNWAY
+              </button>
+              <button
+                onClick={() => setViewMode('vault')}
+                className={`gallery-mode-toggle ${viewMode === 'vault' ? 'active' : ''}`}
+                aria-label="3D Inspection Deck Mode"
+              >
+                <span>▲</span> 3D DECK
+              </button>
             </div>
-          </motion.div>
-        </div>
-
-        {/* Layout Mode Perspective Switcher Toolbar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-          {/* Left: 3 Perspective Buttons */}
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="font-mono text-[11px] text-white/50 uppercase tracking-widest mr-2">
-              Viewing Mode:
-            </span>
-            <button
-              onClick={() => setViewMode('masonry')}
-              className={`gallery-mode-pill ${viewMode === 'masonry' ? 'active' : ''}`}
-            >
-              <span>:::</span> MASONRY LOOKBOOK
-            </button>
-            <button
-              onClick={() => setViewMode('runway')}
-              className={`gallery-mode-pill ${viewMode === 'runway' ? 'active' : ''}`}
-            >
-              <span>◄►</span> KINETIC RUNWAY
-            </button>
-            <button
-              onClick={() => setViewMode('vault')}
-              className={`gallery-mode-pill ${viewMode === 'vault' ? 'active' : ''}`}
-            >
-              <span>▲</span> 3D INSPECTION DECK
-            </button>
-          </div>
-
-          {/* Right: Category Filter Chips */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar">
-            {(['ALL', 'HEAVYWEIGHT', 'GRAPHIC', 'VINTAGE', 'STRUCTURE'] as const).map((cat) => {
-              const isSelected = selectedCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  onClick={() => {
-                    setSelectedCategory(cat);
-                    setVaultActiveIndex(0);
-                  }}
-                  className={`gallery-filter-chip ${isSelected ? 'active' : ''}`}
-                >
-                  {cat === 'ALL' ? 'ALL (27)' : cat}
-                </button>
-              );
-            })}
           </div>
         </div>
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. GALLERY PRESENTATION (3 REVOLUTIONARY MODES) */}
+      {/* 2. MAIN PRESENTATION (3 POWERFUL PERSPECTIVES) */}
       {/* ========================================================================= */}
-      <section className="relative z-10 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto pb-32">
-        {/* =======================================================================
-            MODE A: ASYMMETRIC HAUTE LOOKBOOK (MASONRY)
-           ======================================================================= */}
-        {viewMode === 'masonry' && (
-          <motion.div
-            layout
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="lookbook-grid"
-          >
-            <AnimatePresence mode="popLayout">
-              {filteredPieces.map((piece, idx) => {
-                const isHero = piece.aspect === 'hero';
-                return (
+      <section className="relative z-10 pb-36">
+        <div className="gallery-page-container">
+          {/* =======================================================================
+              PERSPECTIVE A: CLEAN EDITORIAL LOOKBOOK GRID (UNBLOCKED, HIGH IMPACT)
+             ======================================================================= */}
+          {viewMode === 'masonry' && (
+            <motion.div
+              layout
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="gallery-clean-grid"
+            >
+              <AnimatePresence mode="popLayout">
+                {filteredPieces.map((piece, idx) => (
                   <motion.div
                     layout
                     key={piece.id}
-                    initial={{ opacity: 0, scale: 0.92, y: 30 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                    initial={{ opacity: 0, y: 35 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-50px' }}
                     transition={{
-                      duration: 0.5,
+                      duration: 0.6,
                       delay: (idx % 8) * 0.06,
                       ease: [0.16, 1, 0.3, 1],
                     }}
                     onClick={() => setLightboxPiece(piece)}
-                    className={`lookbook-card ${isHero ? 'lookbook-span-2 lookbook-card-hero' : `lookbook-card-${piece.aspect}`}`}
+                    className="gallery-clean-card group"
                   >
+                    {/* T-Shirt Image (Clean, unobstructed focus) */}
                     <img
                       src={piece.image}
                       alt={piece.title}
-                      className="lookbook-image"
+                      className="gallery-clean-img"
                       loading="lazy"
                     />
 
-                    {/* Top Corner Badges */}
-                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10 pointer-events-none">
-                      <span className="bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[9px] font-mono uppercase tracking-widest text-white border border-white/20">
-                        {piece.lot}
-                      </span>
-                      <span className="bg-white/10 backdrop-blur-md px-2.5 py-1 rounded text-[9px] font-mono uppercase tracking-widest text-white/90 border border-white/15">
-                        {piece.badge}
-                      </span>
+                    {/* Top Floating Badges */}
+                    <div className="gallery-card-badge-top">
+                      <span className="gallery-tag-pill">{piece.lot}</span>
+                      <span className="gallery-tag-pill opacity-90">{piece.badge}</span>
                     </div>
 
-                    {/* Sliding Bottom Drawer */}
-                    <div className="lookbook-drawer">
-                      <div className="flex items-start justify-between gap-4">
-                        <div>
-                          <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1">
-                            {piece.weight} · {piece.wash}
-                          </span>
-                          <h3 className="font-display text-lg sm:text-xl font-bold uppercase tracking-tight text-white">
-                            {piece.title}
-                          </h3>
-                        </div>
+                    {/* Clean Sliding Bottom Drawer */}
+                    <div className="gallery-card-bottom-drawer">
+                      <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1">
+                        {piece.weight} · {piece.wash}
+                      </span>
+                      <div className="flex items-center justify-between gap-3">
+                        <h3 className="font-display text-lg sm:text-xl font-bold uppercase tracking-tight text-white group-hover:text-neutral-200 transition-colors">
+                          {piece.title}
+                        </h3>
                         <span className="font-mono text-[10px] text-white/90 bg-white/10 px-2.5 py-1 rounded shrink-0 border border-white/20">
                           INSPECT ↗
                         </span>
                       </div>
                     </div>
                   </motion.div>
-                );
-              })}
-            </AnimatePresence>
-          </motion.div>
-        )}
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          )}
 
-        {/* =======================================================================
-            MODE B: KINETIC FILMSTRIP RUNWAY (DRAG HORIZONTAL TRACK)
-           ======================================================================= */}
-        {viewMode === 'runway' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
-            className="relative"
-          >
-            {/* Left/Right Smooth Navigation Controls */}
-            <div className="flex items-center justify-between mb-6">
-              <span className="font-mono text-xs uppercase tracking-widest text-white/50">
-                ← DRAG TRACK OR USE CONTROLS TO EXPLORE →
-              </span>
-              <div className="flex items-center gap-3">
+          {/* =======================================================================
+              PERSPECTIVE B: KINETIC RUNWAY FILMSTRIP (HORIZONTAL GLIDE TRACK)
+             ======================================================================= */}
+          {viewMode === 'runway' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5 }}
+              className="relative"
+            >
+              {/* Runway Controls */}
+              <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                <span className="font-mono text-xs uppercase tracking-widest text-white/60">
+                  ← DRAG TRACK OR CLICK ARROWS TO GLIDE RUNWAY →
+                </span>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => scrollFilmstrip('left')}
+                    className="w-12 h-12 rounded-full border border-white/20 bg-black/60 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+                    aria-label="Scroll left"
+                  >
+                    ←
+                  </button>
+                  <button
+                    onClick={() => scrollFilmstrip('right')}
+                    className="w-12 h-12 rounded-full border border-white/20 bg-black/60 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+                    aria-label="Scroll right"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+
+              {/* Horizontal Scroll Track */}
+              <div ref={filmstripRef} className="gallery-runway-outer">
+                <div className="gallery-runway-flex">
+                  {filteredPieces.map((piece) => (
+                    <div
+                      key={piece.id}
+                      onClick={() => setLightboxPiece(piece)}
+                      className="gallery-runway-card group"
+                    >
+                      <img
+                        src={piece.image}
+                        alt={piece.title}
+                        className="gallery-clean-img"
+                        loading="lazy"
+                      />
+
+                      <div className="gallery-card-badge-top">
+                        <span className="gallery-tag-pill">{piece.lot}</span>
+                        <span className="gallery-tag-pill">{piece.badge}</span>
+                      </div>
+
+                      <div className="gallery-card-bottom-drawer">
+                        <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-0.5">
+                          {piece.weight}
+                        </span>
+                        <h4 className="font-display text-base sm:text-lg font-bold uppercase tracking-tight text-white mb-2">
+                          {piece.title}
+                        </h4>
+                        <span className="font-mono text-[10px] text-white/70 block">
+                          Click to inspect garment details ↗
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* =======================================================================
+              PERSPECTIVE C: 3D INTERACTIVE FOCUS STAGE DECK
+             ======================================================================= */}
+          {viewMode === 'vault' && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="relative py-12"
+            >
+              {/* 3D Viewport */}
+              <div className="gallery-3d-viewport">
+                {filteredPieces.map((piece, index) => {
+                  const total = filteredPieces.length;
+                  let posClass = 'hidden-right';
+
+                  if (index === vaultActiveIndex) {
+                    posClass = 'active';
+                  } else if (index === (vaultActiveIndex - 1 + total) % total) {
+                    posClass = 'prev';
+                  } else if (index === (vaultActiveIndex + 1) % total) {
+                    posClass = 'next';
+                  } else if (index < vaultActiveIndex) {
+                    posClass = 'hidden-left';
+                  }
+
+                  return (
+                    <div
+                      key={piece.id}
+                      onClick={() => {
+                        if (posClass === 'active') {
+                          setLightboxPiece(piece);
+                        } else if (posClass === 'prev') {
+                          prevVaultCard();
+                        } else if (posClass === 'next') {
+                          nextVaultCard();
+                        }
+                      }}
+                      className={`gallery-3d-card-item ${posClass}`}
+                    >
+                      <img
+                        src={piece.image}
+                        alt={piece.title}
+                        className="w-full h-full object-cover filter contrast-110"
+                      />
+
+                      {posClass === 'active' && <div className="gallery-laser-scan" />}
+
+                      {/* Top Badges */}
+                      <div className="gallery-card-badge-top">
+                        <span className="gallery-tag-pill">{piece.lot}</span>
+                        <span className="gallery-tag-pill">{piece.badge}</span>
+                      </div>
+
+                      {/* Bottom Info Bar */}
+                      <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black via-black/85 to-transparent">
+                        <span className="font-mono text-[10px] uppercase tracking-widest text-white/50 block mb-1">
+                          {piece.weight} · {piece.wash}
+                        </span>
+                        <h3 className="font-display text-xl sm:text-2xl font-bold uppercase tracking-tight text-white mb-2">
+                          {piece.title}
+                        </h3>
+                        <p className="font-body text-xs text-white/70 line-clamp-2 mb-4">
+                          {piece.description}
+                        </p>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setLightboxPiece(piece);
+                          }}
+                          className="w-full py-3 bg-white text-black font-mono text-[10px] uppercase tracking-widest font-bold text-center hover:bg-neutral-200 transition-colors"
+                        >
+                          Inspect Specifications ↗
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* 3D Navigation Arrows */}
+              <div className="mt-8 flex items-center justify-center gap-6">
                 <button
-                  onClick={() => scrollFilmstrip('left')}
-                  className="w-11 h-11 rounded-full border border-white/20 bg-black/60 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
-                  aria-label="Scroll runway left"
+                  onClick={prevVaultCard}
+                  className="w-12 h-12 rounded-full border border-white/20 bg-black flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+                  aria-label="Previous 3D piece"
                 >
                   ←
                 </button>
+                <div className="font-mono text-xs uppercase tracking-widest text-white/70">
+                  [ {vaultActiveIndex + 1} / {filteredPieces.length} ]
+                </div>
                 <button
-                  onClick={() => scrollFilmstrip('right')}
-                  className="w-11 h-11 rounded-full border border-white/20 bg-black/60 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
-                  aria-label="Scroll runway right"
+                  onClick={nextVaultCard}
+                  className="w-12 h-12 rounded-full border border-white/20 bg-black flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+                  aria-label="Next 3D piece"
                 >
                   →
                 </button>
               </div>
+            </motion.div>
+          )}
+
+          {/* Exhibition Counter Footnote */}
+          <div className="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 font-mono text-xs text-white/50">
+            <div>
+              [ EXHIBITING {filteredPieces.length} OF {allGalleryPieces.length} REGISTERED ATELIER WORKS ]
             </div>
-
-            {/* Horizontal Filmstrip Container */}
-            <div ref={filmstripRef} className="runway-track-wrap">
-              <div className="runway-strip">
-                {filteredPieces.map((piece) => (
-                  <div
-                    key={piece.id}
-                    onClick={() => setLightboxPiece(piece)}
-                    className="runway-item-box aspect-[3/4] relative group cursor-pointer"
-                  >
-                    <img
-                      src={piece.image}
-                      alt={piece.title}
-                      className="lookbook-image"
-                      loading="lazy"
-                    />
-
-                    {/* Top Badges */}
-                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10 pointer-events-none">
-                      <span className="bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[9px] font-mono uppercase tracking-widest text-white border border-white/20">
-                        {piece.lot}
-                      </span>
-                      <span className="bg-white/10 backdrop-blur-md px-2 py-0.5 rounded text-[8px] font-mono uppercase tracking-widest text-white/90">
-                        {piece.badge}
-                      </span>
-                    </div>
-
-                    {/* Bottom Drawer */}
-                    <div className="lookbook-drawer">
-                      <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-0.5">
-                        {piece.weight}
-                      </span>
-                      <h4 className="font-display text-base sm:text-lg font-bold uppercase tracking-tight text-white mb-2">
-                        {piece.title}
-                      </h4>
-                      <span className="font-mono text-[10px] text-white/70 block">
-                        Click to inspect piece details →
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="flex items-center gap-6">
+              <Link to="/about" className="hover:text-white transition-colors underline underline-offset-4">
+                ← Read Brand Philosophy
+              </Link>
+              <Link to="/" className="hover:text-white transition-colors underline underline-offset-4">
+                Shop Collection →
+              </Link>
             </div>
-          </motion.div>
-        )}
-
-        {/* =======================================================================
-            MODE C: 3D INTERACTIVE FOCUS STAGE DECK
-           ======================================================================= */}
-        {viewMode === 'vault' && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="relative py-12"
-          >
-            {/* 3D Carousel Stage */}
-            <div className="gallery-3d-stage relative min-h-[580px] sm:min-h-[660px] flex items-center justify-center overflow-hidden">
-              {filteredPieces.map((piece, index) => {
-                const total = filteredPieces.length;
-                let positionState = 'hidden-right';
-
-                if (index === vaultActiveIndex) {
-                  positionState = 'active';
-                } else if (index === (vaultActiveIndex - 1 + total) % total) {
-                  positionState = 'prev';
-                } else if (index === (vaultActiveIndex + 1) % total) {
-                  positionState = 'next';
-                } else if (index < vaultActiveIndex) {
-                  positionState = 'hidden-left';
-                }
-
-                return (
-                  <div
-                    key={piece.id}
-                    onClick={() => {
-                      if (positionState === 'active') {
-                        setLightboxPiece(piece);
-                      } else if (positionState === 'prev') {
-                        prevVaultCard();
-                      } else if (positionState === 'next') {
-                        nextVaultCard();
-                      }
-                    }}
-                    className={`gallery-3d-card ${positionState} absolute w-[300px] sm:w-[420px] aspect-[3/4] rounded-2xl overflow-hidden border border-white/20 bg-neutral-950 cursor-pointer`}
-                  >
-                    <img
-                      src={piece.image}
-                      alt={piece.title}
-                      className="w-full h-full object-cover filter contrast-110"
-                    />
-
-                    {positionState === 'active' && <div className="gallery-scan-laser" />}
-
-                    {/* Top Badges */}
-                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10 pointer-events-none">
-                      <span className="bg-black/85 backdrop-blur-md px-3 py-1 rounded text-[10px] font-mono uppercase tracking-widest text-white border border-white/20">
-                        {piece.lot}
-                      </span>
-                      <span className="bg-white/10 backdrop-blur-md px-3 py-1 rounded text-[10px] font-mono uppercase tracking-widest text-white/90 border border-white/15">
-                        {piece.badge}
-                      </span>
-                    </div>
-
-                    {/* Bottom Metadata Panel */}
-                    <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-white/50 block mb-1">
-                        {piece.weight} · {piece.wash}
-                      </span>
-                      <h3 className="font-display text-xl sm:text-2xl font-bold uppercase tracking-tight text-white mb-2">
-                        {piece.title}
-                      </h3>
-                      <p className="font-body text-xs text-white/70 line-clamp-2 mb-4">
-                        {piece.description}
-                      </p>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setLightboxPiece(piece);
-                        }}
-                        className="w-full py-3 bg-white text-black font-mono text-[10px] uppercase tracking-widest font-bold text-center hover:bg-neutral-200 transition-colors"
-                      >
-                        Inspect Specifications ↗
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* 3D Deck Bottom Navigation Bar */}
-            <div className="mt-8 flex items-center justify-center gap-6">
-              <button
-                onClick={prevVaultCard}
-                className="w-12 h-12 rounded-full border border-white/20 bg-black flex items-center justify-center hover:bg-white hover:text-black transition-colors"
-                aria-label="Previous 3D card"
-              >
-                ←
-              </button>
-              <div className="font-mono text-xs uppercase tracking-widest text-white/60">
-                [ {vaultActiveIndex + 1} / {filteredPieces.length} ]
-              </div>
-              <button
-                onClick={nextVaultCard}
-                className="w-12 h-12 rounded-full border border-white/20 bg-black flex items-center justify-center hover:bg-white hover:text-black transition-colors"
-                aria-label="Next 3D card"
-              >
-                →
-              </button>
-            </div>
-          </motion.div>
-        )}
-
-        {/* Global Catalog Footer Bar */}
-        <div className="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 font-mono text-xs text-white/50">
-          <div className="flex items-center gap-4">
-            <span>PORTO MILLING SPECIFICATION</span>
-            <span className="text-white font-bold">420 GSM COMPACT COMBER</span>
-          </div>
-          <div>
-            SHOWING {filteredPieces.length} OF {allGalleryPieces.length} REGISTERED ATELIER WORKS
           </div>
         </div>
       </section>
@@ -1009,7 +983,7 @@ export const Gallery: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setLightboxPiece(null)}
-            className="gallery-lightbox-modal"
+            className="gallery-modal-overlay"
           >
             <motion.div
               initial={{ scale: 0.92, opacity: 0, y: 25 }}
@@ -1017,7 +991,7 @@ export const Gallery: React.FC = () => {
               exit={{ scale: 0.92, opacity: 0, y: 25 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="gallery-lightbox-shell"
+              className="gallery-modal-box"
             >
               <div className="grid grid-cols-1 md:grid-cols-2">
                 {/* Modal Visual Image */}
@@ -1030,7 +1004,7 @@ export const Gallery: React.FC = () => {
                   <div className="absolute top-4 left-4 bg-black/85 backdrop-blur-md px-3 py-1 rounded text-[10px] font-mono uppercase tracking-widest text-white border border-white/20">
                     {lightboxPiece.lot} · {lightboxPiece.badge}
                   </div>
-                  <div className="gallery-scan-laser" />
+                  <div className="gallery-laser-scan" />
                 </div>
 
                 {/* Modal Details & Specs */}

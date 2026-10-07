@@ -1,217 +1,124 @@
 /* =========================================================================
-   MAISON JJETTAS — GALLERY INNER PAGE STYLESHEET
-   Avant-garde editorial layouting, 3D interactive viewing decks,
-   and luxury transitions.
+   MAISON JJETTAS — HAUTE COUTURE GALLERY STYLESHEET
+   Full-width centered layout, fluid responsive scaling,
+   and luxury editorial transitions.
    ========================================================================= */
 
 :root {
   --gallery-bg: #000000;
   --gallery-fg: #ffffff;
+  --font-display: "beachwood-variable", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-/* 3D Perspective Stage for Inspection Deck */
-.gallery-3d-stage {
-  perspective: 1400px;
-  perspective-origin: 50% 50%;
-  transform-style: preserve-3d;
-}
-
-.gallery-3d-card {
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.5s ease,
-              filter 0.5s ease,
-              box-shadow 0.6s ease;
-  will-change: transform, opacity;
-}
-
-/* Perspective card states in 3D deck */
-.gallery-3d-card.active {
-  transform: translate3d(0, 0, 80px) rotateY(0deg) scale(1);
-  opacity: 1;
-  z-index: 30;
-  filter: grayscale(0%);
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.95), 0 0 50px rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-.gallery-3d-card.prev {
-  transform: translate3d(-60%, 0, -100px) rotateY(28deg) scale(0.88);
-  opacity: 0.45;
-  z-index: 20;
-  filter: grayscale(90%) blur(1px);
-  pointer-events: auto;
-}
-
-.gallery-3d-card.next {
-  transform: translate3d(60%, 0, -100px) rotateY(-28deg) scale(0.88);
-  opacity: 0.45;
-  z-index: 20;
-  filter: grayscale(90%) blur(1px);
-  pointer-events: auto;
-}
-
-.gallery-3d-card.hidden-left {
-  transform: translate3d(-120%, 0, -260px) rotateY(40deg) scale(0.75);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.gallery-3d-card.hidden-right {
-  transform: translate3d(120%, 0, -260px) rotateY(-40deg) scale(0.75);
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Asymmetric Lookbook Grid */
-.lookbook-grid {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1.5rem;
-}
-
-@media (min-width: 640px) {
-  .lookbook-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.75rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lookbook-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2.25rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .lookbook-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 2.25rem;
-  }
-}
-
-/* Lookbook Card Dimensions */
-.lookbook-card {
-  position: relative;
-  border-radius: 1.25rem;
-  overflow: hidden;
-  background-color: #070709;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-}
-
-.lookbook-card:hover {
-  border-color: rgba(255, 255, 255, 0.45);
-  transform: translateY(-8px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95), 0 0 35px rgba(255, 255, 255, 0.08);
-}
-
-.lookbook-card-tall {
-  aspect-ratio: 3 / 4;
-}
-
-.lookbook-card-square {
-  aspect-ratio: 1 / 1;
-}
-
-.lookbook-card-hero {
-  aspect-ratio: 16 / 10;
-}
-
-@media (min-width: 1024px) {
-  .lookbook-span-2 {
-    grid-column: span 2 / span 2;
-  }
-}
-
-/* Lookbook Image Hover Bloom */
-.lookbook-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(85%) contrast(115%);
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
-}
-
-.lookbook-card:hover .lookbook-image {
-  filter: grayscale(0%) contrast(105%);
-  transform: scale(1.07);
-}
-
-/* Kinetic Filmstrip Runway */
-.runway-track-wrap {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: grab;
-  padding: 1rem 0 3rem;
-}
-
-.runway-track-wrap:active {
-  cursor: grabbing;
-}
-
-.runway-track-wrap::-webkit-scrollbar {
-  display: none;
-}
-
-.runway-strip {
-  display: flex;
-  gap: 2rem;
-  width: max-content;
-  padding: 0 1.5rem;
-}
-
-.runway-item-box {
-  width: 320px;
-  flex-shrink: 0;
-  border-radius: 1.25rem;
-  overflow: hidden;
-  background-color: #08080a;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+/* Master Gallery Page Container (Fully Centered, Expansive) */
+.gallery-page-container {
+  width: 100% !important;
+  max-width: 1680px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 
 @media (min-width: 768px) {
-  .runway-item-box {
-    width: 380px;
+  .gallery-page-container {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
   }
 }
 
-.runway-item-box:hover {
-  transform: translateY(-6px) scale(1.02);
-  border-color: rgba(255, 255, 255, 0.5);
+@media (min-width: 1280px) {
+  .gallery-page-container {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
 }
 
-/* View Mode Selector Tabs */
-.gallery-mode-pill {
+/* Background Ambient Glow Orbs */
+.gallery-ambient-glow {
+  pointer-events: none;
+  position: fixed;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 800px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.07) 0%, transparent 68%);
+  filter: blur(140px);
+  z-index: 0;
+}
+
+/* Watermark Marquee Text */
+.gallery-marquee-text {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 8.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.035);
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: -0.02em;
+}
+
+/* Filter Tab Pills */
+.gallery-filter-pill-btn {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  padding: 0.65rem 1.4rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  white-space: nowrap;
+}
+
+.gallery-filter-pill-btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.gallery-filter-pill-btn.active {
+  color: #000000 !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  font-weight: 700;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Perspective Mode Switcher */
+.gallery-mode-toggle {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.65rem 1.25rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 9999px;
   font-family: var(--font-mono);
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.03);
-  color: rgba(255, 255, 255, 0.6);
+  background: rgba(12, 12, 14, 0.7);
+  color: rgba(255, 255, 255, 0.65);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  outline: none;
+  backdrop-filter: blur(8px);
 }
 
-.gallery-mode-pill:hover {
+.gallery-mode-toggle:hover {
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
-.gallery-mode-pill.active {
+.gallery-mode-toggle.active {
   color: #000000 !important;
   background: #ffffff !important;
   border-color: #ffffff !important;
@@ -219,79 +126,276 @@
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
 }
 
-/* Gallery Filter Chip */
-.gallery-filter-chip {
+/* =========================================================================
+   LOOKBOOK GRID (BALANCED, BEAUTIFULLY CENTERED, LUXURY PROPORTIONS)
+   ========================================================================= */
+.gallery-clean-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .gallery-clean-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-clean-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gallery-clean-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.75rem;
+  }
+}
+
+/* Luxury Editorial Card */
+.gallery-clean-card {
   position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background-color: #09090b;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
+  cursor: pointer;
+  aspect-ratio: 3 / 4;
+}
+
+.gallery-clean-card:hover {
+  transform: translateY(-10px) scale(1.015);
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.95), 0 0 45px rgba(255, 255, 255, 0.1);
+}
+
+/* Image Presentation (Artwork is the Hero!) */
+.gallery-clean-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(80%) contrast(115%) brightness(95%);
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.5s ease;
+}
+
+.gallery-clean-card:hover .gallery-clean-img {
+  filter: grayscale(0%) contrast(108%) brightness(100%);
+  transform: scale(1.08);
+}
+
+/* Floating Corner Archival Tags */
+.gallery-card-badge-top {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.gallery-tag-pill {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
   font-family: var(--font-mono);
   font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  padding: 0.55rem 1.1rem;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(0, 0, 0, 0.6);
-  color: rgba(255, 255, 255, 0.65);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.gallery-filter-chip:hover {
+  letter-spacing: 0.18em;
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.gallery-filter-chip.active {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.15);
-  border-color: #ffffff;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-/* Bottom Floating Meta Drawer */
-.lookbook-drawer {
+/* Clean Sliding Caption Drawer (Reveals on Hover, Doesn't Block the Shirt) */
+.gallery-card-bottom-drawer {
   position: absolute;
   inset-x: 0;
   bottom: 0;
-  padding: 1.5rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.65) 70%, transparent 100%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  padding: 1.5rem 1.25rem 1.25rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.8) 60%, transparent 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  transform: translateY(14px);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(22px);
+  opacity: 0.9;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s ease;
+  z-index: 20;
 }
 
-.lookbook-card:hover .lookbook-drawer {
+.gallery-clean-card:hover .gallery-card-bottom-drawer {
   transform: translateY(0);
+  opacity: 1;
 }
 
-/* Scanline Radar Laser */
-.gallery-scan-laser {
+/* =========================================================================
+   3D STAGE FOR INSPECTION DECK
+   ========================================================================= */
+.gallery-3d-viewport {
+  position: relative;
+  width: 100%;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.gallery-3d-card-item {
+  position: absolute;
+  width: 320px;
+  aspect-ratio: 3 / 4;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #08080a;
+  cursor: pointer;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.5s ease,
+              filter 0.5s ease,
+              box-shadow 0.6s ease;
+  will-change: transform, opacity;
+}
+
+@media (min-width: 640px) {
+  .gallery-3d-card-item {
+    width: 420px;
+  }
+}
+
+.gallery-3d-card-item.active {
+  transform: translate3d(0, 0, 100px) rotateY(0deg) scale(1);
+  opacity: 1;
+  z-index: 40;
+  filter: grayscale(0%);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.95), 0 0 60px rgba(255, 255, 255, 0.15);
+}
+
+.gallery-3d-card-item.prev {
+  transform: translate3d(-62%, 0, -80px) rotateY(26deg) scale(0.88);
+  opacity: 0.45;
+  z-index: 20;
+  filter: grayscale(90%) blur(1px);
+}
+
+.gallery-3d-card-item.next {
+  transform: translate3d(62%, 0, -80px) rotateY(-26deg) scale(0.88);
+  opacity: 0.45;
+  z-index: 20;
+  filter: grayscale(90%) blur(1px);
+}
+
+.gallery-3d-card-item.hidden-left {
+  transform: translate3d(-120%, 0, -250px) rotateY(40deg) scale(0.75);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery-3d-card-item.hidden-right {
+  transform: translate3d(120%, 0, -250px) rotateY(-40deg) scale(0.75);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* =========================================================================
+   KINETIC FILMSTRIP RUNWAY (DRAG HORIZONTAL TRACK)
+   ========================================================================= */
+.gallery-runway-outer {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1.5rem 0 3.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+
+.gallery-runway-outer:active {
+  cursor: grabbing;
+}
+
+.gallery-runway-outer::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-runway-flex {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  padding: 0 1rem;
+}
+
+.gallery-runway-card {
+  width: 320px;
+  aspect-ratio: 3 / 4;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background-color: #09090b;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .gallery-runway-card {
+    width: 380px;
+  }
+}
+
+.gallery-runway-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.95), 0 0 35px rgba(255, 255, 255, 0.1);
+}
+
+/* High-Tech Scanline Effect */
+.gallery-laser-scan {
   position: absolute;
   left: 0;
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
   pointer-events: none;
-  animation: laser-sweep 3.5s ease-in-out infinite;
+  animation: laser-line-anim 3.5s ease-in-out infinite;
 }
 
-@keyframes laser-sweep {
+@keyframes laser-line-anim {
   0% { top: 0%; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
   100% { top: 100%; opacity: 0; }
 }
 
-/* Fullscreen Haute-Couture Lightbox */
-.gallery-lightbox-modal {
+/* Lightbox Modal */
+.gallery-modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.92);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: 100000;
   display: flex;
   align-items: center;
@@ -299,13 +403,13 @@
   padding: 1.5rem;
 }
 
-.gallery-lightbox-shell {
+.gallery-modal-box {
   position: relative;
   background: #09090c;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 1.5rem;
-  max-width: 60rem;
+  max-width: 62rem;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.95), 0 0 50px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.95), 0 0 60px rgba(255, 255, 255, 0.08);
 }
