@@ -96,39 +96,37 @@ export const WhyChooseUs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'420' | '180'>('420');
 
   return (
-    <div className="relative min-h-screen bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000] overflow-x-clip">
+    <div className="relative min-h-screen bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000] overflow-x-hidden">
       {/* Ambient Lighting Gradient */}
       <div aria-hidden="true" className="why-ambient-glow" />
 
       {/* ========================================================================= */}
       {/* 1. HERO HEADER SECTION */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pt-36 md:pt-48 pb-20">
-        <div className="why-page-container">
-          {/* Subtle Watermark Kinetic Marquee */}
-          <div aria-hidden="true" className="pointer-events-none absolute -top-4 left-0 right-0 opacity-15 overflow-hidden select-none">
-            <div className="flex whitespace-nowrap animate-marquee-left">
-              <span className="why-marquee-text pr-12">
-                WHY MAISON JJETTAS · ARCHITECTURAL STANDARDS · 420 GSM PURE COTTON · ZERO COMPROMISE ·
-              </span>
-              <span className="why-marquee-text pr-12">
-                WHY MAISON JJETTAS · ARCHITECTURAL STANDARDS · 420 GSM PURE COTTON · ZERO COMPROMISE ·
-              </span>
-            </div>
+      <section className="why-hero-section">
+        {/* Subtle Watermark Kinetic Marquee */}
+        <div aria-hidden="true" className="why-marquee-wrapper">
+          <div className="why-marquee-track">
+            <span className="why-marquee-text">
+              WHY MAISON JJETTAS · ARCHITECTURAL STANDARDS · 420 GSM PURE COTTON · ZERO COMPROMISE ·
+            </span>
+            <span className="why-marquee-text">
+              WHY MAISON JJETTAS · ARCHITECTURAL STANDARDS · 420 GSM PURE COTTON · ZERO COMPROMISE ·
+            </span>
           </div>
+        </div>
 
-          <div className="flex flex-col items-center text-center max-w-5xl mx-auto relative z-10">
+        <div className="why-page-container">
+          <div style={{ maxWidth: '880px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
             {/* Top pill badge */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md mb-8"
+              className="why-hero-badge"
             >
-              <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-              <span className="font-mono text-xs uppercase tracking-[0.28em] text-white/90">
-                The Haute Couture Standard // 5 Architectural Pillars
-              </span>
+              <span className="why-hero-badge-dot" />
+              <span>The Haute Couture Standard // 5 Architectural Pillars</span>
             </motion.div>
 
             {/* Main Headline */}
@@ -139,7 +137,7 @@ export const WhyChooseUs: React.FC = () => {
               className="why-hero-title"
             >
               THE ATELIER <br />
-              <span className="text-white drop-shadow-[0_0_50px_rgba(255,255,255,0.4)]">
+              <span style={{ color: '#ffffff', textShadow: '0 0 50px rgba(255,255,255,0.4)' }}>
                 STANDARD.
               </span>
             </motion.h1>
@@ -161,9 +159,9 @@ export const WhyChooseUs: React.FC = () => {
       {/* ========================================================================= */}
       {/* 2. TELEMETRY STATS GRID */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pb-28">
+      <section className="why-stats-section">
         <div className="why-page-container">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="why-stats-grid">
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -172,9 +170,7 @@ export const WhyChooseUs: React.FC = () => {
               className="why-stat-box"
             >
               <div className="why-stat-number">420</div>
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/60 block">
-                GSM FABRIC DENSITY
-              </span>
+              <span className="why-stat-label">GSM Fabric Density</span>
             </motion.div>
 
             <motion.div
@@ -185,9 +181,7 @@ export const WhyChooseUs: React.FC = () => {
               className="why-stat-box"
             >
               <div className="why-stat-number">100+</div>
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/60 block">
-                WASH CYCLES ZERO SAG
-              </span>
+              <span className="why-stat-label">Wash Cycles Zero Sag</span>
             </motion.div>
 
             <motion.div
@@ -198,9 +192,7 @@ export const WhyChooseUs: React.FC = () => {
               className="why-stat-box"
             >
               <div className="why-stat-number">0%</div>
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/60 block">
-                SYNTHETIC POLYESTER
-              </span>
+              <span className="why-stat-label">Synthetic Polyester</span>
             </motion.div>
 
             <motion.div
@@ -211,9 +203,7 @@ export const WhyChooseUs: React.FC = () => {
               className="why-stat-box"
             >
               <div className="why-stat-number">100</div>
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/60 block">
-                PIECES PER DROP MAX
-              </span>
+              <span className="why-stat-label">Pieces Per Drop Max</span>
             </motion.div>
           </div>
         </div>
@@ -222,130 +212,100 @@ export const WhyChooseUs: React.FC = () => {
       {/* ========================================================================= */}
       {/* 3. THE 5 ARCHITECTURAL PILLARS (FRAMED SHOWCASE) */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pb-36">
-        <div className="why-page-container space-y-16">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="font-mono text-xs uppercase tracking-[0.28em] text-white/50 block mb-3">
-              HAUTE COUTURE EXCELLENCE
-            </span>
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-white">
-              Five Architectural Pillars
-            </h2>
+      <section className="why-pillars-section">
+        <div className="why-page-container">
+          <div className="why-section-header">
+            <span className="why-section-eyebrow">Haute Couture Excellence</span>
+            <h2 className="why-section-title">Five Architectural Pillars</h2>
           </div>
 
-          {pillars.map((pillar, idx) => {
-            const isReversed = idx % 2 === 1;
+          <div className="why-pillars-list">
+            {pillars.map((pillar, idx) => {
+              const isReversed = idx % 2 === 1;
 
-            return (
-              <motion.div
-                key={pillar.number}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="why-frame-card"
-              >
-                {/* Architectural Corner Crosshairs */}
-                <div className="why-frame-crosshair why-frame-tl" />
-                <div className="why-frame-crosshair why-frame-tr" />
-                <div className="why-frame-crosshair why-frame-bl" />
-                <div className="why-frame-crosshair why-frame-br" />
-
-                <div
-                  className={`flex flex-col ${
-                    isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
-                  } items-stretch`}
+              return (
+                <motion.div
+                  key={pillar.number}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-60px' }}
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                  className="why-frame-card"
                 >
-                  {/* Image Column (True Vibrant Color, Zero Grayscale) */}
-                  <div className="lg:w-1/2 relative min-h-[360px] lg:min-h-[480px] overflow-hidden border-b lg:border-b-0 border-white/10">
-                    <img
-                      src={pillar.image}
-                      alt={pillar.title}
-                      className="why-frame-img"
-                      loading="lazy"
-                    />
+                  {/* Architectural Corner Crosshairs */}
+                  <div className="why-frame-crosshair why-frame-tl" />
+                  <div className="why-frame-crosshair why-frame-tr" />
+                  <div className="why-frame-crosshair why-frame-bl" />
+                  <div className="why-frame-crosshair why-frame-br" />
 
-                    {/* Floating Ref Badge */}
-                    <div className="absolute top-6 left-6 z-20 flex items-center gap-3">
-                      <span className="px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 font-mono text-xs tracking-widest text-white font-bold">
-                        PILLAR {pillar.number}
-                      </span>
-                      <span className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md font-mono text-[10px] tracking-widest text-white/80">
-                        {pillar.ref}
-                      </span>
+                  <div className={`why-frame-inner ${isReversed ? 'reversed' : ''}`}>
+                    {/* Image Column (True Vibrant Color, Zero Grayscale) */}
+                    <div className="why-frame-img-col">
+                      <img
+                        src={pillar.image}
+                        alt={pillar.title}
+                        className="why-frame-img"
+                        loading="lazy"
+                      />
+
+                      {/* Floating Ref Badge */}
+                      <div className="why-frame-tag-badge">
+                        <span className="why-pillar-pill">PILLAR {pillar.number}</span>
+                        <span className="why-ref-pill">{pillar.ref}</span>
+                      </div>
+                    </div>
+
+                    {/* Information & Specs Column */}
+                    <div className="why-frame-info-col">
+                      <div>
+                        <span className="why-pillar-subtitle">{pillar.subtitle}</span>
+                        <h3 className="why-pillar-title">{pillar.title}</h3>
+                        <p className="why-pillar-desc">{pillar.description}</p>
+                      </div>
+
+                      {/* Specification Table */}
+                      <div className="why-specs-grid">
+                        {pillar.specs.map((spec) => (
+                          <div key={spec.label} className="why-spec-item">
+                            <span className="why-spec-item-label">{spec.label}</span>
+                            <span className="why-spec-item-val">{spec.value}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-
-                  {/* Information & Specs Column */}
-                  <div className="lg:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-between">
-                    <div>
-                      <span className="font-mono text-xs uppercase tracking-[0.25em] text-white/50 block mb-2">
-                        {pillar.subtitle}
-                      </span>
-                      <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-white mb-6">
-                        {pillar.title}
-                      </h3>
-                      <p className="text-neutral-400 text-sm sm:text-base leading-relaxed font-light mb-8">
-                        {pillar.description}
-                      </p>
-                    </div>
-
-                    {/* Specification Table */}
-                    <div className="pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
-                      {pillar.specs.map((spec) => (
-                        <div key={spec.label} className="p-3.5 rounded-lg bg-white/[0.02] border border-white/5">
-                          <span className="font-mono text-[10px] uppercase tracking-widest text-white/50 block mb-1">
-                            {spec.label}
-                          </span>
-                          <span className="font-mono text-xs sm:text-sm font-bold text-white tracking-wider">
-                            {spec.value}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
       {/* ========================================================================= */}
       {/* 4. INTERACTIVE HEAVYWEIGHT BENCHMARK MATRIX */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pb-36 border-t border-white/10 pt-28">
+      <section className="why-matrix-section">
         <div className="why-page-container">
           <div className="why-matrix-box">
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+            <div className="why-matrix-header">
               <div>
-                <span className="font-mono text-xs uppercase tracking-[0.28em] text-white/50 block mb-3">
-                  DIRECT SPECIFICATION COMPARISON
-                </span>
-                <h3 className="font-display text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white">
-                  The Heavyweight Benchmark
-                </h3>
+                <span className="why-section-eyebrow">Direct Specification Comparison</span>
+                <h3 className="why-matrix-title">The Heavyweight Benchmark</h3>
               </div>
 
               {/* Toggle Switch */}
-              <div className="inline-flex items-center gap-2 p-1.5 rounded-full border border-white/20 bg-white/5">
+              <div className="why-matrix-tabs">
                 <button
+                  type="button"
                   onClick={() => setActiveTab('420')}
-                  className={`px-5 py-2 rounded-full font-mono text-xs uppercase tracking-widest transition-all ${
-                    activeTab === '420'
-                      ? 'bg-white text-black font-bold shadow-[0_0_20px_rgba(255,255,255,0.4)]'
-                      : 'text-white/60 hover:text-white'
-                  }`}
+                  className={`why-matrix-tab-btn ${activeTab === '420' ? 'active' : ''}`}
                 >
                   Maison JJettas (420 GSM)
                 </button>
                 <button
+                  type="button"
                   onClick={() => setActiveTab('180')}
-                  className={`px-5 py-2 rounded-full font-mono text-xs uppercase tracking-widest transition-all ${
-                    activeTab === '180'
-                      ? 'bg-white text-black font-bold shadow-[0_0_20px_rgba(255,255,255,0.4)]'
-                      : 'text-white/60 hover:text-white'
-                  }`}
+                  className={`why-matrix-tab-btn ${activeTab === '180' ? 'active' : ''}`}
                 >
                   High-Street Luxury (180 GSM)
                 </button>
@@ -353,7 +313,7 @@ export const WhyChooseUs: React.FC = () => {
             </div>
 
             {/* Comparative Breakdown Table */}
-            <div className="space-y-4 font-mono">
+            <div className="why-matrix-table">
               {[
                 {
                   metric: 'FABRIC GRAMS / SQ METER',
@@ -381,21 +341,16 @@ export const WhyChooseUs: React.FC = () => {
                   conventional: 'Mass production in 10,000+ quantities',
                 },
               ].map((row) => (
-                <div
-                  key={row.metric}
-                  className="p-5 rounded-xl border border-white/10 bg-white/[0.02] flex flex-col sm:flex-row sm:items-center justify-between gap-4"
-                >
-                  <span className="text-xs uppercase tracking-widest text-white/50 w-full sm:w-1/3">
-                    {row.metric}
-                  </span>
-                  <div className="w-full sm:w-2/3 flex items-center justify-between text-xs sm:text-sm">
+                <div key={row.metric} className="why-matrix-row">
+                  <span className="why-matrix-metric">{row.metric}</span>
+                  <div className="why-matrix-val">
                     {activeTab === '420' ? (
-                      <span className="text-white font-bold tracking-wider flex items-center gap-2">
-                        <span className="text-emerald-400">✓</span> {row.jjettas}
+                      <span style={{ color: '#ffffff', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ color: '#34d399' }}>✓</span> {row.jjettas}
                       </span>
                     ) : (
-                      <span className="text-white/60 tracking-wider flex items-center gap-2">
-                        <span className="text-red-400">✕</span> {row.conventional}
+                      <span style={{ color: 'rgba(255,255,255,0.6)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ color: '#f87171' }}>✕</span> {row.conventional}
                       </span>
                     )}
                   </div>
@@ -404,14 +359,11 @@ export const WhyChooseUs: React.FC = () => {
             </div>
 
             {/* Bottom CTA */}
-            <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
-              <span className="text-sm font-light text-neutral-400">
+            <div className="why-matrix-footer">
+              <span style={{ fontSize: '14px', fontWeight: 300, color: 'rgba(255,255,255,0.6)' }}>
                 Experience the structural weight in person through our 27-piece archive.
               </span>
-              <Link
-                to="/gallery"
-                className="px-8 py-4 bg-white text-black font-mono text-xs uppercase tracking-[0.25em] font-bold hover:bg-neutral-200 transition-colors"
-              >
+              <Link to="/gallery" className="why-cta-btn">
                 Explore The Gallery ↗
               </Link>
             </div>
@@ -422,7 +374,7 @@ export const WhyChooseUs: React.FC = () => {
       {/* ========================================================================= */}
       {/* 5. FINAL FOOTER */}
       {/* ========================================================================= */}
-      <div className="relative z-50">
+      <div style={{ position: 'relative', zIndex: 50 }}>
         <FinalFooter />
       </div>
     </div>
