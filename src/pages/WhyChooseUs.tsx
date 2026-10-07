@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FinalFooter } from '../components/FinalFooter';
+import { PageIntro } from '../components/PageIntro';
 import '../styles/why-choose-us.css';
 
 interface Pillar {
@@ -93,12 +94,32 @@ const pillars: Pillar[] = [
 ];
 
 export const WhyChooseUs: React.FC = () => {
+  const [showIntro, setShowIntro] = useState(true);
   const [activeTab, setActiveTab] = useState<'420' | '180'>('420');
 
   return (
     <div className="relative min-h-screen bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000] overflow-x-hidden">
-      {/* Ambient Lighting Gradient */}
-      <div aria-hidden="true" className="why-ambient-glow" />
+      {/* 0. INTRO PARTICLE TEXT ASSEMBLY OVERLAY */}
+      <AnimatePresence>
+        {showIntro && (
+          <PageIntro
+            sentence="THE ATELIER STANDARD // 5 ARCHITECTURAL PILLARS"
+            categoryLabel="MAISON JJETTAS // STANDARDS"
+            enterButtonText="VIEW STANDARDS"
+            statusText="CALIBRATING ARCHITECTURAL BENCHMARKS..."
+            subMeta="ZERO SYNTHETIC COMPROMISE"
+            onComplete={() => setShowIntro(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: showIntro ? 0 : 1, y: showIntro ? 20 : 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      >
+        {/* Ambient Lighting Gradient */}
+        <div aria-hidden="true" className="why-ambient-glow" />
 
       {/* ========================================================================= */}
       {/* 1. HERO HEADER SECTION */}
@@ -121,7 +142,7 @@ export const WhyChooseUs: React.FC = () => {
             {/* Top pill badge */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
               transition={{ duration: 0.6 }}
               className="why-hero-badge"
             >
@@ -132,7 +153,7 @@ export const WhyChooseUs: React.FC = () => {
             {/* Main Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
               transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="why-hero-title"
             >
@@ -145,7 +166,7 @@ export const WhyChooseUs: React.FC = () => {
             {/* Sub-paragraph */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.85, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="why-hero-sub"
             >
@@ -163,10 +184,11 @@ export const WhyChooseUs: React.FC = () => {
         <div className="why-page-container">
           <div className="why-stats-grid">
             <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 35, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.05 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 20, delay: 0.05 }}
+              whileHover={{ scale: 1.05, y: -5, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
               className="why-stat-box"
             >
               <div className="why-stat-number">420</div>
@@ -174,10 +196,11 @@ export const WhyChooseUs: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 35, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 20, delay: 0.1 }}
+              whileHover={{ scale: 1.05, y: -5, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
               className="why-stat-box"
             >
               <div className="why-stat-number">100+</div>
@@ -185,10 +208,11 @@ export const WhyChooseUs: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 35, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 20, delay: 0.15 }}
+              whileHover={{ scale: 1.05, y: -5, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
               className="why-stat-box"
             >
               <div className="why-stat-number">0%</div>
@@ -196,10 +220,11 @@ export const WhyChooseUs: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 35, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ type: 'spring', stiffness: 200, damping: 20, delay: 0.2 }}
+              whileHover={{ scale: 1.05, y: -5, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
               className="why-stat-box"
             >
               <div className="why-stat-number">100</div>
@@ -226,10 +251,11 @@ export const WhyChooseUs: React.FC = () => {
               return (
                 <motion.div
                   key={pillar.number}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 40, x: isReversed ? 40 : -40 }}
+                  whileInView={{ opacity: 1, y: 0, x: 0 }}
+                  whileHover={{ scale: 1.02, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
                   viewport={{ once: true, margin: '-60px' }}
-                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ type: 'spring', stiffness: 120, damping: 20, delay: 0.1 }}
                   className="why-frame-card"
                 >
                   {/* Architectural Corner Crosshairs */}
@@ -377,7 +403,8 @@ export const WhyChooseUs: React.FC = () => {
       <div style={{ position: 'relative', zIndex: 50 }}>
         <FinalFooter />
       </div>
-    </div>
+    </motion.div>
+  </div>
   );
 };
 

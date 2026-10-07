@@ -147,31 +147,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
           })}
         </nav>
 
-        {/* Overlay Bottom Bar */}
-        <div className="jj-menu-bottom-bar">
-          <div className="flex items-center gap-6">
-            <a
-              href="https://www.instagram.com/atassemble/"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              An Assemble Project
-            </a>
-            <span className="opacity-30">/</span>
-            <Link to="/privacy" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">
-              Privacy
-            </Link>
-            <span className="opacity-30">/</span>
-            <Link to="/terms" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">
-              Terms
-            </Link>
-          </div>
 
-          <div>
-            <span className="text-white/40">© 2026 MAISON JJETTAS · ALL RIGHTS RESERVED</span>
-          </div>
-        </div>
       </div>
     </>
   );

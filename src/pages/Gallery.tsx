@@ -617,7 +617,7 @@ export const Gallery: React.FC = () => {
             <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
                 transition={{ duration: 0.6 }}
                 className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-md"
               >
@@ -640,7 +640,7 @@ export const Gallery: React.FC = () => {
             {/* Main Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
               transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-[-0.03em] leading-[0.9] mb-8"
             >
@@ -653,7 +653,7 @@ export const Gallery: React.FC = () => {
             {/* Sub-paragraph */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.85, delay: 0.2 }}
               className="font-body text-base sm:text-lg md:text-xl text-white/70 max-w-2xl font-light leading-relaxed mb-8"
             >
@@ -663,7 +663,7 @@ export const Gallery: React.FC = () => {
             {/* Key Standards Badges */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.85, delay: 0.3 }}
               className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-white/60"
             >

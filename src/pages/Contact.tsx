@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FinalFooter } from '../components/FinalFooter';
+import { PageIntro } from '../components/PageIntro';
 import '../styles/contact.css';
 
 interface FitSpec {
@@ -82,6 +83,8 @@ const LOT_OPTIONS = [
 ];
 
 export const Contact: React.FC = () => {
+  const [showIntro, setShowIntro] = useState(true);
+
   // Form State
   const [inquiryType, setInquiryType] = useState<string>('BESPOKE TAILORING');
   const [formData, setFormData] = useState({
@@ -156,8 +159,27 @@ export const Contact: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000] overflow-x-clip">
-      {/* Ambient Lighting Gradient */}
-      <div aria-hidden="true" className="contact-ambient-glow" />
+      {/* 0. INTRO PARTICLE TEXT ASSEMBLY OVERLAY */}
+      <AnimatePresence>
+        {showIntro && (
+          <PageIntro
+            sentence="CONNECT WITH THE ATELIER // PRIVATE CONCIERGE"
+            categoryLabel="MAISON JJETTAS // CONCIERGE"
+            enterButtonText="ENTER CONCIERGE"
+            statusText="OPENING PRIVATE DISPATCH DESK..."
+            subMeta="24/7 ENCRYPTED COMMISSIONS"
+            onComplete={() => setShowIntro(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: showIntro ? 0 : 1, y: showIntro ? 20 : 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      >
+        {/* Ambient Lighting Gradient */}
+        <div aria-hidden="true" className="contact-ambient-glow" />
 
       {/* ========================================================================= */}
       {/* 1. HERO HEADER SECTION (EXPANSIVE & LUXURIOUS) */}
@@ -183,7 +205,7 @@ export const Contact: React.FC = () => {
             {/* Top pill badge with animated frequency equalizer */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md mb-8 relative z-10"
             >
@@ -203,7 +225,7 @@ export const Contact: React.FC = () => {
             {/* Main Grand Headline (Pure Solid Brilliant White - No Broken Gradient) */}
             <motion.h1
               initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
               transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="contact-hero-title relative z-10"
             >
@@ -216,7 +238,7 @@ export const Contact: React.FC = () => {
             {/* Roomy Sub-paragraph */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.85, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="contact-hero-sub relative z-10"
             >
@@ -474,218 +496,78 @@ export const Contact: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.35 }}
               className="space-y-6"
             >
-              {/* 1. SIZING & ANATOMICAL FIT GUIDE (INTERACTIVE) */}
-              <div className="contact-panel-card">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-xs uppercase tracking-[0.25em] text-white/60">
-                    ANATOMICAL FIT SPECIFICATIONS
-                  </span>
-                  <span className="font-mono text-[11px] uppercase tracking-widest text-emerald-400 font-bold">
-                    SIZE &amp; DRAPE GUIDE
-                  </span>
-                </div>
-
-                {/* Tab Switcher */}
-                <div className="flex flex-wrap gap-2 mb-5">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedFit('boxy')}
-                    className={`contact-fit-tab ${selectedFit === 'boxy' ? 'active' : ''}`}
-                  >
-                    420 GSM BOXY
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setSelectedFit('tailored')}
-                    className={`contact-fit-tab ${selectedFit === 'tailored' ? 'active' : ''}`}
-                  >
-                    TAILORED CUT
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setSelectedFit('vintage')}
-                    className={`contact-fit-tab ${selectedFit === 'vintage' ? 'active' : ''}`}
-                  >
-                    VINTAGE WASH
-                  </button>
-                </div>
-
-                {/* Active Profile Specs */}
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h4 className="font-display text-xl font-bold text-white uppercase tracking-tight">
-                      {FIT_PROFILES[selectedFit].name}
-                    </h4>
-                    <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-white/10 text-white/80 font-mono tracking-widest uppercase">
-                      {FIT_PROFILES[selectedFit].tag}
+              {/* 1. ARCHIVAL DISPATCH GLOBE (PREMIUM STATIC MAP) */}
+              <div className="contact-panel-card flex flex-col items-center justify-center relative overflow-hidden" style={{ minHeight: '600px', border: '1px solid rgba(255,255,255,0.05)', padding: 0 }}>
+                {/* Decorative Overlay Label */}
+                <div className="absolute top-8 left-8 right-8 flex justify-between items-start z-20 pointer-events-none">
+                  <div>
+                    <span className="font-mono text-xs uppercase tracking-[0.25em] text-white/60 block mb-1">
+                      GLOBAL DISPATCH NETWORK
+                    </span>
+                    <h3 className="font-display text-2xl font-bold text-white uppercase tracking-tight" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}>
+                      WORLDWIDE FULFILLMENT
+                    </h3>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-emerald-400 font-bold">
+                      LIVE
                     </span>
                   </div>
+                </div>
 
-                  {/* 4 Measurement Chips */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                    <div className="contact-spec-chip text-center">
-                      <span className="block text-[10px] font-mono text-white/40 uppercase tracking-widest">CHEST</span>
-                      <span className="block text-sm font-bold text-white mt-1">{FIT_PROFILES[selectedFit].chest}</span>
-                    </div>
-                    <div className="contact-spec-chip text-center">
-                      <span className="block text-[10px] font-mono text-white/40 uppercase tracking-widest">LENGTH</span>
-                      <span className="block text-sm font-bold text-white mt-1">{FIT_PROFILES[selectedFit].length}</span>
-                    </div>
-                    <div className="contact-spec-chip text-center">
-                      <span className="block text-[10px] font-mono text-white/40 uppercase tracking-widest">SHOULDER</span>
-                      <span className="block text-sm font-bold text-white mt-1">{FIT_PROFILES[selectedFit].shoulder}</span>
-                    </div>
-                    <div className="contact-spec-chip text-center">
-                      <span className="block text-[10px] font-mono text-white/40 uppercase tracking-widest">WEIGHT</span>
-                      <span className="block text-sm font-bold text-white mt-1">{FIT_PROFILES[selectedFit].weight.split(' ')[0]} {FIT_PROFILES[selectedFit].weight.split(' ')[1]}</span>
+                {/* Colorful Static Map Image */}
+                <div className="w-full h-full absolute inset-0">
+                  <img src="/images/luxury-world-map.jpg" alt="Global Operations Map" className="w-full h-full object-cover opacity-80" />
+                  
+                  {/* PINS FOR OFFICES */}
+                  {/* North America (NYC approx) */}
+                  <div className="absolute" style={{ top: '35%', left: '26%' }}>
+                    <div className="relative">
+                      <div className="w-3 h-3 bg-emerald-400 rounded-full" />
+                      <div className="absolute inset-0 bg-emerald-400 rounded-full animate-ping opacity-75" style={{ animationDuration: '2s' }} />
+                      <span className="absolute top-4 left-1/2 -translate-x-1/2 font-mono text-[9px] text-white tracking-widest uppercase bg-black/60 px-1 py-0.5 rounded border border-white/10">NYC</span>
                     </div>
                   </div>
 
-                  <p className="text-xs text-white/70 font-light leading-relaxed">
-                    {FIT_PROFILES[selectedFit].silhouette}
-                  </p>
+                  {/* Europe (Paris approx) */}
+                  <div className="absolute" style={{ top: '30%', left: '48%' }}>
+                    <div className="relative">
+                      <div className="w-3 h-3 bg-emerald-400 rounded-full" />
+                      <div className="absolute inset-0 bg-emerald-400 rounded-full animate-ping opacity-75" style={{ animationDuration: '2.5s' }} />
+                      <span className="absolute top-4 left-1/2 -translate-x-1/2 font-mono text-[9px] text-white tracking-widest uppercase bg-black/60 px-1 py-0.5 rounded border border-white/10">PARIS</span>
+                    </div>
+                  </div>
 
-                  <div className="p-3 bg-white/5 rounded-lg border border-white/10 flex items-start gap-2.5 text-xs text-white/80">
-                    <span className="text-emerald-400 font-bold font-mono">ADVICE:</span>
-                    <span>{FIT_PROFILES[selectedFit].recommendation}</span>
+                  {/* Asia (Tokyo approx) */}
+                  <div className="absolute" style={{ top: '38%', left: '84%' }}>
+                    <div className="relative">
+                      <div className="w-3 h-3 bg-emerald-400 rounded-full" />
+                      <div className="absolute inset-0 bg-emerald-400 rounded-full animate-ping opacity-75" style={{ animationDuration: '3s' }} />
+                      <span className="absolute top-4 left-1/2 -translate-x-1/2 font-mono text-[9px] text-white tracking-widest uppercase bg-black/60 px-1 py-0.5 rounded border border-white/10">TOKYO</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* 2. ORDER DISPATCH & LIVE TRACKING LOOKUP */}
-              <div className="contact-panel-card">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="font-mono text-xs uppercase tracking-[0.25em] text-white/60">
-                    ARCHIVAL DISPATCH &amp; TRACKING
-                  </span>
-                  <span className="font-mono text-[11px] uppercase tracking-widest text-white/50">
-                    DHL 24H EXPRESS
-                  </span>
-                </div>
-
-                <p className="text-xs text-white/60 mb-4 font-light">
-                  Query live fulfillment status for your physical order, bespoke commission, or vault reservation:
-                </p>
-
-                <form onSubmit={handleTrackSubmit} className="flex gap-2 mb-4">
-                  <input
-                    type="text"
-                    value={trackingInput}
-                    onChange={(e) => setTrackingInput(e.target.value)}
-                    placeholder="e.g. JJ-84019 or email address"
-                    className="contact-track-input flex-1"
-                  />
-                  <button type="submit" className="contact-track-btn">
-                    TRACK
-                  </button>
-                </form>
-
-                {trackingStatus ? (
-                  <div className="p-3.5 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 font-mono text-xs tracking-wider mb-4 animate-fade-in">
-                    {trackingStatus}
-                  </div>
-                ) : (
-                  <div className="flex items-center justify-between text-xs font-mono text-white/50 p-2.5 bg-white/5 rounded-lg mb-4">
-                    <span>GLOBAL FULFILLMENT:</span>
-                    <span className="text-white/80 font-bold">100% ORDERS DISPATCHED WITHIN 24H</span>
-                  </div>
-                )}
-
-                {/* Regional Timeline Grid */}
-                <div className="grid grid-cols-3 gap-2 text-center pt-3 border-t border-white/10 font-mono">
-                  <div className="p-2 bg-white/5 rounded">
-                    <span className="block text-[10px] text-white/40 uppercase">USA &amp; CAN</span>
-                    <span className="block text-xs font-bold text-white mt-0.5">2–3 DAYS</span>
-                  </div>
-                  <div className="p-2 bg-white/5 rounded">
-                    <span className="block text-[10px] text-white/40 uppercase">EUROPE &amp; UK</span>
-                    <span className="block text-xs font-bold text-white mt-0.5">2–4 DAYS</span>
-                  </div>
-                  <div className="p-2 bg-white/5 rounded">
-                    <span className="block text-[10px] text-white/40 uppercase">WORLDWIDE</span>
-                    <span className="block text-xs font-bold text-white mt-0.5">3–5 DAYS</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* 3. PITCH-BLACK TEXTILE CARE & LONGEVITY */}
-              <div className="contact-panel-card">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-xs uppercase tracking-[0.25em] text-white/60">
-                    PITCH-BLACK TEXTILE CARE
-                  </span>
-                  <span className="font-mono text-[11px] uppercase tracking-widest text-white/50">
-                    100+ WEAR PROTOCOL
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  <div className="contact-care-item">
-                    <span className="block text-[11px] font-mono font-bold text-white uppercase tracking-wider mb-1">
-                      30°C COLD WASH ONLY
-                    </span>
-                    <p className="text-[11px] text-white/60 font-light leading-relaxed">
-                      Protects deep pitch-black reactive dye and preserves the dense 420 GSM combed yarn fibers.
-                    </p>
-                  </div>
-
-                  <div className="contact-care-item">
-                    <span className="block text-[11px] font-mono font-bold text-white uppercase tracking-wider mb-1">
-                      HANG DRY INSIDE OUT
-                    </span>
-                    <p className="text-[11px] text-white/60 font-light leading-relaxed">
-                      Prevents thermal shrinkage and maintains original drop-shoulder silhouette contours.
-                    </p>
-                  </div>
-
-                  <div className="contact-care-item">
-                    <span className="block text-[11px] font-mono font-bold text-white uppercase tracking-wider mb-1">
-                      ZERO BLEACH / AGGRESSION
-                    </span>
-                    <p className="text-[11px] text-white/60 font-light leading-relaxed">
-                      Shields high-density graphic discharge prints and serialized archival seam labels.
-                    </p>
-                  </div>
-
-                  <div className="contact-care-item">
-                    <span className="block text-[11px] font-mono font-bold text-white uppercase tracking-wider mb-1">
-                      REVERSE LOW STEAM
-                    </span>
-                    <p className="text-[11px] text-white/60 font-light leading-relaxed">
-                      Refreshes the reinforced 32mm collar rib tension with zero direct iron friction.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* 4. DIRECT CLIENT CONCIERGE & GUARANTEES */}
-              <div className="contact-desk-card">
-                <div className="flex items-center justify-between mb-5">
-                  <span className="font-mono text-xs uppercase tracking-[0.25em] text-white/60">
-                    DIRECT CLIENT CHANNELS
-                  </span>
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                </div>
-                <div className="space-y-4 text-xs font-mono">
-                  <div className="flex items-center justify-between pb-3.5 border-b border-white/10">
-                    <span className="text-white/60 uppercase">Senior Concierge</span>
-                    <a href="mailto:concierge@jjettas.com" className="text-white font-bold hover:underline tracking-wider">
-                      concierge@jjettas.com ↗
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-between pb-3.5 border-b border-white/10">
-                    <span className="text-white/60 uppercase">Direct WhatsApp Desk</span>
-                    <a href="https://wa.me/16128005538" target="_blank" rel="noreferrer" className="text-white font-bold hover:underline tracking-wider">
-                      +1 (612) 800-JJET ↗
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-between pb-3.5 border-b border-white/10">
-                    <span className="text-white/60 uppercase">Response Guarantee</span>
-                    <span className="text-emerald-400 font-bold">&lt; 2 Hours Average Response</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-white/60 uppercase">Exchange Policy</span>
-                    <span className="text-white font-bold">14-Day Complimentary Size Swap</span>
+                {/* Bottom Overlay Label */}
+                <div className="absolute bottom-8 left-8 right-8 z-20 pointer-events-none">
+                  <div className="flex justify-between items-end border-t border-white/10 pt-4" style={{ backgroundColor: 'rgba(0,0,0,0.5)', padding: '1rem', borderRadius: '8px', backdropFilter: 'blur(4px)' }}>
+                    <div>
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-white/40 block mb-1">
+                        NODE LOCATIONS
+                      </span>
+                      <span className="font-mono text-xs text-white/80">
+                        PORTO · PARIS · TOKYO · LONDON · NYC
+                      </span>
+                    </div>
+                    <div className="text-right">
+                      <span className="font-mono text-[10px] uppercase tracking-widest text-white/40 block mb-1">
+                        CARRIER
+                      </span>
+                      <span className="font-mono text-xs text-white/80 font-bold">
+                        DHL 24H EXPRESS
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -755,7 +637,8 @@ export const Contact: React.FC = () => {
       <div className="relative z-50">
         <FinalFooter />
       </div>
-    </div>
+    </motion.div>
+  </div>
   );
 };
 

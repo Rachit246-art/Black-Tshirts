@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FinalFooter } from '../components/FinalFooter';
+import { PageIntro } from '../components/PageIntro';
 import '../styles/reviews.css';
 
 interface Review {
@@ -112,6 +113,7 @@ const reviewsData: Review[] = [
 ];
 
 export const Reviews: React.FC = () => {
+  const [showIntro, setShowIntro] = useState(true);
   const [selectedFilter, setSelectedFilter] = useState<'ALL' | 'COLLECTOR' | 'STYLIST' | 'TEXTILE' | 'GRAPHIC'>('ALL');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalRating, setModalRating] = useState(5);
@@ -140,47 +142,66 @@ export const Reviews: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000] overflow-x-clip">
-      {/* Ambient Lighting Gradient */}
-      <div aria-hidden="true" className="reviews-ambient-glow" />
+      {/* 0. INTRO PARTICLE TEXT ASSEMBLY OVERLAY */}
+      <AnimatePresence>
+        {showIntro && (
+          <PageIntro
+            sentence="VERIFIED PATRON ARCHIVE // WORLDWIDE COMMISSIONS"
+            categoryLabel="MAISON JJETTAS // PATRONS"
+            enterButtonText="ENTER ARCHIVE"
+            statusText="SYNCHRONIZING 340+ PATRON APPRAISALS..."
+            subMeta="5.0 ACCREDITED WORLDWIDE"
+            onComplete={() => setShowIntro(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: showIntro ? 0 : 1, y: showIntro ? 20 : 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      >
+        {/* Ambient Lighting Gradient */}
+        <div aria-hidden="true" className="reviews-ambient-glow" />
 
       {/* ========================================================================= */}
       {/* 1. HERO HEADER SECTION */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pt-36 md:pt-48 pb-16">
-        <div className="reviews-page-container">
-          {/* Subtle Watermark Kinetic Marquee */}
-          <div aria-hidden="true" className="pointer-events-none absolute -top-4 left-0 right-0 opacity-15 overflow-hidden select-none">
-            <div className="flex whitespace-nowrap animate-marquee-left">
-              <span className="reviews-marquee-text pr-12">
-                PATRON COMMISSIONS · VERIFIED CLIENT ARCHIVE · 5.0 RATED WORLDWIDE · 340+ COMMISSIONS DELIVERED ·
-              </span>
-              <span className="reviews-marquee-text pr-12">
-                PATRON COMMISSIONS · VERIFIED CLIENT ARCHIVE · 5.0 RATED WORLDWIDE · 340+ COMMISSIONS DELIVERED ·
-              </span>
-            </div>
+      <section className="reviews-hero-section">
+        {/* Subtle Watermark Kinetic Marquee */}
+        <div aria-hidden="true" className="reviews-marquee-wrapper">
+          <div className="reviews-marquee-track">
+            <span className="reviews-marquee-text">
+              PATRON COMMISSIONS · VERIFIED CLIENT ARCHIVE · 5.0 RATED WORLDWIDE · 340+ COMMISSIONS DELIVERED ·
+            </span>
+            <span className="reviews-marquee-text">
+              PATRON COMMISSIONS · VERIFIED CLIENT ARCHIVE · 5.0 RATED WORLDWIDE · 340+ COMMISSIONS DELIVERED ·
+            </span>
           </div>
+        </div>
 
-          <div className="flex flex-col items-center text-center max-w-5xl mx-auto relative z-10">
+        <div className="reviews-page-container">
+          <div style={{ maxWidth: '880px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
             {/* 5-Star Rating Pill */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
               transition={{ duration: 0.6 }}
               className="reviews-star-pill"
             >
-              <span className="text-yellow-400">★★★★★</span>
+              <span style={{ color: '#fbbf24', letterSpacing: '0.15em' }}>★★★★★</span>
               <span>5.0 / 5.0 · 340+ VERIFIED PATRONS WORLDWIDE</span>
             </motion.div>
 
             {/* Main Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
               transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="reviews-hero-title"
             >
               PATRON <br />
-              <span className="text-white drop-shadow-[0_0_50px_rgba(255,255,255,0.4)]">
+              <span style={{ color: '#ffffff', textShadow: '0 0 50px rgba(255,255,255,0.4)' }}>
                 ARCHIVE.
               </span>
             </motion.h1>
@@ -188,7 +209,7 @@ export const Reviews: React.FC = () => {
             {/* Sub-paragraph */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.85, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="reviews-hero-sub"
             >
@@ -199,12 +220,13 @@ export const Reviews: React.FC = () => {
             {/* Submit Appraisal Action Button */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
+              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <button
+                type="button"
                 onClick={() => setIsModalOpen(true)}
-                className="px-8 py-3.5 rounded-full border border-white/20 bg-white/5 hover:bg-white hover:text-black font-mono text-xs uppercase tracking-widest text-white transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                className="reviews-hero-action-btn"
               >
                 Log Your Patron Appraisal ↗
               </button>
@@ -212,7 +234,7 @@ export const Reviews: React.FC = () => {
           </div>
 
           {/* Interactive Filter Pills */}
-          <div className="pt-16 mt-12 border-t border-white/10 flex flex-wrap items-center justify-center gap-3">
+          <div className="reviews-filters-wrapper">
             {[
               { id: 'ALL', label: 'ALL CRITIQUES (06)' },
               { id: 'COLLECTOR', label: 'COLLECTORS & VIP' },
@@ -233,9 +255,9 @@ export const Reviews: React.FC = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. FRAMED REVIEWS GRID */}
+      {/* 2. FRAMED REVIEWS GRID (SPACIOUS & UNCONGESTED) */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pb-36">
+      <section className="reviews-grid-section">
         <div className="reviews-page-container">
           <motion.div layout className="reviews-grid">
             <AnimatePresence mode="popLayout">
@@ -243,10 +265,14 @@ export const Reviews: React.FC = () => {
                 <motion.div
                   layout
                   key={review.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ 
+                    opacity: 0, 
+                    x: idx % 4 === 0 ? -150 : idx % 4 === 1 ? 150 : 0,
+                    y: idx % 4 === 2 ? 150 : idx % 4 === 3 ? -150 : 0
+                  }}
+                  animate={!showIntro ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: idx % 4 === 0 ? -150 : idx % 4 === 1 ? 150 : 0, y: idx % 4 === 2 ? 150 : idx % 4 === 3 ? -150 : 0 }}
                   exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.6, delay: idx * 0.08 }}
+                  transition={{ type: 'spring', stiffness: 200, damping: 20, delay: idx * 0.1 }}
                   className="reviews-card group"
                 >
                   {/* Architectural Corner Crosshairs */}
@@ -257,18 +283,18 @@ export const Reviews: React.FC = () => {
 
                   {/* Header: Patron Details & Garment Thumbnail */}
                   <div>
-                    <div className="flex items-start justify-between gap-4 mb-6">
+                    <div className="reviews-card-header">
                       <div>
-                        <div className="flex items-center gap-2 mb-1.5">
-                          <span className="text-yellow-400 text-sm">★★★★★</span>
-                          <span className="font-mono text-[10px] text-white/50 tracking-wider">
+                        <div className="reviews-stars-row">
+                          <span className="reviews-stars-glyph">★★★★★</span>
+                          <span className="reviews-date-tag">
                             {review.date}
                           </span>
                         </div>
-                        <h4 className="font-display text-xl font-bold uppercase tracking-tight text-white">
+                        <h4 className="reviews-patron-name">
                           {review.name}
                         </h4>
-                        <span className="font-mono text-xs text-white/50 block">
+                        <span className="reviews-patron-loc">
                           {review.location}
                         </span>
                       </div>
@@ -284,28 +310,28 @@ export const Reviews: React.FC = () => {
                     </div>
 
                     {/* Verified Lot Tag */}
-                    <div className="flex items-center gap-2 mb-6">
-                      <span className="px-2.5 py-1 rounded bg-white/10 font-mono text-[10px] uppercase tracking-wider text-emerald-400 font-bold border border-emerald-500/20">
+                    <div className="reviews-lot-row">
+                      <span className="reviews-badge-chip">
                         ✓ {review.badge}
                       </span>
-                      <span className="font-mono text-[10px] uppercase tracking-widest text-white/60">
+                      <span className="reviews-lot-info">
                         {review.lot} // {review.pieceTitle}
                       </span>
                     </div>
 
                     {/* Headline */}
-                    <h5 className="font-display text-lg font-bold text-white mb-4 leading-snug">
+                    <h5 className="reviews-card-headline">
                       "{review.headline}"
                     </h5>
 
                     {/* Content */}
-                    <p className="text-neutral-400 text-sm leading-relaxed font-light">
+                    <p className="reviews-card-body">
                       {review.content}
                     </p>
                   </div>
 
                   {/* Card Bottom Meta */}
-                  <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-[10px] font-mono text-white/40 uppercase tracking-widest">
+                  <div className="reviews-card-footer">
                     <span>AUTHENTICATED LEDGER</span>
                     <span>100% VERIFIED</span>
                   </div>
@@ -462,7 +488,8 @@ export const Reviews: React.FC = () => {
       <div className="relative z-50">
         <FinalFooter />
       </div>
-    </div>
+    </motion.div>
+  </div>
   );
 };
 

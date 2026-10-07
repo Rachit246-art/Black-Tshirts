@@ -48,7 +48,7 @@ const AppContent: React.FC = () => {
       )}
 
       {/* Navigation (visible once video begins or completes) */}
-      <Navigation theme="home" />
+      {introStep !== 'loader' && <Navigation theme="home" />}
 
       <main id="main">
         <Routes>

@@ -1,26 +1,38 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-interface GalleryIntroProps {
+export interface PageIntroProps {
+  sentence: string;
+  categoryLabel?: string;
+  enterButtonText?: string;
+  statusText?: string;
+  subMeta?: string;
   onComplete: () => void;
 }
 
 interface TextPiece {
-  sx: number; // Source X in offscreen canvas
-  sy: number; // Source Y in offscreen canvas
-  sw: number; // Width
-  sh: number; // Height
-  tx: number; // Target X on screen
-  ty: number; // Target Y on screen
-  startX: number; // Scattered Start X
-  startY: number; // Scattered Start Y
-  startRot: number; // Scattered Start Rotation (radians)
-  startScale: number; // Scattered Start Scale
-  delay: number; // Staggered start delay (0 - 0.4s)
-  duration: number; // Duration of flight
+  sx: number;
+  sy: number;
+  sw: number;
+  sh: number;
+  tx: number;
+  ty: number;
+  startX: number;
+  startY: number;
+  startRot: number;
+  startScale: number;
+  delay: number;
+  duration: number;
 }
 
-export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
+export const PageIntro: React.FC<PageIntroProps> = ({
+  sentence,
+  categoryLabel = 'MAISON JJETTAS // ATELIER',
+  enterButtonText = 'ENTER PAGE',
+  statusText = 'ASSEMBLING ARCHIVAL STATEMENT...',
+  subMeta = 'AUTHENTICATED SYSTEM',
+  onComplete,
+}) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animFrameIdRef = useRef<number>(0);
   const startTimeRef = useRef<number>(0);
@@ -45,7 +57,6 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
     let textY = 0;
 
     const createTextPieces = () => {
-      // Create high-res offscreen canvas for rendering the pure sentence
       offscreenCanvas = document.createElement('canvas');
       offscreenCanvas.width = width;
       offscreenCanvas.height = height;
@@ -54,17 +65,16 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
 
       offCtx.clearRect(0, 0, width, height);
 
-      // Sentence to combine:
-      const sentence = 'WELCOME TO THE MAISON JJETTAS GALLERY ARCHIVE';
+      // Responsive font size calibrated for full sentences
+      const charCount = sentence.length;
+      let calculatedFontSize = Math.floor((width * 0.82) / (charCount * 0.58));
+      const fontSize = Math.min(Math.max(calculatedFontSize, 15), 42);
 
-      // Responsive font size
-      const fontSize = Math.min(Math.max(width * 0.038, 20), 44);
       offCtx.font = `900 ${fontSize}px "beachwood-variable", "Helvetica Neue", Arial, sans-serif`;
       offCtx.fillStyle = '#737373';
       offCtx.textAlign = 'center';
       offCtx.textBaseline = 'middle';
 
-      // Measure text
       const metrics = offCtx.measureText(sentence);
       textWidth = metrics.width + 40;
       textHeight = fontSize * 1.8;
@@ -72,10 +82,8 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
       textX = width / 2;
       textY = height / 2;
 
-      // Draw the complete sentence onto offscreen canvas
       offCtx.fillText(sentence, textX, textY);
 
-      // Analyze bounding box and slice into small pieces
       const boxLeft = Math.max(0, Math.floor(textX - textWidth / 2));
       const boxTop = Math.max(0, Math.floor(textY - textHeight / 2));
       const boxW = Math.min(width - boxLeft, Math.ceil(textWidth));
@@ -84,7 +92,6 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
       const imgData = offCtx.getImageData(boxLeft, boxTop, boxW, boxH);
       const data = imgData.data;
 
-      // Slice grid: e.g. piece size roughly 14px x 14px
       const pieceW = Math.max(12, Math.floor(fontSize * 0.42));
       const pieceH = Math.max(12, Math.floor(fontSize * 0.45));
 
@@ -95,7 +102,6 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
           const sw = Math.min(pieceW, boxW - x);
           const sh = Math.min(pieceH, boxH - y);
 
-          // Check if this piece actually contains text pixels (alpha > 50)
           let hasContent = false;
           for (let py = 0; py < sh; py += 2) {
             for (let px = 0; px < sw; px += 2) {
@@ -112,7 +118,6 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
             const actualSourceX = boxLeft + x;
             const actualSourceY = boxTop + y;
 
-            // Start position: scattered all across the screen (small pieces coming from everywhere)
             const angle = Math.random() * Math.PI * 2;
             const dist = Math.max(width, height) * (0.35 + Math.random() * 0.65);
             const startX = width / 2 + Math.cos(angle) * dist;
@@ -129,7 +134,7 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
               startY,
               startRot: (Math.random() - 0.5) * Math.PI * 2.5,
               startScale: 0.2 + Math.random() * 0.35,
-              delay: Math.random() * 0.35, // organic staggered launch
+              delay: Math.random() * 0.35,
               duration: 1.8 + Math.random() * 0.4,
             });
           }
@@ -151,21 +156,19 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
     };
     window.addEventListener('resize', handleResize);
 
-    // Easing function: smooth quartic ease out
     const easeOutQuart = (t: number) => 1 - Math.pow(1 - t, 4);
 
     const animate = (currentTime: number) => {
-      const elapsed = (currentTime - startTimeRef.current) / 1000; // in seconds
+      const elapsed = (currentTime - startTimeRef.current) / 1000;
 
-      // PURE SOLID BLACK BACKGROUND — NO NOISE, NO STATIC
+      // Pure solid black background
       ctx.fillStyle = '#000000';
       ctx.fillRect(0, 0, width, height);
 
-      // Phase timing:
-      // 0s to 2.2s: Small pieces coming and assembling
-      // 2.2s to 3.5s: Combined text holds, sheen wave passes
-      // 3.5s onwards: Transition into gallery
-
+      // Animation timings:
+      // 0s to 2.2s: Assembly flight
+      // 2.2s to 3.5s: Hold combined text with sweeping sheen
+      // 3.5s onwards: Smooth exit
       if (elapsed >= 2.2 && elapsed < 3.5) {
         if (phase !== 'combined') setPhase('combined');
       } else if (elapsed >= 3.5) {
@@ -179,7 +182,6 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
       }
 
       if (elapsed < 2.3) {
-        // DRAW FLYING PIECES ASSEMBLING INTO THE SENTENCE
         for (let i = 0; i < pieces.length; i++) {
           const p = pieces[i];
           const localElapsed = Math.max(0, elapsed - p.delay);
@@ -214,14 +216,13 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
           ctx.restore();
         }
       } else {
-        // ONCE COMBINED: DRAW THE PERFECT UNIFIED CRISP SENTENCE
         if (offscreenCanvas) {
           ctx.save();
           ctx.globalAlpha = phase === 'exiting' ? 0.3 : 1;
           ctx.drawImage(offscreenCanvas, 0, 0);
           ctx.restore();
 
-          // Subtle luxury light sheen sweeping across the combined sentence
+          // Luxury light sheen sweeping across assembled text
           if (elapsed >= 2.3 && elapsed <= 3.3) {
             const sheenProgress = (elapsed - 2.3) / 1.0;
             const sheenX = textX - textWidth / 2 + sheenProgress * (textWidth + 200) - 100;
@@ -249,7 +250,7 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
       cancelAnimationFrame(animFrameIdRef.current);
       window.removeEventListener('resize', handleResize);
     };
-  }, [onComplete]);
+  }, [sentence, onComplete]);
 
   const handleSkip = () => {
     if (isTransitioningOutRef.current) return;
@@ -279,12 +280,12 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
         overflow: 'hidden',
       }}
     >
-      {/* 1. MINIMALIST TOP BAR */}
+      {/* 1. Top Header */}
       <header className="page-intro-header">
         <div className="page-intro-badge-wrap">
           <span className="page-intro-pulse-dot" />
           <span className="page-intro-badge-label">
-            MAISON JJETTAS // ARCHIVE
+            {categoryLabel}
           </span>
         </div>
 
@@ -293,28 +294,28 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
           onClick={handleSkip}
           className="page-intro-skip-btn"
         >
-          <span>ENTER GALLERY</span>
+          <span>{enterButtonText}</span>
           <span>↗</span>
         </button>
       </header>
 
-      {/* 2. PURE BLACK CANVAS STAGE (NO NOISE / NO GRAIN) */}
+      {/* 2. Pure Black Canvas Stage */}
       <div className="page-intro-canvas-container">
         <canvas ref={canvasRef} className="page-intro-canvas" />
       </div>
 
-      {/* 3. MINIMALIST BOTTOM STATUS */}
+      {/* 3. Bottom Status Bar */}
       <footer className="page-intro-footer">
         <span className="page-intro-status-text">
           {phase === 'assembling'
-            ? 'ASSEMBLING ARCHIVAL STATEMENT...'
+            ? statusText
             : phase === 'combined'
-            ? 'STATEMENT COMBINED · REVEALING GALLERY'
-            : 'ENTERING GALLERY...'}
+            ? 'STATEMENT COMBINED · REVEALING ATELIER'
+            : 'ENTERING ATELIER...'}
         </span>
 
         <span className="page-intro-meta-text">
-          27 ARTIFACTS LOADED
+          {subMeta}
         </span>
       </footer>
     </motion.div>

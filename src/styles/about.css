@@ -1617,48 +1617,51 @@
   }
 }
 
-/* --- ARCHITECTURAL OVERLAPPING LAYER SYSTEM --- */
+/* --- ARCHITECTURAL CLEAN SECTION SYSTEM --- */
 .about-layer {
   position: relative;
   background-color: #000000 !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
-  border-top-left-radius: 36px !important;
-  border-top-right-radius: 36px !important;
-  box-shadow: 0 -50px 120px rgba(0, 0, 0, 1), 0 -15px 35px rgba(0, 0, 0, 0.8) !important;
-  margin-top: -5rem !important; /* -80px overlap */
-  padding-top: 7rem !important;
-  padding-bottom: 7rem !important;
-  will-change: transform;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
 }
 
 @media (min-width: 768px) {
   .about-layer {
-    border-top-left-radius: 56px !important;
-    border-top-right-radius: 56px !important;
-    margin-top: -7rem !important; /* -112px overlap */
-    padding-top: 9rem !important;
-    padding-bottom: 9rem !important;
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
   }
 }
 
 .about-layer-1 {
-  z-index: 20 !important;
-  background-color: #060608 !important;
+  background-color: #000000 !important;
 }
 
 .about-layer-2 {
-  z-index: 30 !important;
-  background-color: #020204 !important;
+  background-color: #030303 !important;
 }
 
 .about-layer-3 {
-  z-index: 40 !important;
-  background-color: #050508 !important;
+  background-color: #000000 !important;
 }
 
 .about-layer-4 {
-  z-index: 50 !important;
-  background-color: #000000 !important;
+  background-color: #020202 !important;
+}
+
+/* Luxury Metric Benchmark Cards */
+.about-metric-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-metric-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.06);
 }
 
 .rounded-t-\[36px\] {
@@ -1676,10 +1679,6 @@
   border-top-right-radius: 56px !important;
 }
 
-.shadow-layer-stack {
-  box-shadow: 0 -50px 120px rgba(0, 0, 0, 1), 0 -15px 35px rgba(0, 0, 0, 0.8) !important;
-}
-
 /* Background marquee watermark for About page */
 .about-marquee-text {
   font-family: var(--font-display);
@@ -1693,7 +1692,7 @@
 }
 
 /* =========================================================================
-   LUXURY SCROLL ANIMATIONS, HUD & ATELIER MICRO-INTERACTIONS
+   LUXURY SCROLL ANIMATIONS & ATELIER MICRO-INTERACTIONS
    ========================================================================= */
 
 /* Top Scroll Progress Indicator */
@@ -1710,57 +1709,9 @@
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
 }
 
-/* Floating Chapter Navigation HUD (Right Side) */
+/* Floating HUD eliminated to remove clutter */
 .about-hud {
-  position: fixed;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 80;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  padding: 1rem 0.5rem;
-  background: rgba(10, 10, 12, 0.5);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 9999px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-}
-
-@media (max-width: 768px) {
-  .about-hud {
-    display: none !important;
-  }
-}
-
-.about-hud-item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem;
-  outline: none;
-}
-
-.about-hud-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.25);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.about-hud-item.active .about-hud-dot {
-  width: 8px;
-  height: 22px;
-  border-radius: 9999px;
-  background: #ffffff;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 24px rgba(255, 255, 255, 0.3);
+  display: none !important;
 }
 
 .about-hud-label {
