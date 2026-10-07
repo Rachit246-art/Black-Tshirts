@@ -981,77 +981,75 @@ export const About: React.FC = () => {
               onClick={(e) => e.stopPropagation()}
               className="about-lightbox-card"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                {/* Modal Visual Image */}
-                <div className="relative aspect-[3/4] bg-neutral-900 overflow-hidden">
-                  <img
-                    src={selectedVaultItem.image}
-                    alt={selectedVaultItem.title}
-                    className="w-full h-full object-cover filter contrast-110"
-                  />
-                  <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1 rounded text-[10px] font-mono uppercase tracking-widest text-white border border-white/20">
-                    {selectedVaultItem.tag}
+              {/* Left Column: Contained Full T-Shirt Display */}
+              <div className="about-modal-img-col">
+                <img
+                  src={selectedVaultItem.image}
+                  alt={selectedVaultItem.title}
+                  className="about-modal-img"
+                />
+                <div className="absolute top-4 left-4 bg-black/85 backdrop-blur-md px-3 py-1 rounded text-[10px] font-mono uppercase tracking-widest text-white border border-white/20">
+                  {selectedVaultItem.tag}
+                </div>
+              </div>
+
+              {/* Right Column: Garment Specs & Action */}
+              <div className="about-modal-info-col">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-mono text-xs uppercase tracking-widest text-white/50">
+                      ATELIER SPECIFICATION
+                    </span>
+                    <button
+                      onClick={() => setSelectedVaultItem(null)}
+                      className="w-8 h-8 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white/70 hover:text-white hover:border-white transition-colors p-1"
+                      aria-label="Close Inspection Modal"
+                    >
+                      ✕
+                    </button>
+                  </div>
+
+                  <h3 className="font-display text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-2">
+                    {selectedVaultItem.title}
+                  </h3>
+                  <p className="font-mono text-xs text-white/60 mb-6">
+                    {selectedVaultItem.subtitle}
+                  </p>
+
+                  <p className="font-body text-sm text-white/70 leading-relaxed font-light mb-8">
+                    {selectedVaultItem.details}
+                  </p>
+
+                  <div className="space-y-3 pt-6 border-t border-white/10 font-mono text-xs">
+                    <div className="flex justify-between text-white/60">
+                      <span>Fabric Composition</span>
+                      <span className="text-white font-bold">{selectedVaultItem.weight}</span>
+                    </div>
+                    <div className="flex justify-between text-white/60">
+                      <span>Availability</span>
+                      <span className="text-white font-bold">{selectedVaultItem.edition}</span>
+                    </div>
+                    <div className="flex justify-between text-white/60">
+                      <span>Stitching Standard</span>
+                      <span className="text-white font-bold">5-Thread Overlock</span>
+                    </div>
                   </div>
                 </div>
 
-                {/* Modal Details & Specs */}
-                <div className="p-8 md:p-10 flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="font-mono text-xs uppercase tracking-widest text-white/50">
-                        ATELIER SPECIFICATION
-                      </span>
-                      <button
-                        onClick={() => setSelectedVaultItem(null)}
-                        className="text-white/50 hover:text-white font-mono text-lg transition-colors p-1"
-                        aria-label="Close Inspection Modal"
-                      >
-                        ✕
-                      </button>
-                    </div>
-
-                    <h3 className="font-display text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-2">
-                      {selectedVaultItem.title}
-                    </h3>
-                    <p className="font-mono text-xs text-white/60 mb-6">
-                      {selectedVaultItem.subtitle}
-                    </p>
-
-                    <p className="font-body text-sm text-white/70 leading-relaxed font-light mb-8">
-                      {selectedVaultItem.details}
-                    </p>
-
-                    <div className="space-y-3 pt-6 border-t border-white/10 font-mono text-xs">
-                      <div className="flex justify-between text-white/60">
-                        <span>Fabric Composition</span>
-                        <span className="text-white font-bold">{selectedVaultItem.weight}</span>
-                      </div>
-                      <div className="flex justify-between text-white/60">
-                        <span>Availability</span>
-                        <span className="text-white font-bold">{selectedVaultItem.edition}</span>
-                      </div>
-                      <div className="flex justify-between text-white/60">
-                        <span>Stitching Standard</span>
-                        <span className="text-white font-bold">5-Thread Overlock</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between gap-4">
-                    <Link
-                      to="/"
-                      onClick={() => setSelectedVaultItem(null)}
-                      className="flex-1 py-4 bg-white text-black font-mono text-xs uppercase tracking-[0.2em] font-bold text-center hover:bg-neutral-200 transition-colors"
-                    >
-                      View in Shop →
-                    </Link>
-                    <button
-                      onClick={() => setSelectedVaultItem(null)}
-                      className="px-6 py-4 border border-white/20 text-white font-mono text-xs uppercase tracking-widest hover:border-white transition-colors"
-                    >
-                      Close
-                    </button>
-                  </div>
+                <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between gap-4">
+                  <Link
+                    to="/"
+                    onClick={() => setSelectedVaultItem(null)}
+                    className="flex-1 py-4 bg-white text-black font-mono text-xs uppercase tracking-[0.2em] font-bold text-center hover:bg-neutral-200 transition-colors"
+                  >
+                    View in Shop →
+                  </Link>
+                  <button
+                    onClick={() => setSelectedVaultItem(null)}
+                    className="px-6 py-4 border border-white/20 text-white font-mono text-xs uppercase tracking-widest hover:border-white transition-colors"
+                  >
+                    Close
+                  </button>
                 </div>
               </div>
             </motion.div>

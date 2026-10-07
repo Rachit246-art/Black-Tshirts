@@ -993,76 +993,74 @@ export const Gallery: React.FC = () => {
               onClick={(e) => e.stopPropagation()}
               className="gallery-modal-box"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                {/* Modal Visual Image */}
-                <div className="relative aspect-[3/4] bg-neutral-900 overflow-hidden">
-                  <img
-                    src={lightboxPiece.image}
-                    alt={lightboxPiece.title}
-                    className="w-full h-full object-cover filter contrast-110"
-                  />
-                  <div className="absolute top-4 left-4 bg-black/85 backdrop-blur-md px-3 py-1 rounded text-[10px] font-mono uppercase tracking-widest text-white border border-white/20">
-                    {lightboxPiece.lot} · {lightboxPiece.badge}
-                  </div>
-                  <div className="gallery-laser-scan" />
+              {/* Left Column: Contained Full T-Shirt Display */}
+              <div className="gallery-modal-img-col">
+                <img
+                  src={lightboxPiece.image}
+                  alt={lightboxPiece.title}
+                  className="gallery-modal-img"
+                />
+                <div className="absolute top-4 left-4 bg-black/85 backdrop-blur-md px-3 py-1 rounded text-[10px] font-mono uppercase tracking-widest text-white border border-white/20">
+                  {lightboxPiece.lot} · {lightboxPiece.badge}
                 </div>
+                <div className="gallery-laser-scan" />
+              </div>
 
-                {/* Modal Details & Specs */}
-                <div className="p-8 md:p-10 flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="font-mono text-xs uppercase tracking-widest text-white/50">
-                        ATELIER SPECIFICATION ARCHIVE
-                      </span>
-                      <button
-                        onClick={() => setLightboxPiece(null)}
-                        className="text-white/50 hover:text-white font-mono text-lg transition-colors p-1"
-                        aria-label="Close Inspection Modal"
-                      >
-                        ✕
-                      </button>
-                    </div>
-
-                    <h3 className="font-display text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-2">
-                      {lightboxPiece.title}
-                    </h3>
-                    <p className="font-mono text-xs text-white/60 mb-6">
-                      {lightboxPiece.weight} · {lightboxPiece.wash}
-                    </p>
-
-                    <p className="font-body text-sm text-white/70 leading-relaxed font-light mb-8">
-                      {lightboxPiece.description}
-                    </p>
-
-                    <div className="space-y-3 pt-6 border-t border-white/10 font-mono text-xs">
-                      {lightboxPiece.specs.map((spec, sIdx) => (
-                        <div key={sIdx} className="flex justify-between text-white/60">
-                          <span>{spec.label}</span>
-                          <span className="text-white font-bold">{spec.value}</span>
-                        </div>
-                      ))}
-                      <div className="flex justify-between text-white/60">
-                        <span>Availability</span>
-                        <span className="text-white font-bold">{lightboxPiece.edition}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between gap-4">
-                    <Link
-                      to="/"
-                      onClick={() => setLightboxPiece(null)}
-                      className="flex-1 py-4 bg-white text-black font-mono text-xs uppercase tracking-[0.2em] font-bold text-center hover:bg-neutral-200 transition-colors"
-                    >
-                      Shop This Piece →
-                    </Link>
+              {/* Right Column: Garment Specs & Action */}
+              <div className="gallery-modal-info-col">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-mono text-xs uppercase tracking-widest text-white/50">
+                      ATELIER SPECIFICATION ARCHIVE
+                    </span>
                     <button
                       onClick={() => setLightboxPiece(null)}
-                      className="px-6 py-4 border border-white/20 text-white font-mono text-xs uppercase tracking-widest hover:border-white transition-colors"
+                      className="gallery-modal-close-btn"
+                      aria-label="Close Inspection Modal"
                     >
-                      Close (Esc)
+                      ✕
                     </button>
                   </div>
+
+                  <h3 className="font-display text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-2">
+                    {lightboxPiece.title}
+                  </h3>
+                  <p className="font-mono text-xs text-white/60 mb-6">
+                    {lightboxPiece.weight} · {lightboxPiece.wash}
+                  </p>
+
+                  <p className="font-body text-sm text-white/70 leading-relaxed font-light mb-8">
+                    {lightboxPiece.description}
+                  </p>
+
+                  <div className="space-y-3 pt-6 border-t border-white/10 font-mono text-xs">
+                    {lightboxPiece.specs.map((spec, sIdx) => (
+                      <div key={sIdx} className="flex justify-between text-white/60">
+                        <span>{spec.label}</span>
+                        <span className="text-white font-bold">{spec.value}</span>
+                      </div>
+                    ))}
+                    <div className="flex justify-between text-white/60">
+                      <span>Availability</span>
+                      <span className="text-white font-bold">{lightboxPiece.edition}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between gap-4">
+                  <Link
+                    to="/"
+                    onClick={() => setLightboxPiece(null)}
+                    className="flex-1 py-4 bg-white text-black font-mono text-xs uppercase tracking-[0.2em] font-bold text-center hover:bg-neutral-200 transition-colors"
+                  >
+                    Shop This Piece →
+                  </Link>
+                  <button
+                    onClick={() => setLightboxPiece(null)}
+                    className="px-6 py-4 border border-white/20 text-white font-mono text-xs uppercase tracking-widest hover:border-white transition-colors"
+                  >
+                    Close (Esc)
+                  </button>
                 </div>
               </div>
             </motion.div>

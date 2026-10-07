@@ -1859,27 +1859,83 @@
 
 /* Luxury Lightbox Overlay */
 .about-lightbox-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.88);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0, 0, 0, 0.94) !important;
+  backdrop-filter: blur(25px) !important;
+  -webkit-backdrop-filter: blur(25px) !important;
+  z-index: 100000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.5rem !important;
 }
 
 .about-lightbox-card {
-  position: relative;
-  background: #08080a;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1.25rem;
-  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.9), 0 0 40px rgba(255, 255, 255, 0.06);
-  max-width: 52rem;
-  width: 100%;
-  overflow: hidden;
+  position: relative !important;
+  background: #08080a !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 1.5rem !important;
+  max-width: 56rem !important;
+  width: 100% !important;
+  max-height: 88vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.98), 0 0 50px rgba(255, 255, 255, 0.08) !important;
+}
+
+@media (min-width: 768px) {
+  .about-lightbox-card {
+    flex-direction: row !important;
+    height: 580px !important;
+    max-height: 82vh !important;
+  }
+}
+
+.about-modal-img-col {
+  position: relative !important;
+  width: 100% !important;
+  background: #0e0e11 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  height: 320px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+@media (min-width: 768px) {
+  .about-modal-img-col {
+    width: 46% !important;
+    height: 100% !important;
+    border-bottom: none !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
+.about-modal-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  padding: 1.25rem !important;
+}
+
+.about-modal-info-col {
+  width: 100% !important;
+  padding: 1.75rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  overflow-y: auto !important;
+  background: #08080a !important;
+}
+
+@media (min-width: 768px) {
+  .about-modal-info-col {
+    width: 54% !important;
+    padding: 2.25rem 2.5rem !important;
+  }
 }
 
 /* Shimmer Accent on Card Borders */
