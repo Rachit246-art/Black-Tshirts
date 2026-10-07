@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FinalFooter } from '../components/FinalFooter';
+import { GalleryIntro } from '../components/GalleryIntro';
 import '../styles/gallery.css';
 
 // Full 27 Curated Atelier Gallery Pieces
@@ -509,6 +510,9 @@ const allGalleryPieces: GalleryPiece[] = [
 ];
 
 export const Gallery: React.FC = () => {
+  // Particle assembly intro overlay state
+  const [showIntro, setShowIntro] = useState<boolean>(true);
+
   // View mode switcher: 'masonry' | 'runway' | 'vault'
   const [viewMode, setViewMode] = useState<'masonry' | 'runway' | 'vault'>('masonry');
 
@@ -572,19 +576,20 @@ export const Gallery: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000] overflow-x-clip">
-      {/* 1. TOP SCROLL PROGRESS BAR */}
-      <motion.div className="about-scroll-progress" style={{ scaleX: smoothProgress }} />
+      {/* 0. INTRO PARTICLE TEXT ASSEMBLY OVERLAY */}
+      <AnimatePresence>
+        {showIntro && <GalleryIntro onComplete={() => setShowIntro(false)} />}
+      </AnimatePresence>
 
-      {/* Subtle Background Grain Texture */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-0 opacity-25"
-        style={{
-          backgroundImage: "url('/textures/pebble.webp')",
-          backgroundSize: '480px 480px',
-          mixBlendMode: 'overlay',
-        }}
-      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: showIntro ? 0 : 1, y: showIntro ? 20 : 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      >
+        {/* 1. TOP SCROLL PROGRESS BAR */}
+        <motion.div className="about-scroll-progress" style={{ scaleX: smoothProgress }} />
+
+      {/* Pure Deep Obsidian Background - All dotted grain textures completely eliminated */}
 
       {/* Ambient Lighting Gradient */}
       <div aria-hidden="true" className="gallery-ambient-glow" />
@@ -608,18 +613,29 @@ export const Gallery: React.FC = () => {
 
           {/* Centered Grand Hero Header */}
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 relative z-10">
-            {/* Top pill badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-md mb-8"
-            >
-              <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-              <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/90">
-                Maison JJettas · Complete Visual Exhibition
-              </span>
-            </motion.div>
+            {/* Top pill badge + Replay Intro */}
+            <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-md"
+              >
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/90">
+                  Maison JJettas · Complete Visual Exhibition
+                </span>
+              </motion.div>
+
+              <button
+                onClick={() => setShowIntro(true)}
+                className="gallery-replay-btn"
+                title="Replay Archival Particle Text Assembly"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                <span>REPLAY INTRO</span>
+              </button>
+            </div>
 
             {/* Main Headline */}
             <motion.h1
@@ -1068,12 +1084,13 @@ export const Gallery: React.FC = () => {
         )}
       </AnimatePresence>
 
-      {/* ========================================================================= */}
-      {/* 4. FINAL FOOTER */}
-      {/* ========================================================================= */}
-      <div className="relative z-50">
-        <FinalFooter />
-      </div>
+        {/* ========================================================================= */}
+        {/* 4. FINAL FOOTER */}
+        {/* ========================================================================= */}
+        <div className="relative z-50">
+          <FinalFooter />
+        </div>
+      </motion.div>
     </div>
   );
 };
