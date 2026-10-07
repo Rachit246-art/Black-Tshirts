@@ -88,7 +88,7 @@ const garmentFeatures: GarmentFeature[] = [
   },
 ];
 
-// Curated Visual Archive Items
+// Curated Visual Archive Items (Chapter 04)
 const visualArchive = [
   {
     id: 'va-1',
@@ -132,6 +132,180 @@ const visualArchive = [
   },
 ];
 
+// Curated Runway Gallery Items (Chapter 05)
+interface GalleryPiece {
+  id: string;
+  lot: string;
+  title: string;
+  category: 'ALL' | 'HEAVYWEIGHT' | 'GRAPHIC' | 'VINTAGE' | 'STRUCTURE';
+  weight: string;
+  wash: string;
+  image: string;
+  aspect: 'tall' | 'square' | 'wide' | 'hero';
+  edition: string;
+  description: string;
+  badge: string;
+}
+
+const runwayGalleryPieces: GalleryPiece[] = [
+  {
+    id: 'rg-1',
+    lot: 'LOT 001',
+    title: 'Smile Heal The Soul',
+    category: 'HEAVYWEIGHT',
+    weight: '420 GSM Loopback',
+    wash: 'Carbon Matte Black',
+    image: '/real image/product-1.jpeg',
+    aspect: 'tall',
+    edition: '100 Pieces Worldwide',
+    description: 'Archival discharge print on ultra-dense 420 GSM Egyptian cotton. Engineered for permanence.',
+    badge: 'FLAGSHIP DROP',
+  },
+  {
+    id: 'rg-2',
+    lot: 'LOT 002',
+    title: 'Small Body Big Energy',
+    category: 'STRUCTURE',
+    weight: '420 GSM Cotton',
+    wash: 'Obsidian Enzyme',
+    image: '/real image/product-2.jpeg',
+    aspect: 'square',
+    edition: 'Core Silhouette',
+    description: 'Drop-shoulder architectural drape with reinforced twin-needle 280 GSM collar.',
+    badge: 'CORE PATTERN',
+  },
+  {
+    id: 'rg-3',
+    lot: 'LOT 003',
+    title: 'Chicago Racing Team 98',
+    category: 'VINTAGE',
+    weight: '450 GSM French Terry',
+    wash: 'Bio-Enzyme Mineral',
+    image: '/real image/product-3.jpeg',
+    aspect: 'hero',
+    edition: 'Collector Series 098',
+    description: 'Motorsport heritage graphic with subtle tonal distress wash and vintage velvet hand-feel.',
+    badge: 'RUNWAY SHOWPIECE',
+  },
+  {
+    id: 'rg-4',
+    lot: 'LOT 004',
+    title: 'Chains Kurapika Noir',
+    category: 'GRAPHIC',
+    weight: '420 GSM Pure Heavy',
+    wash: 'Deep Pigment Gothic',
+    image: '/real image/product-4.jpeg',
+    aspect: 'tall',
+    edition: 'Limited Run 024',
+    description: 'Gothic-inspired chest illustration in tonal dark charcoal over velvet matte obsidian jersey.',
+    badge: 'OBSIDIAN TONAL',
+  },
+  {
+    id: 'rg-5',
+    lot: 'LOT 005',
+    title: 'Feeling Acid Wash Atelier',
+    category: 'VINTAGE',
+    weight: '400 GSM Combed Cotton',
+    wash: 'Custom Acid Fog',
+    image: '/real image/product-5.jpeg',
+    aspect: 'square',
+    edition: 'Atelier Vault 05',
+    description: 'Hand-distressed acid wash giving each piece a unique marbleized charcoal grain.',
+    badge: 'HAND TREATED',
+  },
+  {
+    id: 'rg-6',
+    lot: 'LOT 006',
+    title: 'Cross Bones Graphic Noir',
+    category: 'GRAPHIC',
+    weight: '420 GSM Jersey',
+    wash: 'Carbon Dye',
+    image: '/real image/product-6.jpeg',
+    aspect: 'wide',
+    edition: 'Limited Edition 50',
+    description: 'High-contrast bone typography screen-printed with archival discharge ink.',
+    badge: 'LIMITED 50',
+  },
+  {
+    id: 'rg-7',
+    lot: 'LOT 007',
+    title: 'Dark Soul Streetwear Architecture',
+    category: 'STRUCTURE',
+    weight: '420 GSM Heavyweight',
+    wash: 'Black Matte',
+    image: '/real image/product-7.jpeg',
+    aspect: 'tall',
+    edition: 'Core Runway',
+    description: 'Clean silhouette designed for everyday royalty, featuring zero side-twist seam technology.',
+    badge: 'ZERO DISTORTION',
+  },
+  {
+    id: 'rg-8',
+    lot: 'LOT 008',
+    title: 'Obsidian Skull Heavy Edition',
+    category: 'GRAPHIC',
+    weight: '440 GSM Luxury',
+    wash: 'Bio-Washed Charcoal',
+    image: '/real image/product-8.jpeg',
+    aspect: 'square',
+    edition: 'Run 088',
+    description: 'Hand-rendered skull artwork across the back shoulders with subtle tonal front embroidery.',
+    badge: 'EMBROIDERED DETAIL',
+  },
+  {
+    id: 'rg-9',
+    lot: 'LOT 009',
+    title: 'Maison Box Cut Signature',
+    category: 'HEAVYWEIGHT',
+    weight: '420 GSM Pure Heavy',
+    wash: 'Pitch Midnight',
+    image: '/real image/product-9.jpeg',
+    aspect: 'hero',
+    edition: 'Permanent Atelier',
+    description: 'The foundation of the Maison. Zero branding on front, letting the sculptural drape command presence.',
+    badge: 'ICONIC SILHOUETTE',
+  },
+  {
+    id: 'rg-10',
+    lot: 'LOT 010',
+    title: 'Ghost In The Machine Edition',
+    category: 'GRAPHIC',
+    weight: '420 GSM Cotton',
+    wash: 'Carbon Wash',
+    image: '/real image/product-10.jpeg',
+    aspect: 'tall',
+    edition: '75 Pieces Worldwide',
+    description: 'Minimalist cyber-gothic technical line art screen printed with zero hand feel.',
+    badge: 'TECHNICAL PRINT',
+  },
+  {
+    id: 'rg-11',
+    lot: 'LOT 011',
+    title: 'Heritage Monogram Vintage',
+    category: 'VINTAGE',
+    weight: '450 GSM French Terry',
+    wash: 'Mineral Enzyme',
+    image: '/real image/product-11.jpeg',
+    aspect: 'square',
+    edition: 'Archive Drop',
+    description: 'Softened with volcanic pumice wash to create instant generational softness.',
+    badge: 'PUMICE WASHED',
+  },
+  {
+    id: 'rg-12',
+    lot: 'LOT 012',
+    title: 'Titanium Edge Oversized',
+    category: 'STRUCTURE',
+    weight: '420 GSM Jersey',
+    wash: 'Obsidian Matte',
+    image: '/real image/product-12.jpeg',
+    aspect: 'wide',
+    edition: 'Runway Edition',
+    description: 'Elongated sleeves terminating just above the elbow with tailored clean cuff hems.',
+    badge: 'OVER-ELBOW FIT',
+  },
+];
+
 // Brand Standards
 const brandBenchmarks = [
   {
@@ -165,16 +339,17 @@ const hudChapters = [
   { id: 'hero', num: '01', label: 'Origin' },
   { id: 'philosophy', num: '02', label: 'Manifesto' },
   { id: 'craft', num: '03', label: 'The Anatomy' },
-  { id: 'archive', num: '04', label: 'Archive' },
-  { id: 'invitation', num: '05', label: 'Statement' },
+  { id: 'archive', num: '04', label: 'Vault' },
+  { id: 'gallery', num: '05', label: 'Runway Gallery' },
+  { id: 'invitation', num: '06', label: 'Statement' },
 ];
 
 export const About: React.FC = () => {
-  // Active feature tab state
+  // Active feature tab state in Chapter 03
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0);
   const activeFeature = garmentFeatures[activeFeatureIndex];
 
-  // Active philosophy quote index
+  // Active philosophy quote index in Chapter 02
   const [philosophyTab, setPhilosophyTab] = useState(0);
   const philosophyQuotes = [
     {
@@ -200,8 +375,17 @@ export const About: React.FC = () => {
     },
   ];
 
-  // Archival Lightbox Inspection Modal State
-  const [selectedArchivalItem, setSelectedArchivalItem] = useState<(typeof visualArchive)[0] | null>(null);
+  // Gallery Filtering & View Mode State
+  const [galleryCategory, setGalleryCategory] = useState<'ALL' | 'HEAVYWEIGHT' | 'GRAPHIC' | 'VINTAGE' | 'STRUCTURE'>('ALL');
+  const [galleryViewMode, setGalleryViewMode] = useState<'masonry' | 'runway'>('masonry');
+
+  // Filtered gallery pieces
+  const filteredGalleryPieces = galleryCategory === 'ALL'
+    ? runwayGalleryPieces
+    : runwayGalleryPieces.filter((p) => p.category === galleryCategory);
+
+  // Unified Editorial Lightbox Modal State
+  const [lightboxPiece, setLightboxPiece] = useState<GalleryPiece | null>(null);
 
   // Active section spy for Floating HUD
   const [activeChapter, setActiveChapter] = useState('hero');
@@ -211,7 +395,11 @@ export const About: React.FC = () => {
   const philosophyRef = useRef<HTMLDivElement>(null);
   const craftRef = useRef<HTMLDivElement>(null);
   const archiveRef = useRef<HTMLDivElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
   const invitationRef = useRef<HTMLDivElement>(null);
+
+  // Horizontal filmstrip scroll ref
+  const filmstripRef = useRef<HTMLDivElement>(null);
 
   // Top Page Scroll Progress
   const { scrollYProgress } = useScroll();
@@ -233,6 +421,11 @@ export const About: React.FC = () => {
     offset: ['start end', 'end start'],
   });
 
+  const { scrollYProgress: galleryProgress } = useScroll({
+    target: galleryRef,
+    offset: ['start end', 'end start'],
+  });
+
   const { scrollYProgress: inviteProgress } = useScroll({
     target: invitationRef,
     offset: ['start end', 'end start'],
@@ -251,11 +444,14 @@ export const About: React.FC = () => {
   const archiveColYOdd = useTransform(archiveProgress, [0, 1], [35, -35]);
   const archiveColYEven = useTransform(archiveProgress, [0, 1], [-25, 25]);
 
+  // Gallery marquee ticker drift
+  const galleryMarqueeX = useTransform(galleryProgress, [0, 1], ['0%', '-30%']);
+
   const inviteScale = useTransform(inviteProgress, [0.2, 0.8], [0.96, 1.02]);
 
   // ScrollSpy listener for floating HUD
   useEffect(() => {
-    const sectionIds = ['hero', 'philosophy', 'craft', 'archive', 'invitation'];
+    const sectionIds = ['hero', 'philosophy', 'craft', 'archive', 'gallery', 'invitation'];
     const handleScroll = () => {
       const scrollCenter = window.scrollY + window.innerHeight * 0.4;
       for (const id of sectionIds) {
@@ -279,6 +475,34 @@ export const About: React.FC = () => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Keyboard navigation for Lightbox
+  useEffect(() => {
+    if (!lightboxPiece) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setLightboxPiece(null);
+      } else if (e.key === 'ArrowRight') {
+        const currentIndex = runwayGalleryPieces.findIndex((p) => p.id === lightboxPiece.id);
+        const nextIndex = (currentIndex + 1) % runwayGalleryPieces.length;
+        setLightboxPiece(runwayGalleryPieces[nextIndex]);
+      } else if (e.key === 'ArrowLeft') {
+        const currentIndex = runwayGalleryPieces.findIndex((p) => p.id === lightboxPiece.id);
+        const prevIndex = (currentIndex - 1 + runwayGalleryPieces.length) % runwayGalleryPieces.length;
+        setLightboxPiece(runwayGalleryPieces[prevIndex]);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxPiece]);
+
+  // Horizontal Filmstrip scroll controls
+  const scrollFilmstrip = (direction: 'left' | 'right') => {
+    if (filmstripRef.current) {
+      const scrollAmount = direction === 'left' ? -420 : 420;
+      filmstripRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
 
@@ -413,10 +637,10 @@ export const About: React.FC = () => {
               </Link>
 
               <button
-                onClick={() => scrollToChapter('philosophy')}
+                onClick={() => scrollToChapter('gallery')}
                 className="inline-flex items-center gap-2 px-6 py-4 border border-white/20 text-white/80 font-mono text-xs uppercase tracking-[0.2em] hover:text-white hover:border-white transition-colors duration-300 bg-transparent cursor-pointer"
               >
-                The Philosophy ↓
+                The Runway Gallery ↓
               </button>
             </motion.div>
           </motion.div>
@@ -810,7 +1034,7 @@ export const About: React.FC = () => {
                 Chapter 04 · Physical Manifestation
               </span>
               <h2 className="font-display text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight">
-                THE ATELIER ARCHIVE.
+                THE ATELIER VAULT.
               </h2>
             </div>
             <p className="font-body text-sm sm:text-base text-white/60 max-w-md font-light leading-relaxed">
@@ -832,7 +1056,10 @@ export const About: React.FC = () => {
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ duration: 0.7, delay: index * 0.12 }}
                   whileHover={{ y: -10 }}
-                  onClick={() => setSelectedArchivalItem(item)}
+                  onClick={() => {
+                    const matchedPiece = runwayGalleryPieces.find((p) => p.title === item.title) || runwayGalleryPieces[0];
+                    setLightboxPiece(matchedPiece);
+                  }}
                   className="group relative rounded-xl overflow-hidden border border-white/15 bg-neutral-950 flex flex-col cursor-pointer transition-all duration-500 shadow-xl hover:border-white/40 hover:shadow-[0_20px_50px_rgba(255,255,255,0.06)]"
                 >
                   {/* Image Frame */}
@@ -881,12 +1108,229 @@ export const About: React.FC = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 5. INVITATION & CALL TO ACTION (CHAPTER 05 · OVERLAPPING LAYER 4) */}
+      {/* 5. THE RUNWAY GALLERY SECTION (CHAPTER 05 · OVERLAPPING LAYER 4) */}
+      {/* ========================================================================= */}
+      <section
+        id="gallery"
+        ref={galleryRef}
+        className="about-layer about-layer-4 px-6 md:px-12 lg:px-20 text-white relative overflow-hidden"
+      >
+        {/* Kinetic Horizontal Background Ticker */}
+        <div aria-hidden="true" className="pointer-events-none absolute top-4 left-0 right-0 opacity-10 overflow-hidden select-none">
+          <motion.div style={{ x: galleryMarqueeX }} className="flex whitespace-nowrap">
+            <span className="about-marquee-text pr-12">
+              THE RUNWAY GALLERY · 2026/27 EXHIBITION · OBSIDIAN ATELIER · 420 GSM BESPOKE ·
+            </span>
+            <span className="about-marquee-text pr-12">
+              THE RUNWAY GALLERY · 2026/27 EXHIBITION · OBSIDIAN ATELIER · 420 GSM BESPOKE ·
+            </span>
+          </motion.div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Gallery Header with Filter Controls */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+            <div>
+              <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/50 block mb-3">
+                Chapter 05 · The Runway Exhibition
+              </span>
+              <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight">
+                THE OBSIDIAN <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-300 to-white/40">
+                  GALLERY.
+                </span>
+              </h2>
+            </div>
+
+            {/* Layout Mode Toggle & Navigation */}
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-[11px] text-white/50 uppercase tracking-widest hidden sm:inline">
+                Perspective:
+              </span>
+              <button
+                onClick={() => setGalleryViewMode('masonry')}
+                className={`gallery-view-btn ${galleryViewMode === 'masonry' ? 'active' : ''}`}
+                aria-label="Masonry Perspective"
+              >
+                <span>:::</span> MASONRY
+              </button>
+              <button
+                onClick={() => setGalleryViewMode('runway')}
+                className={`gallery-view-btn ${galleryViewMode === 'runway' ? 'active' : ''}`}
+                aria-label="Runway Filmstrip Perspective"
+              >
+                <span>◄►</span> RUNWAY
+              </button>
+            </div>
+          </div>
+
+          {/* Interactive Filter Pills Bar */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
+            {(['ALL', 'HEAVYWEIGHT', 'GRAPHIC', 'VINTAGE', 'STRUCTURE'] as const).map((cat) => {
+              const isActive = galleryCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setGalleryCategory(cat)}
+                  className={`gallery-filter-pill ${isActive ? 'active' : ''}`}
+                >
+                  {cat === 'ALL' ? 'ALL PIECES (12)' : cat}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* VIEW MODE 1: ASYMMETRIC EDITORIAL MASONRY GRID */}
+          {galleryViewMode === 'masonry' && (
+            <motion.div
+              layout
+              className="gallery-asymmetric-grid"
+            >
+              <AnimatePresence mode="popLayout">
+                {filteredGalleryPieces.map((piece, idx) => {
+                  const isHero = piece.aspect === 'hero';
+                  return (
+                    <motion.div
+                      layout
+                      key={piece.id}
+                      initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                      animate={{ opacity: 1, scale: 1, y: 0 }}
+                      exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                      transition={{ duration: 0.5, delay: (idx % 6) * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                      onClick={() => setLightboxPiece(piece)}
+                      className={`gallery-piece-card ${isHero ? 'gallery-col-span-2 aspect-hero' : `aspect-${piece.aspect}`}`}
+                    >
+                      {/* Image Frame */}
+                      <img
+                        src={piece.image}
+                        alt={piece.title}
+                        className="gallery-card-image"
+                        loading="lazy"
+                      />
+
+                      {/* Top Corner Badge & Lot Tag */}
+                      <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10 pointer-events-none">
+                        <span className="bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[9px] font-mono uppercase tracking-widest text-white border border-white/20">
+                          {piece.lot}
+                        </span>
+                        <span className="bg-white/10 backdrop-blur-md px-2.5 py-1 rounded text-[9px] font-mono uppercase tracking-widest text-white/90 border border-white/15">
+                          {piece.badge}
+                        </span>
+                      </div>
+
+                      {/* Sliding Bottom Meta Drawer */}
+                      <div className="gallery-card-drawer">
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1">
+                              {piece.weight} · {piece.wash}
+                            </span>
+                            <h3 className="font-display text-lg sm:text-xl font-bold uppercase tracking-tight text-white">
+                              {piece.title}
+                            </h3>
+                          </div>
+                          <span className="font-mono text-[10px] text-white/80 bg-white/10 px-2.5 py-1 rounded shrink-0 border border-white/20">
+                            INSPECT ↗
+                          </span>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
+            </motion.div>
+          )}
+
+          {/* VIEW MODE 2: KINETIC HORIZONTAL FILMSTRIP RUNWAY */}
+          {galleryViewMode === 'runway' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.4 }}
+              className="relative"
+            >
+              {/* Filmstrip Left / Right Controls */}
+              <div className="flex items-center justify-end gap-3 mb-4">
+                <button
+                  onClick={() => scrollFilmstrip('left')}
+                  className="w-10 h-10 rounded-full border border-white/20 bg-black/60 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+                  aria-label="Scroll runway left"
+                >
+                  ←
+                </button>
+                <button
+                  onClick={() => scrollFilmstrip('right')}
+                  className="w-10 h-10 rounded-full border border-white/20 bg-black/60 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+                  aria-label="Scroll runway right"
+                >
+                  →
+                </button>
+              </div>
+
+              {/* Horizontal Scroll Track */}
+              <div ref={filmstripRef} className="gallery-runway-container">
+                <div className="gallery-runway-track">
+                  {filteredGalleryPieces.map((piece, pIdx) => (
+                    <div
+                      key={piece.id}
+                      onClick={() => setLightboxPiece(piece)}
+                      className="gallery-runway-item gallery-piece-card aspect-[3/4]"
+                    >
+                      <img
+                        src={piece.image}
+                        alt={piece.title}
+                        className="gallery-card-image"
+                        loading="lazy"
+                      />
+
+                      <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10 pointer-events-none">
+                        <span className="bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[9px] font-mono uppercase tracking-widest text-white border border-white/20">
+                          {piece.lot}
+                        </span>
+                        <span className="bg-white/10 backdrop-blur-md px-2 py-0.5 rounded text-[8px] font-mono uppercase tracking-widest text-white/90">
+                          {piece.badge}
+                        </span>
+                      </div>
+
+                      <div className="gallery-card-drawer">
+                        <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-0.5">
+                          {piece.weight}
+                        </span>
+                        <h4 className="font-display text-base font-bold uppercase tracking-tight text-white mb-2">
+                          {piece.title}
+                        </h4>
+                        <span className="font-mono text-[10px] text-white/70 block">
+                          Click to inspect details →
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Exhibition Counter Footnote */}
+          <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-white/50">
+            <div>
+              [ SHOWCASING {filteredGalleryPieces.length} OF {runwayGalleryPieces.length} CURATED ATELIER PIECES ]
+            </div>
+            <div className="flex items-center gap-4">
+              <span>ALL PIECES MILLED IN PORTO</span>
+              <span className="text-white/80 font-bold">420 GSM STANDARDS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* 6. INVITATION & CALL TO ACTION (CHAPTER 06 · OVERLAPPING LAYER 5) */}
       {/* ========================================================================= */}
       <section
         id="invitation"
         ref={invitationRef}
-        className="about-layer about-layer-4 text-center px-6 relative overflow-hidden"
+        className="about-layer about-layer-5 text-center px-6 relative overflow-hidden"
       >
         {/* Subtle Ambient Radial Backlight */}
         <div
@@ -918,7 +1362,7 @@ export const About: React.FC = () => {
           </div>
 
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/50 block mb-6">
-            Chapter 05 · The Invitation
+            Chapter 06 · The Invitation
           </span>
           <h2 className="font-display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight leading-[0.95] mb-8">
             OWN THE UNIFORM. <br />
@@ -943,36 +1387,37 @@ export const About: React.FC = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 6. EDITORIAL LIGHTBOX MODAL (FOR ARCHIVAL ITEM INSPECTION) */}
+      {/* 7. FULLSCREEN EDITORIAL LIGHTBOX INSPECTION SUITE */}
       {/* ========================================================================= */}
       <AnimatePresence>
-        {selectedArchivalItem && (
+        {lightboxPiece && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedArchivalItem(null)}
+            onClick={() => setLightboxPiece(null)}
             className="about-lightbox-backdrop"
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              initial={{ scale: 0.92, opacity: 0, y: 25 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              exit={{ scale: 0.92, opacity: 0, y: 25 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               onClick={(e) => e.stopPropagation()}
               className="about-lightbox-card"
             >
               <div className="grid grid-cols-1 md:grid-cols-2">
                 {/* Modal Visual Image */}
-                <div className="relative aspect-[3/4] bg-neutral-900 overflow-hidden">
+                <div className="relative aspect-[3/4] bg-neutral-900 overflow-hidden group">
                   <img
-                    src={selectedArchivalItem.image}
-                    alt={selectedArchivalItem.title}
+                    src={lightboxPiece.image}
+                    alt={lightboxPiece.title}
                     className="w-full h-full object-cover filter contrast-110"
                   />
                   <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1 rounded text-[10px] font-mono uppercase tracking-widest text-white border border-white/20">
-                    {selectedArchivalItem.tag}
+                    {lightboxPiece.lot} · {lightboxPiece.badge}
                   </div>
+                  <div className="about-scanline" />
                 </div>
 
                 {/* Modal Details & Specs */}
@@ -980,10 +1425,10 @@ export const About: React.FC = () => {
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="font-mono text-xs uppercase tracking-widest text-white/50">
-                        ATELIER SPECIFICATION
+                        EXHIBITION SPECIFICATION
                       </span>
                       <button
-                        onClick={() => setSelectedArchivalItem(null)}
+                        onClick={() => setLightboxPiece(null)}
                         className="text-white/50 hover:text-white font-mono text-lg transition-colors p-1"
                         aria-label="Close Inspection Modal"
                       >
@@ -992,28 +1437,32 @@ export const About: React.FC = () => {
                     </div>
 
                     <h3 className="font-display text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-2">
-                      {selectedArchivalItem.title}
+                      {lightboxPiece.title}
                     </h3>
                     <p className="font-mono text-xs text-white/60 mb-6">
-                      {selectedArchivalItem.subtitle}
+                      {lightboxPiece.weight} · {lightboxPiece.wash}
                     </p>
 
                     <p className="font-body text-sm text-white/70 leading-relaxed font-light mb-8">
-                      {selectedArchivalItem.details}
+                      {lightboxPiece.description}
                     </p>
 
                     <div className="space-y-3 pt-6 border-t border-white/10 font-mono text-xs">
                       <div className="flex justify-between text-white/60">
                         <span>Fabric Composition</span>
-                        <span className="text-white font-bold">{selectedArchivalItem.weight}</span>
+                        <span className="text-white font-bold">{lightboxPiece.weight}</span>
+                      </div>
+                      <div className="flex justify-between text-white/60">
+                        <span>Wash Process</span>
+                        <span className="text-white font-bold">{lightboxPiece.wash}</span>
                       </div>
                       <div className="flex justify-between text-white/60">
                         <span>Availability</span>
-                        <span className="text-white font-bold">{selectedArchivalItem.edition}</span>
+                        <span className="text-white font-bold">{lightboxPiece.edition}</span>
                       </div>
                       <div className="flex justify-between text-white/60">
-                        <span>Stitching Standard</span>
-                        <span className="text-white font-bold">5-Thread Overlock</span>
+                        <span>Construction Standard</span>
+                        <span className="text-white font-bold">5-Thread Twin Coverstitch</span>
                       </div>
                     </div>
                   </div>
@@ -1021,16 +1470,16 @@ export const About: React.FC = () => {
                   <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between gap-4">
                     <Link
                       to="/"
-                      onClick={() => setSelectedArchivalItem(null)}
+                      onClick={() => setLightboxPiece(null)}
                       className="flex-1 py-4 bg-white text-black font-mono text-xs uppercase tracking-[0.2em] font-bold text-center hover:bg-neutral-200 transition-colors"
                     >
                       View in Shop →
                     </Link>
                     <button
-                      onClick={() => setSelectedArchivalItem(null)}
+                      onClick={() => setLightboxPiece(null)}
                       className="px-6 py-4 border border-white/20 text-white font-mono text-xs uppercase tracking-widest hover:border-white transition-colors"
                     >
-                      Close
+                      Close (Esc)
                     </button>
                   </div>
                 </div>
@@ -1041,7 +1490,7 @@ export const About: React.FC = () => {
       </AnimatePresence>
 
       {/* ========================================================================= */}
-      {/* 7. FINAL FOOTER */}
+      {/* 8. FINAL FOOTER */}
       {/* ========================================================================= */}
       <div className="relative z-50">
         <FinalFooter />

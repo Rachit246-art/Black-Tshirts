@@ -1658,6 +1658,11 @@
 
 .about-layer-4 {
   z-index: 50 !important;
+  background-color: #040406 !important;
+}
+
+.about-layer-5 {
+  z-index: 60 !important;
   background-color: #000000 !important;
 }
 
@@ -1899,4 +1904,192 @@
   mask-composite: exclude;
   pointer-events: none;
 }
+
+/* =========================================================================
+   UNIQUE RUNWAY GALLERY SECTION STYLING & ANIMATIONS
+   ========================================================================= */
+
+/* Filter Tab Pills */
+.gallery-filter-pill {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  white-space: nowrap;
+}
+
+.gallery-filter-pill:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.gallery-filter-pill.active {
+  color: #000000 !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  font-weight: 700;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+/* View Mode Switcher */
+.gallery-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-view-btn.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Asymmetric Editorial Grid */
+.gallery-asymmetric-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .gallery-asymmetric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-asymmetric-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Card Aspect Variants */
+.aspect-tall {
+  aspect-ratio: 3 / 4 !important;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1 !important;
+}
+
+.aspect-wide {
+  aspect-ratio: 16 / 10 !important;
+}
+
+.aspect-hero {
+  aspect-ratio: 16 / 11 !important;
+}
+
+@media (min-width: 1024px) {
+  .gallery-col-span-2 {
+    grid-column: span 2 / span 2 !important;
+  }
+}
+
+/* Card 3D & Micro-Interactions */
+.gallery-piece-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #0c0c0e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery-piece-card:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 255, 255, 0.08);
+}
+
+.gallery-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(80%) contrast(110%);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.gallery-piece-card:hover .gallery-card-image {
+  filter: grayscale(0%) contrast(105%);
+  transform: scale(1.06);
+}
+
+/* Card Bottom Sliding Meta Drawer */
+.gallery-card-drawer {
+  position: absolute;
+  inset-x: 0;
+  bottom: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 65%, transparent 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(18px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-piece-card:hover .gallery-card-drawer {
+  transform: translateY(0);
+}
+
+/* Horizontal Filmstrip Runway Track */
+.gallery-runway-container {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 2rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.gallery-runway-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.gallery-runway-track {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 0.5rem 1rem;
+  width: max-content;
+}
+
+.gallery-runway-item {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .gallery-runway-item {
+    width: 380px;
+  }
+}
+
 
