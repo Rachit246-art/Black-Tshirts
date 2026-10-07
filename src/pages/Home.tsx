@@ -179,7 +179,7 @@ export const Home: React.FC = () => {
             {/* Central Portrait Cutout */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex justify-center items-end h-[80vh] sm:h-[85vh]">
               <img
-                src="/Hero-section.png"
+                src="/Herosection.png"
                 alt="Justin Jefferson"
                 className="h-full w-auto max-w-none object-contain drop-shadow-2xl scale-[1.32] origin-bottom"
               />
