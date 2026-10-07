@@ -117,33 +117,16 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
         }`}
         style={{ backgroundColor: '#000000' }}
       >
-        <div
-          aria-hidden="true"
-          className="jj-menu-grain pointer-events-none absolute inset-0 md:fixed"
-          style={{
-            backgroundImage: "url('/textures/pebble.webp')",
-            backgroundSize: "var(--pebble-tile, 480px) var(--pebble-tile, 480px)",
-            mixBlendMode: "overlay",
-            opacity: 0.35
-          }}
-        />
-
-        {/* Ambient glow accent */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.06)_0%,_transparent_70%)] blur-[100px]"
-        />
-
         {/* Header spacer */}
-        <div className="h-24 md:h-32 shrink-0" />
+        <div className="h-20 md:h-28 shrink-0" />
 
         {/* Main Links Container */}
-        <div className="jj-menu-layout relative z-10 m-auto flex flex-col items-center justify-center py-8 px-6 w-full max-w-5xl">
+        <div className="jj-menu-layout relative z-10 m-auto flex flex-col items-center justify-center py-6 px-6 w-full max-w-5xl">
           <nav
             aria-label="Main navigation"
             className="jj-menu-links relative m-auto flex shrink-0 flex-col items-center w-full"
           >
-            <div className="flex flex-col items-center gap-y-8 md:gap-y-12 lg:gap-y-16">
+            <div className="flex flex-col items-center gap-y-6 md:gap-y-8 lg:gap-y-10">
               {navLinks.map((item, idx) => {
                 const isActive = location.pathname === item.href;
                 return (
@@ -151,7 +134,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
                     key={item.href}
                     to={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="group relative flex items-center justify-center text-[clamp(48px,11vw,108px)] font-display font-black uppercase tracking-[-0.03em] leading-none transition-all duration-500 ease-out"
+                    className="group relative flex items-center justify-center text-[clamp(42px,8.5vw,84px)] font-display font-black uppercase tracking-[-0.03em] leading-none transition-all duration-500 ease-out"
                     style={{
                       opacity: isOpen ? 1 : 0,
                       transform: isOpen ? 'translateY(0)' : 'translateY(30px)',
