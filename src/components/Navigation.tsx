@@ -115,7 +115,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
             ? 'opacity-100 pointer-events-auto visible'
             : 'opacity-0 pointer-events-none invisible'
         }`}
-        style={{ backgroundColor: 'var(--color-ink-deep)' }}
+        style={{ backgroundColor: '#000000' }}
       >
         <div
           aria-hidden="true"
@@ -128,45 +128,47 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
           }}
         />
 
+        {/* Ambient glow accent */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.06)_0%,_transparent_70%)] blur-[100px]"
+        />
+
         {/* Header spacer */}
         <div className="h-24 md:h-32 shrink-0" />
 
         {/* Main Links Container */}
-        <div className="jj-menu-layout relative z-10 m-auto flex flex-col items-center justify-center py-6 px-6">
+        <div className="jj-menu-layout relative z-10 m-auto flex flex-col items-center justify-center py-6 px-6 w-full max-w-5xl">
           <nav
             aria-label="Main navigation"
-            className="jj-menu-links relative m-auto flex shrink-0 flex-col items-center gap-y-2.5 md:gap-y-[min(20px,calc(20*var(--cu)))]"
+            className="jj-menu-links relative m-auto flex shrink-0 flex-col items-center gap-y-3 md:gap-y-4 w-full"
           >
-            <div className="jj-menu-row flex flex-col items-center gap-y-2.5 md:flex-row md:flex-wrap md:justify-center md:gap-x-[min(56px,calc(56*var(--cu)))] md:gap-y-0">
+            <div className="flex flex-col items-center gap-y-3 md:gap-y-4">
               {navLinks.map((item, idx) => {
                 const isActive = location.pathname === item.href;
                 return (
                   <Link
                     key={item.href}
                     to={item.href}
-                    className="menu-link display relative text-[clamp(50px,12vw,80px)] leading-[1.04] md:text-[clamp(44px,calc(6.5*var(--vu)),100px)] tracking-[-0.02em] transition-[transform,opacity] duration-500 ease-out"
+                    onClick={() => setIsOpen(false)}
+                    className="group relative flex items-center justify-center text-[clamp(36px,7vw,68px)] font-display uppercase tracking-[-0.02em] leading-tight transition-all duration-500 ease-out"
                     style={{
                       opacity: isOpen ? 1 : 0,
-                      transform: isOpen ? 'translateY(0)' : 'translateY(26px)',
-                      transitionDelay: `${idx * 0.04}s`
+                      transform: isOpen ? 'translateY(0)' : 'translateY(24px)',
+                      transitionDelay: `${idx * 0.035}s`
                     }}
                   >
-                    <span className="menu-link-lift relative block">
-                      <span
-                        className={`transition-colors duration-300 ${
-                          isActive
-                            ? 'text-[var(--color-bone)] font-bold'
-                            : 'text-[color-mix(in_oklab,var(--color-bone)_50%,transparent)]'
-                        }`}
-                      >
-                        {item.label}
-                      </span>
-                      <span
-                        aria-hidden="true"
-                        className="menu-link-fill pointer-events-none absolute inset-0 text-[var(--color-bone)]"
-                      >
-                        {item.label}
-                      </span>
+                    <span
+                      className={`relative z-10 transition-all duration-300 ${
+                        isActive
+                          ? 'text-white font-black scale-105'
+                          : 'text-white/50 group-hover:text-white group-hover:scale-105'
+                      }`}
+                    >
+                      {item.label}
+                      {isActive && (
+                        <span className="inline-block w-2 h-2 ml-3 rounded-full bg-white align-middle" />
+                      )}
                     </span>
                   </Link>
                 );
@@ -176,22 +178,22 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
         </div>
 
         {/* Overlay Footer credits */}
-        <div className="jj-menu-credits relative z-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-8 md:px-16 text-[11px] uppercase tracking-widest text-[#ffffff]/50 font-mono">
+        <div className="jj-menu-credits relative z-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-8 md:px-16 text-[11px] uppercase tracking-widest text-white/50 font-mono border-t border-white/10">
           <div className="flex items-center gap-6">
             <a
               href="https://www.instagram.com/atassemble/"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[#ffffff] transition-colors"
+              className="hover:text-white transition-colors"
             >
               An Assemble Project
             </a>
             <span className="opacity-30">/</span>
-            <Link to="/privacy" className="hover:text-[#ffffff] transition-colors">
+            <Link to="/privacy" className="hover:text-white transition-colors">
               Privacy
             </Link>
             <span className="opacity-30">/</span>
-            <Link to="/terms" className="hover:text-[#ffffff] transition-colors">
+            <Link to="/terms" className="hover:text-white transition-colors">
               Terms
             </Link>
           </div>
@@ -201,7 +203,7 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
               href="https://layertwo.design"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[#ffffff] transition-colors"
+              className="hover:text-white transition-colors"
             >
               Site by LayerTwo
             </a>

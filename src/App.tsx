@@ -4,6 +4,7 @@ import { Navigation } from './components/Navigation';
 import { PageLoader } from './components/PageLoader';
 import { IntroVideo } from './components/IntroVideo';
 import { Home } from './pages/Home';
+import { About } from './pages/About';
 
 // Scroll to top helper on route navigation
 const ScrollToTop: React.FC = () => {
@@ -48,6 +49,7 @@ const AppContent: React.FC = () => {
       <main id="main">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
