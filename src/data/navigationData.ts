@@ -6,13 +6,7 @@ export interface NavLink {
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "On-Field", href: "/on-field" },
-  { label: "Off-Field", href: "/off-field" },
-  { label: "Foundation", href: "/foundation" },
-  { label: "Partnerships", href: "/partnerships" },
-  { label: "Journal", href: "/journal" },
-  { label: "Inquiries", href: "/inquiries" }
+  { label: "Gallery", href: "/gallery" }
 ];
 
 export const footerData = {

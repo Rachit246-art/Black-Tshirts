@@ -138,12 +138,12 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
         <div className="h-24 md:h-32 shrink-0" />
 
         {/* Main Links Container */}
-        <div className="jj-menu-layout relative z-10 m-auto flex flex-col items-center justify-center py-6 px-6 w-full max-w-5xl">
+        <div className="jj-menu-layout relative z-10 m-auto flex flex-col items-center justify-center py-8 px-6 w-full max-w-5xl">
           <nav
             aria-label="Main navigation"
-            className="jj-menu-links relative m-auto flex shrink-0 flex-col items-center gap-y-3 md:gap-y-4 w-full"
+            className="jj-menu-links relative m-auto flex shrink-0 flex-col items-center w-full"
           >
-            <div className="flex flex-col items-center gap-y-3 md:gap-y-4">
+            <div className="flex flex-col items-center gap-y-8 md:gap-y-12 lg:gap-y-16">
               {navLinks.map((item, idx) => {
                 const isActive = location.pathname === item.href;
                 return (
@@ -151,23 +151,23 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
                     key={item.href}
                     to={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="group relative flex items-center justify-center text-[clamp(36px,7vw,68px)] font-display uppercase tracking-[-0.02em] leading-tight transition-all duration-500 ease-out"
+                    className="group relative flex items-center justify-center text-[clamp(48px,11vw,108px)] font-display font-black uppercase tracking-[-0.03em] leading-none transition-all duration-500 ease-out"
                     style={{
                       opacity: isOpen ? 1 : 0,
-                      transform: isOpen ? 'translateY(0)' : 'translateY(24px)',
-                      transitionDelay: `${idx * 0.035}s`
+                      transform: isOpen ? 'translateY(0)' : 'translateY(30px)',
+                      transitionDelay: `${idx * 0.06}s`
                     }}
                   >
                     <span
-                      className={`relative z-10 transition-all duration-300 ${
+                      className={`relative z-10 transition-all duration-300 flex items-center ${
                         isActive
                           ? 'text-white font-black scale-105'
-                          : 'text-white/50 group-hover:text-white group-hover:scale-105'
+                          : 'text-white/40 group-hover:text-white group-hover:scale-105'
                       }`}
                     >
                       {item.label}
                       {isActive && (
-                        <span className="inline-block w-2 h-2 ml-3 rounded-full bg-white align-middle" />
+                        <span className="inline-block w-3 h-3 md:w-4 md:h-4 ml-4 md:ml-6 rounded-full bg-white shadow-[0_0_20px_rgba(255,255,255,0.9)]" />
                       )}
                     </span>
                   </Link>
