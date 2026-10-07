@@ -110,58 +110,45 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
       <div
         id="site-navigation"
         aria-hidden={!isOpen}
-        className={`fixed inset-0 z-[85] isolate flex flex-col justify-between overflow-y-auto overflow-x-hidden transition-[opacity,visibility] duration-500 ${
+        className={`jj-menu-overlay ${
           isOpen
             ? 'opacity-100 pointer-events-auto visible'
             : 'opacity-0 pointer-events-none invisible'
         }`}
-        style={{ backgroundColor: '#000000' }}
       >
-        {/* Header spacer */}
-        <div className="h-20 md:h-28 shrink-0" />
+        {/* Ambient Center Radial Glow */}
+        <div aria-hidden="true" className="jj-menu-ambient-glow" />
 
         {/* Main Links Container */}
-        <div className="jj-menu-layout relative z-10 m-auto flex flex-col items-center justify-center py-6 px-6 w-full max-w-5xl">
-          <nav
-            aria-label="Main navigation"
-            className="jj-menu-links relative m-auto flex shrink-0 flex-col items-center w-full"
-          >
-            <div className="flex flex-col items-center gap-y-6 md:gap-y-8 lg:gap-y-10">
-              {navLinks.map((item, idx) => {
-                const isActive = location.pathname === item.href;
-                return (
-                  <Link
-                    key={item.href}
-                    to={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="group relative flex items-center justify-center text-[clamp(42px,8.5vw,84px)] font-display font-black uppercase tracking-[-0.03em] leading-none transition-all duration-500 ease-out"
-                    style={{
-                      opacity: isOpen ? 1 : 0,
-                      transform: isOpen ? 'translateY(0)' : 'translateY(30px)',
-                      transitionDelay: `${idx * 0.06}s`
-                    }}
-                  >
-                    <span
-                      className={`relative z-10 transition-all duration-300 flex items-center ${
-                        isActive
-                          ? 'text-white font-black scale-105'
-                          : 'text-white/40 group-hover:text-white group-hover:scale-105'
-                      }`}
-                    >
-                      {item.label}
-                      {isActive && (
-                        <span className="inline-block w-3 h-3 md:w-4 md:h-4 ml-4 md:ml-6 rounded-full bg-white shadow-[0_0_20px_rgba(255,255,255,0.9)]" />
-                      )}
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-          </nav>
-        </div>
+        <nav aria-label="Main navigation" className="jj-menu-list">
+          {navLinks.map((item, idx) => {
+            const isActive = location.pathname === item.href;
+            const indexStr = `0${idx + 1}`;
 
-        {/* Overlay Footer credits */}
-        <div className="jj-menu-credits relative z-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-8 md:px-16 text-[11px] uppercase tracking-widest text-white/50 font-mono border-t border-white/10">
+            return (
+              <Link
+                key={item.href}
+                to={item.href}
+                onClick={() => setIsOpen(false)}
+                className={`jj-menu-link-item group ${isActive ? 'active' : ''}`}
+                style={{
+                  opacity: isOpen ? 1 : 0,
+                  transform: isOpen ? 'translateY(0)' : 'translateY(24px)',
+                  transition: `all 0.5s cubic-bezier(0.16, 1, 0.3, 1) ${idx * 0.05}s`
+                }}
+              >
+                <span className="jj-menu-link-num">{indexStr}</span>
+                <span className="jj-menu-link-text">
+                  {item.label}
+                  {isActive && <span className="jj-menu-active-dot" />}
+                </span>
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Overlay Bottom Bar */}
+        <div className="jj-menu-bottom-bar">
           <div className="flex items-center gap-6">
             <a
               href="https://www.instagram.com/atassemble/"
@@ -172,24 +159,17 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
               An Assemble Project
             </a>
             <span className="opacity-30">/</span>
-            <Link to="/privacy" className="hover:text-white transition-colors">
+            <Link to="/privacy" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">
               Privacy
             </Link>
             <span className="opacity-30">/</span>
-            <Link to="/terms" className="hover:text-white transition-colors">
+            <Link to="/terms" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">
               Terms
             </Link>
           </div>
 
           <div>
-            <a
-              href="https://layertwo.design"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Site by LayerTwo
-            </a>
+            <span className="text-white/40">© 2026 MAISON JJETTAS · ALL RIGHTS RESERVED</span>
           </div>
         </div>
       </div>

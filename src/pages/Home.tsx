@@ -245,20 +245,54 @@ export const Home: React.FC = () => {
               </h2>
             </div>
 
-            {/* Top Control Bar: Collection Label & Navigation Arrows */}
-            <div className="relative z-10 max-w-7xl mx-auto w-full px-6 sm:px-12 mb-12 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <span className="w-3 h-3 rounded-full bg-[#ffffff] animate-pulse shadow-[0_0_10px_#ffffff]" />
-                <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-[#ffffff]">
-                  Signature Products · 09 Pieces
-                </span>
+            {/* Top Control Bar: Prominent Section Name & Navigation Controls */}
+            <div
+              className="relative z-10 w-full mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6"
+              style={{
+                maxWidth: '1680px',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                paddingLeft: 'clamp(1.5rem, 4vw, 4rem)',
+                paddingRight: 'clamp(1.5rem, 4vw, 4rem)'
+              }}
+            >
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#ffffff] animate-pulse shadow-[0_0_12px_#ffffff]" />
+                  <span
+                    style={{
+                      fontFamily: 'ui-monospace, monospace',
+                      fontSize: '11px',
+                      letterSpacing: '0.28em',
+                      textTransform: 'uppercase',
+                      color: 'rgba(255, 255, 255, 0.65)'
+                    }}
+                  >
+                    Curated Collection // 09 Exclusive Releases
+                  </span>
+                </div>
+                <h2
+                  style={{
+                    fontFamily: 'var(--font-display, "beachwood-variable", "Inter", sans-serif)',
+                    fontSize: 'clamp(2.75rem, 6.5vw, 5.5rem)',
+                    fontWeight: 900,
+                    lineHeight: 0.95,
+                    letterSpacing: '-0.035em',
+                    textTransform: 'uppercase',
+                    color: '#ffffff',
+                    margin: 0
+                  }}
+                >
+                  Signature Products.
+                </h2>
               </div>
 
-              <div className="flex items-center gap-4">
+              {/* Navigation Arrows */}
+              <div className="flex items-center gap-4 shrink-0 pb-1">
                 <button
                   type="button"
                   onClick={() => scrollRail('left')}
-                  className="w-12 h-12 rounded-full border-2 border-white/30 bg-white/10 hover:bg-white/30 flex items-center justify-center text-white/90 hover:text-white transition-all cursor-pointer backdrop-blur-md"
+                  className="w-12 h-12 rounded-full border-2 border-white/30 bg-white/10 hover:bg-white hover:text-black flex items-center justify-center text-white transition-all cursor-pointer backdrop-blur-md"
                   aria-label="Scroll left"
                 >
                   ←
@@ -266,7 +300,7 @@ export const Home: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => scrollRail('right')}
-                  className="w-12 h-12 rounded-full border-2 border-white/30 bg-white/10 hover:bg-white/30 flex items-center justify-center text-white/90 hover:text-white transition-all cursor-pointer backdrop-blur-md"
+                  className="w-12 h-12 rounded-full border-2 border-white/30 bg-white/10 hover:bg-white hover:text-black flex items-center justify-center text-white transition-all cursor-pointer backdrop-blur-md"
                   aria-label="Scroll right"
                 >
                   →

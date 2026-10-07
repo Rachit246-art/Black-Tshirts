@@ -2,6 +2,20 @@
 @import './about.css';
 @import './gallery.css';
 @import './contact.css';
+@import './navigation.css';
+@import './why-choose-us.css';
+@import './reviews.css';
+
+/* Global Dark Color Scheme for native inputs, select menus, and dialogs */
+:root {
+  color-scheme: dark;
+}
+
+select, option {
+  color-scheme: dark !important;
+  background-color: #0e0e0e !important;
+  color: #ffffff !important;
+}
 
 /* Prevent global leather texture from overriding the home page */
 .bg-layers__texture--footer {

@@ -1,0 +1,173 @@
+/* =========================================================================
+   MAISON JJETTAS — WHY CHOOSE US (THE ATELIER STANDARD) STYLESHEET
+   Pure obsidian black, architectural framing, fluid luxury typography.
+   ========================================================================= */
+
+:root {
+  --why-bg: #000000;
+  --why-fg: #ffffff;
+  --font-display: "beachwood-variable", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Master Container */
+.why-page-container {
+  width: 100% !important;
+  max-width: 1720px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .why-page-container {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .why-page-container {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+  }
+}
+
+/* Ambient Radial Glow */
+.why-ambient-glow {
+  pointer-events: none;
+  position: fixed;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 700px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+  filter: blur(140px);
+  z-index: 0;
+}
+
+/* Marquee Text */
+.why-marquee-text {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 11vw, 9.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.03);
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: -0.02em;
+}
+
+/* Hero Typography */
+.why-hero-title {
+  font-family: var(--font-display) !important;
+  font-size: clamp(3.5rem, 8.5vw, 8.5rem) !important;
+  line-height: 0.92 !important;
+  letter-spacing: -0.035em !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  margin-bottom: 2rem !important;
+  color: #ffffff !important;
+}
+
+.why-hero-sub {
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem) !important;
+  line-height: 1.75 !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  max-width: 820px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 300 !important;
+}
+
+/* Architectural Framed Card */
+.why-frame-card {
+  position: relative !important;
+  background: #09090c !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 1.25rem !important;
+  overflow: hidden !important;
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9) !important;
+}
+
+.why-frame-card:hover {
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.95), 0 0 40px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Architectural Frame Corners / Crosshairs */
+.why-frame-crosshair {
+  position: absolute !important;
+  width: 12px !important;
+  height: 12px !important;
+  pointer-events: none !important;
+  z-index: 25 !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.why-frame-tl { top: 12px; left: 12px; border-top: 2px solid; border-left: 2px solid; }
+.why-frame-tr { top: 12px; right: 12px; border-top: 2px solid; border-right: 2px solid; }
+.why-frame-bl { bottom: 12px; left: 12px; border-bottom: 2px solid; border-left: 2px solid; }
+.why-frame-br { bottom: 12px; right: 12px; border-bottom: 2px solid; border-right: 2px solid; }
+
+/* Product Image in Frame (True Natural Vibrant Color) */
+.why-frame-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  filter: none !important;
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.why-frame-card:hover .why-frame-img {
+  transform: scale(1.06) !important;
+}
+
+/* Benchmark Comparison Matrix Box */
+.why-matrix-box {
+  background: #09090c !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 1.5rem !important;
+  padding: 2.5rem !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9) !important;
+}
+
+@media (min-width: 768px) {
+  .why-matrix-box {
+    padding: 3.5rem 4rem !important;
+  }
+}
+
+/* Telemetry Stat Pill Box */
+.why-stat-box {
+  background: #09090c !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 1rem !important;
+  padding: 2.25rem 2rem !important;
+  text-align: center !important;
+  transition: all 0.35s ease !important;
+}
+
+.why-stat-box:hover {
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  transform: translateY(-4px) !important;
+}
+
+.why-stat-number {
+  font-family: var(--font-mono) !important;
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+  color: #ffffff !important;
+  line-height: 1 !important;
+  margin-bottom: 0.75rem !important;
+}

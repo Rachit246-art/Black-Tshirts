@@ -1,0 +1,148 @@
+/* =========================================================================
+   MAISON JJETTAS — FULLSCREEN HAUTE COUTURE MENU NAVIGATION
+   Editorial typography, bold scaling, active glow, and ambient depth.
+   ========================================================================= */
+
+.jj-menu-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 99999 !important;
+  background-color: #000000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s ease !important;
+}
+
+/* Ambient Center Radial Glow */
+.jj-menu-ambient-glow {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.08) 0%, transparent 65%);
+  filter: blur(120px);
+  z-index: 1;
+}
+
+/* Links List Stack (Centered, Roomy, Grand) */
+.jj-menu-list {
+  position: relative;
+  z-index: 10;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: clamp(0.75rem, 2.2vh, 1.85rem) !important;
+  padding: 6rem 1.5rem 2rem 1.5rem !important;
+  margin: auto !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+}
+
+/* Individual Link Item */
+.jj-menu-link-item {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: baseline !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none !important;
+}
+
+.jj-menu-link-num {
+  font-family: var(--font-mono, monospace) !important;
+  font-size: clamp(10px, 1.1vw, 13px) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.22em !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  margin-right: clamp(0.75rem, 1.8vw, 2rem) !important;
+  transition: all 0.35s ease !important;
+  transform: translateY(-0.35em) !important;
+}
+
+.jj-menu-link-text {
+  font-family: var(--font-display, "beachwood-variable", "Inter", sans-serif) !important;
+  font-size: clamp(2.35rem, 5.2vw, 4.8rem) !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.03em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Hover State */
+.jj-menu-link-item:hover .jj-menu-link-text {
+  color: #ffffff !important;
+  letter-spacing: -0.01em !important;
+  transform: scale(1.04) !important;
+  text-shadow: 0 0 40px rgba(255, 255, 255, 0.6) !important;
+}
+
+.jj-menu-link-item:hover .jj-menu-link-num {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  transform: translateY(-0.35em) translateX(-4px) !important;
+}
+
+/* Active State */
+.jj-menu-link-item.active .jj-menu-link-text {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+}
+
+.jj-menu-link-item.active .jj-menu-link-num {
+  color: #ffffff !important;
+}
+
+/* Active Glowing Dot */
+.jj-menu-active-dot {
+  display: inline-block !important;
+  width: clamp(12px, 1.4vw, 18px) !important;
+  height: clamp(12px, 1.4vw, 18px) !important;
+  margin-left: clamp(1rem, 2vw, 2rem) !important;
+  border-radius: 9999px !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.6) !important;
+  animation: navPulse 2s ease-in-out infinite !important;
+  vertical-align: middle !important;
+}
+
+@keyframes navPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.85; }
+}
+
+/* Bottom Footer Bar */
+.jj-menu-bottom-bar {
+  position: relative !important;
+  z-index: 20 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.25rem !important;
+  padding: 1.75rem 3rem 2.5rem 3rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  font-family: var(--font-mono, monospace) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@media (min-width: 640px) {
+  .jj-menu-bottom-bar {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+}

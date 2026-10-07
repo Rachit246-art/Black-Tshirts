@@ -319,17 +319,6 @@ export const About: React.FC = () => {
         })}
       </nav>
 
-      {/* Subtle Background Grain Texture */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-0 opacity-25"
-        style={{
-          backgroundImage: "url('/textures/pebble.webp')",
-          backgroundSize: '480px 480px',
-          mixBlendMode: 'overlay',
-        }}
-      />
-
       {/* Ambient Lighting Gradient */}
       <div
         aria-hidden="true"
@@ -449,7 +438,7 @@ export const About: React.FC = () => {
                 <img
                   src="https://cdn.sanity.io/images/zil8k06j/production/d3e033e240d85dddfbced35e0dab1491bad7be84-1200x1500.webp"
                   alt="Justin Jefferson Noir Editorial"
-                  className="w-full h-full object-cover object-center filter grayscale contrast-110 brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
 
                 {/* Corner Crosshairs */}
@@ -483,7 +472,7 @@ export const About: React.FC = () => {
                 <img
                   src="https://cdn.sanity.io/images/zil8k06j/production/6fa7c7fd07fdbf07119a115343881c3a9913963f-1067x1600.webp"
                   alt="Justin Jefferson Atelier Detail"
-                  className="w-full h-full object-cover filter grayscale contrast-125"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur px-2 py-1 rounded text-[9px] font-mono uppercase text-white/80 text-center border border-white/10">
                   STUDIO ARCHIVE
@@ -621,7 +610,7 @@ export const About: React.FC = () => {
                 <img
                   src="https://cdn.sanity.io/images/zil8k06j/production/6fa7c7fd07fdbf07119a115343881c3a9913963f-1067x1600.webp"
                   alt="Justin Jefferson Philosophy Editorial"
-                  className="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-black/80 backdrop-blur-md border border-white/20">
@@ -733,7 +722,7 @@ export const About: React.FC = () => {
                       <img
                         src={activeFeature.image}
                         alt={activeFeature.title}
-                        className="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-110 transition-transform duration-700 ease-out"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                       />
 
                       {/* Animated Inspection Scanline */}
@@ -851,7 +840,7 @@ export const About: React.FC = () => {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover filter grayscale contrast-110 group-hover:scale-108 group-hover:filter-none transition-all duration-700 ease-out"
+                      className="w-full h-full object-cover group-hover:scale-108 transition-all duration-700 ease-out"
                     />
                     <div className="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors duration-300" />
 
