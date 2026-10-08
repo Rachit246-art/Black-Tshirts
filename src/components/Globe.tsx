@@ -29,11 +29,11 @@ export const Globe: React.FC = () => {
         { location: [40.7128, -74.006], size: 0.05 }, // New York
         { location: [41.1579, -8.6291], size: 0.1 }, // Porto
       ],
-      onRender: (state) => {
+      onRender: (state: any) => {
         state.phi = phi;
         phi += 0.005;
       },
-    });
+    } as any);
 
     return () => {
       globe.destroy();
