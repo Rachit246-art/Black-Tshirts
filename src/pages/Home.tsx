@@ -187,12 +187,12 @@ export const Home: React.FC = () => {
             {/* Central Portrait Cutout */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex justify-center items-end h-[80vh] sm:h-[85vh]">
               <motion.img
-                initial={{ y: 150, opacity: 0, scale: 1.2, filter: 'blur(10px)' }}
-                animate={{ y: 0, opacity: 1, scale: 1.32, filter: 'blur(0px)' }}
+                initial={{ y: 150, opacity: 0, filter: 'blur(10px)' }}
+                animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
                 transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 1.7 }}
                 src="/Herosection.png"
                 alt="Justin Jefferson"
-                className="h-full w-auto max-w-none object-contain drop-shadow-2xl origin-bottom"
+                className="h-[130%] w-auto max-w-none object-contain drop-shadow-2xl origin-bottom"
               />
             </div>
 

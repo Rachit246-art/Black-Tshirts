@@ -41,6 +41,7 @@ export const PageIntro: React.FC<PageIntroProps> = ({
   const [phase, setPhase] = useState<'assembling' | 'combined' | 'exiting'>('assembling');
 
   useEffect(() => {
+    let isActive = true;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -241,16 +242,22 @@ export const PageIntro: React.FC<PageIntroProps> = ({
         }
       }
 
-      animFrameIdRef.current = requestAnimationFrame(animate);
+      if (isActive) {
+        animFrameIdRef.current = requestAnimationFrame(animate);
+      }
     };
 
-    animFrameIdRef.current = requestAnimationFrame(animate);
+    if (isActive) {
+      animFrameIdRef.current = requestAnimationFrame(animate);
+    }
 
     return () => {
+      isActive = false;
       cancelAnimationFrame(animFrameIdRef.current);
       window.removeEventListener('resize', handleResize);
     };
-  }, [sentence, onComplete]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSkip = () => {
     if (isTransitioningOutRef.current) return;

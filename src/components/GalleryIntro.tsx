@@ -29,6 +29,7 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
   const [phase, setPhase] = useState<'assembling' | 'combined' | 'exiting'>('assembling');
 
   useEffect(() => {
+    let isActive = true;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -240,16 +241,22 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
         }
       }
 
-      animFrameIdRef.current = requestAnimationFrame(animate);
+      if (isActive) {
+        animFrameIdRef.current = requestAnimationFrame(animate);
+      }
     };
 
-    animFrameIdRef.current = requestAnimationFrame(animate);
+    if (isActive) {
+      animFrameIdRef.current = requestAnimationFrame(animate);
+    }
 
     return () => {
+      isActive = false;
       cancelAnimationFrame(animFrameIdRef.current);
       window.removeEventListener('resize', handleResize);
     };
-  }, [onComplete]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSkip = () => {
     if (isTransitioningOutRef.current) return;
