@@ -5,10 +5,11 @@ export const FinalFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const links = [
-    { title: 'Shop All', href: '/' },
-    { title: 'Collections', href: '/' },
-    { title: 'The Archive', href: '/' },
-    { title: 'About Studio', href: '/about' },
+    { title: 'Home', href: '/' },
+    { title: 'About', href: '/about' },
+    { title: 'Gallery', href: '/gallery' },
+    { title: 'Reviews', href: '/reviews' },
+    { title: 'Contact', href: '/contact' },
   ];
 
   const socials = [

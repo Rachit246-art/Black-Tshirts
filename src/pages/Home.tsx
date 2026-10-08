@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { homeData } from '../data/homeData';
 import { GalleryView } from '../components/GalleryView';
 import { FinalFooter } from '../components/FinalFooter';
@@ -163,8 +164,14 @@ export const Home: React.FC = () => {
               willChange: 'transform, opacity'
             }}
           >
-            {/* Giant Blurred Background Watermarks: JUSTIN / JEFFERSON */}
-            <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 flex flex-col justify-center opacity-30 select-none overflow-hidden">
+            {/* Background Watermarks */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 0.3, scale: 1 }}
+              transition={{ duration: 2, delay: 1.6, ease: "easeOut" }}
+              aria-hidden="true" 
+              className="pointer-events-none absolute inset-0 z-0 flex flex-col justify-center select-none overflow-hidden"
+            >
               <div className="animate-marquee-left flex whitespace-nowrap">
                 <span className="font-display text-[22vw] leading-none tracking-[-0.03em] uppercase text-[#ffffff] pr-12">
                   PREMIUM PRINTED APPAREL · PREMIUM PRINTED APPAREL ·
@@ -175,19 +182,27 @@ export const Home: React.FC = () => {
                   OVERSIZED TEES · STREETWEAR · OVERSIZED TEES ·
                 </span>
               </div>
-            </div>
+            </motion.div>
 
             {/* Central Portrait Cutout */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex justify-center items-end h-[80vh] sm:h-[85vh]">
-              <img
+              <motion.img
+                initial={{ y: 150, opacity: 0, scale: 1.2, filter: 'blur(10px)' }}
+                animate={{ y: 0, opacity: 1, scale: 1.32, filter: 'blur(0px)' }}
+                transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 1.7 }}
                 src="/Herosection.png"
                 alt="Justin Jefferson"
-                className="h-full w-auto max-w-none object-contain drop-shadow-2xl scale-[1.32] origin-bottom"
+                className="h-full w-auto max-w-none object-contain drop-shadow-2xl origin-bottom"
               />
             </div>
 
             {/* Top Header Label */}
-            <div className="relative z-20 max-w-7xl mx-auto w-full flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-0 mt-4 md:mt-0">
+            <motion.div 
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 2.2, ease: "easeOut" }}
+              className="relative z-20 max-w-7xl mx-auto w-full flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-0 mt-4 md:mt-0"
+            >
               <div className="text-[10px] md:text-[11px] font-mono uppercase tracking-[0.2em] md:tracking-[0.25em] text-[#ffffff]/70 flex items-center gap-2 text-center md:text-left justify-center md:justify-start">
                 <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#ffffff]" />
                 From Studio To The Streets
@@ -195,7 +210,7 @@ export const Home: React.FC = () => {
               <div className="text-[10px] md:text-[11px] font-mono uppercase tracking-[0.2em] md:tracking-[0.25em] text-[#ffffff]/70 text-center md:text-right">
                 Crafted For Comfort
               </div>
-            </div>
+            </motion.div>
 
             {/* All Middle/Bottom flanking text removed per user requests for a cleaner hero image display */}
             <div className="relative z-20 max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-end mt-auto pt-10 md:pt-48 pb-8 md:pb-4 pointer-events-none">
@@ -518,19 +533,26 @@ export const Home: React.FC = () => {
                   }}
                 >
                   <div
-                    className="relative bg-[#111111] rounded-sm shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),0_0_20px_rgba(0,0,0,0.4)] flex flex-col"
+                    className="relative rounded-2xl shadow-[0_40px_80px_-20px_rgba(0,0,0,1)] flex flex-col overflow-hidden border border-white/15 bg-white/5 backdrop-blur-xl"
                     style={{ 
-                      padding: '16px 16px 64px 16px',
-                      aspectRatio: '3/4' 
+                      padding: '12px',
+                      aspectRatio: '4/5' 
                     }}
                   >
-                    <div className="w-full h-full relative overflow-hidden shadow-inner border border-white/10 bg-[#000000] flex items-center justify-center">
+                    <div className="w-full h-full relative overflow-hidden rounded-xl bg-[#000000]">
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                         loading="lazy"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                    </div>
+                    
+                    <div className="absolute bottom-6 left-0 right-0 flex justify-center">
+                      <div className="bg-black/80 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 shadow-xl">
+                        <span className="text-white font-mono text-[10px] uppercase tracking-[0.2em]">{item.title}</span>
+                      </div>
                     </div>
                   </div>
                 </div>

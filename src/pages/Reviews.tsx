@@ -265,14 +265,17 @@ export const Reviews: React.FC = () => {
                 <motion.div
                   layout
                   key={review.id}
-                  initial={{ 
-                    opacity: 0, 
-                    x: idx % 4 === 0 ? -150 : idx % 4 === 1 ? 150 : 0,
-                    y: idx % 4 === 2 ? 150 : idx % 4 === 3 ? -150 : 0
+                  initial={{ opacity: 0, y: 80, scale: 0.9, rotateX: 15 }}
+                  whileInView={!showIntro ? { opacity: 1, y: 0, scale: 1, rotateX: 0 } : {}}
+                  viewport={{ once: true, margin: "-50px" }}
+                  exit={{ opacity: 0, scale: 0.95, y: -20 }}
+                  transition={{ 
+                    type: 'spring', 
+                    stiffness: 100, 
+                    damping: 20, 
+                    mass: 1,
+                    delay: (idx % 3) * 0.1 
                   }}
-                  animate={!showIntro ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: idx % 4 === 0 ? -150 : idx % 4 === 1 ? 150 : 0, y: idx % 4 === 2 ? 150 : idx % 4 === 3 ? -150 : 0 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ type: 'spring', stiffness: 200, damping: 20, delay: idx * 0.1 }}
                   className="reviews-card group"
                 >
                   {/* Architectural Corner Crosshairs */}
