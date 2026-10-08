@@ -91,13 +91,13 @@ export const GalleryView = () => {
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
             {subFilters.map(sf => (
               <button 
                 key={sf.id}
                 onClick={() => setSubFilter(sf.id)}
-                className={`px-4 py-1.5 rounded-full text-[9px] font-mono tracking-widest uppercase transition-colors border ${
-                  subFilter === sf.id ? 'bg-white/10 text-white border-white/20' : 'bg-transparent text-white/30 border-transparent hover:text-white/60'
+                className={`px-5 py-2 rounded-full text-[10px] sm:text-[11px] font-mono tracking-widest uppercase transition-all duration-300 border ${
+                  subFilter === sf.id ? 'bg-[#1a1a1a] text-white border-white/20 shadow-lg' : 'bg-transparent text-white/40 border-transparent hover:text-white/80'
                 }`}
               >
                 {sf.label}
@@ -106,8 +106,14 @@ export const GalleryView = () => {
           </div>
         </div>
 
-        {/* Masonry-style / Dense Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
+        {/* Dynamic Grid based on SubFilter */}
+        <div className={
+          subFilter === 'runway' 
+            ? "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto" 
+            : subFilter === '3ddeck'
+            ? "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 max-w-[1600px] mx-auto"
+            : "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4"
+        }>
           <AnimatePresence>
             {filteredImages.map((img, idx) => (
               <GalleryItem key={img.id} image={img} index={idx} />

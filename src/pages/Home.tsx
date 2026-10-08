@@ -170,7 +170,7 @@ export const Home: React.FC = () => {
               animate={{ opacity: 0.3, scale: 1 }}
               transition={{ duration: 2, delay: 1.6, ease: "easeOut" }}
               aria-hidden="true" 
-              className="pointer-events-none absolute inset-0 z-0 flex flex-col justify-center select-none overflow-hidden"
+              className="pointer-events-none absolute inset-0 z-0 flex flex-col justify-center pb-[35vh] md:pb-0 select-none overflow-hidden"
             >
               <div className="animate-marquee-left flex whitespace-nowrap">
                 <span className="font-display text-[22vw] leading-none tracking-[-0.03em] uppercase text-[#ffffff] pr-12">

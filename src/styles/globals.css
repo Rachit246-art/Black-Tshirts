@@ -84,6 +84,8 @@ body[data-theme="tone-purple"] {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 1.5rem 1rem 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -177,6 +179,8 @@ body[data-theme="tone-purple"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 @media (min-width: 768px) {

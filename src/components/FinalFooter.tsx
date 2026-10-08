@@ -120,10 +120,10 @@ export const FinalFooter: React.FC = () => {
         </div>
 
         {/* Right: Link Columns */}
-        <div style={{ flex: '1 1 600px', display: 'flex', flexWrap: 'wrap', gap: '60px', justifyContent: 'flex-start' }}>
+        <div className="flex-1 grid grid-cols-2 gap-x-8 gap-y-12 md:flex md:gap-16">
           
           {/* Quick Links */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minWidth: '150px' }}>
+          <div className="flex flex-col gap-5">
             <span style={{ fontFamily: 'monospace', fontSize: '10px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '10px' }}>
               Quick Links
             </span>
@@ -146,7 +146,7 @@ export const FinalFooter: React.FC = () => {
           </div>
 
           {/* Socials */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minWidth: '150px' }}>
+          <div className="flex flex-col gap-5">
             <span style={{ fontFamily: 'monospace', fontSize: '10px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '10px' }}>
               Connect
             </span>
@@ -169,7 +169,7 @@ export const FinalFooter: React.FC = () => {
           </div>
 
           {/* Legal */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', minWidth: '150px' }}>
+          <div className="flex flex-col gap-5">
             <span style={{ fontFamily: 'monospace', fontSize: '10px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '10px' }}>
               Information
             </span>
