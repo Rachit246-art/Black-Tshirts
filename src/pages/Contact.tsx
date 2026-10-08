@@ -497,7 +497,7 @@ export const Contact: React.FC = () => {
               className="space-y-6"
             >
               {/* 1. ARCHIVAL DISPATCH GLOBE (PREMIUM STATIC MAP) */}
-              <div className="contact-panel-card flex flex-col items-center justify-center relative overflow-hidden" style={{ minHeight: '600px', border: '1px solid rgba(255,255,255,0.05)', padding: 0 }}>
+              <div className="contact-panel-card flex flex-col items-center justify-center relative overflow-hidden" style={{ minHeight: 'clamp(400px, 60vh, 600px)', border: '1px solid rgba(255,255,255,0.05)', padding: 0 }}>
                 {/* Decorative Overlay Label */}
                 <div className="absolute top-8 left-8 right-8 flex justify-between items-start z-20 pointer-events-none">
                   <div>

@@ -81,23 +81,24 @@ export const Home: React.FC = () => {
   }, []);
 
   // Adjusting for a very tall track (1000vh total, 900vh scrollable)
-  // Section 2 (Moments) rise calculation: Moments section rises over Hero between scroll progress 0.0 and 0.08
-  const momentsRiseProgress = Math.max(0, Math.min(1, scrollProgress / 0.08));
+  // Section 2 (Moments) rise calculation: Moments section rises over Hero between scroll progress 0.0 and 0.12
+  const momentsRiseProgress = Math.max(0, Math.min(1, scrollProgress / 0.12));
   const easedMomentsRise = momentsRiseProgress * momentsRiseProgress * (3 - 2 * momentsRiseProgress);
   const momentsTranslateY = (1 - easedMomentsRise) * 100; // in %
 
-  // Section 3 (Quote) rise calculation: Quote section rises over Moments between scroll progress 0.15 and 0.23
-  const quoteRiseProgress = Math.max(0, Math.min(1, (scrollProgress - 0.15) / 0.08));
+  // Section 3 (Quote) rise calculation: Quote section rises over Moments between scroll progress 0.12 and 0.24
+  const quoteRiseProgress = Math.max(0, Math.min(1, (scrollProgress - 0.12) / 0.12));
   const easedQuoteRise = quoteRiseProgress * quoteRiseProgress * (3 - 2 * quoteRiseProgress);
   const quoteTranslateY = (1 - easedQuoteRise) * 100; // in %
 
-  // 5 Images rising calculations (scroll progress 0.25 to 1.0)
-  // Each image gets a slow interval of 0.15
+  // 5 Images rising calculations
+  // Each image gets an interval of 0.15, starting after Quote section
   const getPhotoRise = (index: number) => {
-    const start = 0.25 + index * 0.15;
+    const start = 0.25 + index * 0.12;
     const progress = Math.max(0, Math.min(1, (scrollProgress - start) / 0.15));
     const eased = progress * progress * (3 - 2 * progress);
-    return (1 - eased) * 100; // Starts at 100% (bottom), ends at 0% (center)
+    // Starts completely off-screen (100vh below center), ends exactly in the center
+    return (1 - eased) * 100; 
   };
 
   const imagesToShow = [
@@ -144,12 +145,12 @@ export const Home: React.FC = () => {
           2. Signature Moments (glides up over Hero on scroll)
           3. Quote: "I Want People To Remember Me For More Than Football" (glides up over Moments on scroll)
           4. 5 Images scroll up one by one
-          Total scroll track: 1000vh
+          Total scroll track: 600vh
           ========================================================================= */}
       <div
         ref={stageTrackRef}
         className="relative w-full"
-        style={{ height: '1000vh' }}
+        style={{ height: '600vh' }}
       >
         <div className="sticky top-0 h-screen min-h-[100svh] w-full overflow-hidden">
           {/* 1. HERO SECTION (STATIONARY UNDERNEATH) */}
@@ -512,8 +513,8 @@ export const Home: React.FC = () => {
                     transform: `translate(-50%, calc(-50% + ${riseVal}vh)) rotate(${rot}deg)`,
                     width: 'clamp(300px, 35vw, 500px)',
                     willChange: 'transform',
-                    // Only show when it starts rising
-                    opacity: riseVal < 100 ? 1 : 0
+                    // Only show when it actually starts rising (< 99)
+                    opacity: riseVal < 99 ? 1 : 0
                   }}
                 >
                   <div
