@@ -120,7 +120,7 @@ export const FinalFooter: React.FC = () => {
         </div>
 
         {/* Right: Link Columns */}
-        <div className="flex-1 flex flex-wrap gap-x-8 gap-y-12 md:gap-16 justify-between md:justify-start">
+        <div className="flex-[2] flex flex-wrap gap-x-8 gap-y-12 md:gap-x-16 lg:gap-x-[10%] justify-between md:justify-end">
           
           {/* Quick Links */}
           <div className="flex flex-col gap-5 w-[45%] md:w-auto">
