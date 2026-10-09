@@ -1,11 +1,19 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(ScrollTrigger);
 import { homeData } from '../data/homeData';
 import { GalleryView } from '../components/GalleryView';
 import { FinalFooter } from '../components/FinalFooter';
 import { PremiumAccordion } from '../components/PremiumAccordion';
 import { PremiumVideo } from '../components/PremiumVideo';
 import { PremiumContact } from '../components/PremiumContact';
+import { FaqSection } from '../components/FaqSection';
+import { BlogSection } from '../components/BlogSection';
+import { TestimonialSection } from '../components/TestimonialSection';
 
 const pseudoRandom = (seed: number) => {
   const x = Math.sin(seed++) * 10000;
@@ -43,6 +51,44 @@ export const Home: React.FC = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeftState, setScrollLeftState] = useState(0);
+  
+  const textRef = useRef<HTMLHeadingElement>(null);
+
+  useGSAP(() => {
+    if (!textRef.current || !stageTrackRef.current) return;
+    
+    const chars = gsap.utils.toArray('.dot-char', textRef.current);
+    
+    // Set initial states
+    gsap.set(chars, { 
+      opacity: 0.1, 
+      filter: 'brightness(0.2) contrast(1)'
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: stageTrackRef.current,
+        start: '15% top', // Start slightly earlier as quote section rises
+        end: '35% top',   // End right before images start at 35%
+        scrub: 1,
+      }
+    });
+
+    // 1. Scroll-Driven Font Scaling & Position (Wrappers)
+    tl.fromTo(textRef.current,
+      { scale: 2.5, y: 150, letterSpacing: '-0.05em' },
+      { scale: 1, y: 0, letterSpacing: '-0.02em', duration: 1, ease: 'power2.out' }
+    );
+
+    // 2. Dot Matrix Reveal (Opacity & Brightness)
+    tl.to(chars, {
+      opacity: 1,
+      filter: 'brightness(1.5) contrast(1.2)',
+      stagger: 0.015,
+      ease: 'power2.inOut',
+      duration: 0.6
+    }, "<0.1"); // Start slightly after scale begins
+  }, { scope: stageTrackRef });
 
   // Staggered vertical base offsets matching authentic reference (Screenshot 2)
   const cardOffsetsPx = [-16, 22, -18, 18, -10];
@@ -110,9 +156,9 @@ export const Home: React.FC = () => {
   const quoteTranslateY = (1 - easedQuoteRise) * 100; // in %
 
   // 5 Images rising calculations
-  // Each image gets an interval of 0.15, starting after Quote section
+  // Each image gets an interval of 0.15, starting strictly after the Quote text GSAP animation completes (0.35)
   const getPhotoRise = (index: number) => {
-    const start = 0.25 + index * 0.12;
+    const start = 0.35 + index * 0.12;
     const progress = Math.max(0, Math.min(1, (scrollProgress - start) / 0.15));
     const eased = progress * progress * (3 - 2 * progress);
     // Starts completely off-screen (100vh below center), ends exactly in the center
@@ -157,6 +203,17 @@ export const Home: React.FC = () => {
     <div
       className="relative w-full bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000]"
     >
+      <style>{`
+        .dot-matrix-text {
+          -webkit-mask-image: radial-gradient(circle, black 35%, transparent 45%);
+          -webkit-mask-size: 7px 7px;
+          mask-image: radial-gradient(circle, black 35%, transparent 45%);
+          mask-size: 7px 7px;
+        }
+        .dot-char {
+          will-change: opacity, filter;
+        }
+      `}</style>
       {/* =========================================================================
           COMBINED 3-TIER PINNED STAGE:
           1. Hero (stationary base)
@@ -458,7 +515,8 @@ export const Home: React.FC = () => {
 
             {/* Giant Central Display Typography */}
             <h2 
-              className="relative z-10 font-display leading-[0.88] uppercase tracking-[-0.02em] max-w-6xl mx-auto select-none"
+              ref={textRef}
+              className="relative z-10 font-display leading-[0.88] uppercase tracking-[-0.02em] max-w-6xl mx-auto select-none dot-matrix-text"
               style={{ 
                 color: '#ffffff', 
                 fontSize: 'clamp(32px, 7vw, 100px)',
@@ -474,29 +532,13 @@ export const Home: React.FC = () => {
                 const words = line.split(' ');
                 return (
                   <span key={lineIdx} className="flex justify-center flex-wrap">
-                    {words.map((word, wordIdx) => {
-                      const globalIdx = lineIdx * 100 + wordIdx;
-                      // Words fly in and assemble as easedQuoteRise goes from 0 to 1
-                      const scatter = Math.max(0, 1 - easedQuoteRise * 1.5);
-                      const randX = (pseudoRandom(globalIdx) - 0.5) * 1200; 
-                      const randY = (pseudoRandom(globalIdx + 10) - 0.5) * 1200; 
-                      const randRot = (pseudoRandom(globalIdx + 20) - 0.5) * 500; 
-
-                      return (
-                        <span 
-                          key={wordIdx}
-                          className="inline-block mb-1 sm:mb-2"
-                          style={{
-                            margin: '0 0.15em',
-                            transform: `translate3d(${randX * scatter}px, ${randY * scatter}px, 0) rotate(${randRot * scatter}deg) scale(${1 - scatter * 0.4})`,
-                            opacity: 1 - scatter * 0.9,
-                            willChange: 'transform, opacity'
-                          }}
-                        >
-                          {word}
-                        </span>
-                      );
-                    })}
+                    {words.map((word, wordIdx) => (
+                      <span key={wordIdx} className="inline-block mb-1 sm:mb-2" style={{ margin: '0 0.15em' }}>
+                        {word.split('').map((char, charIdx) => (
+                          <span key={charIdx} className="dot-char inline-block">{char}</span>
+                        ))}
+                      </span>
+                    ))}
                   </span>
                 );
               })}
@@ -526,13 +568,12 @@ export const Home: React.FC = () => {
                   }}
                 >
                   <div
-                    className="relative rounded-2xl shadow-[0_40px_80px_-20px_rgba(0,0,0,1)] flex flex-col overflow-hidden border border-white/15 bg-white/5 backdrop-blur-xl"
+                    className="relative rounded-2xl shadow-[0_40px_80px_-20px_rgba(0,0,0,1)] flex flex-col overflow-hidden"
                     style={{ 
-                      padding: '12px',
                       aspectRatio: '4/5' 
                     }}
                   >
-                    <div className="w-full h-full relative overflow-hidden rounded-xl bg-[#000000]">
+                    <div className="w-full h-full relative bg-[#000000]">
                       <img
                         src={item.image}
                         alt={item.title}
@@ -586,7 +627,16 @@ export const Home: React.FC = () => {
         
       </div>
 
-      {/* 6. PREMIUM CONTACT US */}
+      {/* 5. FAQ SECTION */}
+      <FaqSection />
+
+      {/* 6. BLOG SECTION */}
+      <BlogSection />
+
+      {/* 7. TESTIMONIALS */}
+      <TestimonialSection />
+
+      {/* 8. PREMIUM CONTACT US */}
       <PremiumContact />
 
       {/* 7. FINAL PREMIUM FOOTER */}

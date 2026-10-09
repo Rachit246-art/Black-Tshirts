@@ -196,18 +196,15 @@
   border-radius: 1.25rem;
   overflow: hidden;
   background-color: #09090b;
-  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.4s ease;
+              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   aspect-ratio: 3 / 4;
 }
 
 .gallery-clean-card:hover {
   transform: translateY(-10px) scale(1.015);
-  border-color: rgba(255, 255, 255, 0.55);
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.95), 0 0 45px rgba(255, 255, 255, 0.1);
 }
 

@@ -598,143 +598,9 @@ export const Gallery: React.FC = () => {
       <div aria-hidden="true" className="gallery-ambient-glow" />
 
       {/* ========================================================================= */}
-      {/* 1. GALLERY HERO SECTION (EXPANSIVE & CENTERED) */}
+      {/* 2. MAIN PRESENTATION (LOOKBOOK GRID) */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pt-36 md:pt-48 pb-16">
-        <div className="gallery-page-container">
-          {/* Subtle Watermark Kinetic Marquee */}
-          <div aria-hidden="true" className="pointer-events-none absolute -top-4 left-0 right-0 opacity-15 overflow-hidden select-none">
-            <div className="flex whitespace-nowrap animate-marquee-left">
-              <span className="gallery-marquee-text pr-12">
-                THE RUNWAY GALLERY · 27 BESPOKE PIECES · 420 GSM COTTON · ARCHITECTURAL LUXURY ·
-              </span>
-              <span className="gallery-marquee-text pr-12">
-                THE RUNWAY GALLERY · 27 BESPOKE PIECES · 420 GSM COTTON · ARCHITECTURAL LUXURY ·
-              </span>
-            </div>
-          </div>
-
-          {/* Centered Grand Hero Header */}
-          <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 relative z-10">
-            {/* Top pill badge + Replay Intro */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-md"
-              >
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/90">
-                  Maison JJettas · Complete Visual Exhibition
-                </span>
-              </motion.div>
-
-              <button
-                onClick={() => setShowIntro(true)}
-                className="gallery-replay-btn"
-                title="Replay Archival Particle Text Assembly"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                <span>REPLAY INTRO</span>
-              </button>
-            </div>
-
-            {/* Main Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 35 }}
-              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
-              transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-[-0.03em] leading-[0.9] mb-8"
-            >
-              THE RUNWAY <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-300 to-white/40">
-                ARCHIVE.
-              </span>
-            </motion.h1>
-
-            {/* Sub-paragraph */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.85, delay: 0.2 }}
-              className="font-body text-base sm:text-lg md:text-xl text-white/70 max-w-2xl font-light leading-relaxed mb-8"
-            >
-              Every release is cut, stitched, and dyed in strictly calibrated small-batch drops. Explore all 27 physical silhouettes defining our modern uniform.
-            </motion.p>
-
-            {/* Key Standards Badges */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.85, delay: 0.3 }}
-              className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-white/60"
-            >
-              <span className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
-                27 EXHIBITED LOTS
-              </span>
-              <span className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
-                420 GSM HEAVYWEIGHT
-              </span>
-              <span className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
-                PORTO CIRCULAR LOOMS
-              </span>
-            </motion.div>
-          </div>
-
-          {/* Interactive Navigation & Controls Bar (Centered and Balanced) */}
-          <div className="pt-10 border-t border-white/10 flex flex-col lg:flex-row items-center justify-between gap-6">
-            {/* Category Filter Pills Bar */}
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              {(['ALL', 'HEAVYWEIGHT', 'GRAPHIC', 'VINTAGE', 'STRUCTURE'] as const).map((cat) => {
-                const isSelected = selectedCategory === cat;
-                return (
-                  <button
-                    key={cat}
-                    onClick={() => {
-                      setSelectedCategory(cat);
-                      setVaultActiveIndex(0);
-                    }}
-                    className={`gallery-filter-pill-btn ${isSelected ? 'active' : ''}`}
-                  >
-                    {cat === 'ALL' ? 'ALL WORKS (27)' : cat}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Viewing Perspective Mode Switcher */}
-            <div className="flex items-center gap-2 shrink-0">
-              <button
-                onClick={() => setViewMode('masonry')}
-                className={`gallery-mode-toggle ${viewMode === 'masonry' ? 'active' : ''}`}
-                aria-label="Lookbook Grid Mode"
-              >
-                <span>:::</span> LOOKBOOK
-              </button>
-              <button
-                onClick={() => setViewMode('runway')}
-                className={`gallery-mode-toggle ${viewMode === 'runway' ? 'active' : ''}`}
-                aria-label="Kinetic Runway Slider Mode"
-              >
-                <span>◄►</span> RUNWAY
-              </button>
-              <button
-                onClick={() => setViewMode('vault')}
-                className={`gallery-mode-toggle ${viewMode === 'vault' ? 'active' : ''}`}
-                aria-label="3D Inspection Deck Mode"
-              >
-                <span>▲</span> 3D DECK
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 2. MAIN PRESENTATION (3 POWERFUL PERSPECTIVES) */}
-      {/* ========================================================================= */}
-      <section className="relative z-10 pb-36">
+      <section className="relative z-10 pt-32 pb-36">
         <div className="gallery-page-container">
           {/* =======================================================================
               PERSPECTIVE A: CLEAN EDITORIAL LOOKBOOK GRID (UNBLOCKED, HIGH IMPACT)
@@ -747,11 +613,11 @@ export const Gallery: React.FC = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
               className="gallery-clean-grid"
+              style={{ display: 'grid', gap: '3rem' }}
             >
-              <AnimatePresence mode="popLayout">
+              <AnimatePresence>
                 {filteredPieces.map((piece, idx) => (
                   <motion.div
-                    layout
                     key={piece.id}
                     initial={{ opacity: 0, y: 35 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -765,15 +631,36 @@ export const Gallery: React.FC = () => {
                       setLightboxIndex(idx);
                       setLightboxPiece(piece);
                     }}
-                    className="gallery-clean-card group cursor-pointer border border-white/10 hover:border-white/40 transition-colors"
+                    className="gallery-clean-card group cursor-pointer"
                   >
                     {/* T-Shirt Image (Clean, unobstructed focus) */}
                     <img
                       src={piece.image}
                       alt={piece.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="gallery-clean-img"
                       loading="lazy"
                     />
+
+                    {/* Top Floating Badges */}
+                    <div className="gallery-card-badge-top">
+                      <span className="gallery-tag-pill">{piece.lot}</span>
+                      <span className="gallery-tag-pill opacity-90">{piece.badge}</span>
+                    </div>
+
+                    {/* Clean Sliding Bottom Drawer */}
+                    <div className="gallery-card-bottom-drawer">
+                      <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1">
+                        {piece.weight} · {piece.wash}
+                      </span>
+                      <div className="flex items-center justify-between gap-3">
+                        <h3 className="font-display text-lg sm:text-xl font-bold uppercase tracking-tight text-white group-hover:text-neutral-200 transition-colors">
+                          {piece.title}
+                        </h3>
+                        <span className="font-mono text-[10px] text-white/90 bg-white/10 px-2.5 py-1 rounded shrink-0 border border-white/20">
+                          VIEW ↗
+                        </span>
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
               </AnimatePresence>
