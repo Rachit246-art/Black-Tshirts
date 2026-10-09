@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { navLinks, footerData } from '../data/navigationData';
+import { VisitStudioButton } from './studio/VisitStudioButton';
 
 interface NavigationProps {
   theme?: 'home' | 'dark' | 'light' | 'purple' | 'foundation';
@@ -70,40 +71,45 @@ export const Navigation: React.FC<NavigationProps> = ({ theme = 'home' }) => {
           </span>
         </Link>
 
-        {/* Custom Angled Hamburger */}
-        <button
-          type="button"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-          aria-controls="site-navigation"
-          data-hamburger="true"
-          data-state={isOpen ? "open" : "closed"}
-          onClick={() => setIsOpen(!isOpen)}
-          className="pointer-events-auto -m-4 inline-flex items-center justify-center bg-transparent p-4"
-          style={{ color: logoColor }}
-        >
-          <svg
-            viewBox="0 0 30 13"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-hidden="true"
-            className="h-3 w-auto md:h-3.5"
-            style={{ fill: '#ffffff' }}
+        {/* Right side controls */}
+        <div className="flex items-center gap-6 pointer-events-auto">
+          <VisitStudioButton />
+          
+          {/* Custom Angled Hamburger */}
+          <button
+            type="button"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            aria-controls="site-navigation"
+            data-hamburger="true"
+            data-state={isOpen ? "open" : "closed"}
+            onClick={() => setIsOpen(!isOpen)}
+            className="-m-4 inline-flex items-center justify-center bg-transparent p-4"
+            style={{ color: logoColor }}
           >
-            <path
-              className={`hamburger-bar hamburger-bar--top transition-transform duration-300 origin-center ${
-                isOpen ? 'translate-y-[4.5px] rotate-45' : ''
-              }`}
-              d="M8.541 0.000 L29.896 0.000 L27.010 4.040 L5.655 4.040 Z"
-            />
-            <path
-              className={`hamburger-bar hamburger-bar--bot transition-transform duration-300 origin-center ${
-                isOpen ? '-translate-y-[4.5px] -rotate-45' : ''
-              }`}
-              d="M2.886 8.888 L24.241 8.888 L21.355 12.928 L0.000 12.928 Z"
-            />
-          </svg>
-        </button>
+            <svg
+              viewBox="0 0 30 13"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-hidden="true"
+              className="h-3 w-auto md:h-3.5"
+              style={{ fill: '#ffffff' }}
+            >
+              <path
+                className={`hamburger-bar hamburger-bar--top transition-transform duration-300 origin-center ${
+                  isOpen ? 'translate-y-[4.5px] rotate-45' : ''
+                }`}
+                d="M8.541 0.000 L29.896 0.000 L27.010 4.040 L5.655 4.040 Z"
+              />
+              <path
+                className={`hamburger-bar hamburger-bar--bot transition-transform duration-300 origin-center ${
+                  isOpen ? '-translate-y-[4.5px] -rotate-45' : ''
+                }`}
+                d="M2.886 8.888 L24.241 8.888 L21.355 12.928 L0.000 12.928 Z"
+              />
+            </svg>
+          </button>
+        </div>
       </header>
 
       {/* Full-screen Overlay Site Navigation */}

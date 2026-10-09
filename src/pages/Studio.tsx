@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useSpring, useMotionValue } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
-import { createPortal } from 'react-dom';
 import { FinalFooter } from '../components/FinalFooter';
 import { GalleryIntro } from '../components/GalleryIntro';
 import '../styles/gallery.css';
@@ -511,9 +510,24 @@ export const allGalleryPieces: GalleryPiece[] = [
   },
 ];
 
-export const Gallery: React.FC = () => {
+export const Studio: React.FC = () => {
   // Particle assembly intro overlay state
   const [showIntro, setShowIntro] = useState<boolean>(true);
+
+  // Hero Banners
+  const [bannerIndex, setBannerIndex] = useState(0);
+  const banners = [
+    '/Studio-images/Hero-section/Banner1.png',
+    '/Studio-images/Hero-section/Banner2.png',
+    '/Studio-images/Hero-section/Banner3.png',
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setBannerIndex((prev) => (prev + 1) % banners.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   // View mode switcher: 'masonry' | 'runway' | 'vault'
   const [viewMode, setViewMode] = useState<'masonry' | 'runway' | 'vault'>('masonry');
@@ -525,8 +539,8 @@ export const Gallery: React.FC = () => {
   const [vaultActiveIndex, setVaultActiveIndex] = useState(0);
 
   // Fullscreen Inspection Lightbox Piece
+  const navigate = useNavigate();
   const [lightboxPiece, setLightboxPiece] = useState<GalleryPiece | null>(null);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   // Filtered pieces
   const filteredPieces = selectedCategory === 'ALL'
@@ -547,18 +561,18 @@ export const Gallery: React.FC = () => {
       if (e.key === 'Escape') {
         setLightboxPiece(null);
       } else if (e.key === 'ArrowRight') {
-        const nextIdx = (lightboxIndex + 1) % filteredPieces.length;
-        setLightboxIndex(nextIdx);
-        setLightboxPiece(filteredPieces[nextIdx]);
+        const curIdx = allGalleryPieces.findIndex((p) => p.id === lightboxPiece.id);
+        const nextIdx = (curIdx + 1) % allGalleryPieces.length;
+        navigate(`/studio/${allGalleryPieces[nextIdx].id}`);
       } else if (e.key === 'ArrowLeft') {
-        const prevIdx = (lightboxIndex - 1 + filteredPieces.length) % filteredPieces.length;
-        setLightboxIndex(prevIdx);
-        setLightboxPiece(filteredPieces[prevIdx]);
+        const curIdx = allGalleryPieces.findIndex((p) => p.id === lightboxPiece.id);
+        const prevIdx = (curIdx - 1 + allGalleryPieces.length) % allGalleryPieces.length;
+        navigate(`/studio/${allGalleryPieces[prevIdx].id}`);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxPiece, lightboxIndex, filteredPieces]);
+  }, [lightboxPiece]);
 
   // Filmstrip horizontal scroll helpers
   const scrollFilmstrip = (direction: 'left' | 'right') => {
@@ -600,90 +614,60 @@ export const Gallery: React.FC = () => {
       {/* ========================================================================= */}
       {/* 1. GALLERY HERO SECTION (EXPANSIVE & CENTERED) */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pt-36 md:pt-48 pb-16">
-        <div className="gallery-page-container">
-          {/* Subtle Watermark Kinetic Marquee */}
-          <div aria-hidden="true" className="pointer-events-none absolute -top-4 left-0 right-0 opacity-15 overflow-hidden select-none">
-            <div className="flex whitespace-nowrap animate-marquee-left">
-              <span className="gallery-marquee-text pr-12">
-                THE RUNWAY GALLERY · 27 BESPOKE PIECES · 420 GSM COTTON · ARCHITECTURAL LUXURY ·
-              </span>
-              <span className="gallery-marquee-text pr-12">
-                THE RUNWAY GALLERY · 27 BESPOKE PIECES · 420 GSM COTTON · ARCHITECTURAL LUXURY ·
-              </span>
-            </div>
-          </div>
+      <section className="relative z-10 w-full overflow-hidden">
+        {/* Parallax Sliding Banners */}
+        <div 
+          className="relative w-full overflow-hidden shadow-2xl"
+          style={{ height: 'calc(100vh - 6rem)', marginTop: '6rem', marginBottom: '4vh' }}
+        >
+          <AnimatePresence initial={false}>
+            <motion.img
+              key={bannerIndex}
+              src={banners[bannerIndex]}
+              alt={`Studio Banner ${bannerIndex + 1}`}
+              initial={{ opacity: 0, scale: 1 }}
+              animate={{ opacity: 1, scale: 1.1 }}
+              exit={{ opacity: 0 }}
+              transition={{ 
+                opacity: { duration: 1, ease: "easeInOut" },
+                scale: { duration: 6, ease: "linear" } 
+              }}
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ objectPosition: 'top' }}
+            />
+          </AnimatePresence>
 
-          {/* Centered Grand Hero Header */}
-          <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 relative z-10">
-            {/* Top pill badge + Replay Intro */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-md"
-              >
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/90">
-                  Maison JJettas · Complete Visual Exhibition
-                </span>
-              </motion.div>
-
+          {/* Banner Controls */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+            {banners.map((_, idx) => (
               <button
-                onClick={() => setShowIntro(true)}
-                className="gallery-replay-btn"
-                title="Replay Archival Particle Text Assembly"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                <span>REPLAY INTRO</span>
-              </button>
-            </div>
-
-            {/* Main Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 35 }}
-              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
-              transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase tracking-[-0.03em] leading-[0.9] mb-8"
-            >
-              THE RUNWAY <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-300 to-white/40">
-                ARCHIVE.
-              </span>
-            </motion.h1>
-
-            {/* Sub-paragraph */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.85, delay: 0.2 }}
-              className="font-body text-base sm:text-lg md:text-xl text-white/70 max-w-2xl font-light leading-relaxed mb-8"
-            >
-              Every release is cut, stitched, and dyed in strictly calibrated small-batch drops. Explore all 27 physical silhouettes defining our modern uniform.
-            </motion.p>
-
-            {/* Key Standards Badges */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={!showIntro ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.85, delay: 0.3 }}
-              className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-white/60"
-            >
-              <span className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
-                27 EXHIBITED LOTS
-              </span>
-              <span className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
-                420 GSM HEAVYWEIGHT
-              </span>
-              <span className="px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.02]">
-                PORTO CIRCULAR LOOMS
-              </span>
-            </motion.div>
+                key={idx}
+                onClick={() => setBannerIndex(idx)}
+                className={`w-3 h-3 rounded-full transition-all duration-500 border border-white/50 ${
+                  idx === bannerIndex ? 'bg-white scale-125' : 'bg-transparent hover:bg-white/30'
+                }`}
+                aria-label={`Go to banner ${idx + 1}`}
+              />
+            ))}
           </div>
+          
+          <button
+            onClick={() => setBannerIndex((prev) => (prev - 1 + banners.length) % banners.length)}
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors z-20"
+          >
+            ←
+          </button>
+          <button
+            onClick={() => setBannerIndex((prev) => (prev + 1) % banners.length)}
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors z-20"
+          >
+            →
+          </button>
+        </div>
 
+        <div className="gallery-page-container">
           {/* Interactive Navigation & Controls Bar (Centered and Balanced) */}
-          <div className="pt-10 border-t border-white/10 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="pt-10 flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Category Filter Pills Bar */}
             <div className="flex flex-wrap items-center justify-center gap-2">
               {(['ALL', 'HEAVYWEIGHT', 'GRAPHIC', 'VINTAGE', 'STRUCTURE'] as const).map((cat) => {
@@ -734,24 +718,23 @@ export const Gallery: React.FC = () => {
       {/* ========================================================================= */}
       {/* 2. MAIN PRESENTATION (3 POWERFUL PERSPECTIVES) */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pb-36">
+      <section className="relative z-10 pb-36" style={{ paddingTop: '3rem' }}>
         <div className="gallery-page-container">
           {/* =======================================================================
               PERSPECTIVE A: CLEAN EDITORIAL LOOKBOOK GRID (UNBLOCKED, HIGH IMPACT)
              ======================================================================= */}
           {viewMode === 'masonry' && (
             <motion.div
-              layout
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
               className="gallery-clean-grid"
+              style={{ display: 'grid', gap: '3rem' }}
             >
-              <AnimatePresence mode="popLayout">
+              <AnimatePresence>
                 {filteredPieces.map((piece, idx) => (
                   <motion.div
-                    layout
                     key={piece.id}
                     initial={{ opacity: 0, y: 35 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -761,19 +744,37 @@ export const Gallery: React.FC = () => {
                       delay: (idx % 8) * 0.06,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    onClick={() => {
-                      setLightboxIndex(idx);
-                      setLightboxPiece(piece);
-                    }}
-                    className="gallery-clean-card group cursor-pointer border border-white/10 hover:border-white/40 transition-colors"
+                    onClick={() => navigate(`/studio/${piece.id}`)}
+                    className="gallery-clean-card group"
                   >
                     {/* T-Shirt Image (Clean, unobstructed focus) */}
                     <img
                       src={piece.image}
                       alt={piece.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="gallery-clean-img"
                       loading="lazy"
                     />
+
+                    {/* Top Floating Badges */}
+                    <div className="gallery-card-badge-top">
+                      <span className="gallery-tag-pill">{piece.lot}</span>
+                      <span className="gallery-tag-pill opacity-90">{piece.badge}</span>
+                    </div>
+
+                    {/* Clean Sliding Bottom Drawer */}
+                    <div className="gallery-card-bottom-drawer">
+                      <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1">
+                        {piece.weight} · {piece.wash}
+                      </span>
+                      <div className="flex items-center justify-between gap-3">
+                        <h3 className="font-display text-lg sm:text-xl font-bold uppercase tracking-tight text-white group-hover:text-neutral-200 transition-colors">
+                          {piece.title}
+                        </h3>
+                        <span className="font-mono text-[10px] text-white/90 bg-white/10 px-2.5 py-1 rounded shrink-0 border border-white/20">
+                          INSPECT ↗
+                        </span>
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
               </AnimatePresence>
@@ -817,21 +818,35 @@ export const Gallery: React.FC = () => {
               {/* Horizontal Scroll Track */}
               <div ref={filmstripRef} className="gallery-runway-outer">
                 <div className="gallery-runway-flex">
-                  {filteredPieces.map((piece, idx) => (
+                  {filteredPieces.map((piece) => (
                     <div
                       key={piece.id}
-                      onClick={() => {
-                        setLightboxIndex(idx);
-                        setLightboxPiece(piece);
-                      }}
-                      className="gallery-runway-card group cursor-pointer border border-white/10 hover:border-white/40 transition-colors"
+                      onClick={() => navigate(`/studio/${piece.id}`)}
+                      className="gallery-runway-card group"
                     >
                       <img
                         src={piece.image}
                         alt={piece.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="gallery-clean-img"
                         loading="lazy"
                       />
+
+                      <div className="gallery-card-badge-top">
+                        <span className="gallery-tag-pill">{piece.lot}</span>
+                        <span className="gallery-tag-pill">{piece.badge}</span>
+                      </div>
+
+                      <div className="gallery-card-bottom-drawer">
+                        <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-0.5">
+                          {piece.weight}
+                        </span>
+                        <h4 className="font-display text-base sm:text-lg font-bold uppercase tracking-tight text-white mb-2">
+                          {piece.title}
+                        </h4>
+                        <span className="font-mono text-[10px] text-white/70 block">
+                          Click to inspect garment details ↗
+                        </span>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -871,21 +886,50 @@ export const Gallery: React.FC = () => {
                       key={piece.id}
                       onClick={() => {
                         if (posClass === 'active') {
-                          setLightboxIndex(index);
-                          setLightboxPiece(piece);
+                          navigate(`/studio/${piece.id}`);
                         } else if (posClass === 'prev') {
                           prevVaultCard();
                         } else if (posClass === 'next') {
                           nextVaultCard();
                         }
                       }}
-                      className={`gallery-3d-card-item ${posClass} cursor-pointer border border-white/10 hover:border-white/40 transition-colors`}
+                      className={`gallery-3d-card-item ${posClass}`}
                     >
                       <img
                         src={piece.image}
                         alt={piece.title}
                         className="w-full h-full object-cover filter contrast-110"
                       />
+
+                      {posClass === 'active' && <div className="gallery-laser-scan" />}
+
+                      {/* Top Badges */}
+                      <div className="gallery-card-badge-top">
+                        <span className="gallery-tag-pill">{piece.lot}</span>
+                        <span className="gallery-tag-pill">{piece.badge}</span>
+                      </div>
+
+                      {/* Bottom Info Bar */}
+                      <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black via-black/85 to-transparent">
+                        <span className="font-mono text-[10px] uppercase tracking-widest text-white/50 block mb-1">
+                          {piece.weight} · {piece.wash}
+                        </span>
+                        <h3 className="font-display text-xl sm:text-2xl font-bold uppercase tracking-tight text-white mb-2">
+                          {piece.title}
+                        </h3>
+                        <p className="font-body text-xs text-white/70 line-clamp-2 mb-4">
+                          {piece.description}
+                        </p>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigate(`/studio/${piece.id}`);
+                          }}
+                          className="w-full py-3 bg-white text-black font-mono text-[10px] uppercase tracking-widest font-bold text-center hover:bg-neutral-200 transition-colors"
+                        >
+                          Inspect Specifications ↗
+                        </button>
+                      </div>
                     </div>
                   );
                 })}
@@ -932,85 +976,99 @@ export const Gallery: React.FC = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. FULLSCREEN SIMPLE LIGHTBOX */}
+      {/* 3. FULLSCREEN EDITORIAL LIGHTBOX SUITE */}
       {/* ========================================================================= */}
-      {createPortal(
-        <AnimatePresence>
-          {lightboxPiece && (
+      <AnimatePresence>
+        {lightboxPiece && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setLightboxPiece(null)}
+            className="gallery-modal-overlay"
+          >
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/95 backdrop-blur-xl flex items-center justify-center"
-              style={{ zIndex: 999999 }}
-              onClick={() => setLightboxPiece(null)}
+              initial={{ scale: 0.92, opacity: 0, y: 25 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.92, opacity: 0, y: 25 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              onClick={(e) => e.stopPropagation()}
+              className="gallery-modal-box"
             >
-              <button className="absolute top-6 right-6 md:top-10 md:right-10 text-white/50 hover:text-white transition-colors z-50">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-              </button>
-              
-              <button 
-                onClick={(e) => { 
-                  e.stopPropagation(); 
-                  const prevIdx = (lightboxIndex - 1 + filteredPieces.length) % filteredPieces.length;
-                  setLightboxIndex(prevIdx);
-                  setLightboxPiece(filteredPieces[prevIdx]);
-                }}
-                className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/30 text-white transition-all z-50 border border-white/20"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg>
-              </button>
+              {/* Left Column: Contained Full T-Shirt Display */}
+              <div className="gallery-modal-img-col">
+                <img
+                  src={lightboxPiece.image}
+                  alt={lightboxPiece.title}
+                  className="gallery-modal-img"
+                />
+                <div className="absolute top-4 left-4 bg-black/85 backdrop-blur-md px-3 py-1 rounded text-[10px] font-mono uppercase tracking-widest text-white border border-white/20">
+                  {lightboxPiece.lot} · {lightboxPiece.badge}
+                </div>
+                <div className="gallery-laser-scan" />
+              </div>
 
-              <motion.img 
-                key={lightboxPiece.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                src={lightboxPiece.image} 
-                className="select-none shadow-[0_0_100px_rgba(255,255,255,0.05)]"
-                style={{ 
-                  objectFit: 'contain', 
-                  maxWidth: '90vw', 
-                  maxHeight: '85vh',
-                  borderRadius: '16px',
-                  border: '1px solid rgba(255,255,255,0.15)',
-                  backgroundColor: '#0a0a0a'
-                }}
-                alt="Fullscreen"
-                onClick={e => e.stopPropagation()}
-              />
+              {/* Right Column: Garment Specs & Action */}
+              <div className="gallery-modal-info-col">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-mono text-xs uppercase tracking-widest text-white/50">
+                      ATELIER SPECIFICATION ARCHIVE
+                    </span>
+                    <button
+                      onClick={() => setLightboxPiece(null)}
+                      className="gallery-modal-close-btn"
+                      aria-label="Close Inspection Modal"
+                    >
+                      ✕
+                    </button>
+                  </div>
 
-              <button 
-                onClick={(e) => { 
-                  e.stopPropagation(); 
-                  const nextIdx = (lightboxIndex + 1) % filteredPieces.length;
-                  setLightboxIndex(nextIdx);
-                  setLightboxPiece(filteredPieces[nextIdx]);
-                }}
-                className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/30 text-white transition-all z-50 border border-white/20"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
-              </button>
-              
-              <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2">
-                {filteredPieces.map((_, i) => (
-                  <button 
-                    key={i} 
-                    onClick={(e) => { 
-                      e.stopPropagation(); 
-                      setLightboxIndex(i);
-                      setLightboxPiece(filteredPieces[i]);
-                    }}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${i === lightboxIndex ? 'bg-white scale-150' : 'bg-white/30 hover:bg-white/60'}`} 
-                  />
-                ))}
+                  <h3 className="font-display text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-2">
+                    {lightboxPiece.title}
+                  </h3>
+                  <p className="font-mono text-xs text-white/60 mb-6">
+                    {lightboxPiece.weight} · {lightboxPiece.wash}
+                  </p>
+
+                  <p className="font-body text-sm text-white/70 leading-relaxed font-light mb-8">
+                    {lightboxPiece.description}
+                  </p>
+
+                  <div className="space-y-3 pt-6 border-t border-white/10 font-mono text-xs">
+                    {lightboxPiece.specs.map((spec, sIdx) => (
+                      <div key={sIdx} className="flex justify-between text-white/60">
+                        <span>{spec.label}</span>
+                        <span className="text-white font-bold">{spec.value}</span>
+                      </div>
+                    ))}
+                    <div className="flex justify-between text-white/60">
+                      <span>Availability</span>
+                      <span className="text-white font-bold">{lightboxPiece.edition}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between gap-4">
+                  <Link
+                    to="/"
+                    onClick={() => setLightboxPiece(null)}
+                    className="flex-1 py-4 bg-white text-black font-mono text-xs uppercase tracking-[0.2em] font-bold text-center hover:bg-neutral-200 transition-colors"
+                  >
+                    Shop This Piece →
+                  </Link>
+                  <button
+                    onClick={() => setLightboxPiece(null)}
+                    className="px-6 py-4 border border-white/20 text-white font-mono text-xs uppercase tracking-widest hover:border-white transition-colors"
+                  >
+                    Close (Esc)
+                  </button>
+                </div>
               </div>
             </motion.div>
-          )}
-        </AnimatePresence>,
-        document.body
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
         {/* ========================================================================= */}
         {/* 4. FINAL FOOTER */}
@@ -1023,4 +1081,4 @@ export const Gallery: React.FC = () => {
   );
 };
 
-export default Gallery;
+export default Studio;

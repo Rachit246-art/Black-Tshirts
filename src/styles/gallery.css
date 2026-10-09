@@ -11,6 +11,39 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+/* Custom Studio Product Layout (Fallback for missing Tailwind JIT) */
+.studio-product-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: flex-start;
+}
+.studio-product-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+}
+@media (min-width: 600px) {
+  .studio-product-layout {
+    flex-direction: row;
+    gap: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .studio-product-sticky {
+    position: sticky;
+    top: 6rem;
+  }
+}
+
 /* Master Gallery Page Container (Fully Centered, Expansive) */
 .gallery-page-container {
   width: 100% !important;

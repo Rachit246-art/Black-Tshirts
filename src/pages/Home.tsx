@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { homeData } from '../data/homeData';
 import { GalleryView } from '../components/GalleryView';
 import { FinalFooter } from '../components/FinalFooter';
@@ -19,6 +19,23 @@ export const Home: React.FC = () => {
   const stageTrackRef = useRef<HTMLDivElement>(null);
   const railRef = useRef<HTMLDivElement>(null);
   
+  // Parallax logic for Hero Image
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const springX = useSpring(mouseX, { stiffness: 40, damping: 15 });
+  const springY = useSpring(mouseY, { stiffness: 40, damping: 15 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth) * 2 - 1;
+      const y = (e.clientY / window.innerHeight) * 2 - 1;
+      mouseX.set(x * 50); // Move up to 50px horizontally
+      mouseY.set(y * 25); // Move up to 25px vertically
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   // Custom JS-driven pinning for Gallery -> Video overlap
   const galleryAnchorRef = useRef<HTMLDivElement>(null);
   const [galleryTranslateY, setGalleryTranslateY] = useState(0);
@@ -190,6 +207,7 @@ export const Home: React.FC = () => {
                 initial={{ y: 150, opacity: 0, filter: 'blur(10px)' }}
                 animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
                 transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 1.7 }}
+                style={{ x: springX, y: springY }}
                 src="/Herosection.png"
                 alt="Justin Jefferson"
                 className="h-[130%] w-auto max-w-none object-contain drop-shadow-2xl origin-bottom"
@@ -224,8 +242,6 @@ export const Home: React.FC = () => {
             style={{
               transform: `translate3d(0, ${momentsTranslateY}%, 0) scale(${1 - easedQuoteRise * 0.05})`,
               opacity: Math.max(0.15, 1 - easedQuoteRise * 0.85),
-              clipPath: 'polygon(0 3.5vw, 100% 0, 100% 100%, 0 100%)',
-              WebkitClipPath: 'polygon(0 3.5vw, 100% 0, 100% 100%, 0 100%)',
               willChange: 'transform, opacity'
             }}
           >
@@ -251,15 +267,6 @@ export const Home: React.FC = () => {
               }}
             />
 
-            {/* Giant Purple Display Watermark: SIGNATURE PRODUCTS */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden opacity-30 select-none"
-            >
-              <h2 className="font-display font-bold text-[35vw] sm:text-[28vw] leading-none uppercase tracking-[-0.03em] text-[#333333] drop-shadow-2xl whitespace-nowrap">
-                Signature Products
-              </h2>
-            </div>
 
             {/* Top Control Bar: Prominent Section Name & Navigation Controls */}
             <div
@@ -273,20 +280,6 @@ export const Home: React.FC = () => {
               }}
             >
               <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#ffffff] animate-pulse shadow-[0_0_12px_#ffffff]" />
-                  <span
-                    style={{
-                      fontFamily: 'ui-monospace, monospace',
-                      fontSize: '11px',
-                      letterSpacing: '0.28em',
-                      textTransform: 'uppercase',
-                      color: 'rgba(255, 255, 255, 0.65)'
-                    }}
-                  >
-                    Curated Collection // 09 Exclusive Releases
-                  </span>
-                </div>
                 <h2
                   style={{
                     fontFamily: 'var(--font-display, "beachwood-variable", "Inter", sans-serif)',

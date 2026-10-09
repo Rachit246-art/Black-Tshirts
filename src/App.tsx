@@ -6,6 +6,8 @@ import { IntroVideo } from './components/IntroVideo';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Gallery } from './pages/Gallery';
+import { Studio } from './pages/Studio';
+import { StudioProduct } from './pages/StudioProduct';
 import { WhyChooseUs } from './pages/WhyChooseUs';
 import { Reviews } from './pages/Reviews';
 import { Contact } from './pages/Contact';
@@ -55,6 +57,8 @@ const AppContent: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/studio" element={<Studio />} />
+          <Route path="/studio/:id" element={<StudioProduct />} />
           <Route path="/why-choose-us" element={<WhyChooseUs />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contact" element={<Contact />} />
