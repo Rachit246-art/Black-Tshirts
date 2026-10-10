@@ -766,8 +766,8 @@ export const Studio: React.FC = () => {
                       <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1">
                         {piece.weight} · {piece.wash}
                       </span>
-                      <div className="flex items-center justify-between gap-3">
-                        <h3 className="font-display text-lg sm:text-xl font-bold uppercase tracking-tight text-white group-hover:text-neutral-200 transition-colors">
+                      <div className="flex items-start justify-between gap-3 mt-1">
+                        <h3 className="font-display text-base sm:text-lg font-medium uppercase tracking-wide leading-tight text-white group-hover:text-neutral-200 transition-colors pr-2">
                           {piece.title}
                         </h3>
                         <span className="font-mono text-[10px] text-white/90 bg-white/10 px-2.5 py-1 rounded shrink-0 border border-white/20">
