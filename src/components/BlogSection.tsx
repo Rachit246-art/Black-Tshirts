@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Link, useNavigate } from 'react-router-dom';
 
-interface Post {
+export interface Post {
   id: number;
   tag: string;
   date: string;
@@ -11,7 +12,7 @@ interface Post {
   readTime: string;
 }
 
-const posts: Post[] = [
+export const posts: Post[] = [
   {
     id: 1,
     tag: 'CRAFT PHILOSOPHY',
@@ -46,8 +47,10 @@ const BlogCard = ({ post, index }: { post: Post; index: number }) => {
   const { scrollYProgress } = useScroll({ target: cardRef, offset: ['start end', 'end start'] });
   const y = useTransform(scrollYProgress, [0, 1], [index % 2 === 0 ? 20 : -20, index % 2 === 0 ? -20 : 20]);
 
+  const navigate = useNavigate();
   return (
     <motion.div
+      onClick={() => navigate(`/article/${post.id}`)}
       ref={cardRef}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -132,60 +135,62 @@ export const BlogSection: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Heading */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
-          <div>
-            <motion.p
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, margin: '-80px' }}
-              transition={{ duration: 0.6 }}
-              style={{ fontFamily: 'monospace', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.35em', color: 'rgba(255,255,255,0.3)', marginBottom: '12px' }}
-            >
-              &mdash; EDITORIAL &mdash;
-            </motion.p>
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: '-80px' }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              style={{ fontFamily: 'sans-serif', fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, textTransform: 'uppercase', color: '#fff', lineHeight: 1, letterSpacing: '-0.03em' }}
-            >
-              From The Studio
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              style={{ fontFamily: 'monospace', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.3)', marginTop: '10px' }}
-            >
-              Craft stories, design process and culture
-            </motion.p>
-          </div>
-
-          <motion.button
+        <div className="flex flex-col items-center text-center gap-4 mb-16">
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, margin: '-80px' }}
+            transition={{ duration: 0.6 }}
+            style={{ fontFamily: 'monospace', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.35em', color: 'rgba(255,255,255,0.3)' }}
+          >
+            &mdash; EDITORIAL &mdash;
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, margin: '-80px' }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            style={{ fontFamily: 'sans-serif', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 900, textTransform: 'uppercase', color: '#fff', lineHeight: 1, letterSpacing: '-0.02em' }}
+          >
+            From The Studio
+          </motion.h2>
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="shrink-0 flex items-center gap-3 px-6 py-3 hover:border-white/60 transition-colors"
-            style={{
-              fontFamily: 'monospace', fontSize: '10px', textTransform: 'uppercase',
-              letterSpacing: '0.2em', color: 'rgba(255,255,255,0.65)',
-              background: 'transparent', cursor: 'pointer',
-              border: '1px solid rgba(255,255,255,0.2)',
-              borderRadius: '4px',
-            }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            style={{ fontFamily: 'monospace', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.4)', marginTop: '8px' }}
           >
-            ALL ARTICLES &rarr;
-          </motion.button>
+            Craft stories, design process and culture
+          </motion.p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {posts.map((post, i) => (
             <BlogCard key={post.id} post={post} index={i} />
           ))}
+        </div>
+
+        {/* Bottom Button */}
+        <div className="flex justify-center">
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            onClick={() => window.scrollTo(0, 0)}
+            className="flex items-center gap-3 px-8 py-4 hover:border-white transition-all group"
+            style={{
+              fontFamily: 'monospace', fontSize: '11px', textTransform: 'uppercase',
+              letterSpacing: '0.25em', color: '#fff',
+              background: 'transparent', cursor: 'pointer',
+              border: '1px solid rgba(255,255,255,0.3)',
+              borderRadius: '4px',
+            }}
+          >
+            ALL ARTICLES <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+          </motion.button>
         </div>
       </div>
     </section>

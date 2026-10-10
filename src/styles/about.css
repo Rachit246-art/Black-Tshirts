@@ -1902,6 +1902,7 @@
   padding: 1px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), transparent 40%, rgba(255, 255, 255, 0.2));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -2048,7 +2049,8 @@
 /* Card Bottom Sliding Meta Drawer */
 .gallery-card-drawer {
   position: absolute;
-  inset-x: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
   padding: 1.5rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 65%, transparent 100%);

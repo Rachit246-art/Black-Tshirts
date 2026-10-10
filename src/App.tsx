@@ -11,6 +11,7 @@ import { StudioProduct } from './pages/StudioProduct';
 import { WhyChooseUs } from './pages/WhyChooseUs';
 import { Reviews } from './pages/Reviews';
 import { Contact } from './pages/Contact';
+import { ArticleDetail } from './pages/ArticleDetail';
 
 // Scroll to top helper on route navigation
 const ScrollToTop: React.FC = () => {
@@ -62,6 +63,7 @@ const AppContent: React.FC = () => {
           <Route path="/why-choose-us" element={<WhyChooseUs />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/article/:id" element={<ArticleDetail />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

@@ -66,7 +66,7 @@ const ReviewCard = ({ review, active }: { review: typeof reviews[0]; active?: bo
       background: active ? '#141414' : '#0f0f0f',
       border: '1px solid rgba(255,255,255,0.08)',
       borderRadius: '16px',
-      padding: '24px',
+      padding: '32px',
       transition: 'all 0.4s ease',
       boxShadow: active ? '0 20px 60px rgba(0,0,0,0.8)' : '0 8px 30px rgba(0,0,0,0.5)',
     }}
@@ -84,8 +84,8 @@ const ReviewCard = ({ review, active }: { review: typeof reviews[0]; active?: bo
 
     {/* Product image */}
     <div
-      className="overflow-hidden mb-5"
-      style={{ borderRadius: '10px', aspectRatio: '16/9', width: '100%' }}
+      className="overflow-hidden mb-6"
+      style={{ borderRadius: '12px', aspectRatio: '4/3', width: '100%' }}
     >
       <img
         src={review.image}
@@ -98,8 +98,8 @@ const ReviewCard = ({ review, active }: { review: typeof reviews[0]; active?: bo
     <p style={{
       fontFamily: 'sans-serif',
       fontSize: '0.875rem',
-      color: 'rgba(255,255,255,0.65)',
-      lineHeight: 1.7,
+      color: 'rgba(255,255,255,0.7)',
+      lineHeight: 1.85,
       fontStyle: 'italic',
       flex: 1,
       marginBottom: '20px',

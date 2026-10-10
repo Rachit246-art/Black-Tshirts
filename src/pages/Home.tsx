@@ -287,6 +287,51 @@ export const Home: React.FC = () => {
               </div>
             </motion.div>
 
+            {/* Left Detail Element */}
+            <motion.div
+              className="absolute z-40 flex flex-col"
+              style={{ left: 'clamp(20px, 6vw, 10%)', bottom: 'clamp(20px, 8vh, 15%)', maxWidth: '160px' }}
+              animate={{ y: [0, -10, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+            >
+              <div className="relative rounded-[8px] overflow-hidden mb-4"
+                   style={{
+                     width: '120px',
+                     aspectRatio: '2/3',
+                     boxShadow: '0 10px 30px rgba(0,0,0,0.8), 0 0 20px rgba(255,180,0,0.2)',
+                     border: '1px solid rgba(255,210,60,0.5)'
+                   }}>
+                <img src="/real image/product-1.jpeg" alt="Detail" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-white/10 mix-blend-overlay"></div>
+              </div>
+              <div className="w-[120px]">
+                <div className="h-[1px] w-8 bg-[#ffaa00]/50 mb-2"></div>
+                <p style={{ fontFamily: 'sans-serif', fontSize: '10px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, fontWeight: 500 }}>
+                  The 420 GSM drop that rewrote the rules of comfort.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right Detail Element (Signature) */}
+            <motion.div
+              className="absolute z-40 flex flex-col items-start"
+              style={{ right: 'clamp(20px, 6vw, 10%)', bottom: 'clamp(20px, 8vh, 15%)', maxWidth: '180px' }}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }}
+            >
+              <div className="mb-4" style={{ width: '160px' }}>
+                <svg viewBox="0 0 300 100" className="w-full h-auto drop-shadow-[0_0_12px_rgba(167,139,250,0.4)]" style={{ color: '#a78bfa' }} stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
+                  <path d="M 40,70 C 20,70 10,40 30,30 C 50,20 70,50 60,80 C 50,110 20,90 30,70 C 40,50 80,30 110,40 C 140,50 120,90 150,70 C 180,50 200,30 220,40 C 240,50 220,90 250,70 C 270,60 280,40 290,50" />
+                </svg>
+              </div>
+              <div className="w-[160px]">
+                <div className="h-[1px] w-8 bg-[#a78bfa]/50 mb-2"></div>
+                <p style={{ fontFamily: 'sans-serif', fontSize: '10px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, fontWeight: 500 }}>
+                  Obsessive craftsmanship. Every piece tells a story.
+                </p>
+              </div>
+            </motion.div>
+
             {/* All Middle/Bottom flanking text removed per user requests for a cleaner hero image display */}
             <div className="relative z-20 max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-end mt-auto pt-10 md:pt-48 pb-8 md:pb-4 pointer-events-none">
               {/* Empty container to preserve bottom spacing */}
