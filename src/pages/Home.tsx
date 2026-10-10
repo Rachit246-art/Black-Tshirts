@@ -48,6 +48,14 @@ export const Home: React.FC = () => {
   const galleryAnchorRef = useRef<HTMLDivElement>(null);
   const [galleryTranslateY, setGalleryTranslateY] = useState(0);
 
+  // Custom JS-driven pinning for FAQ -> Blog overlap
+  const faqAnchorRef = useRef<HTMLDivElement>(null);
+  const [faqTranslateY, setFaqTranslateY] = useState(0);
+
+  // Custom JS-driven pinning for Blog -> Reviews overlap
+  const blogAnchorRef = useRef<HTMLDivElement>(null);
+  const [blogTranslateY, setBlogTranslateY] = useState(0);
+
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeftState, setScrollLeftState] = useState(0);
@@ -130,6 +138,30 @@ export const Home: React.FC = () => {
               setGalleryTranslateY(Math.min(overlap, windowHeight));
             } else {
               setGalleryTranslateY(0);
+            }
+          }
+
+          // 2.5. JS-Driven Pinning for FAQ -> Blog Overlap
+          if (faqAnchorRef.current) {
+            const rect = faqAnchorRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const overlap = windowHeight - rect.bottom;
+            if (overlap > 0) {
+              setFaqTranslateY(Math.min(overlap, windowHeight));
+            } else {
+              setFaqTranslateY(0);
+            }
+          }
+
+          // 3. JS-Driven Pinning for Blog -> Reviews Overlap
+          if (blogAnchorRef.current) {
+            const rect = blogAnchorRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const overlap = windowHeight - rect.bottom;
+            if (overlap > 0) {
+              setBlogTranslateY(Math.min(overlap, windowHeight));
+            } else {
+              setBlogTranslateY(0);
             }
           }
 
@@ -535,10 +567,23 @@ export const Home: React.FC = () => {
               willChange: 'transform'
             }}
           >
+            {/* Background Video */}
+            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-30 mix-blend-screen">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="/vecteezy_old-film-heavy-grain-overlays-film-dust-and-scratches_56778674.mp4" type="video/mp4" />
+              </video>
+            </div>
+
             {/* Ambient Purple Radial Glow matching screenshot vignette */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 opacity-40"
+              className="pointer-events-none absolute inset-0 opacity-40 z-0"
               style={{
                 background: 'radial-gradient(ellipse at 50% 45%, rgba(94, 53, 153, 0.35) 0%, rgba(26, 14, 48, 0.1) 55%, transparent 100%)'
               }}
@@ -672,14 +717,31 @@ export const Home: React.FC = () => {
         
       </div>
 
-      {/* 5. FAQ SECTION */}
-      <FaqSection />
+      {/* 5, 6 & 7. JS-DRIVEN OVERLAPPING FAQ, BLOG & TESTIMONIALS SECTION */}
+      <div className="relative w-full bg-[#000000]">
+        
+        {/* ANCHOR 1: Tracks natural scroll position of FAQ */}
+        <div ref={faqAnchorRef} className="w-full z-10 bg-black">
+          <div style={{ transform: `translateY(${faqTranslateY}px)`, willChange: 'transform' }}>
+            <FaqSection />
+          </div>
+        </div>
 
-      {/* 6. BLOG SECTION */}
-      <BlogSection />
+        {/* Blog glides up naturally over FAQ, and acts as ANCHOR 2 for Testimonials */}
+        <div className="relative z-20 shadow-[0_-40px_100px_rgba(0,0,0,1)] bg-[#000000]">
+          <div ref={blogAnchorRef} className="w-full bg-black">
+            <div style={{ transform: `translateY(${blogTranslateY}px)`, willChange: 'transform' }}>
+              <BlogSection />
+            </div>
+          </div>
+        </div>
 
-      {/* 7. TESTIMONIALS */}
-      <TestimonialSection />
+        {/* Testimonials glide up naturally over the pinned blog */}
+        <div className="relative z-30 shadow-[0_-40px_100px_rgba(0,0,0,1)] bg-[#000000]">
+          <TestimonialSection />
+        </div>
+        
+      </div>
 
       {/* 8. PREMIUM CONTACT US */}
       <PremiumContact />

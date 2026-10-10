@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import Lenis from 'lenis';
 import { Navigation } from './components/Navigation';
 import { PageLoader } from './components/PageLoader';
 import { IntroVideo } from './components/IntroVideo';
@@ -32,6 +33,23 @@ const AppContent: React.FC = () => {
 
   useEffect(() => {
     document.body.setAttribute('data-theme', 'home');
+
+    // Initialize Lenis smooth scrolling
+    const lenis = new Lenis({
+      lerp: 0.08, // Adjust for smoothness (lower is smoother, default 0.1)
+      wheelMultiplier: 1,
+      smoothWheel: true,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
   }, []);
 
   return (

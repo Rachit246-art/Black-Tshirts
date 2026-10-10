@@ -597,10 +597,32 @@ export const Gallery: React.FC = () => {
       {/* Ambient Lighting Gradient */}
       <div aria-hidden="true" className="gallery-ambient-glow" />
 
+      {/* 1.5. GALLERY HERO SECTION */}
+      <section className="relative w-full flex flex-col justify-end pt-40 pb-16 px-6 md:px-12 border-b border-white/10 overflow-hidden bg-[#000000]">
+        <div className="relative z-10 max-w-7xl mx-auto w-full text-center flex flex-col items-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="font-display text-4xl md:text-6xl lg:text-7xl uppercase tracking-tight text-white font-black mb-6"
+          >
+            The Atelier Archive
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+            className="font-sans text-sm md:text-base text-white/60 max-w-xl leading-relaxed"
+          >
+            A curated collection of our most iconic pieces. Every garment tells a story of obsessive craftsmanship, experimental washes, and uncompromising quality.
+          </motion.p>
+        </div>
+      </section>
+
       {/* ========================================================================= */}
       {/* 2. MAIN PRESENTATION (LOOKBOOK GRID) */}
       {/* ========================================================================= */}
-      <section className="relative z-10 pt-32 pb-36">
+      <section className="relative z-10 pt-16 pb-36">
         <div className="gallery-page-container">
           {/* =======================================================================
               PERSPECTIVE A: CLEAN EDITORIAL LOOKBOOK GRID (UNBLOCKED, HIGH IMPACT)
@@ -641,26 +663,6 @@ export const Gallery: React.FC = () => {
                       loading="lazy"
                     />
 
-                    {/* Top Floating Badges */}
-                    <div className="gallery-card-badge-top">
-                      <span className="gallery-tag-pill">{piece.lot}</span>
-                      <span className="gallery-tag-pill opacity-90">{piece.badge}</span>
-                    </div>
-
-                    {/* Clean Sliding Bottom Drawer */}
-                    <div className="gallery-card-bottom-drawer">
-                      <span className="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1">
-                        {piece.weight} · {piece.wash}
-                      </span>
-                      <div className="flex items-center justify-between gap-3">
-                        <h3 className="font-display text-lg sm:text-xl font-bold uppercase tracking-tight text-white group-hover:text-neutral-200 transition-colors">
-                          {piece.title}
-                        </h3>
-                        <span className="font-mono text-[10px] text-white/90 bg-white/10 px-2.5 py-1 rounded shrink-0 border border-white/20">
-                          VIEW ↗
-                        </span>
-                      </div>
-                    </div>
                   </motion.div>
                 ))}
               </AnimatePresence>

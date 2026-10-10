@@ -61,9 +61,11 @@ const Stars = ({ count }: { count: number }) => (
 
 const ReviewCard = ({ review, active }: { review: typeof reviews[0]; active?: boolean }) => (
   <div
-    className="flex flex-col h-full"
+    className="flex flex-col h-full relative overflow-hidden"
     style={{
-      background: active ? '#141414' : '#0f0f0f',
+      background: active ? 'rgba(20,20,20,0.85)' : 'rgba(15,15,15,0.65)',
+      backdropFilter: 'blur(16px)',
+      WebkitBackdropFilter: 'blur(16px)',
       border: '1px solid rgba(255,255,255,0.08)',
       borderRadius: '16px',
       padding: '32px',
@@ -166,6 +168,21 @@ export const TestimonialSection: React.FC = () => {
       className="relative w-full bg-[#000000] overflow-hidden"
       style={{ padding: 'clamp(80px, 10vw, 130px) clamp(20px, 6vw, 80px)' }}
     >
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover opacity-50"
+        >
+          <source src="/12762291_3840_2160_24fps (1).mp4" type="video/mp4" />
+        </video>
+        {/* Subtle gradient overlay to ensure text legibility but not block the video completely */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/70" />
+      </div>
+
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Heading */}
         <div className="text-center mb-14">

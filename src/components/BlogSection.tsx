@@ -58,7 +58,9 @@ const BlogCard = ({ post, index }: { post: Post; index: number }) => {
       transition={{ duration: 0.7, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] }}
       className="group relative flex flex-col cursor-pointer overflow-hidden"
       style={{
-        background: '#111111',
+        background: 'rgba(17,17,17,0.7)',
+        backdropFilter: 'blur(16px)',
+        WebkitBackdropFilter: 'blur(16px)',
         borderRadius: '12px',
         border: '1px solid rgba(255,255,255,0.07)',
       }}
@@ -71,7 +73,7 @@ const BlogCard = ({ post, index }: { post: Post; index: number }) => {
           alt={post.title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 50%, #111111 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 50%, rgba(17,17,17,0.7) 100%)' }} />
         {/* Tag pill */}
         <div className="absolute top-4 left-4">
           <span style={{
@@ -133,6 +135,21 @@ export const BlogSection: React.FC = () => {
       className="relative w-full bg-[#000000] overflow-hidden"
       style={{ padding: 'clamp(80px, 10vw, 130px) clamp(20px, 6vw, 80px)' }}
     >
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover opacity-30"
+        >
+          <source src="/2dca3bcd72.mp4" type="video/mp4" />
+        </video>
+        {/* Subtle gradient overlay to ensure text legibility but not block the video completely */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/80" />
+      </div>
+
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Heading */}
         <div className="flex flex-col items-center text-center gap-4 mb-16">
