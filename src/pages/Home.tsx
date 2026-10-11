@@ -26,6 +26,13 @@ export const Home: React.FC = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(true);
   const stageTrackRef = useRef<HTMLDivElement>(null);
   const railRef = useRef<HTMLDivElement>(null);
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (heroVideoRef.current) {
+      heroVideoRef.current.play().catch(() => {});
+    }
+  }, []);
   
   // Parallax logic for Hero Image
   const mouseX = useMotionValue(0);
@@ -316,13 +323,29 @@ export const Home: React.FC = () => {
               willChange: 'transform, opacity'
             }}
           >
+            {/* Background Archival Film Video */}
+            <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+              <video
+                ref={heroVideoRef}
+                src="/2dca3bcd72.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                className="w-full h-full object-cover"
+                style={{ opacity: 0.2 }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80" />
+            </div>
+
             {/* Background Watermarks */}
             <motion.div 
               initial={{ opacity: 0, scale: 1.05 }}
               animate={{ opacity: 0.3, scale: 1 }}
               transition={{ duration: 2, delay: 1.6, ease: "easeOut" }}
               aria-hidden="true" 
-              className="pointer-events-none absolute inset-0 z-0 flex flex-col justify-center pb-[35vh] md:pb-0 select-none overflow-hidden"
+              className="pointer-events-none absolute inset-0 z-[1] flex flex-col justify-center pb-[35vh] md:pb-0 select-none overflow-hidden"
             >
               <div className="animate-marquee-left flex whitespace-nowrap">
                 <span className="font-display text-[22vw] leading-none tracking-[-0.03em] uppercase text-[#ffffff] pr-12">
