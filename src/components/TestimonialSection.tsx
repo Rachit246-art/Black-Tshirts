@@ -68,7 +68,7 @@ const ReviewCard = ({ review, active }: { review: typeof reviews[0]; active?: bo
       WebkitBackdropFilter: 'blur(16px)',
       border: '1px solid rgba(255,255,255,0.08)',
       borderRadius: '16px',
-      padding: '32px',
+      padding: 'clamp(20px, 5vw, 32px)',
       transition: 'all 0.4s ease',
       boxShadow: active ? '0 20px 60px rgba(0,0,0,0.8)' : '0 8px 30px rgba(0,0,0,0.5)',
     }}
@@ -141,9 +141,8 @@ const ReviewCard = ({ review, active }: { review: typeof reviews[0]; active?: bo
 
 export const TestimonialSection: React.FC = () => {
   const [page, setPage] = useState(0);
+  const [direction, setDirection] = useState(1);
   const intervalRef = useRef<ReturnType<typeof setInterval>>();
-  const perPage = 3;
-  const totalPages = Math.ceil(reviews.length / perPage);
 
   const visibleReviews = [
     reviews[page % reviews.length],
@@ -151,16 +150,37 @@ export const TestimonialSection: React.FC = () => {
     reviews[(page + 2) % reviews.length],
   ];
 
-  useEffect(() => {
+  const resetInterval = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
+      setDirection(1);
       setPage((p) => (p + 1) % reviews.length);
-    }, 5000);
-    return () => clearInterval(intervalRef.current);
+    }, 4500);
+  };
+
+  useEffect(() => {
+    resetInterval();
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
   }, []);
 
+  const next = () => {
+    setDirection(1);
+    setPage((p) => (p + 1) % reviews.length);
+    resetInterval();
+  };
+
+  const prev = () => {
+    setDirection(-1);
+    setPage((p) => (p - 1 + reviews.length) % reviews.length);
+    resetInterval();
+  };
+
   const goTo = (i: number) => {
-    clearInterval(intervalRef.current);
+    setDirection(i > page ? 1 : -1);
     setPage(i % reviews.length);
+    resetInterval();
   };
 
   return (
@@ -168,6 +188,23 @@ export const TestimonialSection: React.FC = () => {
       className="relative w-full bg-[#000000] overflow-hidden"
       style={{ padding: 'clamp(80px, 10vw, 130px) clamp(20px, 6vw, 80px)' }}
     >
+      <style>{`
+        .testimonial-desktop-grid {
+          display: block;
+        }
+        .testimonial-mobile-slider {
+          display: none;
+        }
+        @media (max-width: 768px) {
+          .testimonial-desktop-grid {
+            display: none !important;
+          }
+          .testimonial-mobile-slider {
+            display: block !important;
+          }
+        }
+      `}</style>
+
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
         <video
@@ -206,21 +243,55 @@ export const TestimonialSection: React.FC = () => {
           </motion.h2>
         </div>
 
-        {/* Cards */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={page}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-5"
-          >
-            {visibleReviews.map((review, i) => (
-              <ReviewCard key={`${review.id}-${i}`} review={review} active={i === 1} />
-            ))}
-          </motion.div>
-        </AnimatePresence>
+        {/* Desktop View: 3 cards row */}
+        <div className="testimonial-desktop-grid">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={page}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+                gap: '20px',
+                width: '100%',
+              }}
+            >
+              {visibleReviews.map((review, i) => (
+                <ReviewCard key={`${review.id}-${i}`} review={review} active={i === 1} />
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Mobile View: strictly 1 card visible at a time with smooth auto-slide and swipe */}
+        <div className="testimonial-mobile-slider w-full max-w-sm mx-auto">
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.div
+              key={page}
+              custom={direction}
+              initial={{ opacity: 0, x: direction > 0 ? 50 : -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(_, info) => {
+                if (info.offset.x < -40) {
+                  next();
+                } else if (info.offset.x > 40) {
+                  prev();
+                }
+              }}
+              className="touch-pan-y cursor-grab active:cursor-grabbing w-full"
+            >
+              <ReviewCard review={reviews[page % reviews.length]} active={true} />
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
         {/* Dots + arrows */}
         <div className="mt-10 flex items-center justify-between">
@@ -230,11 +301,12 @@ export const TestimonialSection: React.FC = () => {
               <button
                 key={i}
                 onClick={() => goTo(i)}
+                aria-label={`Go to slide ${i + 1}`}
                 style={{
-                  width: i === page ? '24px' : '8px',
+                  width: i === page % reviews.length ? '24px' : '8px',
                   height: '3px',
                   borderRadius: '2px',
-                  background: i === page ? '#fff' : 'rgba(255,255,255,0.18)',
+                  background: i === page % reviews.length ? '#fff' : 'rgba(255,255,255,0.18)',
                   transition: 'all 0.4s ease',
                   border: 'none',
                   cursor: 'pointer',
@@ -246,20 +318,30 @@ export const TestimonialSection: React.FC = () => {
 
           {/* Arrows */}
           <div className="flex gap-3">
-            {([-1, 1] as const).map((delta) => (
-              <button
-                key={delta}
-                onClick={() => { clearInterval(intervalRef.current); setPage((p) => (p + delta + reviews.length) % reviews.length); }}
-                className="w-11 h-11 flex items-center justify-center rounded-full transition-all"
-                style={{ border: '1px solid rgba(255,255,255,0.15)', background: 'transparent', color: 'rgba(255,255,255,0.6)', cursor: 'pointer' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.5)'; (e.currentTarget as HTMLButtonElement).style.color = '#fff'; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.15)'; (e.currentTarget as HTMLButtonElement).style.color = 'rgba(255,255,255,0.6)'; }}
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  {delta === -1 ? <path d="M15 18l-6-6 6-6" /> : <path d="M9 18l6-6-6-6" />}
-                </svg>
-              </button>
-            ))}
+            <button
+              onClick={prev}
+              aria-label="Previous review"
+              className="w-11 h-11 flex items-center justify-center rounded-full transition-all"
+              style={{ border: '1px solid rgba(255,255,255,0.15)', background: 'transparent', color: 'rgba(255,255,255,0.6)', cursor: 'pointer' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.5)'; (e.currentTarget as HTMLButtonElement).style.color = '#fff'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.15)'; (e.currentTarget as HTMLButtonElement).style.color = 'rgba(255,255,255,0.6)'; }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              onClick={next}
+              aria-label="Next review"
+              className="w-11 h-11 flex items-center justify-center rounded-full transition-all"
+              style={{ border: '1px solid rgba(255,255,255,0.15)', background: 'transparent', color: 'rgba(255,255,255,0.6)', cursor: 'pointer' }}
+              onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.5)'; (e.currentTarget as HTMLButtonElement).style.color = '#fff'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.15)'; (e.currentTarget as HTMLButtonElement).style.color = 'rgba(255,255,255,0.6)'; }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

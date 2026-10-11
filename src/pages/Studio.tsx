@@ -3,6 +3,8 @@ import { motion, AnimatePresence, useScroll, useSpring, useMotionValue } from 'f
 import { Link, useNavigate } from 'react-router-dom';
 import { FinalFooter } from '../components/FinalFooter';
 import { GalleryIntro } from '../components/GalleryIntro';
+import { StudioCartWishlistGlobal } from '../components/studio/StudioCartWishlistGlobal';
+import { useStudioCartWishlist } from '../context/StudioCartWishlistContext';
 import '../styles/gallery.css';
 
 // Full 27 Curated Atelier Gallery Pieces
@@ -511,8 +513,10 @@ export const allGalleryPieces: GalleryPiece[] = [
 ];
 
 export const Studio: React.FC = () => {
-  // Particle assembly intro overlay state
-  const [showIntro, setShowIntro] = useState<boolean>(true);
+  // Particle assembly intro overlay state - skip if already viewed or returning from product page
+  const [showIntro, setShowIntro] = useState<boolean>(() => {
+    return sessionStorage.getItem('studio_intro_seen') !== 'true';
+  });
 
   // Hero Banners
   const [bannerIndex, setBannerIndex] = useState(0);
@@ -595,7 +599,14 @@ export const Studio: React.FC = () => {
     <div className="relative min-h-screen bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000] overflow-x-clip">
       {/* 0. INTRO PARTICLE TEXT ASSEMBLY OVERLAY */}
       <AnimatePresence>
-        {showIntro && <GalleryIntro onComplete={() => setShowIntro(false)} />}
+        {showIntro && (
+          <GalleryIntro
+            onComplete={() => {
+              setShowIntro(false);
+              sessionStorage.setItem('studio_intro_seen', 'true');
+            }}
+          />
+        )}
       </AnimatePresence>
 
       <motion.div
@@ -617,8 +628,7 @@ export const Studio: React.FC = () => {
       <section className="relative z-10 w-full overflow-hidden">
         {/* Parallax Sliding Banners */}
         <div 
-          className="relative w-full overflow-hidden shadow-2xl"
-          style={{ height: 'calc(100vh - 6rem)', marginTop: '6rem', marginBottom: '4vh' }}
+          className="studio-hero-banner shadow-2xl"
         >
           <AnimatePresence initial={false}>
             <motion.img
@@ -626,24 +636,23 @@ export const Studio: React.FC = () => {
               src={banners[bannerIndex]}
               alt={`Studio Banner ${bannerIndex + 1}`}
               initial={{ opacity: 0, scale: 1 }}
-              animate={{ opacity: 1, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1.05 }}
               exit={{ opacity: 0 }}
               transition={{ 
-                opacity: { duration: 1, ease: "easeInOut" },
+                opacity: { duration: 0.8, ease: "easeInOut" },
                 scale: { duration: 6, ease: "linear" } 
               }}
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{ objectPosition: 'top' }}
+              className="studio-banner-img"
             />
           </AnimatePresence>
 
           {/* Banner Controls */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+          <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20">
             {banners.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setBannerIndex(idx)}
-                className={`w-3 h-3 rounded-full transition-all duration-500 border border-white/50 ${
+                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-500 border border-white/50 cursor-pointer ${
                   idx === bannerIndex ? 'bg-white scale-125' : 'bg-transparent hover:bg-white/30'
                 }`}
                 aria-label={`Go to banner ${idx + 1}`}
@@ -653,13 +662,15 @@ export const Studio: React.FC = () => {
           
           <button
             onClick={() => setBannerIndex((prev) => (prev - 1 + banners.length) % banners.length)}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors z-20"
+            className="studio-banner-arrow absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors z-20 cursor-pointer"
+            aria-label="Previous banner"
           >
             ←
           </button>
           <button
             onClick={() => setBannerIndex((prev) => (prev + 1) % banners.length)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors z-20"
+            className="studio-banner-arrow absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors z-20 cursor-pointer"
+            aria-label="Next banner"
           >
             →
           </button>
@@ -667,9 +678,9 @@ export const Studio: React.FC = () => {
 
         <div className="gallery-page-container">
           {/* Interactive Navigation & Controls Bar (Centered and Balanced) */}
-          <div className="pt-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="studio-controls-bar pt-10 flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Category Filter Pills Bar */}
-            <div className="flex flex-wrap items-center justify-center gap-2">
+            <div className="studio-category-filters flex flex-wrap items-center justify-center gap-2">
               {(['ALL', 'HEAVYWEIGHT', 'GRAPHIC', 'VINTAGE', 'STRUCTURE'] as const).map((cat) => {
                 const isSelected = selectedCategory === cat;
                 return (
@@ -688,7 +699,7 @@ export const Studio: React.FC = () => {
             </div>
 
             {/* Viewing Perspective Mode Switcher */}
-            <div className="flex items-center gap-2 shrink-0">
+            <div className="studio-mode-switchers flex items-center gap-2 shrink-0">
               <button
                 onClick={() => setViewMode('masonry')}
                 className={`gallery-mode-toggle ${viewMode === 'masonry' ? 'active' : ''}`}
@@ -1076,6 +1087,9 @@ export const Studio: React.FC = () => {
         <div className="relative z-50">
           <FinalFooter />
         </div>
+
+        {/* Global Cart & Wishlist Floating Triggers & Drawers */}
+        <StudioCartWishlistGlobal />
       </motion.div>
     </div>
   );

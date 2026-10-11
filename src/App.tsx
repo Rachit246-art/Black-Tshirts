@@ -13,6 +13,7 @@ import { WhyChooseUs } from './pages/WhyChooseUs';
 import { Reviews } from './pages/Reviews';
 import { Contact } from './pages/Contact';
 import { ArticleDetail } from './pages/ArticleDetail';
+import { StudioCartWishlistProvider } from './context/StudioCartWishlistContext';
 
 // Scroll to top helper on route navigation
 const ScrollToTop: React.FC = () => {
@@ -92,7 +93,9 @@ const AppContent: React.FC = () => {
 export const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <AppContent />
+      <StudioCartWishlistProvider>
+        <AppContent />
+      </StudioCartWishlistProvider>
     </BrowserRouter>
   );
 };

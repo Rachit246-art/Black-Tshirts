@@ -236,11 +236,57 @@ export const Home: React.FC = () => {
       className="relative w-full bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000]"
     >
       <style>{`
+        .hero-studio-card {
+          display: flex !important;
+        }
         .dot-matrix-text {
           -webkit-mask-image: radial-gradient(circle, black 35%, transparent 45%);
-          -webkit-mask-size: 7px 7px;
+          -webkit-mask-size: 6px 6px;
           mask-image: radial-gradient(circle, black 35%, transparent 45%);
-          mask-size: 7px 7px;
+          mask-size: 6px 6px;
+          line-height: 0.96;
+        }
+        @media (max-width: 768px) {
+          .hero-studio-card {
+            display: none !important;
+          }
+          .dot-matrix-text {
+            -webkit-mask-size: 3.5px 3.5px !important;
+            mask-size: 3.5px 3.5px !important;
+            line-height: 1.18 !important;
+          }
+          .signature-moments-section {
+            padding-top: 96px !important;
+            padding-bottom: 24px !important;
+            justify-content: flex-start !important;
+          }
+          .signature-control-bar {
+            margin-bottom: 10px !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            gap: 12px !important;
+          }
+          .signature-heading {
+            font-size: clamp(1.4rem, 5.5vw, 2.2rem) !important;
+            line-height: 1.05 !important;
+          }
+          .signature-arrows button {
+            width: 38px !important;
+            height: 38px !important;
+            font-size: 14px !important;
+          }
+          .signature-rail {
+            padding-top: 8px !important;
+            padding-bottom: 24px !important;
+          }
+          .signature-card-item {
+            width: clamp(220px, 68vw, 260px) !important;
+          }
+          .signature-card-frame {
+            width: clamp(220px, 68vw, 260px) !important;
+            height: clamp(300px, 46vh, 360px) !important;
+          }
         }
         .dot-char {
           will-change: opacity, filter;
@@ -321,7 +367,7 @@ export const Home: React.FC = () => {
 
             {/* Left Detail Element */}
             <motion.div
-              className="absolute z-40 flex flex-col"
+              className="hero-studio-card absolute z-40 flex-col"
               style={{ left: 'clamp(20px, 6vw, 10%)', bottom: 'clamp(20px, 8vh, 15%)', maxWidth: '160px' }}
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -346,7 +392,7 @@ export const Home: React.FC = () => {
 
             {/* Right Detail Element (Signature) */}
             <motion.div
-              className="absolute z-40 flex flex-col items-start"
+              className="hero-studio-card absolute z-40 flex-col items-start"
               style={{ right: 'clamp(20px, 6vw, 10%)', bottom: 'clamp(20px, 8vh, 15%)', maxWidth: '180px' }}
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }}
@@ -372,7 +418,7 @@ export const Home: React.FC = () => {
 
           {/* 2. SIGNATURE MOMENTS SECTION (RISES UP OVER HERO ACCORDING TO SCROLL) */}
           <div
-            className="absolute inset-0 w-full h-full z-20 flex flex-col justify-center bg-[#000000] text-[#ffffff] overflow-hidden shadow-[0_-30px_90px_rgba(0,0,0,0.95)]"
+            className="signature-moments-section absolute inset-0 w-full h-full z-20 flex flex-col justify-center bg-[#000000] text-[#ffffff] overflow-hidden shadow-[0_-30px_90px_rgba(0,0,0,0.95)]"
             style={{
               transform: `translate3d(0, ${momentsTranslateY}%, 0) scale(${1 - easedQuoteRise * 0.05})`,
               opacity: Math.max(0.15, 1 - easedQuoteRise * 0.85),
@@ -404,7 +450,7 @@ export const Home: React.FC = () => {
 
             {/* Top Control Bar: Prominent Section Name & Navigation Controls */}
             <div
-              className="relative z-10 w-full mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6"
+              className="signature-control-bar relative z-10 w-full mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6"
               style={{
                 maxWidth: '1680px',
                 marginLeft: 'auto',
@@ -415,6 +461,7 @@ export const Home: React.FC = () => {
             >
               <div>
                 <h2
+                  className="signature-heading"
                   style={{
                     fontFamily: 'var(--font-display, "beachwood-variable", "Inter", sans-serif)',
                     fontSize: 'clamp(2.75rem, 6.5vw, 5.5rem)',
@@ -431,11 +478,11 @@ export const Home: React.FC = () => {
               </div>
 
               {/* Navigation Arrows */}
-              <div className="flex items-center gap-4 shrink-0 pb-1">
+              <div className="signature-arrows flex items-center gap-3 sm:gap-4 shrink-0 pb-1">
                 <button
                   type="button"
                   onClick={() => scrollRail('left')}
-                  className="w-12 h-12 rounded-full border-2 border-white/30 bg-white/10 hover:bg-white hover:text-black flex items-center justify-center text-white transition-all cursor-pointer backdrop-blur-md"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white/30 bg-white/10 hover:bg-white hover:text-black flex items-center justify-center text-white transition-all cursor-pointer backdrop-blur-md"
                   aria-label="Scroll left"
                 >
                   ←
@@ -443,7 +490,7 @@ export const Home: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => scrollRail('right')}
-                  className="w-12 h-12 rounded-full border-2 border-white/30 bg-white/10 hover:bg-white hover:text-black flex items-center justify-center text-white transition-all cursor-pointer backdrop-blur-md"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white/30 bg-white/10 hover:bg-white hover:text-black flex items-center justify-center text-white transition-all cursor-pointer backdrop-blur-md"
                   aria-label="Scroll right"
                 >
                   →
@@ -458,7 +505,7 @@ export const Home: React.FC = () => {
               onMouseMove={handleMouseMove}
               onMouseUp={stopDragging}
               onMouseLeave={stopDragging}
-              className="relative z-10 w-full overflow-x-auto no-scrollbar pt-12 pb-24 px-4 sm:px-8 md:px-12 cursor-grab active:cursor-grabbing select-none"
+              className="signature-rail relative z-10 w-full overflow-x-auto no-scrollbar pt-12 pb-24 px-4 sm:px-8 md:px-12 cursor-grab active:cursor-grabbing select-none"
             >
               <div className="flex items-center gap-8 sm:gap-10 md:gap-12 min-w-max mx-auto justify-start sm:justify-center">
                 {homeData.signatureMoments.map((moment, idx) => {
@@ -469,7 +516,7 @@ export const Home: React.FC = () => {
                   return (
                     <div
                       key={moment._id}
-                      className="shrink-0 flex flex-col items-center group cursor-pointer relative"
+                      className="signature-card-item shrink-0 flex flex-col items-center group cursor-pointer relative"
                       style={{
                         width: '280px',
                         flexShrink: 0,
@@ -485,7 +532,7 @@ export const Home: React.FC = () => {
                     >
                       {/* Premium Polaroid Frame */}
                       <div
-                        className="relative bg-[#111111] p-3 pb-12 sm:p-4 sm:pb-16 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.8)] transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-8 group-hover:rotate-2 z-10 group-hover:z-30 group-hover:shadow-[0_40px_80px_rgba(0,0,0,1)]"
+                        className="signature-card-frame relative bg-[#111111] p-3 pb-12 sm:p-4 sm:pb-16 rounded-sm shadow-[0_20px_40px_rgba(0,0,0,0.8)] transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-8 group-hover:rotate-2 z-10 group-hover:z-30 group-hover:shadow-[0_40px_80px_rgba(0,0,1)]"
                         style={{
                           width: '280px',
                           height: '380px'
@@ -606,10 +653,10 @@ export const Home: React.FC = () => {
             {/* Giant Central Display Typography */}
             <h2 
               ref={textRef}
-              className="relative z-10 font-display leading-[0.88] uppercase tracking-[-0.02em] max-w-6xl mx-auto select-none dot-matrix-text"
+              className="relative z-10 font-display uppercase tracking-[-0.02em] max-w-6xl mx-auto select-none dot-matrix-text px-4 text-center"
               style={{ 
                 color: '#ffffff', 
-                fontSize: 'clamp(32px, 7vw, 100px)',
+                fontSize: 'clamp(24px, 6.2vw, 100px)',
                 fontWeight: 800,
                 WebkitFontSmoothing: 'antialiased'
               }}

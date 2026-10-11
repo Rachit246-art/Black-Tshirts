@@ -1,4 +1,4 @@
-﻿@import './reference.css';
+@import './reference.css';
 @import './about.css';
 @import './gallery.css';
 @import './contact.css';
@@ -203,6 +203,39 @@ body[data-theme="tone-purple"] {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .page-intro-header {
+    padding: 1.25rem 1rem 0.5rem 1rem !important;
+    gap: 0.5rem !important;
+  }
+  .page-intro-badge-label {
+    font-size: 9px !important;
+    letter-spacing: 0.12em !important;
+  }
+  .page-intro-skip-btn {
+    padding: 0.35rem 0.85rem !important;
+    font-size: 9px !important;
+    letter-spacing: 0.1em !important;
+  }
+  .page-intro-footer {
+    padding: 0.5rem 1rem 1.5rem 1rem !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.4rem !important;
+  }
+  .page-intro-status-text {
+    font-size: 8.5px !important;
+    letter-spacing: 0.12em !important;
+    text-align: center !important;
+  }
+  .page-intro-meta-text {
+    font-size: 8px !important;
+    letter-spacing: 0.1em !important;
+    text-align: center !important;
+  }
 }
 html, body { overflow-x: clip; width: 100%; max-width: 100vw; }
 img { image-rendering: -webkit-optimize-contrast; image-rendering: high-quality; transform: translateZ(0); backface-visibility: hidden; }

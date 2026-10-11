@@ -58,23 +58,83 @@ export const GalleryIntro: React.FC<GalleryIntroProps> = ({ onComplete }) => {
       // Sentence to combine:
       const sentence = 'WELCOME TO THE MAISON JJETTAS GALLERY ARCHIVE';
 
-      // Responsive font size
-      const fontSize = Math.min(Math.max(width * 0.038, 20), 44);
-      offCtx.font = `900 ${fontSize}px "beachwood-variable", "Helvetica Neue", Arial, sans-serif`;
+      // Max width allowed for text with generous margins for mobile screens
+      const maxAllowedWidth = Math.min(width * 0.84, 1200);
+
+      // Base target font size based on viewport width
+      let targetFontSize = width < 480 ? 20 : width < 768 ? 24 : Math.min(Math.max(width * 0.034, 26), 42);
+
+      const getFont = (size: number) => `900 ${size}px "beachwood-variable", "Helvetica Neue", Arial, sans-serif`;
+
+      // Word wrapping helper
+      const getWrappedLines = (txt: string, size: number): string[] => {
+        offCtx.font = getFont(size);
+        const words = txt.split(' ');
+        const result: string[] = [];
+        let curr = '';
+        for (const w of words) {
+          const test = curr ? `${curr} ${w}` : w;
+          if (offCtx.measureText(test).width > maxAllowedWidth && curr) {
+            result.push(curr);
+            curr = w;
+          } else {
+            curr = test;
+          }
+        }
+        if (curr) result.push(curr);
+        return result;
+      };
+
+      // Ensure longest individual word fits inside maxAllowedWidth
+      offCtx.font = getFont(targetFontSize);
+      const allWords = sentence.split(' ');
+      for (const w of allWords) {
+        let wWidth = offCtx.measureText(w).width;
+        while (wWidth > maxAllowedWidth && targetFontSize > 13) {
+          targetFontSize -= 1;
+          offCtx.font = getFont(targetFontSize);
+          wWidth = offCtx.measureText(w).width;
+        }
+      }
+
+      // Compute wrapped lines
+      let lines = getWrappedLines(sentence, targetFontSize);
+
+      // On desktop, if slight reduction allows single line display:
+      if (width >= 768 && lines.length > 1) {
+        offCtx.font = getFont(targetFontSize - 4);
+        if (offCtx.measureText(sentence).width <= maxAllowedWidth) {
+          targetFontSize -= 4;
+          lines = [sentence];
+        }
+      }
+
+      const fontSize = targetFontSize;
+      offCtx.font = getFont(fontSize);
       offCtx.fillStyle = '#737373';
       offCtx.textAlign = 'center';
       offCtx.textBaseline = 'middle';
 
-      // Measure text
-      const metrics = offCtx.measureText(sentence);
-      textWidth = metrics.width + 40;
-      textHeight = fontSize * 1.8;
+      const lineHeight = fontSize * 1.38;
+      const totalTextHeight = lines.length * lineHeight;
+
+      let maxLineWidth = 0;
+      lines.forEach((l) => {
+        const lw = offCtx.measureText(l).width;
+        if (lw > maxLineWidth) maxLineWidth = lw;
+      });
+
+      textWidth = maxLineWidth + 40;
+      textHeight = totalTextHeight + 20;
 
       textX = width / 2;
       textY = height / 2;
 
-      // Draw the complete sentence onto offscreen canvas
-      offCtx.fillText(sentence, textX, textY);
+      // Draw each line centered vertically and horizontally
+      const startY = textY - (totalTextHeight / 2) + (lineHeight / 2);
+      lines.forEach((l, idx) => {
+        offCtx.fillText(l, textX, startY + idx * lineHeight);
+      });
 
       // Analyze bounding box and slice into small pieces
       const boxLeft = Math.max(0, Math.floor(textX - textWidth / 2));

@@ -111,6 +111,7 @@
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   outline: none;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .gallery-filter-pill-btn:hover {
@@ -131,6 +132,7 @@
 .gallery-mode-toggle {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
   border-radius: 9999px;
@@ -144,6 +146,8 @@
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   backdrop-filter: blur(8px);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .gallery-mode-toggle:hover {
@@ -158,6 +162,54 @@
   font-weight: 700;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
 }
+
+/* Mobile Filter Bar & Mode Toggle Refinements */
+@media (max-width: 768px) {
+  .studio-controls-bar {
+    padding-top: 1.5rem !important;
+    gap: 1.25rem !important;
+    align-items: center !important;
+  }
+
+  .studio-category-filters {
+    display: flex !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    justify-content: flex-start !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+    gap: 0.5rem !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  .studio-category-filters::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .gallery-filter-pill-btn {
+    font-size: 9.5px !important;
+    letter-spacing: 0.12em !important;
+    padding: 0.5rem 0.95rem !important;
+  }
+
+  .studio-mode-switchers {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .gallery-mode-toggle {
+    font-size: 9.5px !important;
+    letter-spacing: 0.12em !important;
+    padding: 0.5rem 0.85rem !important;
+    gap: 0.35rem !important;
+    flex: 1 !important;
+    max-width: 130px !important;
+  }
+}
+
 
 /* =========================================================================
    LOOKBOOK GRID (BALANCED, BEAUTIFULLY CENTERED, LUXURY PROPORTIONS)
@@ -542,4 +594,46 @@
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.15) !important;
   transform: translateY(-1px) !important;
 }
+
+/* Studio Hero Sliding Banner Responsive System */
+.studio-hero-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: calc(100vh - 6rem);
+  margin-top: 6rem;
+  margin-bottom: 4vh;
+  background-color: #000000;
+}
+
+.studio-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .studio-hero-banner {
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    min-height: 220px !important;
+    margin-top: 5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .studio-banner-img {
+    object-fit: contain !important;
+    background-color: #000000 !important;
+  }
+
+  .studio-banner-arrow {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
 

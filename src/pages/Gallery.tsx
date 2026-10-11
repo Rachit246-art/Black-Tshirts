@@ -512,8 +512,10 @@ export const allGalleryPieces: GalleryPiece[] = [
 ];
 
 export const Gallery: React.FC = () => {
-  // Particle assembly intro overlay state
-  const [showIntro, setShowIntro] = useState<boolean>(true);
+  // Particle assembly intro overlay state - skip if already viewed in session
+  const [showIntro, setShowIntro] = useState<boolean>(() => {
+    return sessionStorage.getItem('gallery_intro_seen') !== 'true';
+  });
 
   // View mode switcher: 'masonry' | 'runway' | 'vault'
   const [viewMode, setViewMode] = useState<'masonry' | 'runway' | 'vault'>('masonry');
@@ -581,7 +583,14 @@ export const Gallery: React.FC = () => {
     <div className="relative min-h-screen bg-[#000000] text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000] overflow-x-clip">
       {/* 0. INTRO PARTICLE TEXT ASSEMBLY OVERLAY */}
       <AnimatePresence>
-        {showIntro && <GalleryIntro onComplete={() => setShowIntro(false)} />}
+        {showIntro && (
+          <GalleryIntro
+            onComplete={() => {
+              setShowIntro(false);
+              sessionStorage.setItem('gallery_intro_seen', 'true');
+            }}
+          />
+        )}
       </AnimatePresence>
 
       <motion.div
